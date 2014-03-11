@@ -1,71 +1,78 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="NICTA SmartGridToolbox : Microgrid and Smart Grid Simulation" />
+<head>
+<meta charset='utf-8' />
+<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+<meta name="description" content="NICTA SmartGridToolbox : Microgrid and Smart Grid Simulation" />
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>NICTA SmartGridToolbox</title>
-  </head>
+<title>NICTA SmartGridToolbox</title>
+</head>
 
-  <body>
+<body>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.inside.nicta.com.au/dgordon/SmartGridToolbox">View on GitHub</a>
+<!-- HEADER -->
+<div id="header_wrap" class="outer">
+   <header class="inner">
+      <a id="forkme_banner" href="https://github.inside.nicta.com.au/dgordon/SmartGridToolbox">View on GitHub</a>
 
-          <h1 id="project_title">NICTA SmartGridToolbox</h1>
-          <h2 id="project_tagline">Microgrid and Smart Grid Simulation</h2>
+      <h1 id="project_title">NICTA SmartGridToolbox</h1>
+      <h2 id="project_tagline">Microgrid and Smart Grid Simulation</h2>
 
-        </header>
-    </div>
+   </header>
+</div>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <p><img src="https://github.inside.nicta.com.au/dgordon/SmartGridToolbox/blob/master/images/logo.png?raw=true" alt="SmartGridToolbox Logo"></p>
+<!-- MAIN CONTENT -->
+<div id="main_content_wrap" class="outer">
+   <section id="main_content" class="inner">
+      <p><img src="https://github.inside.nicta.com.au/dgordon/SmartGridToolbox/blob/master/images/logo.png?raw=true" alt="SmartGridToolbox Logo"></p>
 
-<h3>
-<a name="introduction" class="anchor" href="#introduction"><span class="octicon octicon-link"></span></a>Introduction</h3>
+      <h3>
+         <a name="introduction" class="anchor" href="#introduction"><span class="octicon octicon-link"></span></a>Introduction</h3>
 
-<p>NICTA SmartGridToolbox is a C++-11 library API for developing smart grid and microgrid simulations. It was developed by the <a href="http://org.nicta.com.au/portfolio/energy-systems/">Energy Systems</a> subgroup of <a href="http://www.nicta.com.au">Nicta</a>'s <a href="http://org.nicta.com.au">Optimisation Research Group</a>, with the help of the <a href="http://www.anu.edu.au">Australian National University</a> and <a href="http://www.actewagl.com.au">Actew-AGL</a>.</p>
+      <p>NICTA SmartGridToolbox is a C++-11 library API for developing smart grid and microgrid simulations. It was developed by the <a href="http://org.nicta.com.au/portfolio/energy-systems/">Energy Systems</a> subgroup of <a href="http://www.nicta.com.au">Nicta</a>'s <a href="http://org.nicta.com.au">Optimisation Research Group</a>, with the help of the <a href="http://www.anu.edu.au">Australian National University</a> and <a href="http://www.actewagl.com.au">Actew-AGL</a>.</p>
 
-<p>SmartGridToolbox's simulation engine uses agent-based and discrete event simulation concepts. Research into future electricity grids requires the ability to handle a wide range of control strategies and simulation components. SmartGridToolbox aims to provide this ability through an API that emphasises flexibility and extensibility.</p>
+      <p>SmartGridToolbox's simulation engine uses agent-based and discrete event simulation concepts. Research into future electricity grids requires the ability to handle a wide range of control strategies and simulation components. SmartGridToolbox aims to provide this ability through an API that emphasises flexibility and extensibility.</p>
 
-<h3>
-<a name="getting-started" class="anchor" href="#getting-started"><span class="octicon octicon-link"></span></a>Getting started</h3>
+      <h3>
+         <a name="getting-started" class="anchor" href="#getting-started"><span class="octicon octicon-link"></span></a>Getting started</h3>
 
-<p>Download or checkout a copy of SmartGridToolbox from GitHub. To download a tarball containing the latest release, go to <a href="https://github.inside.nicta.com.au/dgordon/SmartGridToolbox/releases">https://github.inside.nicta.com.au/dgordon/SmartGridToolbox/releases</a>. Unpack the archive, and <code>cd</code> into the top level directory. Follow the instructions in the <code>INSTALL</code> file.</p>
+      <p>Download or checkout a copy of SmartGridToolbox from GitHub. To download a tarball containing the latest release, go to <a href="https://github.inside.nicta.com.au/dgordon/SmartGridToolbox/releases">https://github.inside.nicta.com.au/dgordon/SmartGridToolbox/releases</a>. Unpack the archive, and <code>cd</code> into the top level directory. Follow the instructions in the <code>INSTALL</code> file.</p>
 
-<p>Alternatively, to checkout a local clone of the github repository, you can</p>
+      <p>Alternatively, to checkout a local clone of the github repository, you can</p>
 
-<pre><code>git clone https://github.it.nicta.com.au/dgordon/SmartGridToolbox.git
-</code></pre>
+      <pre><code>git clone https://github.it.nicta.com.au/dgordon/SmartGridToolbox.git
+      </code></pre>
 
-<p>(you will need access to <code>github.it.nicta.com.au</code>). In this case, you will need to run <code>autogen.sh</code> as an extra step before building, and will need the gnu autotools to be present on your system.</p>
+      <p>(you will need access to <code>github.it.nicta.com.au</code>). In this case, you will need to run <code>autogen.sh</code> as an extra step before building, and will need the gnu autotools to be present on your system.</p>
 
-<p>After you have built and installed SmartGridToolbox, you can begin to familiarise yourself with its use. At present, tutorials are still being developed. The best place to start is in the <code>examples/MicrogridDemo</code> folder, which sets up a simulation involving a microgrid with solar panels, a battery, a building + HVAC, and a custom controller. The source code, or <a href="doxygen_docs/index.html">doxygen documentation</a>, are your friend.</p>
+      <p>After you have built and installed SmartGridToolbox, you can begin to familiarise yourself with its use. At present, tutorials are still being developed. The best place to start is in the <code>examples/MicrogridDemo</code> folder, which sets up a simulation involving a microgrid with solar panels, a battery, a building + HVAC, and a custom controller. The source code, or <a href="doxygen_docs/index.html">doxygen documentation</a>, are your friend.</p>
 
-<h3>
-<a name="code-documentation" class="anchor" href="#code-documentation"><span class="octicon octicon-link"></span></a>Code Documentation</h3>
+      <h3>
+         <a name="code-documentation" class="anchor" href="#code-documentation"><span class="octicon octicon-link"></span></a>Code Documentation</h3>
 
-<p>The primary documentation for the code is via <a href="doxygen_docs/index.html">doxygen</a>.</p>
-      </section>
-    </div>
+      <p>The primary documentation for the code is via <a href="doxygen_docs/index.html">doxygen</a>.</p>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">NICTA SmartGridToolbox maintained by <a href="https://github.inside.nicta.com.au/dgordon">dgordon</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
+      <h3>
+         <a name="tutorials" class="anchor" href="#tutorials"><span class="octicon octicon-link"></span></a>Tutorials</h3>
 
-    
+         <p>
+            <a href="microgrid_tutorial.html">Microgrid Tutorial</a> - Simulation of a simple microgrid, including a building plus HVAC, solar installation, battery and controller.
+         </p>
+   </section>
+</div>
 
-  </body>
+<!-- FOOTER  -->
+<div id="footer_wrap" class="outer">
+   <footer class="inner">
+      <p class="copyright">NICTA SmartGridToolbox maintained by <a href="https://github.inside.nicta.com.au/dgordon">dgordon</a></p>
+      <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+   </footer>
+</div>
+
+
+
+</body>
 </html>
