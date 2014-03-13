@@ -97,7 +97,7 @@ h6 {
 }
 
 p {
-  margin: 10px 0 15px 0;
+  margin: 10px 0 0px 0;
   text-align: justify;
 }
 
@@ -146,57 +146,19 @@ img {
   max-width: 739px;
   padding: 5px;
   margin: 10px 0 10px 0;
-  /*
-  border: 1px solid #ebebeb;
-
-  box-shadow: 0 0 5px #ebebeb;
-  -webkit-box-shadow: 0 0 5px #ebebeb;
-  -moz-box-shadow: 0 0 5px #ebebeb;
-  -o-box-shadow: 0 0 5px #ebebeb;
-  -ms-box-shadow: 0 0 5px #ebebeb;
-  */
 }
 
 pre, code {
   width: 100%;
-  color: #222;
-  /*
-  background-color: #fff;
-   */
-
+  color: #707070;
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
   font-size: 14px;
-
-  /*
-  border-radius: 2px;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  */
-
-
-
 }
 
 pre {
-  width: 100%;
-  padding: 10px;
-  /*
-  box-shadow: 0 0 10px rgba(0,0,0,.1);
-  */
   overflow: auto;
-}
-
-code {
-  padding: 3px;
-  margin: 0 3px;
-  /*
-  box-shadow: 0 0 10px rgba(0,0,0,.1);
-  */
-}
-
-pre code {
   display: block;
-  box-shadow: none;
+  margin: 10px 0px;
 }
 
 blockquote {
@@ -374,7 +336,7 @@ Full-Width Styles
 }
 
 #main_content {
-  padding-top: 40px;
+  /*padding-top: 40px;*/
 }
 
 #footer_wrap {
