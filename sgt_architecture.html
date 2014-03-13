@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8' />
+		<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+		<meta name="description" content="NICTA SmartGridToolbox : Microgrid tutorial" />
+		<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+		<title>NICTA SmartGridToolbox Architecture</title>
+	</head>
+	<body>
+	<!-- MAIN CONTENT -->
+		<div id="main_content_wrap" class="outer">
+			<section id="main_content" class="inner">
+				<p>
+					<img src="https://github.inside.nicta.com.au/dgordon/SmartGridToolbox/blob/master/images/logo.png?raw=true" alt="SmartGridToolbox Logo">
+				</p>
+				<h3><a name="sgt-architecture" class="anchor" href="#sgt-architecture"><span class="octicon octicon-link"></span></a>Introduction to the SmartGridToolbox Architecture</h3>
+				<p>
+					SmartGridToolbox is a library that can be used to rapidly develop simulations of of smart grid and microgrid systems. It is written in C++-11, and users will need access to a compiler that can handle this C++ specification.
+				</p>
+				<h4><a name="sgt-library" class="anchor" href="#sgt-library"><span class="octicon octicon-link"></span></a>Including and linking the SmartGridToolbox library</h4>
+				<p>
+					SmartGridToolbox programs will need to link to the SmartGridToolbox library, and will need to include the relevant SmartGridToolbox header files.
+				</p>
+				<p>
+					Header files may be included individually, as follows:
+<pre><code>#include &ltSmartGridToolbox/Model.h&gt
+#include &ltSmartGridToolbox/Simulation.h&gt
+// ... 
+</code></pre>
+					or they may be all included automatically using <pre><code>#include &ltSmartGridToolbox.h&gt</code></pre>
+				</p>
+				<p>
+					When linking, you should include <code>-lSmartGridToolbox</code> in the compiler link flags. (If you use the MicrogridTutorial example as a template, including the autoconf and automake scripts, then this will be done automatically). Your compiler will also need to be able to find the SmartGridToolbox library; you may need to add an extra <code>-L</code> compile flag if you have installed it in a non-standard location.
+				</p>
+				<h4><a name="sgt-program-structure" class="anchor" href="#sgt-program-structure"><span class="octicon octicon-link"></span></a>Basic structure of a SmartGridToolbox program</h4>
+				<p>
+					At the top level, a SmartGridToolbox simulation will have two basic objects: a <code>Model</code> object, and a <code>Simulation</code> object. The model manages the elements, or <em>components</em> used in the simulation, and the <code>Simulation</code> is responsible for advancing time for all the components of the model.
+				</p>
+				<p>
+					Consider the following simple SmartGridToolbox program:
+<pre><code style="fontsize:9">#include &ltSmartGridToolbox.h&gt
+
+Model mod;
+// Add code to populate the model here...
+mod.validate();
+Simulation sim(mod);
+sim.setStartTime(posix_time::seconds(0));
+sim.setEndTime(posix_time::seconds(10));
+sim.initialize();
+</code></pre>
+				</p>
+			</section>
+		</div>
+	</body>
+</html>
