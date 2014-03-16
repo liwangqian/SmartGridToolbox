@@ -14,11 +14,11 @@
 				<p>
 					<img src="https://github.inside.nicta.com.au/dgordon/SmartGridToolbox/blob/master/images/logo.png?raw=true" alt="SmartGridToolbox Logo">
 				</p>
-				<h3><a name="sgt-architecture" class="anchor" href="#sgt-architecture"><span class="octicon octicon-link"></span></a>Introduction to the SmartGridToolbox Architecture</h3>
+				<h3><a name="sgt-architecture" class="anchor" href="#sgt-architecture"></a>Introduction to the SmartGridToolbox Architecture</h3>
 				<p>
 					SmartGridToolbox is a library that can be used to rapidly develop simulations of of smart grid and microgrid systems. It is written in C++-11, and users will need access to a compiler that can handle this C++ specification.
 				</p>
-				<h4><a name="sgt-library" class="anchor" href="#sgt-library"><span class="octicon octicon-link"></span></a>Including and linking the SmartGridToolbox library</h4>
+				<h4><a name="sgt-library" class="anchor" href="#sgt-library"></a>Including and linking the SmartGridToolbox library</h4>
 				<p>
 					SmartGridToolbox programs will need to link to the SmartGridToolbox library, and will need to include the relevant SmartGridToolbox header files.
 				</p>
@@ -33,7 +33,7 @@
 				<p>
 					When linking, you should include <code>-lSmartGridToolbox</code> in the compiler link flags. (If you use the MicrogridTutorial example as a template, including the autoconf and automake scripts, then this will be done automatically). Your compiler will also need to be able to find the SmartGridToolbox library; you may need to add an extra <code>-L</code> compile flag if you have installed it in a non-standard location.
 				</p>
-				<h4><a name="sgt-program-structure" class="anchor" href="#sgt-program-structure"><span class="octicon octicon-link"></span></a>Basic structure of a SmartGridToolbox program</h4>
+				<h4><a name="sgt-program-structure" class="anchor" href="#sgt-program-structure"></a>Basic structure of a SmartGridToolbox program</h4>
 				<p>
 					At the top level, a SmartGridToolbox simulation will have two basic objects: a <code>Model</code> object, and a <code>Simulation</code> object. The model manages the elements, or <em>components</em> used in the simulation, and the simulation is responsible for advancing time for all the components of the model.
 				</p>
