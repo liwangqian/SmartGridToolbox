@@ -38,18 +38,81 @@
 					At the top level, a SmartGridToolbox simulation will have two basic objects: a <code>Model</code> object, and a <code>Simulation</code> object. The model manages the elements, or <em>components</em> used in the simulation, and the simulation is responsible for advancing time for all the components of the model.
 				</p>
 				<p>
-					Consider the following simple SmartGridToolbox program:
+					The following simple program can be found in <code>/Users/dgordon/Devel/SmartGridToolbox/docs/tutorials/IntroductionToSgt/src/tickers.cc</code>.
 <pre><code style="fontsize:9">#include &ltSmartGridToolbox.h&gt
 
-Model mod;
-// Add code to populate the model here...
-mod.validate();
-Simulation sim(mod);
-sim.setStartTime(posix_time::seconds(0));
-sim.setEndTime(posix_time::seconds(10));
-sim.initialize();
-</code></pre>
+int main()
+{
+   using SmartGridToolbox::Model;
+   using SmartGridToolbox::RegularUpdateComponent;
+   using seconds = SmartGridToolbox::posix_time::seconds;
+   using SmartGridToolbox::Simulation;
+
+   // Create the model:
+   Model mod;
+
+   // Now populate the model using factory functionality of Model.
+   // The RegularUpdateComponent does nothing other than regularly update itself, every 1 second in this case.
+   RegularUpdateComponent & ticker1 = 
+      mod.newComponent<RegularUpdateComponent>("ticker_1");
+   ticker1.setDt(seconds(1));
+   // And here's one that updates every 2 seconds...
+   RegularUpdateComponent & ticker2 = 
+      mod.newComponent<RegularUpdateComponent>("ticker_2");
+   ticker2.setDt(seconds(2));
+
+   mod.validate();
+
+   // Set up the simulation.
+   Simulation sim(mod);
+   sim.setStartTime(seconds(0));
+   sim.setEndTime(seconds(5));
+   sim.initialize();
+
+   std::cout << "Initial timestep : simulation is at time = " << sim.currentTime() << "." << std::endl;
+   std::cout << "                 : ticker_1 is at time = " << ticker1.time() << "." << std::endl;
+   std::cout << "                 : ticker_2 is at time = " << ticker2.time() << "." << std::endl;
+   std::cout << std::endl;
+   while (sim.doTimestep())
+   {
+      std::cout << "New timestep     : simulation is at time = " << sim.currentTime() << "." << std::endl;
+      std::cout << "                 : ticker_1 is at time = " << ticker1.time() << "." << std::endl;
+      std::cout << "                 : ticker_2 is at time = " << ticker2.time() << "." << std::endl;
+      std::cout << std::endl;
+   }
+}</code></pre>
 				</p>
+				<p>
+					It illustrates both how to set up a simple SmartGridToolbox program, and certain simple aspects of the event based simulation architecture. Note that at each timestep, more than one component update may occur. To get finer control over the updates, we can change the final <code>while</code> loop so that looping occurs at every single component update, but changing <code>while (sim.doTimestep())</code> to <code>while (sim.doNextUpdate())</code> <em>Exercise: copy the tutorial directory and try it.</em>
+				</p>
+				<p>
+					The output, upon running the program above, is:
+				<pre><code style="fontsize:9">
+				MESSAGE:	Component ticker_1 added to model.
+MESSAGE:	Component ticker_2 added to model.
+MESSAGE:	Model after validation:
+MESSAGE:		ticker_1 0
+MESSAGE:		ticker_2 0
+Initial timestep : simulation is at time = 00:00:00.
+                 : ticker_1 is at time = 00:00:00.
+                 : ticker_2 is at time = 00:00:00.
+
+New timestep     : simulation is at time = 00:00:01.
+                 : ticker_1 is at time = 00:00:01.
+                 : ticker_2 is at time = 00:00:00.
+
+New timestep     : simulation is at time = 00:00:02.
+                 : ticker_1 is at time = 00:00:02.
+                 : ticker_2 is at time = 00:00:02.
+
+New timestep     : simulation is at time = 00:00:03.
+                 : ticker_1 is at time = 00:00:03.
+                 : ticker_2 is at time = 00:00:02.
+
+New timestep     : simulation is at time = 00:00:04.
+                 : ticker_1 is at time = 00:00:04.
+                 : ticker_2 is at time = 00:00:04.
+</samp>
 			</section>
 		</div>
 	</body>
