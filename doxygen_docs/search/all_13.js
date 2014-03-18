@@ -1,9 +1,5 @@
 var searchData=
 [
-  ['weather',['Weather',['../class_smart_grid_toolbox_1_1_weather.html',1,'SmartGridToolbox']]],
-  ['weatherparser',['WeatherParser',['../class_smart_grid_toolbox_1_1_weather_parser.html',1,'SmartGridToolbox']]],
-  ['willstartnewtimestep',['willStartNewTimestep',['../class_smart_grid_toolbox_1_1_component.html#a38fdba9d97ba7605348cf047be43704b',1,'SmartGridToolbox::Component']]],
-  ['willupdate',['willUpdate',['../class_smart_grid_toolbox_1_1_component.html#ab154efa7f8e4833bd9213f5d68beade7',1,'SmartGridToolbox::Component']]],
-  ['wograph',['WoGraph',['../class_smart_grid_toolbox_1_1_wo_graph.html',1,'SmartGridToolbox']]],
-  ['wonode',['WoNode',['../class_smart_grid_toolbox_1_1_wo_node.html',1,'SmartGridToolbox']]]
+  ['v',['V',['../class_smart_grid_toolbox_1_1_bus.html#aee828f5cf3a940fc5bfdb46c5b0518f7',1,'SmartGridToolbox::Bus']]],
+  ['v_5f',['V_',['../struct_smart_grid_toolbox_1_1_bus_nr.html#ace65efa5ec4d8b9fdebbda146a40f97a',1,'SmartGridToolbox::BusNr']]]
 ];

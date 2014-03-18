@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SmartGridToolbox
-   &#160;<span id="projectnumber">v1.0.0</span>
+   &#160;<span id="projectnumber">v1.0.3</span>
    </div>
   </td>
  </tr>
@@ -97,36 +97,38 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;SmartGridToolbox/PowerFlow.h&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span>SmartGridToolbox</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_smart_grid_toolbox_1_1_zip_to_ground_base.html">   10</a></span>&#160;   <span class="keyword">class </span><a class="code" href="class_smart_grid_toolbox_1_1_zip_to_ground_base.html">ZipToGroundBase</a> : <span class="keyword">public</span> <a class="code" href="class_smart_grid_toolbox_1_1_component.html">Component</a></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;   {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;      <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;         <a class="code" href="class_smart_grid_toolbox_1_1_zip_to_ground_base.html">ZipToGroundBase</a>(<span class="keyword">const</span> std::string &amp; <a class="code" href="class_smart_grid_toolbox_1_1_component.html#a1ed9cb36917dce6c52426240a283ab2e">name</a>, <span class="keyword">const</span> <a class="code" href="class_smart_grid_toolbox_1_1_phases.html">Phases</a> &amp; phases) : <a class="code" href="class_smart_grid_toolbox_1_1_component.html#ac088f9b5a6f9ddbca6b85d31f05ccf43">Component</a>(name), phases_(phases) </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;         {</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <span class="comment">// Empty.</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;         }</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;         <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="class_smart_grid_toolbox_1_1_phases.html">Phases</a> &amp; phases()<span class="keyword"> const </span>{<span class="keywordflow">return</span> phases_;}</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{<span class="comment"></span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">   /// @brief A load (or sometimes generator) with constant Z, I, P components.</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">   /// @ingroup PowerFlowCore</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_smart_grid_toolbox_1_1_zip_to_ground_base.html">   12</a></span>&#160;<span class="comment"></span>   <span class="keyword">class </span><a class="code" href="class_smart_grid_toolbox_1_1_zip_to_ground_base.html">ZipToGroundBase</a> : <span class="keyword">public</span> <a class="code" href="class_smart_grid_toolbox_1_1_component.html">Component</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;   {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;      <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;         <a class="code" href="class_smart_grid_toolbox_1_1_zip_to_ground_base.html">ZipToGroundBase</a>(<span class="keyword">const</span> std::string &amp; <a class="code" href="class_smart_grid_toolbox_1_1_component.html#a1ed9cb36917dce6c52426240a283ab2e">name</a>, <span class="keyword">const</span> <a class="code" href="class_smart_grid_toolbox_1_1_phases.html">Phases</a> &amp; phases) : <a class="code" href="class_smart_grid_toolbox_1_1_component.html#ac088f9b5a6f9ddbca6b85d31f05ccf43">Component</a>(name), phases_(phases) </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;         {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <span class="comment">// Empty.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;         }</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;         <span class="keyword">virtual</span> ublas::vector&lt;Complex&gt; Y() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;         <span class="keyword">virtual</span> ublas::vector&lt;Complex&gt; I() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;         <span class="keyword">virtual</span> ublas::vector&lt;Complex&gt; S() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;     </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;      <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;         <a class="code" href="class_smart_grid_toolbox_1_1_phases.html">Phases</a> phases_; <span class="comment">///&lt; My phases on parent bus.</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"></span>   };</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#endif // ZIP_TO_GROUND_BASE_DOT_H</span></div>
-<div class="ttc" id="class_smart_grid_toolbox_1_1_component_html_a1ed9cb36917dce6c52426240a283ab2e"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_component.html#a1ed9cb36917dce6c52426240a283ab2e">SmartGridToolbox::Component::name</a></div><div class="ttdeci">const std::string &amp; name() const </div><div class="ttdoc">Get the name of the object. </div><div class="ttdef"><b>Definition:</b> Component.h:34</div></div>
-<div class="ttc" id="class_smart_grid_toolbox_1_1_phases_html"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_phases.html">SmartGridToolbox::Phases</a></div><div class="ttdef"><b>Definition:</b> PowerFlow.h:48</div></div>
-<div class="ttc" id="class_smart_grid_toolbox_1_1_component_html"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_component.html">SmartGridToolbox::Component</a></div><div class="ttdoc">Base class for simulation objects. </div><div class="ttdef"><b>Definition:</b> Component.h:13</div></div>
-<div class="ttc" id="class_smart_grid_toolbox_1_1_zip_to_ground_base_html"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_zip_to_ground_base.html">SmartGridToolbox::ZipToGroundBase</a></div><div class="ttdef"><b>Definition:</b> ZipToGroundBase.h:10</div></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;         <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="class_smart_grid_toolbox_1_1_phases.html">Phases</a> &amp; phases()<span class="keyword"> const </span>{<span class="keywordflow">return</span> phases_;}</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;         <span class="keyword">virtual</span> ublas::vector&lt;Complex&gt; Y() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;         <span class="keyword">virtual</span> ublas::vector&lt;Complex&gt; I() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;         <span class="keyword">virtual</span> ublas::vector&lt;Complex&gt; S() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;     </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;         <a class="code" href="class_smart_grid_toolbox_1_1_phases.html">Phases</a> phases_; <span class="comment">///&lt; My phases on parent bus.</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"></span>   };</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#endif // ZIP_TO_GROUND_BASE_DOT_H</span></div>
+<div class="ttc" id="class_smart_grid_toolbox_1_1_component_html_a1ed9cb36917dce6c52426240a283ab2e"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_component.html#a1ed9cb36917dce6c52426240a283ab2e">SmartGridToolbox::Component::name</a></div><div class="ttdeci">const std::string &amp; name() const </div><div class="ttdoc">Get the name of the object. </div><div class="ttdef"><b>Definition:</b> Component.h:47</div></div>
+<div class="ttc" id="class_smart_grid_toolbox_1_1_phases_html"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_phases.html">SmartGridToolbox::Phases</a></div><div class="ttdef"><b>Definition:</b> PowerFlow.h:47</div></div>
+<div class="ttc" id="class_smart_grid_toolbox_1_1_component_html"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_component.html">SmartGridToolbox::Component</a></div><div class="ttdoc">Base class for simulation objects. Component derived classes are expected to override three methods: ...</div><div class="ttdef"><b>Definition:</b> Component.h:29</div></div>
+<div class="ttc" id="class_smart_grid_toolbox_1_1_zip_to_ground_base_html"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_zip_to_ground_base.html">SmartGridToolbox::ZipToGroundBase</a></div><div class="ttdoc">A load (or sometimes generator) with constant Z, I, P components. </div><div class="ttdef"><b>Definition:</b> ZipToGroundBase.h:12</div></div>
 <div class="ttc" id="class_smart_grid_toolbox_1_1_component_html_ac088f9b5a6f9ddbca6b85d31f05ccf43"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_component.html#ac088f9b5a6f9ddbca6b85d31f05ccf43">SmartGridToolbox::Component::Component</a></div><div class="ttdeci">Component(const std::string &amp;name)</div><div class="ttdoc">Constructor. </div><div class="ttdef"><b>Definition:</b> Component.cc:5</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 5 2014 21:51:37 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Mar 19 2014 10:44:42 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

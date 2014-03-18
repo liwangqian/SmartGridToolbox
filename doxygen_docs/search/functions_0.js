@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['changed',['changed',['../class_smart_grid_toolbox_1_1_branch.html#a9f7d660019d4bde9b2a787f83ba02604',1,'SmartGridToolbox::Branch::changed()'],['../class_smart_grid_toolbox_1_1_bus.html#ac9133f740cd8a3b1a8ba1f488931f0a4',1,'SmartGridToolbox::Bus::changed()']]],
-  ['component',['Component',['../class_smart_grid_toolbox_1_1_component.html#ac088f9b5a6f9ddbca6b85d31f05ccf43',1,'SmartGridToolbox::Component']]]
+  ['angsandmagtovec',['angsAndMagToVec',['../namespace_smart_grid_toolbox.html#adafb716d1c6f14f75f3d794bd2833aff',1,'SmartGridToolbox']]],
+  ['angsandprojtovec',['angsAndProjToVec',['../namespace_smart_grid_toolbox.html#a2da22e88060890f2d46b95eb3e414300',1,'SmartGridToolbox']]]
 ];

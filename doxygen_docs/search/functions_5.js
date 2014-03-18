@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['overheadline',['OverheadLine',['../class_smart_grid_toolbox_1_1_overhead_line.html#a872d3bade3e82c8d3e7359f85a6f5cbb',1,'SmartGridToolbox::OverheadLine']]]
+  ['model',['Model',['../class_smart_grid_toolbox_1_1_model.html#a8be20c86c6a4456e5107951bf8c3a4fb',1,'SmartGridToolbox::Model::Model()'],['../class_smart_grid_toolbox_1_1_simulation.html#aacd40b6709de2075f244a24a6810b0e4',1,'SmartGridToolbox::Simulation::model() const '],['../class_smart_grid_toolbox_1_1_simulation.html#a80fd6d52847f4be4ed0242942b59f6f4',1,'SmartGridToolbox::Simulation::model()']]]
 ];

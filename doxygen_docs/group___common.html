@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>SmartGridToolbox: Common utilities.</title>
+<title>SmartGridToolbox: Common Utilities</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SmartGridToolbox
-   &#160;<span id="projectnumber">v1.0.0</span>
+   &#160;<span id="projectnumber">v1.0.3</span>
    </div>
   </td>
  </tr>
@@ -77,14 +77,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle">
-<div class="title">Common utilities.</div>  </div>
+<div class="title">Common Utilities</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Utility functions, classes and constants.  
+<p>Utility classes, functions and constants. These will typically be included in most headers, and provide access to utility functions etc. for time, complex numbers, linear algebra, etc.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -92,8 +91,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_smart_grid_toolbox_1_1_lat_long.html">SmartGridToolbox::LatLong</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Reporting and errors.</h2></td></tr>
 <tr class="memitem:gad420cb86edc212ee65c64b444eb79887"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gad420cb86edc212ee65c64b444eb79887"></a>
 std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>SmartGridToolbox::messageStream</b> ()</td></tr>
 <tr class="separator:gad420cb86edc212ee65c64b444eb79887"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -277,14 +276,36 @@ template&lt;typename T , std::size_t d&gt; </td></tr>
 template&lt;typename T , std::size_t d&gt; </td></tr>
 <tr class="memitem:ga84f6e6cd26bc85de6f1119cfd61ec84a"><td class="memTemplItemLeft" align="right" valign="top">Array&lt; T, d &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>SmartGridToolbox::operator-</b> (const Array&lt; T, d &gt; &amp;lhs, const Array&lt; T, d &gt; &amp;rhs)</td></tr>
 <tr class="separator:ga84f6e6cd26bc85de6f1119cfd61ec84a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Random number generation.</h2></td></tr>
+<tr class="memitem:ga6cc5b3740b7496823019501b3022290b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga6cc5b3740b7496823019501b3022290b"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___common.html#ga6cc5b3740b7496823019501b3022290b">SmartGridToolbox::randDiscrete</a> (const double *probs, int nProbs)</td></tr>
+<tr class="memdesc:ga6cc5b3740b7496823019501b3022290b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sample from discrete distribution with nProbs given probabilities. <br/></td></tr>
+<tr class="separator:ga6cc5b3740b7496823019501b3022290b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab82615f37ca15fd6e1b634bdcb612559"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gab82615f37ca15fd6e1b634bdcb612559"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___common.html#gab82615f37ca15fd6e1b634bdcb612559">SmartGridToolbox::randNormal</a> (double mu, double sig)</td></tr>
+<tr class="memdesc:gab82615f37ca15fd6e1b634bdcb612559"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sample from normal distribution with given mean and s.d. <br/></td></tr>
+<tr class="separator:gab82615f37ca15fd6e1b634bdcb612559"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabfccb7caf003f5683e51dd9ecbde5d06"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gabfccb7caf003f5683e51dd9ecbde5d06"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___common.html#gabfccb7caf003f5683e51dd9ecbde5d06">SmartGridToolbox::randUniform</a> (double lower, double upper)</td></tr>
+<tr class="memdesc:gabfccb7caf003f5683e51dd9ecbde5d06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sample from uniform distribution with given lower and upper bounds. <br/></td></tr>
+<tr class="separator:gabfccb7caf003f5683e51dd9ecbde5d06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga43f0b2810cbea2e5c50068f80dd2b962"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga43f0b2810cbea2e5c50068f80dd2b962"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___common.html#ga43f0b2810cbea2e5c50068f80dd2b962">SmartGridToolbox::randUniformInt</a> (int lower, int upper)</td></tr>
+<tr class="memdesc:ga43f0b2810cbea2e5c50068f80dd2b962"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sample from integer uniform distribution with given lower and upper bounds. <br/></td></tr>
+<tr class="separator:ga43f0b2810cbea2e5c50068f80dd2b962"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa7c72ad40ce1d1379a438d1b2e90ddce"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaa7c72ad40ce1d1379a438d1b2e90ddce"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___common.html#gaa7c72ad40ce1d1379a438d1b2e90ddce">SmartGridToolbox::randWeibull</a> (double a, double b)</td></tr>
+<tr class="memdesc:gaa7c72ad40ce1d1379a438d1b2e90ddce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sample from Weibull distribution with given a and b parameters. <br/></td></tr>
+<tr class="separator:gaa7c72ad40ce1d1379a438d1b2e90ddce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>Utility functions, classes and constants. </p>
-<p>These will typically be included in most headers, and provide access to utility functions etc. for time, complex numbers, linear algebra, etc. </p>
+<p>Utility classes, functions and constants. These will typically be included in most headers, and provide access to utility functions etc. for time, complex numbers, linear algebra, etc. </p>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 5 2014 21:51:37 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Mar 19 2014 10:44:42 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

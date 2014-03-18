@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SmartGridToolbox
-   &#160;<span id="projectnumber">v1.0.0</span>
+   &#160;<span id="projectnumber">v1.0.3</span>
    </div>
   </td>
  </tr>
@@ -102,74 +102,75 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;   <span class="keyword">class </span>Bus;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">   /// A Branch connects two Busses in a Network.</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_smart_grid_toolbox_1_1_branch.html">   15</a></span>&#160;<span class="comment"></span>   <span class="keyword">class </span><a class="code" href="class_smart_grid_toolbox_1_1_branch.html">Branch</a> : <span class="keyword">public</span> <a class="code" href="class_smart_grid_toolbox_1_1_component.html">Component</a></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;   {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;      <span class="keyword">public</span>:<span class="comment"></span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">         /// @name Lifecycle:</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">         /// @{</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;         <a class="code" href="class_smart_grid_toolbox_1_1_branch.html">Branch</a>(<span class="keyword">const</span> std::string &amp; <a class="code" href="class_smart_grid_toolbox_1_1_component.html#a1ed9cb36917dce6c52426240a283ab2e">name</a>, <span class="keyword">const</span> <a class="code" href="class_smart_grid_toolbox_1_1_phases.html">Phases</a> &amp; phases0, <span class="keyword">const</span> <a class="code" href="class_smart_grid_toolbox_1_1_phases.html">Phases</a> &amp; phases1);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">         /// @}</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"></span><span class="comment"></span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">         /// @name Bus accessors:</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">         /// @{</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"></span>        </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;         <span class="keyword">const</span> <a class="code" href="class_smart_grid_toolbox_1_1_bus.html">Bus</a> &amp; bus0()<span class="keyword"> const </span>{<span class="keywordflow">return</span> *bus0_;}</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;         <span class="keywordtype">void</span> setBus0(<a class="code" href="class_smart_grid_toolbox_1_1_bus.html">Bus</a> &amp; bus0);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;         <span class="keyword">const</span> <a class="code" href="class_smart_grid_toolbox_1_1_bus.html">Bus</a> &amp; bus1()<span class="keyword"> const </span>{<span class="keywordflow">return</span> *bus1_;}</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;         <span class="keywordtype">void</span> setBus1(<a class="code" href="class_smart_grid_toolbox_1_1_bus.html">Bus</a> &amp; bus1);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;         <span class="comment"></span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">         /// @}</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"></span><span class="comment"></span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">         /// @name Phase accessors:</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">         /// @{</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment"></span>         </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;         <span class="keyword">const</span> <a class="code" href="class_smart_grid_toolbox_1_1_phases.html">Phases</a> &amp; phases0()<span class="keyword"> const </span>{<span class="keywordflow">return</span> phases0_;}</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;         <span class="keyword">const</span> <a class="code" href="class_smart_grid_toolbox_1_1_phases.html">Phases</a> &amp; phases1()<span class="keyword"> const </span>{<span class="keywordflow">return</span> phases1_;}</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;         <span class="comment"></span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">         /// @}</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment"></span><span class="comment"></span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">         /// @name Nodal admittance matrix (Y) accessors:</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">         /// @{</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment"></span>         </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;         <span class="keyword">const</span> ublas::matrix&lt;Complex&gt; &amp; Y()<span class="keyword"> const </span>{<span class="keywordflow">return</span> Y_;}</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;         <span class="keywordtype">void</span> setY(<span class="keyword">const</span> ublas::matrix&lt;Complex&gt; &amp; Y);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;         <span class="comment"></span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">         /// @}</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment"></span>         <span class="comment"></span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">         /// @name Custom events:</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">         /// @{</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment"></span>         <span class="comment"></span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">         /// Event triggered whenever branch is changed in some way:</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_smart_grid_toolbox_1_1_branch.html#a9f7d660019d4bde9b2a787f83ba02604">   56</a></span>&#160;<span class="comment"></span>         <a class="code" href="class_smart_grid_toolbox_1_1_event.html">Event</a> &amp; <a class="code" href="class_smart_grid_toolbox_1_1_branch.html#a9f7d660019d4bde9b2a787f83ba02604">changed</a>() {<span class="keywordflow">return</span> changed_;}</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;         <span class="comment"></span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">         /// @}</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;         <a class="code" href="class_smart_grid_toolbox_1_1_bus.html">Bus</a>* bus0_;                      <span class="comment">///&lt; My bus 0.</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment"></span>         <a class="code" href="class_smart_grid_toolbox_1_1_bus.html">Bus</a>* bus1_;                      <span class="comment">///&lt; My bus 1.</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment"></span>         <a class="code" href="class_smart_grid_toolbox_1_1_phases.html">Phases</a> phases0_;                 <span class="comment">///&lt; Phases on bus 0.</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment"></span>         <a class="code" href="class_smart_grid_toolbox_1_1_phases.html">Phases</a> phases1_;                 <span class="comment">///&lt; Phases on bus 1.</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment"></span>         ublas::matrix&lt;Complex&gt; Y_;       <span class="comment">///&lt; Complex value of elements in bus admittance matrix in NR solver.</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment"></span>         <a class="code" href="class_smart_grid_toolbox_1_1_event.html">Event</a> changed_;                  <span class="comment">///&lt; Updates when a setpoint property of the branch changes.</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment"></span>   };</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#endif // BRANCH_DOT_H</span></div>
-<div class="ttc" id="class_smart_grid_toolbox_1_1_component_html_a1ed9cb36917dce6c52426240a283ab2e"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_component.html#a1ed9cb36917dce6c52426240a283ab2e">SmartGridToolbox::Component::name</a></div><div class="ttdeci">const std::string &amp; name() const </div><div class="ttdoc">Get the name of the object. </div><div class="ttdef"><b>Definition:</b> Component.h:34</div></div>
-<div class="ttc" id="class_smart_grid_toolbox_1_1_bus_html"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_bus.html">SmartGridToolbox::Bus</a></div><div class="ttdoc">A Bus component of a Network. </div><div class="ttdef"><b>Definition:</b> Bus.h:16</div></div>
-<div class="ttc" id="class_smart_grid_toolbox_1_1_phases_html"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_phases.html">SmartGridToolbox::Phases</a></div><div class="ttdef"><b>Definition:</b> PowerFlow.h:48</div></div>
-<div class="ttc" id="class_smart_grid_toolbox_1_1_branch_html_a9f7d660019d4bde9b2a787f83ba02604"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_branch.html#a9f7d660019d4bde9b2a787f83ba02604">SmartGridToolbox::Branch::changed</a></div><div class="ttdeci">Event &amp; changed()</div><div class="ttdoc">Event triggered whenever branch is changed in some way: </div><div class="ttdef"><b>Definition:</b> Branch.h:56</div></div>
-<div class="ttc" id="class_smart_grid_toolbox_1_1_component_html"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_component.html">SmartGridToolbox::Component</a></div><div class="ttdoc">Base class for simulation objects. </div><div class="ttdef"><b>Definition:</b> Component.h:13</div></div>
-<div class="ttc" id="class_smart_grid_toolbox_1_1_event_html"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_event.html">SmartGridToolbox::Event</a></div><div class="ttdoc">An event, when triggered, performs all of its registered actions. </div><div class="ttdef"><b>Definition:</b> Event.h:44</div></div>
-<div class="ttc" id="class_smart_grid_toolbox_1_1_branch_html"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_branch.html">SmartGridToolbox::Branch</a></div><div class="ttdoc">A Branch connects two Busses in a Network. </div><div class="ttdef"><b>Definition:</b> Branch.h:15</div></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">   /// @brief A Branch connects two Busses in a Network.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">   /// @ingroup PowerFlowCore</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_smart_grid_toolbox_1_1_branch.html">   16</a></span>&#160;<span class="comment"></span>   <span class="keyword">class </span><a class="code" href="class_smart_grid_toolbox_1_1_branch.html">Branch</a> : <span class="keyword">public</span> <a class="code" href="class_smart_grid_toolbox_1_1_component.html">Component</a></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;   {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;      <span class="keyword">public</span>:<span class="comment"></span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">         /// @name Lifecycle:</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">         /// @{</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;         <a class="code" href="class_smart_grid_toolbox_1_1_branch.html">Branch</a>(<span class="keyword">const</span> std::string &amp; <a class="code" href="class_smart_grid_toolbox_1_1_component.html#a1ed9cb36917dce6c52426240a283ab2e">name</a>, <span class="keyword">const</span> <a class="code" href="class_smart_grid_toolbox_1_1_phases.html">Phases</a> &amp; phases0, <span class="keyword">const</span> <a class="code" href="class_smart_grid_toolbox_1_1_phases.html">Phases</a> &amp; phases1);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">         /// @}</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"></span><span class="comment"></span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">         /// @name Bus accessors:</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">         /// @{</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"></span>        </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;         <span class="keyword">const</span> <a class="code" href="class_smart_grid_toolbox_1_1_bus.html">Bus</a> &amp; bus0()<span class="keyword"> const </span>{<span class="keywordflow">return</span> *bus0_;}</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;         <span class="keywordtype">void</span> setBus0(<a class="code" href="class_smart_grid_toolbox_1_1_bus.html">Bus</a> &amp; bus0);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;         <span class="keyword">const</span> <a class="code" href="class_smart_grid_toolbox_1_1_bus.html">Bus</a> &amp; bus1()<span class="keyword"> const </span>{<span class="keywordflow">return</span> *bus1_;}</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;         <span class="keywordtype">void</span> setBus1(<a class="code" href="class_smart_grid_toolbox_1_1_bus.html">Bus</a> &amp; bus1);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;         <span class="comment"></span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">         /// @}</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment"></span><span class="comment"></span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">         /// @name Phase accessors:</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">         /// @{</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment"></span>         </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;         <span class="keyword">const</span> <a class="code" href="class_smart_grid_toolbox_1_1_phases.html">Phases</a> &amp; phases0()<span class="keyword"> const </span>{<span class="keywordflow">return</span> phases0_;}</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;         <span class="keyword">const</span> <a class="code" href="class_smart_grid_toolbox_1_1_phases.html">Phases</a> &amp; phases1()<span class="keyword"> const </span>{<span class="keywordflow">return</span> phases1_;}</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;         <span class="comment"></span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">         /// @}</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment"></span><span class="comment"></span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">         /// @name Nodal admittance matrix (Y) accessors:</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">         /// @{</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment"></span>         </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;         <span class="keyword">const</span> ublas::matrix&lt;Complex&gt; &amp; Y()<span class="keyword"> const </span>{<span class="keywordflow">return</span> Y_;}</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;         <span class="keywordtype">void</span> setY(<span class="keyword">const</span> ublas::matrix&lt;Complex&gt; &amp; Y);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;         <span class="comment"></span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">         /// @}</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment"></span>         <span class="comment"></span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">         /// @name Custom events:</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">         /// @{</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment"></span>         <span class="comment"></span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">         /// @brief Event triggered whenever branch is changed in some way:</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_smart_grid_toolbox_1_1_branch.html#a9f7d660019d4bde9b2a787f83ba02604">   57</a></span>&#160;<span class="comment"></span>         <a class="code" href="class_smart_grid_toolbox_1_1_event.html">Event</a> &amp; <a class="code" href="class_smart_grid_toolbox_1_1_branch.html#a9f7d660019d4bde9b2a787f83ba02604">changed</a>() {<span class="keywordflow">return</span> changed_;}</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;         <span class="comment"></span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">         /// @}</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;         <a class="code" href="class_smart_grid_toolbox_1_1_bus.html">Bus</a>* bus0_;                      <span class="comment">///&lt; My bus 0.</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment"></span>         <a class="code" href="class_smart_grid_toolbox_1_1_bus.html">Bus</a>* bus1_;                      <span class="comment">///&lt; My bus 1.</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment"></span>         <a class="code" href="class_smart_grid_toolbox_1_1_phases.html">Phases</a> phases0_;                 <span class="comment">///&lt; Phases on bus 0.</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment"></span>         <a class="code" href="class_smart_grid_toolbox_1_1_phases.html">Phases</a> phases1_;                 <span class="comment">///&lt; Phases on bus 1.</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment"></span>         ublas::matrix&lt;Complex&gt; Y_;       <span class="comment">///&lt; Complex value of elements in bus admittance matrix in NR solver.</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment"></span>         <a class="code" href="class_smart_grid_toolbox_1_1_event.html">Event</a> changed_;                  <span class="comment">///&lt; Updates when a setpoint property of the branch changes.</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment"></span>   };</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#endif // BRANCH_DOT_H</span></div>
+<div class="ttc" id="class_smart_grid_toolbox_1_1_component_html_a1ed9cb36917dce6c52426240a283ab2e"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_component.html#a1ed9cb36917dce6c52426240a283ab2e">SmartGridToolbox::Component::name</a></div><div class="ttdeci">const std::string &amp; name() const </div><div class="ttdoc">Get the name of the object. </div><div class="ttdef"><b>Definition:</b> Component.h:47</div></div>
+<div class="ttc" id="class_smart_grid_toolbox_1_1_bus_html"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_bus.html">SmartGridToolbox::Bus</a></div><div class="ttdoc">A Bus component of a Network. </div><div class="ttdef"><b>Definition:</b> Bus.h:17</div></div>
+<div class="ttc" id="class_smart_grid_toolbox_1_1_phases_html"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_phases.html">SmartGridToolbox::Phases</a></div><div class="ttdef"><b>Definition:</b> PowerFlow.h:47</div></div>
+<div class="ttc" id="class_smart_grid_toolbox_1_1_branch_html_a9f7d660019d4bde9b2a787f83ba02604"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_branch.html#a9f7d660019d4bde9b2a787f83ba02604">SmartGridToolbox::Branch::changed</a></div><div class="ttdeci">Event &amp; changed()</div><div class="ttdoc">Event triggered whenever branch is changed in some way: </div><div class="ttdef"><b>Definition:</b> Branch.h:57</div></div>
+<div class="ttc" id="class_smart_grid_toolbox_1_1_component_html"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_component.html">SmartGridToolbox::Component</a></div><div class="ttdoc">Base class for simulation objects. Component derived classes are expected to override three methods: ...</div><div class="ttdef"><b>Definition:</b> Component.h:29</div></div>
+<div class="ttc" id="class_smart_grid_toolbox_1_1_event_html"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_event.html">SmartGridToolbox::Event</a></div><div class="ttdoc">An event, when triggered, performs all of its registered actions. Actions are stored as a list in the...</div><div class="ttdef"><b>Definition:</b> Event.h:44</div></div>
+<div class="ttc" id="class_smart_grid_toolbox_1_1_branch_html"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_branch.html">SmartGridToolbox::Branch</a></div><div class="ttdoc">A Branch connects two Busses in a Network. </div><div class="ttdef"><b>Definition:</b> Branch.h:16</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 5 2014 21:51:37 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Mar 19 2014 10:44:42 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

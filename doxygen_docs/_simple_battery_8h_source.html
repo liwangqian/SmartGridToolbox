@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SmartGridToolbox
-   &#160;<span id="projectnumber">v1.0.0</span>
+   &#160;<span id="projectnumber">v1.0.3</span>
    </div>
   </td>
  </tr>
@@ -100,7 +100,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>SmartGridToolbox</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{<span class="comment"></span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">   /// Basic battery class, deriving from DCPowerSourceBase.</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">   /// @brief Basic battery class, deriving from DCPowerSourceBase.</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_smart_grid_toolbox_1_1_simple_battery.html">   13</a></span>&#160;<span class="comment"></span>   <span class="keyword">class </span><a class="code" href="class_smart_grid_toolbox_1_1_simple_battery.html">SimpleBattery</a> : <span class="keyword">public</span> <a class="code" href="class_smart_grid_toolbox_1_1_dc_power_source_base.html">DcPowerSourceBase</a></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;   {</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;      <span class="keyword">public</span>:</div>
@@ -153,50 +153,49 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            charge_ = initCharge_;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;         }</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_smart_grid_toolbox_1_1_simple_battery.html#aa290fe09b47dae04fafe2cb5ee248c95">updateState</a>(Time t0, Time t1) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;         </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;         <span class="keyword">virtual</span> Time validUntil()<span class="keyword"> const override</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">         </span>{</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_smart_grid_toolbox_1_1_component.html#ac6ffa044b2d6726645de7e2e957fbcf4">time</a>() + dt_;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;         }</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      <span class="comment">// Overridden functions: from DCPowerSourceBase.</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;         <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="class_smart_grid_toolbox_1_1_simple_battery.html#a912548d44c162d4c107f1f88c53f3530">PDc</a>() <span class="keyword">const override</span>; <span class="comment">///&lt; Positive = charging.</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      <span class="comment">// Member variables.</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;         <span class="comment">// Parameters.</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;         Time dt_;                           <span class="comment">// Timestep.</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;         <span class="keywordtype">double</span> initCharge_;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;         <span class="keywordtype">double</span> maxCharge_;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;         <span class="keywordtype">double</span> maxChargePower_;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;         <span class="keywordtype">double</span> maxDischargePower_;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;         <span class="keywordtype">double</span> chargeEfficiency_;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;         <span class="keywordtype">double</span> dischargeEfficiency_;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                  </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;         <span class="comment">// Setpoint.</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;         <span class="keywordtype">double</span> requestedPower_; <span class="comment">///&lt; Positive = charging.</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;         <span class="comment">// State.</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;         <span class="keywordtype">double</span> charge_;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;   };</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#endif // SIMPLE_BATTERY_DOT_H</span></div>
-<div class="ttc" id="class_smart_grid_toolbox_1_1_component_html_a1ed9cb36917dce6c52426240a283ab2e"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_component.html#a1ed9cb36917dce6c52426240a283ab2e">SmartGridToolbox::Component::name</a></div><div class="ttdeci">const std::string &amp; name() const </div><div class="ttdoc">Get the name of the object. </div><div class="ttdef"><b>Definition:</b> Component.h:34</div></div>
-<div class="ttc" id="class_smart_grid_toolbox_1_1_dc_power_source_base_html"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_dc_power_source_base.html">SmartGridToolbox::DcPowerSourceBase</a></div><div class="ttdoc">DC power source. </div><div class="ttdef"><b>Definition:</b> DcPowerSourceBase.h:11</div></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_smart_grid_toolbox_1_1_simple_battery.html#a7023feb7aee5db421265c70d12e3675d">updateState</a>(Time t) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;         </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;         <span class="keyword">virtual</span> Time validUntil()<span class="keyword"> const override</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">         </span>{</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_smart_grid_toolbox_1_1_component.html#ac6ffa044b2d6726645de7e2e957fbcf4">time</a>() + dt_;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;         }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      <span class="comment">// Overridden functions: from DCPowerSourceBase.</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;         <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="class_smart_grid_toolbox_1_1_simple_battery.html#a912548d44c162d4c107f1f88c53f3530">PDc</a>() <span class="keyword">const override</span>; <span class="comment">///&lt; Positive = charging.</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      <span class="comment">// Member variables.</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;         <span class="comment">// Parameters.</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;         Time dt_;                           <span class="comment">// Timestep.</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;         <span class="keywordtype">double</span> initCharge_;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;         <span class="keywordtype">double</span> maxCharge_;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;         <span class="keywordtype">double</span> maxChargePower_;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;         <span class="keywordtype">double</span> maxDischargePower_;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;         <span class="keywordtype">double</span> chargeEfficiency_;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;         <span class="keywordtype">double</span> dischargeEfficiency_;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                  </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;         <span class="comment">// Setpoint.</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;         <span class="keywordtype">double</span> requestedPower_; <span class="comment">///&lt; Positive = charging.</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;         <span class="comment">// State.</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;         <span class="keywordtype">double</span> charge_;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;   };</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#endif // SIMPLE_BATTERY_DOT_H</span></div>
+<div class="ttc" id="class_smart_grid_toolbox_1_1_component_html_a1ed9cb36917dce6c52426240a283ab2e"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_component.html#a1ed9cb36917dce6c52426240a283ab2e">SmartGridToolbox::Component::name</a></div><div class="ttdeci">const std::string &amp; name() const </div><div class="ttdoc">Get the name of the object. </div><div class="ttdef"><b>Definition:</b> Component.h:47</div></div>
+<div class="ttc" id="class_smart_grid_toolbox_1_1_dc_power_source_base_html"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_dc_power_source_base.html">SmartGridToolbox::DcPowerSourceBase</a></div><div class="ttdoc">DC power source. Abstract base class for any object that can provide a source of DC power...</div><div class="ttdef"><b>Definition:</b> DcPowerSourceBase.h:11</div></div>
 <div class="ttc" id="class_smart_grid_toolbox_1_1_simple_battery_html_a912548d44c162d4c107f1f88c53f3530"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_simple_battery.html#a912548d44c162d4c107f1f88c53f3530">SmartGridToolbox::SimpleBattery::PDc</a></div><div class="ttdeci">virtual double PDc() const override</div><div class="ttdoc">Positive = charging. </div><div class="ttdef"><b>Definition:</b> SimpleBattery.cc:19</div></div>
-<div class="ttc" id="class_smart_grid_toolbox_1_1_component_html_a10667a6185d07622297718e001ece358"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_component.html#a10667a6185d07622297718e001ece358">SmartGridToolbox::Component::needsUpdate</a></div><div class="ttdeci">Event &amp; needsUpdate()</div><div class="ttdoc">Triggered when I am flagged for future update. </div><div class="ttdef"><b>Definition:</b> Component.h:121</div></div>
-<div class="ttc" id="class_smart_grid_toolbox_1_1_simple_battery_html_aa290fe09b47dae04fafe2cb5ee248c95"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_simple_battery.html#aa290fe09b47dae04fafe2cb5ee248c95">SmartGridToolbox::SimpleBattery::updateState</a></div><div class="ttdeci">virtual void updateState(Time t0, Time t1) override</div><div class="ttdoc">Bring state up to time current time. </div><div class="ttdef"><b>Definition:</b> SimpleBattery.cc:9</div></div>
-<div class="ttc" id="class_smart_grid_toolbox_1_1_simple_battery_html_a9024999c453da2db67bba186cebaf880"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_simple_battery.html#a9024999c453da2db67bba186cebaf880">SmartGridToolbox::SimpleBattery::initializeState</a></div><div class="ttdeci">virtual void initializeState() override</div><div class="ttdoc">Reset state of the object, time is at current time. </div><div class="ttdef"><b>Definition:</b> SimpleBattery.h:60</div></div>
-<div class="ttc" id="class_smart_grid_toolbox_1_1_component_html_ac6ffa044b2d6726645de7e2e957fbcf4"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_component.html#ac6ffa044b2d6726645de7e2e957fbcf4">SmartGridToolbox::Component::time</a></div><div class="ttdeci">Time time() const </div><div class="ttdoc">Get the current step for the object. </div><div class="ttdef"><b>Definition:</b> Component.h:51</div></div>
+<div class="ttc" id="class_smart_grid_toolbox_1_1_simple_battery_html_a7023feb7aee5db421265c70d12e3675d"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_simple_battery.html#a7023feb7aee5db421265c70d12e3675d">SmartGridToolbox::SimpleBattery::updateState</a></div><div class="ttdeci">virtual void updateState(Time t) override</div><div class="ttdoc">Bring state up to time current time. </div><div class="ttdef"><b>Definition:</b> SimpleBattery.cc:9</div></div>
+<div class="ttc" id="class_smart_grid_toolbox_1_1_component_html_a10667a6185d07622297718e001ece358"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_component.html#a10667a6185d07622297718e001ece358">SmartGridToolbox::Component::needsUpdate</a></div><div class="ttdeci">Event &amp; needsUpdate()</div><div class="ttdoc">Triggered when I am flagged for future update. </div><div class="ttdef"><b>Definition:</b> Component.h:134</div></div>
+<div class="ttc" id="class_smart_grid_toolbox_1_1_simple_battery_html_a9024999c453da2db67bba186cebaf880"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_simple_battery.html#a9024999c453da2db67bba186cebaf880">SmartGridToolbox::SimpleBattery::initializeState</a></div><div class="ttdeci">virtual void initializeState() override</div><div class="ttdoc">Reset state of the object, time will be at negative infinity. </div><div class="ttdef"><b>Definition:</b> SimpleBattery.h:60</div></div>
+<div class="ttc" id="class_smart_grid_toolbox_1_1_component_html_ac6ffa044b2d6726645de7e2e957fbcf4"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_component.html#ac6ffa044b2d6726645de7e2e957fbcf4">SmartGridToolbox::Component::time</a></div><div class="ttdeci">Time time() const </div><div class="ttdoc">Get the current step for the object. </div><div class="ttdef"><b>Definition:</b> Component.h:64</div></div>
 <div class="ttc" id="class_smart_grid_toolbox_1_1_simple_battery_html"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_simple_battery.html">SmartGridToolbox::SimpleBattery</a></div><div class="ttdoc">Basic battery class, deriving from DCPowerSourceBase. </div><div class="ttdef"><b>Definition:</b> SimpleBattery.h:13</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 5 2014 21:51:37 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Mar 19 2014 10:44:42 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

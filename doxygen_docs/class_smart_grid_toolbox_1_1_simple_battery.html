@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SmartGridToolbox
-   &#160;<span id="projectnumber">v1.0.0</span>
+   &#160;<span id="projectnumber">v1.0.3</span>
    </div>
   </td>
  </tr>
@@ -84,7 +84,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>SmartGridToolbox</b></li><li class="navelem"><a class="el" href="class_smart_grid_toolbox_1_1_simple_battery.html">SimpleBattery</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespace_smart_grid_toolbox.html">SmartGridToolbox</a></li><li class="navelem"><a class="el" href="class_smart_grid_toolbox_1_1_simple_battery.html">SimpleBattery</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -107,8 +107,8 @@ Inheritance diagram for SmartGridToolbox::SimpleBattery:</div>
  <div class="center">
   <img src="class_smart_grid_toolbox_1_1_simple_battery.png" usemap="#SmartGridToolbox::SimpleBattery_map" alt=""/>
   <map id="SmartGridToolbox::SimpleBattery_map" name="SmartGridToolbox::SimpleBattery_map">
-<area href="class_smart_grid_toolbox_1_1_dc_power_source_base.html" title="DC power source. " alt="SmartGridToolbox::DcPowerSourceBase" shape="rect" coords="0,56,239,80"/>
-<area href="class_smart_grid_toolbox_1_1_component.html" title="Base class for simulation objects. " alt="SmartGridToolbox::Component" shape="rect" coords="0,0,239,24"/>
+<area href="class_smart_grid_toolbox_1_1_dc_power_source_base.html" title="DC power source. Abstract base class for any object that can provide a source of DC power..." alt="SmartGridToolbox::DcPowerSourceBase" shape="rect" coords="0,56,239,80"/>
+<area href="class_smart_grid_toolbox_1_1_component.html" title="Base class for simulation objects. Component derived classes are expected to override three methods: ..." alt="SmartGridToolbox::Component" shape="rect" coords="0,0,239,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -184,10 +184,10 @@ virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_smart_grid_toolbox_1_1_component.html#ac088f9b5a6f9ddbca6b85d31f05ccf43">Component</a> (const std::string &amp;<a class="el" href="class_smart_grid_toolbox_1_1_component.html#a1ed9cb36917dce6c52426240a283ab2e">name</a>)</td></tr>
 <tr class="memdesc:ac088f9b5a6f9ddbca6b85d31f05ccf43 inherit pub_methods_class_smart_grid_toolbox_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor. <br/></td></tr>
 <tr class="separator:ac088f9b5a6f9ddbca6b85d31f05ccf43 inherit pub_methods_class_smart_grid_toolbox_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4607d4fbb4f0e8c5c13fdb7f081cd8db inherit pub_methods_class_smart_grid_toolbox_1_1_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4607d4fbb4f0e8c5c13fdb7f081cd8db"></a>
-virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_smart_grid_toolbox_1_1_component.html#a4607d4fbb4f0e8c5c13fdb7f081cd8db">~Component</a> ()</td></tr>
-<tr class="memdesc:a4607d4fbb4f0e8c5c13fdb7f081cd8db inherit pub_methods_class_smart_grid_toolbox_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br/></td></tr>
-<tr class="separator:a4607d4fbb4f0e8c5c13fdb7f081cd8db inherit pub_methods_class_smart_grid_toolbox_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1d898e46a2ae15330280b0b0f3eeb9b inherit pub_methods_class_smart_grid_toolbox_1_1_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab1d898e46a2ae15330280b0b0f3eeb9b"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_smart_grid_toolbox_1_1_component.html#ab1d898e46a2ae15330280b0b0f3eeb9b">~Component</a> ()=0</td></tr>
+<tr class="memdesc:ab1d898e46a2ae15330280b0b0f3eeb9b inherit pub_methods_class_smart_grid_toolbox_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br/></td></tr>
+<tr class="separator:ab1d898e46a2ae15330280b0b0f3eeb9b inherit pub_methods_class_smart_grid_toolbox_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ed9cb36917dce6c52426240a283ab2e inherit pub_methods_class_smart_grid_toolbox_1_1_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1ed9cb36917dce6c52426240a283ab2e"></a>
 const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_smart_grid_toolbox_1_1_component.html#a1ed9cb36917dce6c52426240a283ab2e">name</a> () const </td></tr>
 <tr class="memdesc:a1ed9cb36917dce6c52426240a283ab2e inherit pub_methods_class_smart_grid_toolbox_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the name of the object. <br/></td></tr>
@@ -216,8 +216,9 @@ const std::vector&lt; const <br class="typebreak"/>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_smart_grid_toolbox_1_1_component.html#aa140d4b88b1162d3aa99506472f08846">dependsOn</a> (const <a class="el" href="class_smart_grid_toolbox_1_1_component.html">Component</a> &amp;b)</td></tr>
 <tr class="memdesc:aa140d4b88b1162d3aa99506472f08846 inherit pub_methods_class_smart_grid_toolbox_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Components on which I depend will update first. <br/></td></tr>
 <tr class="separator:aa140d4b88b1162d3aa99506472f08846 inherit pub_methods_class_smart_grid_toolbox_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73e455623c670eddcf085a7ccbdd950c inherit pub_methods_class_smart_grid_toolbox_1_1_component"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_smart_grid_toolbox_1_1_component.html#a73e455623c670eddcf085a7ccbdd950c">initialize</a> ()</td></tr>
-<tr class="memdesc:a73e455623c670eddcf085a7ccbdd950c inherit pub_methods_class_smart_grid_toolbox_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize state of the object.  <a href="#a73e455623c670eddcf085a7ccbdd950c">More...</a><br/></td></tr>
+<tr class="memitem:a73e455623c670eddcf085a7ccbdd950c inherit pub_methods_class_smart_grid_toolbox_1_1_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a73e455623c670eddcf085a7ccbdd950c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_smart_grid_toolbox_1_1_component.html#a73e455623c670eddcf085a7ccbdd950c">initialize</a> ()</td></tr>
+<tr class="memdesc:a73e455623c670eddcf085a7ccbdd950c inherit pub_methods_class_smart_grid_toolbox_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize state of the object. This simply does the initial work needed to set the object up, prior to simulation. The time following initialization will be set to negative infinity, and the object will not be considered to be in an invalid state. To progress to a valid state, the object will need to undergo an <a class="el" href="class_smart_grid_toolbox_1_1_component.html#a435a1a591508e39a5b0ade54a4f2f1ca" title="Bring state up to time t. ">update()</a>. <br/></td></tr>
 <tr class="separator:a73e455623c670eddcf085a7ccbdd950c inherit pub_methods_class_smart_grid_toolbox_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a435a1a591508e39a5b0ade54a4f2f1ca inherit pub_methods_class_smart_grid_toolbox_1_1_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a435a1a591508e39a5b0ade54a4f2f1ca"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_smart_grid_toolbox_1_1_component.html#a435a1a591508e39a5b0ade54a4f2f1ca">update</a> (Time t)</td></tr>
@@ -248,12 +249,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a9024999c453da2db67bba186cebaf880"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9024999c453da2db67bba186cebaf880"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_smart_grid_toolbox_1_1_simple_battery.html#a9024999c453da2db67bba186cebaf880">initializeState</a> () override</td></tr>
-<tr class="memdesc:a9024999c453da2db67bba186cebaf880"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset state of the object, time is at current time. <br/></td></tr>
+<tr class="memdesc:a9024999c453da2db67bba186cebaf880"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset state of the object, time will be at negative infinity. <br/></td></tr>
 <tr class="separator:a9024999c453da2db67bba186cebaf880"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa290fe09b47dae04fafe2cb5ee248c95"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa290fe09b47dae04fafe2cb5ee248c95"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_smart_grid_toolbox_1_1_simple_battery.html#aa290fe09b47dae04fafe2cb5ee248c95">updateState</a> (Time t0, Time t1) override</td></tr>
-<tr class="memdesc:aa290fe09b47dae04fafe2cb5ee248c95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bring state up to time current time. <br/></td></tr>
-<tr class="separator:aa290fe09b47dae04fafe2cb5ee248c95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7023feb7aee5db421265c70d12e3675d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7023feb7aee5db421265c70d12e3675d"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_smart_grid_toolbox_1_1_simple_battery.html#a7023feb7aee5db421265c70d12e3675d">updateState</a> (Time t) override</td></tr>
+<tr class="memdesc:a7023feb7aee5db421265c70d12e3675d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bring state up to time current time. <br/></td></tr>
+<tr class="separator:a7023feb7aee5db421265c70d12e3675d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b6f89322b6d25471af9bdc4a1e6e65c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b6f89322b6d25471af9bdc4a1e6e65c"></a>
 virtual Time&#160;</td><td class="memItemRight" valign="bottom"><b>validUntil</b> () const override</td></tr>
 <tr class="separator:a0b6f89322b6d25471af9bdc4a1e6e65c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -275,7 +276,7 @@ typedef std::vector&lt; const <br class="typebreak"/>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 5 2014 21:51:41 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Mar 19 2014 10:44:45 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SmartGridToolbox
-   &#160;<span id="projectnumber">v1.0.0</span>
+   &#160;<span id="projectnumber">v1.0.3</span>
    </div>
   </td>
  </tr>
@@ -84,7 +84,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>SmartGridToolbox</b></li><li class="navelem"><a class="el" href="class_smart_grid_toolbox_1_1_wo_node.html">WoNode</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespace_smart_grid_toolbox.html">SmartGridToolbox</a></li><li class="navelem"><a class="el" href="class_smart_grid_toolbox_1_1_wo_node.html">WoNode</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -105,11 +105,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aac198a22995741eb32dc8c5e9805d6e4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aac198a22995741eb32dc8c5e9805d6e4"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>index</b> () const </td></tr>
 <tr class="separator:aac198a22995741eb32dc8c5e9805d6e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a326438eb66886af6cc07cda2394ee8c2"><td class="memItemLeft" align="right" valign="top">*bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_smart_grid_toolbox_1_1_wo_node.html#a326438eb66886af6cc07cda2394ee8c2">precedes</a> (const <a class="el" href="class_smart_grid_toolbox_1_1_wo_node.html">WoNode</a> &amp;nd) const </td></tr>
-<tr class="memdesc:a326438eb66886af6cc07cda2394ee8c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is there a link from here to nd?  <a href="#a326438eb66886af6cc07cda2394ee8c2">More...</a><br/></td></tr>
-<tr class="separator:a326438eb66886af6cc07cda2394ee8c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98b3321a6173da3a14b8f4b2b7c6a686"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_smart_grid_toolbox_1_1_wo_node.html#a98b3321a6173da3a14b8f4b2b7c6a686">dominates</a> (const <a class="el" href="class_smart_grid_toolbox_1_1_wo_node.html">WoNode</a> &amp;nd) const </td></tr>
-<tr class="memdesc:a98b3321a6173da3a14b8f4b2b7c6a686"><td class="mdescLeft">&#160;</td><td class="mdescRight">Can I get from here to nd, but not the reverse?  <a href="#a98b3321a6173da3a14b8f4b2b7c6a686">More...</a><br/></td></tr>
+<tr class="memitem:a3598ec74222b1da7413c5a653790e13f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3598ec74222b1da7413c5a653790e13f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_smart_grid_toolbox_1_1_wo_node.html#a3598ec74222b1da7413c5a653790e13f">precedes</a> (const <a class="el" href="class_smart_grid_toolbox_1_1_wo_node.html">WoNode</a> &amp;nd) const </td></tr>
+<tr class="memdesc:a3598ec74222b1da7413c5a653790e13f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is there a link from here to nd? This relation could model dependency: nd would directly depend on me. <br/></td></tr>
+<tr class="separator:a3598ec74222b1da7413c5a653790e13f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98b3321a6173da3a14b8f4b2b7c6a686"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a98b3321a6173da3a14b8f4b2b7c6a686"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_smart_grid_toolbox_1_1_wo_node.html#a98b3321a6173da3a14b8f4b2b7c6a686">dominates</a> (const <a class="el" href="class_smart_grid_toolbox_1_1_wo_node.html">WoNode</a> &amp;nd) const </td></tr>
+<tr class="memdesc:a98b3321a6173da3a14b8f4b2b7c6a686"><td class="mdescLeft">&#160;</td><td class="mdescRight">Can I get from here to nd, but not the reverse? This relation could model dependency: nd would indirectly depend on me, and not vice-versa. Thus domination == "goes first.". <br/></td></tr>
 <tr class="separator:a98b3321a6173da3a14b8f4b2b7c6a686"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d8f824ec8b7000037c7b651465aad89"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8d8f824ec8b7000037c7b651465aad89"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_smart_grid_toolbox_1_1_wo_node.html#a8d8f824ec8b7000037c7b651465aad89">dfs</a> (std::vector&lt; <a class="el" href="class_smart_grid_toolbox_1_1_wo_node.html">WoNode</a> * &gt; &amp;stack)</td></tr>
@@ -121,103 +123,11 @@ Friends</h2></td></tr>
 <tr class="memitem:a52b697e810f24c64684619b891a33c9b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a52b697e810f24c64684619b891a33c9b"></a>
 class&#160;</td><td class="memItemRight" valign="bottom"><b>WoGraph</b></td></tr>
 <tr class="separator:a52b697e810f24c64684619b891a33c9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab98bac6a4bc5321332dadbd253cbb982"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_smart_grid_toolbox_1_1_wo_node.html#ab98bac6a4bc5321332dadbd253cbb982">operator&lt;</a> (const <a class="el" href="class_smart_grid_toolbox_1_1_wo_node.html">WoNode</a> &amp;lhs, const <a class="el" href="class_smart_grid_toolbox_1_1_wo_node.html">WoNode</a> &amp;rhs)</td></tr>
-<tr class="memdesc:ab98bac6a4bc5321332dadbd253cbb982"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partial ordering operator.  <a href="#ab98bac6a4bc5321332dadbd253cbb982">More...</a><br/></td></tr>
+<tr class="memitem:ab98bac6a4bc5321332dadbd253cbb982"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab98bac6a4bc5321332dadbd253cbb982"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_smart_grid_toolbox_1_1_wo_node.html#ab98bac6a4bc5321332dadbd253cbb982">operator&lt;</a> (const <a class="el" href="class_smart_grid_toolbox_1_1_wo_node.html">WoNode</a> &amp;lhs, const <a class="el" href="class_smart_grid_toolbox_1_1_wo_node.html">WoNode</a> &amp;rhs)</td></tr>
+<tr class="memdesc:ab98bac6a4bc5321332dadbd253cbb982"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partial ordering operator. Smaller goes first. So lhs &lt; rhs if lhs dominates rhs. <br/></td></tr>
 <tr class="separator:ab98bac6a4bc5321332dadbd253cbb982"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a326438eb66886af6cc07cda2394ee8c2"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">* bool SmartGridToolbox::WoNode::precedes </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_smart_grid_toolbox_1_1_wo_node.html">WoNode</a> &amp;&#160;</td>
-          <td class="paramname"><em>nd</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Is there a link from here to nd? </p>
-<p>This relation could model dependency: nd would directly depend on me. </p>
-
-</div>
-</div>
-<a class="anchor" id="a98b3321a6173da3a14b8f4b2b7c6a686"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool SmartGridToolbox::WoNode::dominates </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_smart_grid_toolbox_1_1_wo_node.html">WoNode</a> &amp;&#160;</td>
-          <td class="paramname"><em>nd</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Can I get from here to nd, but not the reverse? </p>
-<p>This relation could model dependency: nd would indirectly depend on me, and not vice-versa. Thus domination == "goes first." </p>
-
-</div>
-</div>
-<h2 class="groupheader">Friends And Related Function Documentation</h2>
-<a class="anchor" id="ab98bac6a4bc5321332dadbd253cbb982"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool operator&lt; </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_smart_grid_toolbox_1_1_wo_node.html">WoNode</a> &amp;&#160;</td>
-          <td class="paramname"><em>lhs</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="class_smart_grid_toolbox_1_1_wo_node.html">WoNode</a> &amp;&#160;</td>
-          <td class="paramname"><em>rhs</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Partial ordering operator. </p>
-<p>Smaller goes first. So lhs &lt; rhs if lhs dominates rhs. </p>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>/Users/dgordon/Devel/SmartGridToolbox/SmartGridToolbox/<a class="el" href="_weak_order_8h_source.html">WeakOrder.h</a></li>
 <li>/Users/dgordon/Devel/SmartGridToolbox/SmartGridToolbox/WeakOrder.cc</li>
@@ -225,7 +135,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>WoGraph</b></td></tr
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 5 2014 21:51:44 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Mar 19 2014 10:44:48 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['units',['Units',['../namespace_units.html',1,'']]]
+  ['smartgridtoolbox',['SmartGridToolbox',['../namespace_smart_grid_toolbox.html',1,'']]]
 ];

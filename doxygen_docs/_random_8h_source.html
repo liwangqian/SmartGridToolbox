@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SmartGridToolbox
-   &#160;<span id="projectnumber">v1.0.0</span>
+   &#160;<span id="projectnumber">v1.0.3</span>
    </div>
   </td>
  </tr>
@@ -97,23 +97,38 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span>SmartGridToolbox</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{<span class="comment"></span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">   /// @brief Sample from discrete distribution with nProbs given probabilities.</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"></span>   <span class="keywordtype">double</span> randDiscrete(<span class="keyword">const</span> <span class="keywordtype">double</span>* probs, <span class="keywordtype">int</span> nProbs);<span class="comment"></span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">   /// @brief Sample from normal distribution with given mean and s.d.</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"></span>   <span class="keywordtype">double</span> randNormal(<span class="keywordtype">double</span> mu, <span class="keywordtype">double</span> sig);<span class="comment"></span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">   /// @brief Sample from uniform distribution with given lower and upper bounds.</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"></span>   <span class="keywordtype">double</span> randUniform(<span class="keywordtype">double</span> lower, <span class="keywordtype">double</span> upper);<span class="comment"></span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">   /// @brief Sample from integer uniform distribution with given lower and upper bounds.</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"></span>   <span class="keywordtype">double</span> randUniformInt(<span class="keywordtype">int</span> lower, <span class="keywordtype">int</span> upper);<span class="comment"></span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">   /// @brief Sample from Weibull distribution with given a and b parameters.</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"></span>   <span class="keywordtype">double</span> randWeibull(<span class="keywordtype">double</span> a, <span class="keywordtype">double</span> b);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#endif // RANDOM_DOT_H</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">   /// @addtogroup Common</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">   /// @{</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"></span><span class="comment"></span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">   /// @name Random number generation.</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">   /// @{</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"></span>   <span class="comment"></span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">   /// @brief Sample from discrete distribution with nProbs given probabilities.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"></span>   <span class="keywordtype">double</span> <a class="code" href="group___common.html#ga6cc5b3740b7496823019501b3022290b">randDiscrete</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>* probs, <span class="keywordtype">int</span> nProbs);<span class="comment"></span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">   /// @brief Sample from normal distribution with given mean and s.d.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"></span>   <span class="keywordtype">double</span> <a class="code" href="group___common.html#gab82615f37ca15fd6e1b634bdcb612559">randNormal</a>(<span class="keywordtype">double</span> mu, <span class="keywordtype">double</span> sig);<span class="comment"></span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">   /// @brief Sample from uniform distribution with given lower and upper bounds.</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"></span>   <span class="keywordtype">double</span> <a class="code" href="group___common.html#gabfccb7caf003f5683e51dd9ecbde5d06">randUniform</a>(<span class="keywordtype">double</span> lower, <span class="keywordtype">double</span> upper);<span class="comment"></span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">   /// @brief Sample from integer uniform distribution with given lower and upper bounds.</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"></span>   <span class="keywordtype">double</span> <a class="code" href="group___common.html#ga43f0b2810cbea2e5c50068f80dd2b962">randUniformInt</a>(<span class="keywordtype">int</span> lower, <span class="keywordtype">int</span> upper);<span class="comment"></span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">   /// @brief Sample from Weibull distribution with given a and b parameters.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"></span>   <span class="keywordtype">double</span> <a class="code" href="group___common.html#gaa7c72ad40ce1d1379a438d1b2e90ddce">randWeibull</a>(<span class="keywordtype">double</span> a, <span class="keywordtype">double</span> b);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;   <span class="comment"></span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">   /// @}</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"></span><span class="comment"></span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">   /// @}</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"></span>}</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#endif // RANDOM_DOT_H</span></div>
+<div class="ttc" id="group___common_html_gab82615f37ca15fd6e1b634bdcb612559"><div class="ttname"><a href="group___common.html#gab82615f37ca15fd6e1b634bdcb612559">SmartGridToolbox::randNormal</a></div><div class="ttdeci">double randNormal(double mu, double sig)</div><div class="ttdoc">Sample from normal distribution with given mean and s.d. </div><div class="ttdef"><b>Definition:</b> Random.cc:18</div></div>
+<div class="ttc" id="group___common_html_gabfccb7caf003f5683e51dd9ecbde5d06"><div class="ttname"><a href="group___common.html#gabfccb7caf003f5683e51dd9ecbde5d06">SmartGridToolbox::randUniform</a></div><div class="ttdeci">double randUniform(double lower, double upper)</div><div class="ttdoc">Sample from uniform distribution with given lower and upper bounds. </div><div class="ttdef"><b>Definition:</b> Random.cc:25</div></div>
+<div class="ttc" id="group___common_html_ga6cc5b3740b7496823019501b3022290b"><div class="ttname"><a href="group___common.html#ga6cc5b3740b7496823019501b3022290b">SmartGridToolbox::randDiscrete</a></div><div class="ttdeci">double randDiscrete(const double *probs, int nProbs)</div><div class="ttdoc">Sample from discrete distribution with nProbs given probabilities. </div><div class="ttdef"><b>Definition:</b> Random.cc:12</div></div>
+<div class="ttc" id="group___common_html_ga43f0b2810cbea2e5c50068f80dd2b962"><div class="ttname"><a href="group___common.html#ga43f0b2810cbea2e5c50068f80dd2b962">SmartGridToolbox::randUniformInt</a></div><div class="ttdeci">double randUniformInt(int lower, int upper)</div><div class="ttdoc">Sample from integer uniform distribution with given lower and upper bounds. </div><div class="ttdef"><b>Definition:</b> Random.cc:32</div></div>
+<div class="ttc" id="group___common_html_gaa7c72ad40ce1d1379a438d1b2e90ddce"><div class="ttname"><a href="group___common.html#gaa7c72ad40ce1d1379a438d1b2e90ddce">SmartGridToolbox::randWeibull</a></div><div class="ttdeci">double randWeibull(double a, double b)</div><div class="ttdoc">Sample from Weibull distribution with given a and b parameters. </div><div class="ttdef"><b>Definition:</b> Random.cc:39</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 5 2014 21:51:37 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Mar 19 2014 10:44:42 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

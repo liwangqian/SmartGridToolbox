@@ -54,11 +54,11 @@ int main()
    // Now populate the model using factory functionality of Model.
    // The RegularUpdateComponent does nothing other than regularly update itself, every 1 second in this case.
    RegularUpdateComponent & ticker1 = 
-      mod.newComponent<RegularUpdateComponent>("ticker_1");
+      mod.newComponent&ltRegularUpdateComponent&gt("ticker_1");
    ticker1.setDt(seconds(1));
    // And here's one that updates every 2 seconds...
    RegularUpdateComponent & ticker2 = 
-      mod.newComponent<RegularUpdateComponent>("ticker_2");
+      mod.newComponent&ltRegularUpdateComponent&gt("ticker_2");
    ticker2.setDt(seconds(2));
 
    mod.validate();
@@ -83,7 +83,7 @@ int main()
 }</code></pre>
 				</p>
 				<p>
-					It illustrates both how to set up a simple SmartGridToolbox program, and certain simple aspects of the event based simulation architecture. Note that at each timestep, more than one component update may occur. To get finer control over the updates, we can change the final <code>while</code> loop so that looping occurs at every single component update, but changing <code>while (sim.doTimestep())</code> to <code>while (sim.doNextUpdate())</code> <em>Exercise: copy the tutorial directory and try it.</em>
+					It illustrates both how to set up a simple SmartGridToolbox program, and certain simple aspects of the event based simulation architecture.
 				</p>
 				<p>
 					The output, upon running the program above, is:
@@ -111,6 +111,14 @@ New timestep     : simulation is at time = 00:00:03.
 New timestep     : simulation is at time = 00:00:04.
                  : ticker_1 is at time = 00:00:04.
                  : ticker_2 is at time = 00:00:04.</code></pre>
+				</p>
+				<p>
+					Note that at each timestep, more than one component update may occur. To get finer control over the updates, we can change the final <code>while</code> loop so that looping occurs at every single component update, but changing <code>while (sim.doTimestep())</code> to <code>while (sim.doNextUpdate())</code> <strong>Exercise: copy the tutorial directory and try it</strong>. 
+				<p> 
+					Also note that when the simulation is at a given time, there may be components that have not yet updated to that time. This will be the case when they have not required a <em>scheduled update</em> at that time, and no other component has requested that they require a <em>contingent update</em> - but more about this later.
+				</p>
+				<p>
+					In the example above, we added components to the simulation programmatically. In most SmartGridToolbox programs, the components will instead be parsed in from a YAML configuration file.
 				</p>
 			</section>
 		</div>

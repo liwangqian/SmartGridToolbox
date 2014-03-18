@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SmartGridToolbox
-   &#160;<span id="projectnumber">v1.0.0</span>
+   &#160;<span id="projectnumber">v1.0.3</span>
    </div>
   </td>
  </tr>
@@ -193,7 +193,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      <span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_smart_grid_toolbox_1_1_simple_building.html#ae749a16c88ea8cb12fb891e7732cb6e7">initializeState</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_smart_grid_toolbox_1_1_simple_building.html#acea24c55dd18422b775b75af4550fddf">updateState</a>(Time t0, Time t1) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_smart_grid_toolbox_1_1_simple_building.html#adb6638c1971cdce9afc1de76e045dd36">updateState</a>(Time t) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      <span class="comment">// Private member functions:</span></div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;      <span class="keyword">private</span>:</div>
@@ -226,19 +226,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;   };</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;}</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="preprocessor">#endif // SIMPLE_BUILDING_DOT_H</span></div>
-<div class="ttc" id="class_smart_grid_toolbox_1_1_component_html_a1ed9cb36917dce6c52426240a283ab2e"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_component.html#a1ed9cb36917dce6c52426240a283ab2e">SmartGridToolbox::Component::name</a></div><div class="ttdeci">const std::string &amp; name() const </div><div class="ttdoc">Get the name of the object. </div><div class="ttdef"><b>Definition:</b> Component.h:34</div></div>
-<div class="ttc" id="class_smart_grid_toolbox_1_1_simple_building_html_ae749a16c88ea8cb12fb891e7732cb6e7"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_simple_building.html#ae749a16c88ea8cb12fb891e7732cb6e7">SmartGridToolbox::SimpleBuilding::initializeState</a></div><div class="ttdeci">virtual void initializeState() override</div><div class="ttdoc">Reset state of the object, time is at current time. </div><div class="ttdef"><b>Definition:</b> SimpleBuilding.cc:38</div></div>
-<div class="ttc" id="class_smart_grid_toolbox_1_1_component_html_a10667a6185d07622297718e001ece358"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_component.html#a10667a6185d07622297718e001ece358">SmartGridToolbox::Component::needsUpdate</a></div><div class="ttdeci">Event &amp; needsUpdate()</div><div class="ttdoc">Triggered when I am flagged for future update. </div><div class="ttdef"><b>Definition:</b> Component.h:121</div></div>
-<div class="ttc" id="class_smart_grid_toolbox_1_1_simple_building_html_acea24c55dd18422b775b75af4550fddf"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_simple_building.html#acea24c55dd18422b775b75af4550fddf">SmartGridToolbox::SimpleBuilding::updateState</a></div><div class="ttdeci">virtual void updateState(Time t0, Time t1) override</div><div class="ttdoc">Bring state up to time current time. </div><div class="ttdef"><b>Definition:</b> SimpleBuilding.cc:45</div></div>
-<div class="ttc" id="class_smart_grid_toolbox_1_1_component_html_ac6ffa044b2d6726645de7e2e957fbcf4"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_component.html#ac6ffa044b2d6726645de7e2e957fbcf4">SmartGridToolbox::Component::time</a></div><div class="ttdeci">Time time() const </div><div class="ttdoc">Get the current step for the object. </div><div class="ttdef"><b>Definition:</b> Component.h:51</div></div>
-<div class="ttc" id="class_smart_grid_toolbox_1_1_zip_to_ground_base_html"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_zip_to_ground_base.html">SmartGridToolbox::ZipToGroundBase</a></div><div class="ttdef"><b>Definition:</b> ZipToGroundBase.h:10</div></div>
+<div class="ttc" id="class_smart_grid_toolbox_1_1_component_html_a1ed9cb36917dce6c52426240a283ab2e"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_component.html#a1ed9cb36917dce6c52426240a283ab2e">SmartGridToolbox::Component::name</a></div><div class="ttdeci">const std::string &amp; name() const </div><div class="ttdoc">Get the name of the object. </div><div class="ttdef"><b>Definition:</b> Component.h:47</div></div>
+<div class="ttc" id="class_smart_grid_toolbox_1_1_simple_building_html_ae749a16c88ea8cb12fb891e7732cb6e7"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_simple_building.html#ae749a16c88ea8cb12fb891e7732cb6e7">SmartGridToolbox::SimpleBuilding::initializeState</a></div><div class="ttdeci">virtual void initializeState() override</div><div class="ttdoc">Reset state of the object, time will be at negative infinity. </div><div class="ttdef"><b>Definition:</b> SimpleBuilding.cc:38</div></div>
+<div class="ttc" id="class_smart_grid_toolbox_1_1_component_html_a10667a6185d07622297718e001ece358"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_component.html#a10667a6185d07622297718e001ece358">SmartGridToolbox::Component::needsUpdate</a></div><div class="ttdeci">Event &amp; needsUpdate()</div><div class="ttdoc">Triggered when I am flagged for future update. </div><div class="ttdef"><b>Definition:</b> Component.h:134</div></div>
+<div class="ttc" id="class_smart_grid_toolbox_1_1_component_html_ac6ffa044b2d6726645de7e2e957fbcf4"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_component.html#ac6ffa044b2d6726645de7e2e957fbcf4">SmartGridToolbox::Component::time</a></div><div class="ttdeci">Time time() const </div><div class="ttdoc">Get the current step for the object. </div><div class="ttdef"><b>Definition:</b> Component.h:64</div></div>
+<div class="ttc" id="class_smart_grid_toolbox_1_1_zip_to_ground_base_html"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_zip_to_ground_base.html">SmartGridToolbox::ZipToGroundBase</a></div><div class="ttdoc">A load (or sometimes generator) with constant Z, I, P components. </div><div class="ttdef"><b>Definition:</b> ZipToGroundBase.h:12</div></div>
 <div class="ttc" id="class_smart_grid_toolbox_1_1_time_series_html"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_time_series.html">SmartGridToolbox::TimeSeries&lt; Time, double &gt;</a></div></div>
+<div class="ttc" id="class_smart_grid_toolbox_1_1_simple_building_html_adb6638c1971cdce9afc1de76e045dd36"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_simple_building.html#adb6638c1971cdce9afc1de76e045dd36">SmartGridToolbox::SimpleBuilding::updateState</a></div><div class="ttdeci">virtual void updateState(Time t) override</div><div class="ttdoc">Bring state up to time current time. </div><div class="ttdef"><b>Definition:</b> SimpleBuilding.cc:45</div></div>
 <div class="ttc" id="class_smart_grid_toolbox_1_1_simple_building_html"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_simple_building.html">SmartGridToolbox::SimpleBuilding</a></div><div class="ttdef"><b>Definition:</b> SimpleBuilding.h:20</div></div>
 <div class="ttc" id="class_smart_grid_toolbox_1_1_weather_html"><div class="ttname"><a href="class_smart_grid_toolbox_1_1_weather.html">SmartGridToolbox::Weather</a></div><div class="ttdef"><b>Definition:</b> Weather.h:16</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 5 2014 21:51:37 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Mar 19 2014 10:44:42 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
