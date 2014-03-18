@@ -152,7 +152,7 @@ code {
   width: 100%;
   color: #707070;
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-  font-size: 14px;
+  font-size: 13px;
   /*margin-left: 5px;*/
 }
 
@@ -160,6 +160,9 @@ pre {
   overflow: auto;
   display: block;
   margin: 10px 0px;
+  background-color: #eee;
+  border: 1px solid #ddd;
+  padding-left: 7px;
 }
 
 pre code {
