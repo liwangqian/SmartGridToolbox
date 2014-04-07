@@ -38,7 +38,7 @@
 					At the top level, a SmartGridToolbox simulation will have two basic objects: a <code>Model</code> object, and a <code>Simulation</code> object. The model manages the elements, or <em>components</em> used in the simulation, and the simulation is responsible for advancing time for all the components of the model.
 				</p>
 				<p>
-					The following simple program can be found in <code>/Users/dgordon/Devel/SmartGridToolbox/docs/tutorials/IntroductionToSgt/src/tickers.cc</code>.
+					The following simple program can be found in <code>SmartGridToolbox/tutorials/IntroductionToSgt/src/tickers.cc</code>.
 <pre><code>#include &ltSmartGridToolbox.h&gt
 
 int main()
@@ -113,12 +113,48 @@ New timestep     : simulation is at time = 00:00:04.
                  : ticker_2 is at time = 00:00:04.</code></pre>
 				</p>
 				<p>
-					Note that at each timestep, more than one component update may occur. To get finer control over the updates, we can change the final <code>while</code> loop so that looping occurs at every single component update, but changing <code>while (sim.doTimestep())</code> to <code>while (sim.doNextUpdate())</code> <strong>Exercise: copy the tutorial directory and try it</strong>. 
+					Note that at each timestep, more than one component update may occur. To get finer control over the updates, so that looping occurs at every single component update, we can change <code>while (sim.doTimestep())</code> to <code>while (sim.doNextUpdate())</code>. <strong>Exercise: copy the tutorial directory and try it</strong>. 
 				<p> 
 					Also note that when the simulation is at a given time, there may be components that have not yet updated to that time. This will be the case when they have not required a <em>scheduled update</em> at that time, and no other component has requested that they require a <em>contingent update</em> - but more about this later.
 				</p>
+				<h5><a name="config-files" class="anchor" href="#config-files"></a>Using YAML Configuration Files</h5>
 				<p>
-					In the example above, we added components to the simulation programmatically. In most SmartGridToolbox programs, the components will instead be parsed in from a YAML configuration file.
+					In the example above, we added components to the simulation programmatically. In most SmartGridToolbox programs, the components will instead be parsed in from a YAML configuration file. The following example is from <code>SmartGridToolbox/tutorials/IntroductionToSgt/src/test_overhead_line.cc</code>, and the YAML configuration file that gets parsed in can be found in <code>SmartGridToolbox/tutorials/IntroductionToSgt/src/test_overhead_line.yaml</code>.
+				</p>
+<pre><code>#include <SmartGridToolbox.h>
+
+int main()
+{
+   //using namespace SmartGridToolbox;
+   using SmartGridToolbox::Bus;
+   using SmartGridToolbox::Model;
+   using SmartGridToolbox::Parser;
+   using SmartGridToolbox::Simulation;
+   using SmartGridToolbox::operator<<;
+
+   Model mod;
+   Simulation sim(mod);
+   Parser & p = Parser::globalParser();
+   p.parse("test_overhead_line.yaml", mod, sim); p.postParse();
+   mod.validate();
+   sim.initialize();
+   // That's it!
+
+   // Since there is no time dependence this model, none of the components will
+   // ever undergo an update. But, the initial call to sim.initialize() will
+   // ensure that the model is put into a valid state, with its time equal to
+   // the start time of the simulation in the yaml configuration file. Thus,
+   // the power flow equations will already be solved. We can look at the 
+   // voltages etc. on the busses:
+   
+   Bus * bus_1 = mod.component&ltBus&gt("bus_1");
+   Bus * bus_2 = mod.component&ltBus&gt("bus_2");
+
+   std::cout << "Bus 1 complex voltage = " << bus_1->V() << std::endl;
+   std::cout << "Bus 2 complex voltage = " << bus_2->V() << std::endl;
+}</code></pre>
+				<p>
+					Immediately following the call to <code>p.parse(...)</code>, it is also possible to add additional components programmatically. This must be done <em>before</em> <code>mod.validate()</code> is called. <strong>Exercise: add in the "tickers" from the first example to the model</strong>. It is also possible to <em>replace</em> a component with another, using the <code>Model::replaceComponentWithNew(...)</code> function. Again, this should be done after the call to <code>p.parse(...)</code> but before the call to <code>mod.validate()</code>. The usual use for replacing or adding components is to include custom component types, in cases where you wish to avoid having to write a YAML parser for the component.
 				</p>
 			</section>
 		</div>
