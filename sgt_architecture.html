@@ -18,21 +18,33 @@
 				<p>
 					SmartGridToolbox is a library that can be used to rapidly develop simulations of of smart grid and microgrid systems. It is written in C++-11, and users will need access to a compiler that can handle this C++ specification.
 				</p>
-				<h4><a name="sgt-library" class="anchor" href="#sgt-library"></a>Including and linking the SmartGridToolbox library</h4>
+				<h4><a name="sgt-library" class="anchor" href="#sgt-library"></a>SmartGridToolbox libraries</h4>
 				<p>
-					SmartGridToolbox programs will need to link to the SmartGridToolbox library, and will need to include the relevant SmartGridToolbox header files.
+					SmartGridToolbox consists of two libraries: <strong>SgtCore</strong> , which contains core utilities and powerflow modelling tools, and <strong>SgtSim</strong>, which contains the simulation architecture and simulation components. SgtCore may be used in a standalone manner, for non-simulation based tasks. SgtSim is built on top of SgtCore.
 				</p>
 				<p>
-					Header files may be included individually, as follows:
-<pre><code>#include &ltSmartGridToolbox/Model.h&gt
-#include &ltSmartGridToolbox/Simulation.h&gt
+					If, for example, you are installing in <code>/usr/local</code>, the static libraries <code>libSgtCore.a</code> and <code>libSgtSim.a</code> will be installed in <code>/usr/local/lib</code>. The individual header files will be installed in <code>/usr/local/include/SgtCore</code> and <code>/usr/local/include/SgtSim</code>. Additional headers <code>SgtCore.h</code> and <code>SgtSim.h</code> will be installed in <code>/usr/local/include</code>, which will allow the user to include all of the individual headers using single include statements.
+				</p>
+				<h4><a name="sgt-library" class="anchor" href="#sgt-library"></a>Including and linking the SmartGridToolbox libraries</h4>
+				<p>
+					SmartGridToolbox programs will need to link to the SmartGridToolbox libraries, and will need to include the relevant SmartGridToolbox header files.
+				</p>
+				<p>
+					Header files may be included individually, as follows, e.g.:
+<pre><code>#include &ltSgtCore/Network.h&gt
+#include &ltSgtSim/Simulation.h&gt
 // ... 
 </code></pre>
-					or they may be all included automatically using <pre><code>#include &ltSmartGridToolbox.h&gt</code></pre>
+					or they may be all included automatically using 
+<pre><code>#include &ltSgtCore.h&gt
+#include &ltSgtSim.h&gt
+</code></pre>
 				</p>
 				<p>
-					When linking, you should include <code>-lSmartGridToolbox</code> in the compiler link flags. (If you use the MicrogridTutorial example as a template, including the autoconf and automake scripts, then this will be done automatically). Your compiler will also need to be able to find the SmartGridToolbox library; you may need to add an extra <code>-L</code> compile flag if you have installed it in a non-standard location.
+					When linking, you should include <code>-lSgtCore</code> and/or <code>-lSgtSim</code> in the compiler link flags. (If you use the MicrogridTutorial example as a template, including the autoconf and automake scripts, then this will be done automatically). Your compiler will also need to be able to find the SmartGridToolbox library; you may need to add an extra <code>-L</code> compile flag if you have installed it in a non-standard location.
 				</p>
+				<p> you will also need to link to the other dependent libraries. Thus, the following will be needed:
+				<pre><code>-lSgtCore -lSgtSim -larmadillo -lboost_date_time-mt -lyaml-cpp -lklu -lamd -lcolamd -lbtf</code></pre> although the <code>-lSgtSim</code> may be dropped for non-simulation based applications.
 				<h4><a name="sgt-program-structure" class="anchor" href="#sgt-program-structure"></a>Basic structure of a SmartGridToolbox program</h4>
 				<p>
 					At the top level, a SmartGridToolbox simulation will have two basic objects: a <code>Model</code> object, and a <code>Simulation</code> object. The model manages the elements, or <em>components</em> used in the simulation, and the simulation is responsible for advancing time for all the components of the model.
