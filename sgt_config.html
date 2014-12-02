@@ -65,17 +65,6 @@ timezone:                     AEST10AEDT,M10.5.0/02,M3.5.0/03 # Optional, used f
       type:                   SL
       phases:                 [A, B, C]
       nominal_voltage:        [15094.8D0, 15094.8D-120, 15094.8D120] # 24.9 kV L-L nominal @ 1.05 p.u, convert L-G.
-   bus:
-      name:                   bus_2
-      network:                network_1
-      type:                   PQ
-      phases:                 [A, B, C]
-      nominal_voltage:        [15094.8D0, 15094.8D-120, 15094.8D120] # 24.9 kV L-L nominal @ 1.05 p.u, convert L-G.
-   zip_to_ground:
-     name:                   zip_load_2
-     phases:                 [A, B, C]
-     bus:                    bus_2
-     complex_power_load:     [6.99e5 + 1.43e5j, 6.90e5 + 1.03e5j, 5.91e5 + 1.60e4j]
    # etc.
 --- # Marks the end of each configuration document.</code></pre>
 						The YAML spec for each component can be found below.
@@ -87,73 +76,103 @@ timezone:                     AEST10AEDT,M10.5.0/02,M3.5.0/03 # Optional, used f
 					Time Series List
 				</h4>
 				<p>
-					As indicated above, the optional list of time series is specified with the <code>time_series_list</code> tag. Within this tag is placed a list of time series specifiers, which can currently either be <code>data_time_series</code> or <code>const_time_series</code>. These are described below:
+					As indicated above, the optional list of time series is specified with the <code>time_series_list</code> key. The value for this key is a list of time series specifiers, which can currently either be <code>data_time_series</code> or <code>const_time_series</code>. These are described below:
 				<p>
 				<h5>
 					data_time_series
 				</h5>
 				<p>
-					The following table gives the list of tags that should be specified:
-				</p>
-<table>
-	<tr><th>Tag</th><th>Description</th><th>Example</th></tr>
-	<tr>
-		<td><code>name</code></td>
-		<td>Name of the time series</td>
-		<td><code>name: temperature_time_series</code></td>
-	</tr>
-	<tr>
-		<td><code>data_file</code></td>
-		<td>Filename of file containing the data</td>
-		<td><code>data_file: temp.txt</code></td>
-	</tr>
-	<tr>
-		<td><code>value_type</code></td>
-		<td><code>real_scalar</code> / <code>real_vector</code> / <code>complex_scalar</code> / <code>complex_vector</code>. Currently, only <code>real_scalar</code> is supported, though.</td>
-		<td><code>value_type: real_scalar</code></td>
-	</tr>
-	<tr>
-		<td><code>interp_type</code></td>
-		<td>Interpolation type: <code>stepwise</code> / <code>lerp</code> / <code>spline</code>.</td>
-		<td><code>interp_type: lerp</code></td>
-	</tr>
-	<tr>
-		<td><code>relative_to_time</code></td>
-		<td>Local time zero point of time in data file</td>
-		<td><code>relative_to_time: 2014-04-01 06:00:00</code></td>
-	</tr>
-	<tr>
-		<td><code>time_unit</code></td>
-		<td>Unit of time in data file: <code>h</code> / <code>m</code> / <code>s</code>.</td>
-		<td><code>relative_to_time: 2014-04-01 06:00:00</code></td>
-	</tr>
-</table>
+					The following table gives the list of key/value pairs that should be specified:
+					<table style = "font-size:9pt">
+						<tr>
+							<th>Key</th>
+							<th>Description</th>
+							<th>Example</th>
+						</tr>	<tr>
+							<td><code>name</code></td>
+							<td>Name of the time series</td>
+							<td><code><nobr>name: temperature_time_series</nobr></code></td>
+						</tr>
+						<tr>
+							<td><code>data_file</code></td>
+							<td>Filename of file containing the data</td>
+							<td><code><nobr>data_file: temp.txt</nobr></code></td>
+						</tr>
+						<tr>
+							<td><code>value_type</code></td>
+							<td><code>real_scalar/<wbr>real_vector/<wbr>complex_scalar/<wbr>complex_vector</code>. Currently, only <code>real_scalar</code> is supported, though.</td>
+							<td><code><nobr>value_type: real_scalar</nobr></code></td>
+						</tr>
+						<tr>
+							<td><code>interp_type</code></td>
+							<td>Interpolation type: <code>stepwise</code> / <code>lerp</code> / <code>spline</code>.</td>
+							<td><code>interp_type: lerp</code></td>
+						</tr>
+						<tr>
+							<td><code>relative_to_time</code></td>
+							<td>Local time zero point of time in data file</td>
+							<td><code><nobr>relative_to_time: 2014-04-01 06:00:00</nobr></code></td>
+						</tr>
+						<tr>
+							<td><code>time_unit</code></td>
+							<td>Unit of time in data file: <code>h</code> / <code>m</code> / <code>s</code>.</td>
+							<td><code>time_unit: h</code></td>
+						</tr>
+				</table>
 				</p>
 				<h5>
 					const_time_series
 				</h5>
 				<p>
-					The following table gives the list of tags that should be specified:
-				</p>
-<table>
-	<tr><th>Tag</th><th>Description</th><th>Example</th></tr>
-	<tr>
-		<td><code>value_type</code></td>
-		<td><code>real_scalar</code> / <code>real_vector</code> / <code>complex_scalar</code> / <code>complex_vector</code>. Currently, only <code>real_scalar</code> is supported, though.</td>
-		<td><code>value_type: real_scalar</code></td>
-	</tr>
-	<tr>
-		<td><code>const_value</code></td>
-		<td>Constant value of the time series</td>
-		<td><code>const_value: 5.7</code></td>
-	</tr>
-</table>
+					The following table gives the list of key/value pairs that should be specified:
+					<table style = "font-size:9pt">
+						<tr>
+							<th>Key</th>
+							<th>Description</th>
+							<th>Example</th>
+						</tr>
+						<tr>
+							<td><code>value_type</code></td>
+							<td><code>real_scalar/<wbr>real_vector/<wbr>complex_scalar/<wbr>complex_vector</code>. Currently, only <code>real_scalar</code> is supported, though.</td>
+							<td><code><nobr>value_type: real_scalar</nobr></code></td>
+						</tr>
+						<tr>
+							<td><code>const_value</code></td>
+							<td>Constant value of the time series</td>
+							<td><code><nobr>const_value: 5.7</nobr></code></td>
+						</tr>
+					</table>
 				</p>
 				<h4>
 					Components
 				</h4>
 				<p>
-					Here, we provide a list of all components that may be parsed in the configuration file:
+					Here, we provide a list of all components that may be parsed in the configuration file, organised by the key for the component in question:
+					<ul>
+						<dl>
+								<dt>
+									<code>branch</code><dt>
+								<dd style="font-style:normal">
+									Creates a SmartGridToolbox::Branch object in the model. The following key/value pairs should be specified for the <code>branch</code> key.
+									<table style = "font-size:9pt">
+										<tr>
+											<th>Key</th>
+											<th>Description</th>
+											<th>Example</th>
+										</tr>
+										<tr>
+											<td><code>value_type</code></td>
+											<td><code>real_scalar</code> / <code>real_vector</code> / <code>complex_scalar</code> / <code>complex_vector</code>. Currently, only <code>real_scalar</code> is supported, though.</td>
+											<td><code>value_type: real_scalar</code></td>
+										</tr>
+										<tr>
+											<td><code>const_value</code></td>
+											<td>Constant value of the time series</td>
+											<td><code>const_value: 5.7</code></td>
+										</tr>
+									</table>
+							</dd>
+				</p>
 			</section>
 		</div>
 	</body>
