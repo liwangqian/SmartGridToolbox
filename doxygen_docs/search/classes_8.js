@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['jacobian',['Jacobian',['../struct_smart_grid_toolbox_1_1_jacobian.html',1,'SmartGridToolbox']]]
+  ['inverterabc',['InverterAbc',['../class_sgt_1_1_inverter_abc.html',1,'Sgt']]],
+  ['inverterparserplugin',['InverterParserPlugin',['../class_sgt_1_1_inverter_parser_plugin.html',1,'Sgt']]]
 ];

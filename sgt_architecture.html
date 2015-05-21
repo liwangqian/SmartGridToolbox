@@ -16,14 +16,11 @@
 				</p>
 				<h3><a name="sgt-architecture" class="anchor" href="#sgt-architecture"></a>Introduction to the SmartGridToolbox Architecture</h3>
 				<p>
-					SmartGridToolbox is a library that can be used to rapidly develop simulations of of smart grid and microgrid systems. It is written in C++-11, and users will need access to a compiler that can handle this C++ specification.
+					SmartGridToolbox is a library that can be used to rapidly develop simulations of of smart grid and microgrid systems. It is written in C++11, and users will need access to a compiler that can handle this C++ specification.
 				</p>
 				<h4><a name="sgt-library" class="anchor" href="#sgt-library"></a>SmartGridToolbox libraries</h4>
 				<p>
-					SmartGridToolbox consists of two libraries: <strong>SgtCore</strong> , which contains core utilities and powerflow modelling tools, and <strong>SgtSim</strong>, which contains the simulation architecture and simulation components. SgtCore may be used in a standalone manner, for non-simulation based tasks. SgtSim is built on top of SgtCore.
-				</p>
-				<p>
-					If, for example, you are installing in <code>/usr/local</code>, the static libraries <code>libSgtCore.a</code> and <code>libSgtSim.a</code> will be installed in <code>/usr/local/lib</code>. The individual header files will be installed in <code>/usr/local/include/SgtCore</code> and <code>/usr/local/include/SgtSim</code>. Additional headers <code>SgtCore.h</code> and <code>SgtSim.h</code> will be installed in <code>/usr/local/include</code>, which will allow the user to include all of the individual headers using single include statements.
+					SmartGridToolbox consists of two libraries: <strong>SgtCore</strong> , which contains core utilities and powerflow modelling tools and solvers, and <strong>SgtSim</strong>, which contains the simulation architecture and simulation components. SgtCore may be used in a standalone manner, for non-simulation based tasks. SgtSim is built on top of SgtCore. In the following, we will assume that SmartGridToolbox has already been compiled and installed in the default location, <code>/usr/local</code>.
 				</p>
 				<h4><a name="sgt-library" class="anchor" href="#sgt-library"></a>Including and linking the SmartGridToolbox libraries</h4>
 				<p>
@@ -41,13 +38,11 @@
 </code></pre>
 				</p>
 				<p>
-					When linking, you should include <code>-lSgtCore</code> and/or <code>-lSgtSim</code> in the compiler link flags. (If you use the MicrogridTutorial example as a template, including the autoconf and automake scripts, then this will be done automatically). Your compiler will also need to be able to find the SmartGridToolbox library; you may need to add an extra <code>-L</code> compile flag if you have installed it in a non-standard location.
+					The easiest cross-platform way to link to your application is to use libtool with the GNU autotools. <code>SmartGridToolbox/examples/ResidentialA/Makefile.am</code> gives an example of how to do this. The correct dynamic and static libraries will be linked, including all dependencies and depending on your system configuration. Otherwise, you must choose	the correct static and dynamic libraries. To statically link a program, the following link flags will work: <code>-lSgtCore -lSgtSim -larmadillo -lboost_date_time -lyaml-cpp</code>.
 				</p>
-				<p> you will also need to link to the other dependent libraries. Thus, the following will be needed:
-				<pre><code>-lSgtCore -lSgtSim -larmadillo -lboost_date_time-mt -lyaml-cpp -lklu -lamd -lcolamd -lbtf</code></pre> although the <code>-lSgtSim</code> may be dropped for non-simulation based applications.
 				<h4><a name="sgt-program-structure" class="anchor" href="#sgt-program-structure"></a>Basic structure of a SmartGridToolbox program</h4>
 				<p>
-					At the top level, a SmartGridToolbox simulation will have two basic objects: a <code>Model</code> object, and a <code>Simulation</code> object. The model manages the elements, or <em>components</em> used in the simulation, and the simulation is responsible for advancing time for all the components of the model.
+					At the top level, a SmartGridToolbox simulation consists of a <code>Simulation</code> object, which manages the elements, or <code>Component</code>s, and controls the way time advances as the simulation progresses.
 				</p>
 				<p>
 					The following simple program can be found in <code>SmartGridToolbox/tutorials/IntroductionToSgt/src/tickers.cc</code>.

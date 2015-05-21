@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['phases_5f',['phases_',['../struct_smart_grid_toolbox_1_1_bus_nr.html#a6386550ba3e7d7c1312bb35636d0ac44',1,'SmartGridToolbox::BusNr::phases_()'],['../struct_smart_grid_toolbox_1_1_branch_nr.html#a3e47dcbb6fcc5ef1d104e37568b8b909',1,'SmartGridToolbox::BranchNr::phases_()']]]
+  ['j_5f',['J_',['../struct_sgt_1_1_pf_bus.html#a635a33634f697c5359dd9df870f330c9',1,'Sgt::PfBus']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['g_5f',['G_',['../struct_smart_grid_toolbox_1_1_branch_nr.html#acf29c1bc121ee9900600ff39830edc1f',1,'SmartGridToolbox::BranchNr']]]
+  ['gmrphase_5f',['gmrPhase_',['../class_sgt_1_1_underground_line.html#a0f25b5bf132cf295e53701c61825ddbc',1,'Sgt::UndergroundLine']]]
 ];

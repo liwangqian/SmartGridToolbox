@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['b_5f',['B_',['../struct_smart_grid_toolbox_1_1_branch_nr.html#a25cea8535850aa6333352252fefe98e9',1,'SmartGridToolbox::BranchNr']]]
+  ['freq_5f',['freq_',['../class_sgt_1_1_underground_line.html#a597d64c84df07744c587e3f723ef5ea7',1,'Sgt::UndergroundLine']]]
 ];

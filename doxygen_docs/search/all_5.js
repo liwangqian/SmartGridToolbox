@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['functiontimeseries',['FunctionTimeSeries',['../class_smart_grid_toolbox_1_1_function_time_series.html',1,'SmartGridToolbox']]]
+  ['freq_5f',['freq_',['../class_sgt_1_1_underground_line.html#a597d64c84df07744c587e3f723ef5ea7',1,'Sgt::UndergroundLine']]],
+  ['functiontimeseries',['FunctionTimeSeries',['../class_sgt_1_1_function_time_series.html',1,'Sgt']]]
 ];

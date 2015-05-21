@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['v_5f',['V_',['../struct_smart_grid_toolbox_1_1_bus_nr.html#ace65efa5ec4d8b9fdebbda146a40f97a',1,'SmartGridToolbox::BusNr']]]
+  ['phasedist_5f',['phaseDist_',['../class_sgt_1_1_underground_line.html#a6ce8972efbf42621229f4fadb42b1d77',1,'Sgt::UndergroundLine']]],
+  ['phases_5f',['phases_',['../struct_sgt_1_1_pf_bus.html#a75e4c939db462f168fb6a61fa47c409b',1,'Sgt::PfBus::phases_()'],['../struct_sgt_1_1_pf_branch.html#a8c2aac6ca03028303c86ff4d23358fdb',1,'Sgt::PfBranch::phases_()']]]
 ];

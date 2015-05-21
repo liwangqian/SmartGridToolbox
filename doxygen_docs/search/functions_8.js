@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['pdc',['PDc',['../class_smart_grid_toolbox_1_1_simple_battery.html#a912548d44c162d4c107f1f88c53f3530',1,'SmartGridToolbox::SimpleBattery']]],
-  ['pperphase',['PPerPhase',['../class_smart_grid_toolbox_1_1_inverter_base.html#a6a60679ee01e74d8116c3ba3288a4ac4',1,'SmartGridToolbox::InverterBase::PPerPhase()'],['../class_smart_grid_toolbox_1_1_simple_inverter.html#ab84676d2796b957f1e1fd50223b6112c',1,'SmartGridToolbox::SimpleInverter::PPerPhase()']]],
-  ['precedes',['precedes',['../class_smart_grid_toolbox_1_1_wo_node.html#a3598ec74222b1da7413c5a653790e13f',1,'SmartGridToolbox::WoNode']]]
+  ['needsupdate',['needsUpdate',['../class_sgt_1_1_sim_component_adaptor.html#a50e3877fea9fd10c4827f9b785710b12',1,'Sgt::SimComponentAdaptor']]],
+  ['newsimcomponent',['newSimComponent',['../class_sgt_1_1_simulation.html#a7ada935a68dc18fbf628de809ee87c26',1,'Sgt::Simulation']]]
 ];

@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['overheadline',['OverheadLine',['../class_smart_grid_toolbox_1_1_overhead_line.html',1,'SmartGridToolbox']]],
-  ['overheadlineparser',['OverheadLineParser',['../class_smart_grid_toolbox_1_1_overhead_line_parser.html',1,'SmartGridToolbox']]]
+  ['network',['Network',['../class_sgt_1_1_network.html',1,'Sgt']]],
+  ['notgettableexception',['NotGettableException',['../class_sgt_1_1_not_gettable_exception.html',1,'Sgt']]],
+  ['notsettableexception',['NotSettableException',['../class_sgt_1_1_not_settable_exception.html',1,'Sgt']]]
 ];

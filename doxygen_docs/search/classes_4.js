@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['event',['Event',['../class_smart_grid_toolbox_1_1_event.html',1,'SmartGridToolbox']]]
+  ['event',['Event',['../class_sgt_1_1_event.html',1,'Sgt']]]
 ];

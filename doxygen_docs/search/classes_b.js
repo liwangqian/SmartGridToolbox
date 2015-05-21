@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['network',['Network',['../class_smart_grid_toolbox_1_1_network.html',1,'SmartGridToolbox']]],
-  ['networkparser',['NetworkParser',['../class_smart_grid_toolbox_1_1_network_parser.html',1,'SmartGridToolbox']]],
-  ['nodenr',['NodeNr',['../struct_smart_grid_toolbox_1_1_node_nr.html',1,'SmartGridToolbox']]]
+  ['matpowerparserplugin',['MatpowerParserPlugin',['../class_sgt_1_1_matpower_parser_plugin.html',1,'Sgt']]],
+  ['mpbranchinfo',['MpBranchInfo',['../struct_sgt_1_1_mp_branch_info.html',1,'Sgt']]],
+  ['mpbusinfo',['MpBusInfo',['../struct_sgt_1_1_mp_bus_info.html',1,'Sgt']]],
+  ['mpgencostinfo',['MpGenCostInfo',['../struct_sgt_1_1_mp_gen_cost_info.html',1,'Sgt']]],
+  ['mpgeninfo',['MpGenInfo',['../struct_sgt_1_1_mp_gen_info.html',1,'Sgt']]]
 ];

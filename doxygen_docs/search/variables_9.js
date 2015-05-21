@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['y_5f',['Y_',['../struct_smart_grid_toolbox_1_1_branch_nr.html#adfc3e27d8036f0b0c94d68f99162d311',1,'SmartGridToolbox::BranchNr']]],
-  ['ys_5f',['Ys_',['../struct_smart_grid_toolbox_1_1_bus_nr.html#ab735b32dffd2307ee6ed07f85c91062b',1,'SmartGridToolbox::BusNr']]]
+  ['resperlphase_5f',['resPerLPhase_',['../class_sgt_1_1_underground_line.html#ad0284f6115d586a2ece9db17ad5147bf',1,'Sgt::UndergroundLine']]],
+  ['rhoearth_5f',['rhoEarth_',['../class_sgt_1_1_underground_line.html#a3919ffe5c56e9b332214c58ef83e9ad4',1,'Sgt::UndergroundLine']]]
 ];

@@ -27,7 +27,7 @@
 					<a name="introduction" class="anchor" href="#introduction"></a>Introduction
 				</h3>
 				<p>
-					NICTA SmartGridToolbox is a C++-11 library API for developing smart grid and microgrid simulations. It was developed by the <a href="http://org.nicta.com.au/portfolio/energy-systems/">Energy Systems</a> subgroup of <a href="http://www.nicta.com.au">Nicta</a>'s <a href="http://org.nicta.com.au">Optimisation Research Group</a>, with the help of the <a href="http://www.anu.edu.au">Australian National University</a> and <a href="http://www.actewagl.com.au">Actew-AGL</a>.
+					NICTA SmartGridToolbox is a C++-11 library for developing smart grid and microgrid simulations. It was developed by the <a href="http://org.nicta.com.au/portfolio/energy-systems/">Energy Systems</a> subgroup of <a href="http://www.nicta.com.au">Nicta</a>'s <a href="http://org.nicta.com.au">Optimisation Research Group</a>, with the help of the <a href="http://www.anu.edu.au">Australian National University</a> and <a href="http://www.actewagl.com.au">Actew-AGL</a>.
 				</p>
 				<p>
 					SmartGridToolbox's simulation engine uses agent-based and discrete event simulation concepts. Research into future electricity grids requires the ability to handle a wide range of control strategies and simulation components. SmartGridToolbox aims to provide this ability through an API that emphasises flexibility and extensibility.
@@ -35,15 +35,14 @@
 				<h3>
 					<a name="getting-started" class="anchor" href="#getting-started"></a>Getting started</h3>
 				<p>
-					Download or checkout a copy of SmartGridToolbox from GitHub. To download a tarball containing the latest release, go to <a href="https://github.inside.nicta.com.au/dgordon/SmartGridToolbox/releases">https://github.inside.nicta.com.au/dgordon/SmartGridToolbox/releases</a>. Unpack the archive, and <code>cd</code> into the top level directory.
+					Download or check out a copy of SmartGridToolbox from GitHub. To download a tarball containing the latest release, go to <a href="https://github.com/NICTA/SmartGridToolbox/releases">https://github.inside.nicta.com.au/dgordon/SmartGridToolbox/releases</a>. Unpack the archive, and <code>cd</code> into the top level directory.
 				</p>
 				<p>
-					Alternatively, to checkout a local clone of the github repository, you can
-					<pre><code>git clone https://github.it.nicta.com.au/dgordon/SmartGridToolbox.git</code></pre>
-					(you will need access to <code>github.it.nicta.com.au</code>). You will then need to run <code>autogen.sh</code> immediately after you have checked out the repository; this is a once-only operation. You will also need the gnu autotools to be present on your system. 
+					Alternatively, to check out a local clone of the github repository, you can
+					<pre><code>git clone https://github.com/NICTA/SmartGridToolbox.git</code></pre>
 				</p>
 				<p>
-					After obtaining the repository, make sure you are in the top level directory, and follow the instructions in the <code>INSTALL</code> file.
+					After obtaining the repository, start a terminal window and make sure you are in the top level directory. Now follow the instructions in the <code>INSTALL</code> file.
 				</p>
 				<p>
 					After you have built and installed SmartGridToolbox, you can begin to familiarise yourself with its use. The following introduction to the <a href="sgt_architecture.html">basic architecture</a> will be helpful. At present, <a href="#tutorials">tutorials</a> are still being developed. The best place to start is in the <code>examples/MicrogridDemo</code> folder, which sets up a simulation involving a microgrid with solar panels, a battery, a building + HVAC, and a custom controller. The source code, or <a href="doxygen_docs/index.html">doxygen documentation</a>, are your friend.
