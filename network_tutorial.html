@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8' />
+		<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+		<meta name="description" content="NICTA SmartGridToolbox : Network tutorial" />
+		<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+		<title>NICTA SmartGridToolbox Network Tutorial</title>
+	</head>
+	<body>
+	<!-- MAIN CONTENT -->
+		<div id="main_content_wrap" class="outer">
+			<section id="main_content" class="inner">
+				<p>
+					<img src="https://github.inside.nicta.com.au/dgordon/SmartGridToolbox/blob/master/images/logo.png?raw=true" alt="SmartGridToolbox Logo">
+				</p>
+				<h3><a name="network-tutorial" class="anchor" href="#network-tutorial"></a>Network Tutorial</h3>
+				<p>
+					In this tutorial, we will explore the basics of how to set up and solve models of electricity networks. We are not performing any simulation, and as such we link only to <code>SgtCore</code>, not <code>SgtSim</code>.
+				</p>
+				<p>
+					The tutorial can be found in the <code>tutorials/IntroductionToSgt</code> subdirectory of the SmartGridToolbox directory. Copy this directory into a convenient work directory. <code>cd</code> into the directory, run <code>autogen.sh</code> (if needed) and <code>configure</code>. Now <code>make</code> to build the two executables, <code>solve_network</code> and <code>solve_network_yaml</code>.
+				</p>
+				<p>
+					The code is self documenting. Briefly, <code>solve_network</code> manually creates and solves a network power flow problem. Normally, one wouldn't explicitly code all the network components, as is done in this first example. Instead, objects would be loaded in from a YAML configuration file. <code>solve_network_yaml</code> loads the same problem as <code>solve_network</code> in from the configuration file <code>solve_network_yaml.yaml</code>, and again solves the network, achieving the same solution.
+				</p>
+				<p> 
+					Here is the source code for <code>solve_network.cc</code>:
+					<pre><code>#include &ltSgtCore.h&gt
+
+// The following tutorial manually sets up a network and solves it using the
+// Newton Raphson solver. Normally, the network would initially be parsed in
+// from a YAML configuration file, but we want to show how things work behind
+// the scenes. Compare to solve_network_yaml.cc.
+int main(int argc, char** argv)
+{
+    using namespace Sgt;
+    
+    Network nw("my_network"); // Create a network named "my_network".
+        
+    auto bus1 = std::make_shared&ltBus&gt(
+            "bus_1", Phase::BAL, arma::Col&ltComplex&gt{11}, 11);
+        // Create a bus named "bus_1", with a single balanced (BAL) phase,
+        // a nominal voltage vector of [11 kV] (with only 1 element because it
+        // is single phase), and base voltage of 11 kV. 
+    bus1->setType(BusType::SL); // Make it the slack bus for powerflow.
+    nw.addBus(bus1); // Add it to the network.
+    
+    auto gen1 = std::make_shared&ltGenericGen&gt("gen_1", Phase::BAL);
+        // Create a generic generator named "gen_1".
+    nw.addGen(gen1, "bus_1"); // Add it to the network, attaching it to bus_1.
+   
+    auto bus2 = std::make_shared&ltBus&gt("bus_2", Phase::BAL, 
+            arma::Col&ltComplex&gt{11}, 11); // Another bus...
+    bus2->setType(BusType::PQ); // Make it a PQ bus (load or fixed generation).
+    nw.addBus(bus2); // Add it to the network.
+    
+    auto load2 = std::make_shared&ltGenericZip&gt("load_2", Phase::BAL);
+        // Create a generic "ZIP" load named load_2.
+    load2->setSConst({std::polar(0.1, -5.0 * pi / 180.0)}); 
+        // The load consumes a constant S component of 0.1 MW = 100 kW, at a
+        // phase angle of -5 degrees.
+    nw.addZip(load2, "bus_2"); // Add it to the network and to bus_2.
+    
+    auto line = std::make_shared&ltCommonBranch&gt("line");
+        // Make a "CommonBranch" (Matpower style) line.
+    line->setYSeries({Complex(0.005, -0.05)});
+        // Set the series admittance of the line.
+    nw.addBranch(line, "bus_1", "bus_2");
+        // Add the line to the network, between the two busses.
+    
+    nw.solvePowerFlow();
+        // Solve the power flow problem, using default Newton-Raphson solver.
+    
+    // Below, we show how to retrieve some information:
+    auto bus = nw.bus("bus_2");
+    Log().message() << "Bus " << bus->id() << ": " << " voltage is "
+                    << bus->V() << std::endl; // Note logging...
+
+    // Print the network:
+    Log().message() << "Network: " << nw << std::endl;
+}</code></pre>
+				</p>
+				<p> 
+					Here is the source code for <code>solve_network.cc</code>:
+					<pre><code>#include &ltSgtCore.h&gt
+
+// The following tutorial sets up a network by parsing in a YAML file, and
+// solves it using the Newton Raphson solver. Compare to solve_network.cc.
+int main(int argc, char** argv)
+{
+    using namespace Sgt;
+    
+    Network nw("my_network"); // Create a network named "my_network".
+    Parser&ltNetwork&gt p; 
+        // Make a network parser to parse information into the network.
+    p.parse("solve_network_yaml.yaml", nw);
+        // Read in from the config file "solve_network_yaml.yaml".
+        
+    nw.solvePowerFlow();
+        // Solve the power flow problem, using default Newton-Raphson solver.
+    
+    // Below, we show how to retrieve some information:
+    auto bus = nw.bus("bus_2");
+    Log().message() << "Bus " << bus->id() << ": " << " voltage is "
+                    << bus->V() << std::endl;
+    
+    // Print the network:
+    Log().message() << "Network: " << nw << std::endl;
+}</code></pre>
+				</p>
+				<p> 
+					Here is the YAML configuration file:
+					<pre><code>- bus:
+    id: bus_1
+    phases: [BAL]
+    type: SL
+    V_base: 11
+    V_nom: [11]
+- generic_gen:
+    id: gen_1
+    bus_id: bus_1
+    phases: [BAL]
+- bus:
+    id: bus_2
+    phases: [BAL]
+    type: PQ
+    V_base: 11
+    V_nom: [11]
+- generic_zip:
+    id: load_2
+    bus_id: bus_2
+    phases: [BAL]
+    S_const: [0.1D-5.0] # 0.1 @ -5 degrees.
+- common_branch:
+    id: line
+    bus_0_id: bus_1
+    bus_1_id: bus_2
+    Y_series: 0.005-0.05j</code></pre>
+				</p>
+			</section>
+		</div>
+	</body>
+</html>

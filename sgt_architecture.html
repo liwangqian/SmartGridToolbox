@@ -30,7 +30,6 @@
 					Header files may be included individually, as follows, e.g.:
 <pre><code>#include &ltSgtCore/Network.h&gt
 #include &ltSgtSim/Simulation.h&gt
-// ... 
 </code></pre>
 					or they may be all included automatically using 
 <pre><code>#include &ltSgtCore.h&gt
@@ -38,7 +37,13 @@
 </code></pre>
 				</p>
 				<p>
-					The easiest cross-platform way to link to your application is to use libtool with the GNU autotools. <code>SmartGridToolbox/examples/ResidentialA/Makefile.am</code> gives an example of how to do this. The correct dynamic and static libraries will be linked, including all dependencies and depending on your system configuration. Otherwise, you must choose	the correct static and dynamic libraries. To statically link a program, the following link flags will work: <code>-lSgtCore -lSgtSim -larmadillo -lboost_date_time -lyaml-cpp</code>.
+					SmartGridToolbox uses GNU autotools a build system, and builds libraries using libtool. By default, static libraries only are built; for dynamic libraries, SmartGridToolbox should be <code>configure</code>d with the <code>--enable-shared</code> option.
+				</p>
+				<p>
+					The easiest cross-platform way to link to your application is to also use libtool with the GNU autotools. <code>SmartGridToolbox/examples/ResidentialA/Makefile.am</code> gives an example of how to do this. Libtool handles all library dependencies, and correctly handles shared libraries in a manner that is appropriate for the architecture.
+				</p>
+				<p>
+					Otherwise, you must choose	the correct static and dynamic libraries. To statically link a program, the following link flags will work: <code>-lSgtCore -lSgtSim -larmadillo -lboost_date_time -lyaml-cpp</code>. If your program is using <code>SgtCore</code> only, then obviously the <code>-lSgtSim</code> flag should be omitted.
 				</p>
 				<h4><a name="sgt-program-structure" class="anchor" href="#sgt-program-structure"></a>Basic structure of a SmartGridToolbox program</h4>
 				<p>
