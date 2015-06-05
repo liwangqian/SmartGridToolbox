@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['smartgridtoolbox_20core',['SmartGridToolbox Core',['../group___core.html',1,'']]]
+  ['utilities',['Utilities',['../group___utilities.html',1,'']]]
 ];

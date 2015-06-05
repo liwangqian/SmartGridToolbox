@@ -22,5 +22,6 @@ var searchData=
   ['convert_3c_20phases_20_3e',['convert&lt; Phases &gt;',['../struct_y_a_m_l_1_1convert_3_01_phases_01_4.html',1,'YAML']]],
   ['convert_3c_20ptime_20_3e',['convert&lt; ptime &gt;',['../struct_y_a_m_l_1_1convert_3_01ptime_01_4.html',1,'YAML']]],
   ['convert_3c_20time_20_3e',['convert&lt; Time &gt;',['../struct_y_a_m_l_1_1convert_3_01_time_01_4.html',1,'YAML']]],
+  ['core',['Core',['../group___core.html',1,'']]],
   ['currenttime',['currentTime',['../class_sgt_1_1_simulation.html#a119d13c734f281d27263e4e4972de775',1,'Sgt::Simulation']]]
 ];

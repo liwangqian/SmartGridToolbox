@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['smartgridtoolbox_20core',['SmartGridToolbox Core',['../group___core.html',1,'']]],
   ['s',['S',['../class_sgt_1_1_power_flow_model.html#a061f7a372e5420aec6745f55b50c4926',1,'Sgt::PowerFlowModel']]],
   ['s_5f',['S_',['../struct_sgt_1_1_pf_bus.html#ac5ec2a7a1627be42dd9afe9bc06f58fb',1,'Sgt::PfBus']]],
   ['sconst',['SConst',['../class_sgt_1_1_bus.html#ad9f21e84cb42c90e6bb951a463eb6f41',1,'Sgt::Bus']]],
