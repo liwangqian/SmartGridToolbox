@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>SmartGridToolbox: Power Flow Utilities</title>
+<title>SmartGridToolbox: Power Flow</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -77,18 +77,329 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Power Flow Utilities</div>  </div>
+<div class="title">Power Flow</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Utility functions, classes and constants related to AC power flow.  
+<p>Core power flow classes of <a class="el" href="namespace_smart_grid_toolbox.html" title="The primary namespace for SmartGridToolbox. ">SmartGridToolbox</a>.  
 <a href="#details">More...</a></p>
-<p>Utility functions, classes and constants related to AC power flow. </p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_branch_abc.html">Sgt::BranchAbc</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Common abstract base class for a branch.  <a href="class_sgt_1_1_branch_abc.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_generic_branch.html">Sgt::GenericBranch</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A concrete, generic branch.  <a href="class_sgt_1_1_generic_branch.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_bus.html">Sgt::Bus</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="class_sgt_1_1_bus.html" title="A Bus is a grouped set of conductors / terminals, one per phase. ">Bus</a> is a grouped set of conductors / terminals, one per phase.  <a href="class_sgt_1_1_bus.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_bus_parser_plugin.html">Sgt::BusParserPlugin</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sgt_1_1_parser_plugin.html" title="A plugin to parse YAML into an object. ">ParserPlugin</a> that parses <a class="el" href="class_sgt_1_1_bus.html" title="A Bus is a grouped set of conductors / terminals, one per phase. ">Bus</a> objects.  <a href="class_sgt_1_1_bus_parser_plugin.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_common_branch.html">Sgt::CommonBranch</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A single phase transmission line or transformer.  <a href="class_sgt_1_1_common_branch.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_common_branch_parser_plugin.html">Sgt::CommonBranchParserPlugin</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sgt_1_1_parser_plugin.html" title="A plugin to parse YAML into an object. ">ParserPlugin</a> that parses <a class="el" href="class_sgt_1_1_common_branch.html" title="A single phase transmission line or transformer. ">CommonBranch</a> objects.  <a href="class_sgt_1_1_common_branch_parser_plugin.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_dgy_transformer.html">Sgt::DgyTransformer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delta-grounded wye transformer.  <a href="class_sgt_1_1_dgy_transformer.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_dgy_transformer_parser_plugin.html">Sgt::DgyTransformerParserPlugin</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sgt_1_1_parser_plugin.html" title="A plugin to parse YAML into an object. ">ParserPlugin</a> that parses <a class="el" href="class_sgt_1_1_dgy_transformer.html" title="Delta-grounded wye transformer. ">DgyTransformer</a> objects.  <a href="class_sgt_1_1_dgy_transformer_parser_plugin.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_gen_abc.html">Sgt::GenAbc</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Common abstract base class for a generation at a bus.  <a href="class_sgt_1_1_gen_abc.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_generic_gen.html">Sgt::GenericGen</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A concrete, generic generation at a bus.  <a href="class_sgt_1_1_generic_gen.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_generic_branch_parser_plugin.html">Sgt::GenericBranchParserPlugin</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sgt_1_1_parser_plugin.html" title="A plugin to parse YAML into an object. ">ParserPlugin</a> that parses <a class="el" href="class_sgt_1_1_generic_branch.html" title="A concrete, generic branch. ">GenericBranch</a> objects.  <a href="class_sgt_1_1_generic_branch_parser_plugin.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_generic_gen_parser_plugin.html">Sgt::GenericGenParserPlugin</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sgt_1_1_parser_plugin.html" title="A plugin to parse YAML into an object. ">ParserPlugin</a> that parses <a class="el" href="class_sgt_1_1_generic_gen.html" title="A concrete, generic generation at a bus. ">GenericGen</a> objects.  <a href="class_sgt_1_1_generic_gen_parser_plugin.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_generic_zip_parser_plugin.html">Sgt::GenericZipParserPlugin</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sgt_1_1_parser_plugin.html" title="A plugin to parse YAML into an object. ">ParserPlugin</a> that parses <a class="el" href="class_sgt_1_1_generic_zip.html" title="A concrete, generic ZIP at a bus. ">GenericZip</a> objects.  <a href="class_sgt_1_1_generic_zip_parser_plugin.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_matpower_parser_plugin.html">Sgt::MatpowerParserPlugin</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sgt_1_1_parser_plugin.html" title="A plugin to parse YAML into an object. ">ParserPlugin</a> that parses Matpower files.  <a href="class_sgt_1_1_matpower_parser_plugin.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_network.html">Sgt::Network</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_overhead_line.html">Sgt::OverheadLine</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An overhead power line.  <a href="class_sgt_1_1_overhead_line.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_overhead_line_parser_plugin.html">Sgt::OverheadLineParserPlugin</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sgt_1_1_parser_plugin.html" title="A plugin to parse YAML into an object. ">ParserPlugin</a> that parses <a class="el" href="class_sgt_1_1_overhead_line.html" title="An overhead power line. ">OverheadLine</a> objects.  <a href="class_sgt_1_1_overhead_line_parser_plugin.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_phases.html">Sgt::Phases</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_power_flow_model.html">Sgt::PowerFlowModel</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_power_flow_nr_solver.html">Sgt::PowerFlowNrSolver</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_power_flow_pt_pp_solver.html">Sgt::PowerFlowPtPpSolver</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_power_flow_solver_interface.html">Sgt::PowerFlowSolverInterface</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_power_flow_solver_parser_plugin.html">Sgt::PowerFlowSolverParserPlugin</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sgt_1_1_parser_plugin.html" title="A plugin to parse YAML into an object. ">ParserPlugin</a> that parses PowerFlowSolver objects.  <a href="class_sgt_1_1_power_flow_solver_parser_plugin.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_single_phase_transformer.html">Sgt::SinglePhaseTransformer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Single phase transformer.  <a href="class_sgt_1_1_single_phase_transformer.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_single_phase_transformer_parser_plugin.html">Sgt::SinglePhaseTransformerParserPlugin</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sgt_1_1_parser_plugin.html" title="A plugin to parse YAML into an object. ">ParserPlugin</a> that parses <a class="el" href="class_sgt_1_1_single_phase_transformer.html" title="Single phase transformer. ">SinglePhaseTransformer</a> objects.  <a href="class_sgt_1_1_single_phase_transformer_parser_plugin.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_underground_line.html">Sgt::UndergroundLine</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An underground power line.  <a href="class_sgt_1_1_underground_line.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_underground_line_stranded_shield.html">Sgt::UndergroundLineStrandedShield</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_underground_line_parser_plugin.html">Sgt::UndergroundLineParserPlugin</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sgt_1_1_parser_plugin.html" title="A plugin to parse YAML into an object. ">ParserPlugin</a> that parses <a class="el" href="class_sgt_1_1_underground_line.html" title="An underground power line. ">UndergroundLine</a> objects.  <a href="class_sgt_1_1_underground_line_parser_plugin.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_yy_transformer.html">Sgt::YyTransformer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wye-wye transformer.  <a href="class_sgt_1_1_yy_transformer.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_yy_transformer_parser_plugin.html">Sgt::YyTransformerParserPlugin</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sgt_1_1_parser_plugin.html" title="A plugin to parse YAML into an object. ">ParserPlugin</a> that parses <a class="el" href="class_sgt_1_1_yy_transformer.html" title="Wye-wye transformer. ">YyTransformer</a> objects.  <a href="class_sgt_1_1_yy_transformer_parser_plugin.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_zip_abc.html">Sgt::ZipAbc</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A Zip is an injection into a bus with constant impedance / current / complex power components.  <a href="class_sgt_1_1_zip_abc.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_generic_zip.html">Sgt::GenericZip</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A concrete, generic ZIP at a bus.  <a href="class_sgt_1_1_generic_zip.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:gaeee8bcbe103bf0781875c819f5166c46"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaeee8bcbe103bf0781875c819f5166c46"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>BusType</b> { <br />
+&#160;&#160;<b>SL</b>, 
+<b>PQ</b>, 
+<b>PV</b>, 
+<b>NA</b>, 
+<br />
+&#160;&#160;<b>BAD</b>
+<br />
+ }</td></tr>
+<tr class="separator:gaeee8bcbe103bf0781875c819f5166c46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7d341b36061e346e358dd0dc66ed5fd2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga7d341b36061e346e358dd0dc66ed5fd2"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>Phase</b> : unsigned int { <br />
+&#160;&#160;<b>BAL</b> = 0x1, 
+<b>A</b> = 0x2, 
+<b>B</b> = 0x4, 
+<b>C</b> = 0x8, 
+<br />
+&#160;&#160;<b>G</b> = 0x10, 
+<b>N</b> = 0x20, 
+<b>SP</b> = 0x40, 
+<b>SM</b> = 0x80, 
+<br />
+&#160;&#160;<b>SN</b> = 0x100, 
+<b>BAD</b> = 0x200
+<br />
+ }</td></tr>
+<tr class="separator:ga7d341b36061e346e358dd0dc66ed5fd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga9470b17afa78357ce4dd237c3088c3d9"><td class="memItemLeft" align="right" valign="top">arma::Mat&lt; Complex &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___power_flow.html#ga9470b17afa78357ce4dd237c3088c3d9">Sgt::carson</a> (arma::uword nWire, const arma::Mat&lt; double &gt; &amp;Dij, const <a class="el" href="classarma_1_1_col.html">arma::Col</a>&lt; double &gt; resPerL, double L, double freq, double rhoEarth)</td></tr>
+<tr class="memdesc:ga9470b17afa78357ce4dd237c3088c3d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply Carson's equations.  <a href="#ga9470b17afa78357ce4dd237c3088c3d9">More...</a><br /></td></tr>
+<tr class="separator:ga9470b17afa78357ce4dd237c3088c3d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga45b079e12dad853ead1b93db1528d66c"><td class="memItemLeft" align="right" valign="top">arma::Mat&lt; Complex &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___power_flow.html#ga45b079e12dad853ead1b93db1528d66c">Sgt::kron</a> (const arma::Mat&lt; Complex &gt; &amp;Z, int nPhase)</td></tr>
+<tr class="memdesc:ga45b079e12dad853ead1b93db1528d66c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply the kron reduction to line impedance matrix Z.  <a href="#ga45b079e12dad853ead1b93db1528d66c">More...</a><br /></td></tr>
+<tr class="separator:ga45b079e12dad853ead1b93db1528d66c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac77aa4c2855649f65d6642d4bbdfd8ae"><td class="memItemLeft" align="right" valign="top">arma::Mat&lt; Complex &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___power_flow.html#gac77aa4c2855649f65d6642d4bbdfd8ae">Sgt::ZLine2YNode</a> (const arma::Mat&lt; Complex &gt; &amp;ZLine)</td></tr>
+<tr class="memdesc:gac77aa4c2855649f65d6642d4bbdfd8ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the nodal admittance matrix YNode from the line impedance ZLine.  <a href="#gac77aa4c2855649f65d6642d4bbdfd8ae">More...</a><br /></td></tr>
+<tr class="separator:gac77aa4c2855649f65d6642d4bbdfd8ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9e6dd80d32f5e2d314011e4a8befa8e3"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___power_flow.html#ga9e6dd80d32f5e2d314011e4a8befa8e3">Sgt::bundleGmr</a> (int n, double gmr1, double d)</td></tr>
+<tr class="memdesc:ga9e6dd80d32f5e2d314011e4a8befa8e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the GMR of a bundled conductor.  <a href="#ga9e6dd80d32f5e2d314011e4a8befa8e3">More...</a><br /></td></tr>
+<tr class="separator:ga9e6dd80d32f5e2d314011e4a8befa8e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p>Core power flow classes of <a class="el" href="namespace_smart_grid_toolbox.html" title="The primary namespace for SmartGridToolbox. ">SmartGridToolbox</a>. </p>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga9470b17afa78357ce4dd237c3088c3d9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">arma::Mat&lt; Complex &gt; Sgt::carson </td>
+          <td>(</td>
+          <td class="paramtype">arma::uword&#160;</td>
+          <td class="paramname"><em>nWire</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const arma::Mat&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>Dij</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classarma_1_1_col.html">arma::Col</a>&lt; double &gt;&#160;</td>
+          <td class="paramname"><em>resPerL</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>L</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>freq</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>rhoEarth</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Apply Carson's equations. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nWire</td><td>The number of wires. </td></tr>
+    <tr><td class="paramname">Dij</td><td>Distance between wires on off diagonal, GMR of wires on diagonal. <a class="el" href="namespace_units.html" title="Physical units. ">Units</a>: m. </td></tr>
+    <tr><td class="paramname">resPerL</td><td>resistance per unit length, in ohms per metre. </td></tr>
+    <tr><td class="paramname">L</td><td>The line length, in m. </td></tr>
+    <tr><td class="paramname">freq</td><td>The system frequency. </td></tr>
+    <tr><td class="paramname">rhoEarth</td><td>The conductivity of the earth, ohm metres. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Line impedance matrix Z, s.t. I_phase = Z  V_phase. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga45b079e12dad853ead1b93db1528d66c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">arma::Mat&lt; Complex &gt; Sgt::kron </td>
+          <td>(</td>
+          <td class="paramtype">const arma::Mat&lt; Complex &gt; &amp;&#160;</td>
+          <td class="paramname"><em>Z</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nPhase</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Apply the kron reduction to line impedance matrix Z. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Z</td><td>The primitive nWire x nWire line impedance matrix </td></tr>
+    <tr><td class="paramname">nPhase</td><td>The number of phases, not including nWire grounded neutral wires that will be eliminated </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The impedance nPhase x nPhase matrix ZPhase, having eliminated nWire grounded neutrals. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gac77aa4c2855649f65d6642d4bbdfd8ae"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">arma::Mat&lt; Complex &gt; Sgt::ZLine2YNode </td>
+          <td>(</td>
+          <td class="paramtype">const arma::Mat&lt; Complex &gt; &amp;&#160;</td>
+          <td class="paramname"><em>ZLine</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculate the nodal admittance matrix YNode from the line impedance ZLine. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ZLine</td><td>The line impedance matrix. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The nodal admittance matrix YNode. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga9e6dd80d32f5e2d314011e4a8befa8e3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Sgt::bundleGmr </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>gmr1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>d</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculate the GMR of a bundled conductor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>The number of single conductors. </td></tr>
+    <tr><td class="paramname">gmr1</td><td>The GMR of a single conductor. </td></tr>
+    <tr><td class="paramname">d</td><td>The side length of a regular polygon on whose vertices the single conductors lie. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The GMR of the bundle. </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 21 2015 15:34:13 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jun 5 2015 12:55:18 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

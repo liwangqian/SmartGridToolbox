@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['currenttime',['currentTime',['../class_sgt_1_1_simulation.html#a119d13c734f281d27263e4e4972de775',1,'Sgt::Simulation']]]
+  ['bundlegmr',['bundleGmr',['../group___power_flow.html#ga9e6dd80d32f5e2d314011e4a8befa8e3',1,'Sgt']]]
 ];

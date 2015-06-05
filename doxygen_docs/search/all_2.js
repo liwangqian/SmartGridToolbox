@@ -1,12 +1,13 @@
 var searchData=
 [
+  ['carson',['carson',['../group___power_flow.html#ga9470b17afa78357ce4dd237c3088c3d9',1,'Sgt']]],
   ['cgram',['CGram',['../struct_sgt_1_1_c_gram.html',1,'Sgt']]],
   ['col',['Col',['../classarma_1_1_col.html',1,'arma']]],
   ['col_3c_20arma_3a_3auword_20_3e',['Col&lt; arma::uword &gt;',['../classarma_1_1_col.html',1,'arma']]],
   ['col_3c_20complex_20_3e',['Col&lt; Complex &gt;',['../classarma_1_1_col.html',1,'arma']]],
   ['col_3c_20double_20_3e',['Col&lt; double &gt;',['../classarma_1_1_col.html',1,'arma']]],
   ['col_3c_20int_20_3e',['Col&lt; int &gt;',['../classarma_1_1_col.html',1,'arma']]],
-  ['common_20utilities',['Common Utilities',['../group___common.html',1,'']]],
+  ['common',['Common',['../group___common.html',1,'']]],
   ['commonbranch',['CommonBranch',['../class_sgt_1_1_common_branch.html',1,'Sgt']]],
   ['commonbranchparserplugin',['CommonBranchParserPlugin',['../class_sgt_1_1_common_branch_parser_plugin.html',1,'Sgt']]],
   ['component',['Component',['../class_sgt_1_1_component.html',1,'Sgt']]],

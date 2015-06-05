@@ -11,7 +11,6 @@ var searchData=
   ['powerflowmodel',['PowerFlowModel',['../class_sgt_1_1_power_flow_model.html',1,'Sgt']]],
   ['powerflownrsolver',['PowerFlowNrSolver',['../class_sgt_1_1_power_flow_nr_solver.html',1,'Sgt']]],
   ['powerflowptppsolver',['PowerFlowPtPpSolver',['../class_sgt_1_1_power_flow_pt_pp_solver.html',1,'Sgt']]],
-  ['powerflowptsolver',['PowerFlowPtSolver',['../class_sgt_1_1_power_flow_pt_solver.html',1,'Sgt']]],
   ['powerflowsolverinterface',['PowerFlowSolverInterface',['../class_sgt_1_1_power_flow_solver_interface.html',1,'Sgt']]],
   ['powerflowsolverparserplugin',['PowerFlowSolverParserPlugin',['../class_sgt_1_1_power_flow_solver_parser_plugin.html',1,'Sgt']]],
   ['property',['Property',['../class_sgt_1_1_property.html',1,'Sgt']]],

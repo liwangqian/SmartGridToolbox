@@ -93,9 +93,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="class_sgt_1_1_parser_plugin-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Sgt::ParserPlugin&lt; T &gt; Class Template Reference</div>  </div>
+<div class="title">Sgt::ParserPlugin&lt; T &gt; Class Template Reference<div class="ingroups"><a class="el" href="group___core.html">SmartGridToolbox Core</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>A plugin to parse YAML into an object.  
+ <a href="class_sgt_1_1_parser_plugin.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_parser_8h_source.html">Parser.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Sgt::ParserPlugin&lt; T &gt;:</div>
 <div class="dyncontent">
@@ -120,7 +125,7 @@ Inheritance diagram for Sgt::ParserPlugin&lt; T &gt;:</div>
 <area href="class_sgt_1_1_sim_generic_branch_parser_plugin.html" title="ParserPlugin that parses generic branch objects. " alt="Sgt::SimGenericBranchParserPlugin" shape="rect" coords="278,896,546,920"/>
 <area href="class_sgt_1_1_sim_generic_gen_parser_plugin.html" title="ParserPlugin that parses generic gen objects. " alt="Sgt::SimGenericGenParserPlugin" shape="rect" coords="278,952,546,976"/>
 <area href="class_sgt_1_1_sim_generic_zip_parser_plugin.html" title="ParserPlugin that parses generic zip objects. " alt="Sgt::SimGenericZipParserPlugin" shape="rect" coords="278,1008,546,1032"/>
-<area href="class_sgt_1_1_sim_global_parser_plugin.html" title="ParserPlugin that parses generic branch objects. " alt="Sgt::SimGlobalParserPlugin" shape="rect" coords="278,1064,546,1088"/>
+<area href="class_sgt_1_1_sim_global_parser_plugin.html" title="ParserPlugin that parses simulation information. " alt="Sgt::SimGlobalParserPlugin" shape="rect" coords="278,1064,546,1088"/>
 <area href="class_sgt_1_1_sim_matpower_parser_plugin.html" title="ParserPlugin that parses matpower networks. " alt="Sgt::SimMatpowerParserPlugin" shape="rect" coords="278,1120,546,1144"/>
 <area href="class_sgt_1_1_sim_network_parser_plugin.html" title="ParserPlugin that parses the network keyword, adding a new SimNetwork to the model. " alt="Sgt::SimNetworkParserPlugin" shape="rect" coords="278,1176,546,1200"/>
 <area href="class_sgt_1_1_sim_overhead_line_parser_plugin.html" title="ParserPlugin that parses OverheadLine objects. " alt="Sgt::SimOverheadLineParserPlugin" shape="rect" coords="278,1232,546,1256"/>
@@ -149,13 +154,18 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>parse</b> (co
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>postParse</b> (const YAML::Node &amp;nd, T &amp;into, const <a class="el" href="class_sgt_1_1_parser_base.html">ParserBase</a> &amp;parser) const </td></tr>
 <tr class="separator:a39504bff60e639ce6265bc8fc4eeed92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;typename T&gt;<br />
+class Sgt::ParserPlugin&lt; T &gt;</h3>
+
+<p>A plugin to parse YAML into an object. </p>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>/Users/dgordon/Devel/SmartGridToolbox/SgtCore/<a class="el" href="_parser_8h_source.html">Parser.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 21 2015 15:34:24 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jun 5 2015 12:55:27 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

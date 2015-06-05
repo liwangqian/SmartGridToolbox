@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['generationchanged',['generationChanged',['../class_sgt_1_1_gen_abc.html#a246ce730bc0a39dc1cd66081d6bcd534',1,'Sgt::GenAbc']]]
+  ['endtime',['endTime',['../class_sgt_1_1_simulation.html#a72019f7688a6c678b2f138fa391da3ec',1,'Sgt::Simulation']]]
 ];

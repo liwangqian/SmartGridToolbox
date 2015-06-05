@@ -37,8 +37,6 @@ var searchData=
   ['solarpvparserplugin',['SolarPvParserPlugin',['../class_sgt_1_1_solar_pv_parser_plugin.html',1,'Sgt']]],
   ['sparsehelper',['SparseHelper',['../class_sgt_1_1_sparse_helper.html',1,'Sgt']]],
   ['sphericalangles',['SphericalAngles',['../struct_sgt_1_1_spherical_angles.html',1,'Sgt']]],
-  ['spline',['Spline',['../class_spline.html',1,'']]],
-  ['splinetimeseries',['SplineTimeSeries',['../class_sgt_1_1_spline_time_series.html',1,'Sgt']]],
   ['spmat',['SpMat',['../classarma_1_1_sp_mat.html',1,'arma']]],
   ['spmat_3c_20complex_20_3e',['SpMat&lt; Complex &gt;',['../classarma_1_1_sp_mat.html',1,'arma']]],
   ['spmat_3c_20double_20_3e',['SpMat&lt; double &gt;',['../classarma_1_1_sp_mat.html',1,'arma']]],

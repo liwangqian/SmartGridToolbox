@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['pdc',['PDc',['../class_sgt_1_1_battery.html#ac7836c442ba3b52ee51ad0b6167471de',1,'Sgt::Battery::PDc()'],['../class_sgt_1_1_inverter_abc.html#a22a41c301b69abbb244f7359c6a97e1e',1,'Sgt::InverterAbc::PDc()']]],
-  ['precedes',['precedes',['../class_sgt_1_1_wo_node.html#adf44321a7e5e969175e2784c1619cbc3',1,'Sgt::WoNode']]]
+  ['lastupdated',['lastUpdated',['../class_sgt_1_1_sim_component_adaptor.html#af92866b78117e81a03277ce4f8435134',1,'Sgt::SimComponentAdaptor']]],
+  ['latlong',['latLong',['../class_sgt_1_1_simulation.html#a8c18b3f7c9c74052aaecbd82d089b60f',1,'Sgt::Simulation']]],
+  ['logcomponents',['logComponents',['../class_sgt_1_1_simulation.html#a8b619618272095d37879b052dcd2f409',1,'Sgt::Simulation']]]
 ];

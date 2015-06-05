@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['yconst',['YConst',['../class_sgt_1_1_bus.html#aa0aadd5e1d1d9aac66707b715c8507b8',1,'Sgt::Bus::YConst()'],['../class_sgt_1_1_zip_abc.html#a220bf933ef9e00276a58a204a8323dd9',1,'Sgt::ZipAbc::YConst()'],['../class_sgt_1_1_generic_zip.html#a403c18e467dd9df74e72a75b78f22586',1,'Sgt::GenericZip::YConst()'],['../class_sgt_1_1_simple_zip_inverter.html#a1f62487a1047cf259b6379f2dde53ea6',1,'Sgt::SimpleZipInverter::YConst()'],['../class_sgt_1_1_time_series_zip.html#aa47f07ed1813726545825bf25cac969b',1,'Sgt::TimeSeriesZip::YConst()']]],
-  ['yytransformer',['YyTransformer',['../class_sgt_1_1_yy_transformer.html#a89a70a1ab314a5e74ac3bff4df5718c4',1,'Sgt::YyTransformer']]]
+  ['undergroundline',['UndergroundLine',['../class_sgt_1_1_underground_line.html#a0f7cc7e445af6ffd9cdc4e3991184d06',1,'Sgt::UndergroundLine']]],
+  ['update',['update',['../class_sgt_1_1_sim_component_adaptor.html#a012e295b20a8204a104c0e2e04f1d23d',1,'Sgt::SimComponentAdaptor']]],
+  ['updatestate',['updateState',['../class_sgt_1_1_battery.html#aed1b6be906fcb40317b6b5338530df14',1,'Sgt::Battery::updateState()'],['../class_sgt_1_1_heartbeat_adaptor.html#a25de9e1945b98c0ed5ac7bfab81d2efa',1,'Sgt::HeartbeatAdaptor::updateState()'],['../class_sgt_1_1_sim_component_adaptor.html#a55869db534f5b37c16479da48831cf8d',1,'Sgt::SimComponentAdaptor::updateState()'],['../class_sgt_1_1_sim_network.html#a95aee93f756728907ddc831565abc538',1,'Sgt::SimNetwork::updateState()'],['../class_sgt_1_1_simple_building.html#ac9f8f8b96ac9005be387a8db216fe45b',1,'Sgt::SimpleBuilding::updateState()'],['../class_sgt_1_1_time_series_zip.html#a5f8c3cb2326bbfb57c87d3b5abebd1eb',1,'Sgt::TimeSeriesZip::updateState()']]]
 ];

@@ -161,41 +161,42 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment"></span>    SphericalAngles sunPos(posix_time::ptime utcTime, LatLong location);</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">    /// @brief Horizontal solar irradiance.</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">    /// This quantity is often used as a proxy for the solar irradiance magnitude, as it is easier to measure.</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">    /// @parameter angs: spherical angles of the sun.</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">    /// @return Horizontal solar irradiance of the sun, in W/m^2.</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment"></span>    <span class="keyword">inline</span> <span class="keywordtype">double</span> horizontalSolarIrradiance(<span class="keyword">const</span> SphericalAngles&amp; angs)</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    {</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordtype">double</span> cosZen = cos(angs.zenith);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">return</span> (cosZen &gt; 0.0 ? solarIrradianceMag() * cosZen : 0.0);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">    /// @brief Solar irradiance vector, W/m^2.</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">    /// @parameter solarAngles : solar angles of the sun.</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">    /// @return Irradiance vector in W/m^2. Direction of vector points to the sun.</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment"></span>    <span class="keyword">inline</span> Array&lt;double, 3&gt; solarIrradianceVec(SphericalAngles solarAngles)</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    {</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordflow">return</span> angsAndMagToVec(solarAngles, solarIrradianceMag());</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment">    /// @brief Solar power falling on a plane, W.</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">    /// @parameter solarAngles : spherical angles of the sun.</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment">    /// @parameter planeNormal: the coordinates specified by the normal of a plane.</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment">    /// @parameter planeArea: the area of the plane.</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">    /// @return Power in W. Angle between sun and plane normal of &gt;= 90 degrees implies zero power.</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment"></span>    <span class="keywordtype">double</span> solarPower(SphericalAngles solarAngles, SphericalAngles planeNormal, <span class="keywordtype">double</span> planeArea);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment">    /// @brief Solar power per m^2 falling on a plane, W/m^2.</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">    /// @parameter solarAngles : struct containing zenith and azimuth angles of the sun.</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment">    /// @parameter planeNormal: the coordinates specified by the normal of a plane.</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment">    /// @return Irradiance in W/m^2. Angle between sun and plane normal of &gt;= 90 degrees implies zero power.</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment"></span>    <span class="keyword">inline</span> <span class="keywordtype">double</span> solarIrradiance(SphericalAngles solarAngles, SphericalAngles planeNormal)</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    {</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordflow">return</span> solarPower(solarAngles, planeNormal, 1.0);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    }</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;}</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#endif // SUN_DOT_H</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">    ///</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">    /// This quantity is often used as a proxy for the solar irradiance magnitude, as it is easier to measure.</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">    /// @parameter angs: spherical angles of the sun.</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">    /// @return Horizontal solar irradiance of the sun, in W/m^2.</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment"></span>    <span class="keyword">inline</span> <span class="keywordtype">double</span> horizontalSolarIrradiance(<span class="keyword">const</span> SphericalAngles&amp; angs)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordtype">double</span> cosZen = cos(angs.zenith);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordflow">return</span> (cosZen &gt; 0.0 ? solarIrradianceMag() * cosZen : 0.0);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">    /// @brief Solar irradiance vector, W/m^2.</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">    /// @parameter solarAngles : solar angles of the sun.</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">    /// @return Irradiance vector in W/m^2. Direction of vector points to the sun.</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment"></span>    <span class="keyword">inline</span> Array&lt;double, 3&gt; solarIrradianceVec(SphericalAngles solarAngles)</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">return</span> angsAndMagToVec(solarAngles, solarIrradianceMag());</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">    /// @brief Solar power falling on a plane, W.</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment">    /// @parameter solarAngles : spherical angles of the sun.</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment">    /// @parameter planeNormal: the coordinates specified by the normal of a plane.</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">    /// @parameter planeArea: the area of the plane.</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">    /// @return Power in W. Angle between sun and plane normal of &gt;= 90 degrees implies zero power.</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment"></span>    <span class="keywordtype">double</span> solarPower(SphericalAngles solarAngles, SphericalAngles planeNormal, <span class="keywordtype">double</span> planeArea);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">    /// @brief Solar power per m^2 falling on a plane, W/m^2.</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment">    /// @parameter solarAngles : struct containing zenith and azimuth angles of the sun.</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment">    /// @parameter planeNormal: the coordinates specified by the normal of a plane.</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment">    /// @return Irradiance in W/m^2. Angle between sun and plane normal of &gt;= 90 degrees implies zero power.</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment"></span>    <span class="keyword">inline</span> <span class="keywordtype">double</span> solarIrradiance(SphericalAngles solarAngles, SphericalAngles planeNormal)</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordflow">return</span> solarPower(solarAngles, planeNormal, 1.0);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">#endif // SUN_DOT_H</span></div>
 <div class="ttc" id="namespace_sgt_html"><div class="ttname"><a href="namespace_sgt.html">Sgt</a></div><div class="ttdef"><b>Definition:</b> Branch.cc:19</div></div>
 <div class="ttc" id="struct_sgt_1_1_spherical_angles_html_af6659d1fdc1a548f2d7d7b488fea1d98"><div class="ttname"><a href="struct_sgt_1_1_spherical_angles.html#af6659d1fdc1a548f2d7d7b488fea1d98">Sgt::SphericalAngles::zenith</a></div><div class="ttdeci">double zenith</div><div class="ttdoc">Angle in radians between directly overhead and the desired point on sphere. </div><div class="ttdef"><b>Definition:</b> Sun.h:29</div></div>
 <div class="ttc" id="struct_sgt_1_1_spherical_angles_html_ab34340e366982abb8b1c778d8d07abc8"><div class="ttname"><a href="struct_sgt_1_1_spherical_angles.html#ab34340e366982abb8b1c778d8d07abc8">Sgt::SphericalAngles::azimuth</a></div><div class="ttdeci">double azimuth</div><div class="ttdoc">Direction of point in radians, angle clockwise from due north(?). </div><div class="ttdef"><b>Definition:</b> Sun.h:30</div></div>
@@ -203,7 +204,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 21 2015 15:34:13 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jun 5 2015 12:55:18 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

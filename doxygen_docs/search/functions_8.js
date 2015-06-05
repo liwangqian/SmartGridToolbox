@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['needsupdate',['needsUpdate',['../class_sgt_1_1_sim_component_adaptor.html#a50e3877fea9fd10c4827f9b785710b12',1,'Sgt::SimComponentAdaptor']]],
-  ['newsimcomponent',['newSimComponent',['../class_sgt_1_1_simulation.html#a7ada935a68dc18fbf628de809ee87c26',1,'Sgt::Simulation']]]
+  ['jchanged',['JChanged',['../class_sgt_1_1_gen_abc.html#a2754778a2b0ed9bf130b3bb4a06af9b3',1,'Sgt::GenAbc']]]
 ];

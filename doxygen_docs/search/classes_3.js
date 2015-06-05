@@ -1,7 +1,6 @@
 var searchData=
 [
   ['datatimeseries',['DataTimeSeries',['../class_sgt_1_1_data_time_series.html',1,'Sgt']]],
-  ['datatimeseries_3c_20t_2c_20double_20_3e',['DataTimeSeries&lt; T, double &gt;',['../class_sgt_1_1_data_time_series.html',1,'Sgt']]],
   ['dcpowersourceabc',['DcPowerSourceAbc',['../class_sgt_1_1_dc_power_source_abc.html',1,'Sgt']]],
   ['dgytransformer',['DgyTransformer',['../class_sgt_1_1_dgy_transformer.html',1,'Sgt']]],
   ['dgytransformerparserplugin',['DgyTransformerParserPlugin',['../class_sgt_1_1_dgy_transformer_parser_plugin.html',1,'Sgt']]],

@@ -1,13 +1,15 @@
 var searchData=
 [
-  ['undergroundline',['UndergroundLine',['../class_sgt_1_1_underground_line.html',1,'Sgt']]],
-  ['undergroundline',['UndergroundLine',['../class_sgt_1_1_underground_line.html#a0f7cc7e445af6ffd9cdc4e3991184d06',1,'Sgt::UndergroundLine']]],
-  ['undergroundlineparserplugin',['UndergroundLineParserPlugin',['../class_sgt_1_1_underground_line_parser_plugin.html',1,'Sgt']]],
-  ['undergroundlinestrandedshield',['UndergroundLineStrandedShield',['../class_sgt_1_1_underground_line_stranded_shield.html',1,'Sgt']]],
-  ['unit',['Unit',['../class_units_1_1_unit.html',1,'Units']]],
-  ['unit_3c_20d_2c_20v2_20_3e',['Unit&lt; D, V2 &gt;',['../class_units_1_1_unit.html',1,'Units']]],
-  ['unitquantity',['UnitQuantity',['../class_units_1_1_unit_quantity.html',1,'Units']]],
-  ['units',['Units',['../namespace_units.html',1,'']]],
-  ['update',['update',['../class_sgt_1_1_sim_component_adaptor.html#a012e295b20a8204a104c0e2e04f1d23d',1,'Sgt::SimComponentAdaptor']]],
-  ['updatestate',['updateState',['../class_sgt_1_1_battery.html#aed1b6be906fcb40317b6b5338530df14',1,'Sgt::Battery::updateState()'],['../class_sgt_1_1_heartbeat_adaptor.html#a25de9e1945b98c0ed5ac7bfab81d2efa',1,'Sgt::HeartbeatAdaptor::updateState()'],['../class_sgt_1_1_sim_component_adaptor.html#a55869db534f5b37c16479da48831cf8d',1,'Sgt::SimComponentAdaptor::updateState()'],['../class_sgt_1_1_sim_network.html#a95aee93f756728907ddc831565abc538',1,'Sgt::SimNetwork::updateState()'],['../class_sgt_1_1_simple_building.html#ac9f8f8b96ac9005be387a8db216fe45b',1,'Sgt::SimpleBuilding::updateState()'],['../class_sgt_1_1_time_series_zip.html#a5f8c3cb2326bbfb57c87d3b5abebd1eb',1,'Sgt::TimeSeriesZip::updateState()']]]
+  ['tapratio',['tapRatio',['../class_sgt_1_1_common_branch.html#aca48b051357236e6fd6aff2ddb670c2f',1,'Sgt::CommonBranch']]],
+  ['timeseries',['TimeSeries',['../class_sgt_1_1_time_series.html',1,'Sgt']]],
+  ['timeseries',['timeSeries',['../class_sgt_1_1_simulation.html#a28ec0d2203ac52ee422617317bb14d44',1,'Sgt::Simulation::timeSeries(const std::string &amp;id, bool crashOnFail=true) const '],['../class_sgt_1_1_simulation.html#a682f0d6c06958c7daf1f2153b6b20048',1,'Sgt::Simulation::timeSeries(const std::string &amp;id, bool crashOnFail=true)']]],
+  ['timeseriesbase',['TimeSeriesBase',['../class_sgt_1_1_time_series_base.html',1,'Sgt']]],
+  ['timeseriesparserplugin',['TimeSeriesParserPlugin',['../class_sgt_1_1_time_series_parser_plugin.html',1,'Sgt']]],
+  ['timeserieszip',['TimeSeriesZip',['../class_sgt_1_1_time_series_zip.html',1,'Sgt']]],
+  ['timeserieszipparserplugin',['TimeSeriesZipParserPlugin',['../class_sgt_1_1_time_series_zip_parser_plugin.html',1,'Sgt']]],
+  ['timestepdidcomplete',['timestepDidComplete',['../class_sgt_1_1_simulation.html#ad190f8f9eb37d07c8a101f49e12d5951',1,'Sgt::Simulation']]],
+  ['timestepwillstart',['timestepWillStart',['../class_sgt_1_1_simulation.html#a05ca47be0230ee065792737c56bb2520',1,'Sgt::Simulation']]],
+  ['timezone',['timezone',['../class_sgt_1_1_simulation.html#a28f06270cbc10befeb04b6ed908afea2',1,'Sgt::Simulation']]],
+  ['toyamlstring',['toYamlString',['../group___utilities.html#gae975ed475ef00424f8096561728acaa6',1,'Sgt']]],
+  ['type_5f',['type_',['../struct_sgt_1_1_pf_bus.html#a41d6d2e6f405de07697c51ce2fcec230',1,'Sgt::PfBus']]]
 ];

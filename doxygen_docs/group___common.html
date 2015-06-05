@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>SmartGridToolbox: Common Utilities</title>
+<title>SmartGridToolbox: Common</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -80,22 +80,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle">
-<div class="title">Common Utilities</div>  </div>
+<div class="title">Common</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>Utility classes, functions and constants. These will typically be included in most headers, and provide access to utility functions etc. for time, complex numbers, linear algebra, etc.  
-<a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_stream_indent.html">Sgt::StreamIndent</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_log.html">Sgt::Log</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logging object.  <a href="class_sgt_1_1_log.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_log_indent.html">Sgt::LogIndent</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="class_sgt_1_1_log_indent.html" title="Create a LogIndent on the stack to indent all logs. ">LogIndent</a> on the stack to indent all logs.  <a href="class_sgt_1_1_log_indent.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_lat_long.html">Sgt::LatLong</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple struct storing a latitude and longitude.  <a href="class_sgt_1_1_lat_long.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
@@ -103,27 +103,6 @@ Reporting and errors.</h2></td></tr>
 <tr class="memitem:ga4cb534117e92b9d13c8f992637aeae1c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga4cb534117e92b9d13c8f992637aeae1c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Sgt::error</b> ()</td></tr>
 <tr class="separator:ga4cb534117e92b9d13c8f992637aeae1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
-String conversion.</h2></td></tr>
-<tr class="memitem:gae13287ed53132b053e5bb7015ae35958"><td class="memTemplParams" colspan="2"><a class="anchor" id="gae13287ed53132b053e5bb7015ae35958"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:gae13287ed53132b053e5bb7015ae35958"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Sgt::from_string</b> (const std::string &amp;s)</td></tr>
-<tr class="separator:gae13287ed53132b053e5bb7015ae35958"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
-Constant dimension 1D array type.</h2></td></tr>
-<tr class="memitem:gab1d63d787778e17c96392a4ad2e78bca"><td class="memTemplParams" colspan="2"><a class="anchor" id="gab1d63d787778e17c96392a4ad2e78bca"></a>
-template&lt;class T , size_t N&gt; </td></tr>
-<tr class="memitem:gab1d63d787778e17c96392a4ad2e78bca"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Sgt::Array</b> = std::array&lt; T, N &gt;</td></tr>
-<tr class="separator:gab1d63d787778e17c96392a4ad2e78bca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
-Constant dimension 2D array type.</h2></td></tr>
-<tr class="memitem:ga407f3af7a7ab450c7b7fd0e6d0e61bee"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga407f3af7a7ab450c7b7fd0e6d0e61bee"></a>
-template&lt;class T , size_t NR, size_t NC&gt; </td></tr>
-<tr class="memitem:ga407f3af7a7ab450c7b7fd0e6d0e61bee"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Sgt::Array2D</b> = std::array&lt; std::array&lt; T, NC &gt;, NR &gt;</td></tr>
-<tr class="separator:ga407f3af7a7ab450c7b7fd0e6d0e61bee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
 Complex numbers</h2></td></tr>
@@ -152,10 +131,6 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>Sgt::to_string
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
 Linear algebra</h2></td></tr>
-<tr class="memitem:ga47b0570928a773a8f90dc48052421989"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga47b0570928a773a8f90dc48052421989"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ga47b0570928a773a8f90dc48052421989"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Sgt::operator&lt;&lt;</b> (std::ostream &amp;os, const <a class="el" href="classarma_1_1_col.html">arma::Col</a>&lt; T &gt; &amp;v)</td></tr>
-<tr class="separator:ga47b0570928a773a8f90dc48052421989"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4e35e09949458411d098f7563af98138"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga4e35e09949458411d098f7563af98138"></a>
 template std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Sgt::operator&lt;&lt; &lt; double &gt;</b> (std::ostream &amp;os, const <a class="el" href="classarma_1_1_col.html">arma::Col</a>&lt; double &gt; &amp;v)</td></tr>
 <tr class="separator:ga4e35e09949458411d098f7563af98138"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -168,10 +143,6 @@ template std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><
 <tr class="memitem:gaba45ba17b5d2741baef9275e574686fd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaba45ba17b5d2741baef9275e574686fd"></a>
 template std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Sgt::operator&lt;&lt; &lt; Complex &gt;</b> (std::ostream &amp;os, const <a class="el" href="classarma_1_1_col.html">arma::Col</a>&lt; Complex &gt; &amp;v)</td></tr>
 <tr class="separator:gaba45ba17b5d2741baef9275e574686fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae0761a1e0d8b115191cf0f5e5ea58e83"><td class="memTemplParams" colspan="2"><a class="anchor" id="gae0761a1e0d8b115191cf0f5e5ea58e83"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:gae0761a1e0d8b115191cf0f5e5ea58e83"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Sgt::operator&lt;&lt;</b> (std::ostream &amp;os, const arma::Mat&lt; T &gt; &amp;m)</td></tr>
-<tr class="separator:gae0761a1e0d8b115191cf0f5e5ea58e83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga034d0320dd3ad90fda9a14f3a5ec7dc8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga034d0320dd3ad90fda9a14f3a5ec7dc8"></a>
 template std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Sgt::operator&lt;&lt; &lt; double &gt;</b> (std::ostream &amp;os, const arma::Mat&lt; double &gt; &amp;v)</td></tr>
 <tr class="separator:ga034d0320dd3ad90fda9a14f3a5ec7dc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -211,116 +182,12 @@ posix_time::ptime&#160;</td><td class="memItemRight" valign="bottom"><b>Sgt::loc
 <tr class="memitem:gac62497e4d1da5f7e0c3f086fa48711bd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gac62497e4d1da5f7e0c3f086fa48711bd"></a>
 Time&#160;</td><td class="memItemRight" valign="bottom"><b>Sgt::timeFromLocalTime</b> (posix_time::ptime localTime, const local_time::time_zone_ptr localTz)</td></tr>
 <tr class="separator:gac62497e4d1da5f7e0c3f086fa48711bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
-Constants</h2></td></tr>
-<tr class="memitem:gae9e7be61113594d115bf893383a1b4d3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gae9e7be61113594d115bf893383a1b4d3"></a>
-const double&#160;</td><td class="memItemRight" valign="bottom"><b>Sgt::pi</b> = 3.141592653589793238462643383279502884</td></tr>
-<tr class="separator:gae9e7be61113594d115bf893383a1b4d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3aea0c1f4a0b3d671f76fd02dc840b91"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga3aea0c1f4a0b3d671f76fd02dc840b91"></a>
-const double&#160;</td><td class="memItemRight" valign="bottom"><b>Sgt::negInfinity</b> = -std::numeric_limits&lt;double&gt;::infinity()</td></tr>
-<tr class="separator:ga3aea0c1f4a0b3d671f76fd02dc840b91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3f61d1347dde14f76ae5ca742fad2f5d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga3f61d1347dde14f76ae5ca742fad2f5d"></a>
-const double&#160;</td><td class="memItemRight" valign="bottom"><b>Sgt::infinity</b> = std::numeric_limits&lt;double&gt;::infinity()</td></tr>
-<tr class="separator:ga3f61d1347dde14f76ae5ca742fad2f5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga75287117a094ab39aac1c47376183508"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga75287117a094ab39aac1c47376183508"></a>
-const double&#160;</td><td class="memItemRight" valign="bottom"><b>Sgt::second</b> = 1.0</td></tr>
-<tr class="separator:ga75287117a094ab39aac1c47376183508"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafd9ffc20f7ac911398fdd62534ab46f2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gafd9ffc20f7ac911398fdd62534ab46f2"></a>
-const double&#160;</td><td class="memItemRight" valign="bottom"><b>Sgt::minute</b> = 60.0 * second</td></tr>
-<tr class="separator:gafd9ffc20f7ac911398fdd62534ab46f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga225e6c49f9ed2bccde7062eb3a1e7ae5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga225e6c49f9ed2bccde7062eb3a1e7ae5"></a>
-const double&#160;</td><td class="memItemRight" valign="bottom"><b>Sgt::hour</b> = 60.0 * minute</td></tr>
-<tr class="separator:ga225e6c49f9ed2bccde7062eb3a1e7ae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaaf1f2571640a93b341badc4cab5dcf51"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaaf1f2571640a93b341badc4cab5dcf51"></a>
-const double&#160;</td><td class="memItemRight" valign="bottom"><b>Sgt::day</b> = 24.0 * hour</td></tr>
-<tr class="separator:gaaf1f2571640a93b341badc4cab5dcf51"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf64c69d7bdab08d5d5d16e0ec4cf931f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaf64c69d7bdab08d5d5d16e0ec4cf931f"></a>
-const double&#160;</td><td class="memItemRight" valign="bottom"><b>Sgt::week</b> = 7 * day</td></tr>
-<tr class="separator:gaf64c69d7bdab08d5d5d16e0ec4cf931f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1f26c4c92c5b644f48d14ea1a4ffdf15"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga1f26c4c92c5b644f48d14ea1a4ffdf15"></a>
-const double&#160;</td><td class="memItemRight" valign="bottom"><b>Sgt::J</b> = 1.0</td></tr>
-<tr class="separator:ga1f26c4c92c5b644f48d14ea1a4ffdf15"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaac418aa7ac6a58b191a266112b2d1fa9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaac418aa7ac6a58b191a266112b2d1fa9"></a>
-const double&#160;</td><td class="memItemRight" valign="bottom"><b>Sgt::kJ</b> = 1000.0 * J</td></tr>
-<tr class="separator:gaac418aa7ac6a58b191a266112b2d1fa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaeb52c2d0754a5691400d9dfcdc62accf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaeb52c2d0754a5691400d9dfcdc62accf"></a>
-const double&#160;</td><td class="memItemRight" valign="bottom"><b>Sgt::W</b> = J / second</td></tr>
-<tr class="separator:gaeb52c2d0754a5691400d9dfcdc62accf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gacd74a358884bf0a3b7154457ca6997a6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gacd74a358884bf0a3b7154457ca6997a6"></a>
-const double&#160;</td><td class="memItemRight" valign="bottom"><b>Sgt::kW</b> = 1000.0 * W</td></tr>
-<tr class="separator:gacd74a358884bf0a3b7154457ca6997a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7777e6973ff9d10ae84d9b21170eb79f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga7777e6973ff9d10ae84d9b21170eb79f"></a>
-const double&#160;</td><td class="memItemRight" valign="bottom"><b>Sgt::kWh</b> = kW * hour</td></tr>
-<tr class="separator:ga7777e6973ff9d10ae84d9b21170eb79f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga48c87a2837d34b77aa3680a81c377983"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga48c87a2837d34b77aa3680a81c377983"></a>
-const double&#160;</td><td class="memItemRight" valign="bottom"><b>Sgt::A</b> = 1.0</td></tr>
-<tr class="separator:ga48c87a2837d34b77aa3680a81c377983"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab93b97b865f6c6fddf7f5136959ffb58"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gab93b97b865f6c6fddf7f5136959ffb58"></a>
-const double&#160;</td><td class="memItemRight" valign="bottom"><b>Sgt::C</b> = A / second</td></tr>
-<tr class="separator:gab93b97b865f6c6fddf7f5136959ffb58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga90df7f431b9cba2e05f7e172cb4aaf68"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga90df7f431b9cba2e05f7e172cb4aaf68"></a>
-const double&#160;</td><td class="memItemRight" valign="bottom"><b>Sgt::K</b> = 1.0</td></tr>
-<tr class="separator:ga90df7f431b9cba2e05f7e172cb4aaf68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga256851bd7687515e9bd23e4fa4ca9ec1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga256851bd7687515e9bd23e4fa4ca9ec1"></a>
-const Complex&#160;</td><td class="memItemRight" valign="bottom"><b>Sgt::czero</b> {0.0, 0.0}</td></tr>
-<tr class="separator:ga256851bd7687515e9bd23e4fa4ca9ec1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga971b3334c9a3cc350cd471adbe5942e5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga971b3334c9a3cc350cd471adbe5942e5"></a>
-const LatLong&#160;</td><td class="memItemRight" valign="bottom"><b>Sgt::Greenwich</b> {51.4791, 0.0}</td></tr>
-<tr class="separator:ga971b3334c9a3cc350cd471adbe5942e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
-Basic vector algebra in n dimensions.</h2></td></tr>
-<tr class="memitem:gaa12f54a3320f2fa61cd50eaddb8c06c2"><td class="memTemplParams" colspan="2"><a class="anchor" id="gaa12f54a3320f2fa61cd50eaddb8c06c2"></a>
-template&lt;typename T , std::size_t d&gt; </td></tr>
-<tr class="memitem:gaa12f54a3320f2fa61cd50eaddb8c06c2"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Sgt::dot</b> (const Array&lt; T, d &gt; &amp;v1, const Array&lt; T, d &gt; &amp;v2)</td></tr>
-<tr class="separator:gaa12f54a3320f2fa61cd50eaddb8c06c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga01834615a4ae9f0d9cae1f04145cbef9"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga01834615a4ae9f0d9cae1f04145cbef9"></a>
-template&lt;typename T , std::size_t d, typename S &gt; </td></tr>
-<tr class="memitem:ga01834615a4ae9f0d9cae1f04145cbef9"><td class="memTemplItemLeft" align="right" valign="top">Array&lt; T, d &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Sgt::operator*</b> (const Array&lt; T, d &gt; &amp;v, const S &amp;s)</td></tr>
-<tr class="separator:ga01834615a4ae9f0d9cae1f04145cbef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga728409b60ad608ce6f53e321c346a3df"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga728409b60ad608ce6f53e321c346a3df"></a>
-template&lt;typename T , std::size_t d, typename S &gt; </td></tr>
-<tr class="memitem:ga728409b60ad608ce6f53e321c346a3df"><td class="memTemplItemLeft" align="right" valign="top">Array&lt; T, d &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Sgt::operator*</b> (const S &amp;s, const Array&lt; T, d &gt; &amp;v)</td></tr>
-<tr class="separator:ga728409b60ad608ce6f53e321c346a3df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga41b23c7d8dc6469d5009593e7def64e6"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga41b23c7d8dc6469d5009593e7def64e6"></a>
-template&lt;typename T , std::size_t d&gt; </td></tr>
-<tr class="memitem:ga41b23c7d8dc6469d5009593e7def64e6"><td class="memTemplItemLeft" align="right" valign="top">Array&lt; T, d &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Sgt::operator+</b> (const Array&lt; T, d &gt; &amp;lhs, const Array&lt; T, d &gt; &amp;rhs)</td></tr>
-<tr class="separator:ga41b23c7d8dc6469d5009593e7def64e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1454f0fb5897731b6e822800547c46d6"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga1454f0fb5897731b6e822800547c46d6"></a>
-template&lt;typename T , std::size_t d&gt; </td></tr>
-<tr class="memitem:ga1454f0fb5897731b6e822800547c46d6"><td class="memTemplItemLeft" align="right" valign="top">Array&lt; T, d &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Sgt::operator-</b> (const Array&lt; T, d &gt; &amp;lhs, const Array&lt; T, d &gt; &amp;rhs)</td></tr>
-<tr class="separator:ga1454f0fb5897731b6e822800547c46d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
-Random number generation.</h2></td></tr>
-<tr class="memitem:gaa5962c244adcacc0570ba33189207fee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaa5962c244adcacc0570ba33189207fee"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___common.html#gaa5962c244adcacc0570ba33189207fee">Sgt::randDiscrete</a> (const double *probs, int nProbs)</td></tr>
-<tr class="memdesc:gaa5962c244adcacc0570ba33189207fee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sample from discrete distribution with nProbs given probabilities. <br /></td></tr>
-<tr class="separator:gaa5962c244adcacc0570ba33189207fee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8994ff617877a65cb01cd3b8a1a22f0d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga8994ff617877a65cb01cd3b8a1a22f0d"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___common.html#ga8994ff617877a65cb01cd3b8a1a22f0d">Sgt::randNormal</a> (double mu, double sig)</td></tr>
-<tr class="memdesc:ga8994ff617877a65cb01cd3b8a1a22f0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sample from normal distribution with given mean and s.d. <br /></td></tr>
-<tr class="separator:ga8994ff617877a65cb01cd3b8a1a22f0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1ae47f9b9323006e23fd3fe48f587f35"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga1ae47f9b9323006e23fd3fe48f587f35"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___common.html#ga1ae47f9b9323006e23fd3fe48f587f35">Sgt::randUniform</a> (double lower, double upper)</td></tr>
-<tr class="memdesc:ga1ae47f9b9323006e23fd3fe48f587f35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sample from uniform distribution with given lower and upper bounds. <br /></td></tr>
-<tr class="separator:ga1ae47f9b9323006e23fd3fe48f587f35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga747c72267689060bcdc8120da6f90646"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga747c72267689060bcdc8120da6f90646"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___common.html#ga747c72267689060bcdc8120da6f90646">Sgt::randUniformInt</a> (int lower, int upper)</td></tr>
-<tr class="memdesc:ga747c72267689060bcdc8120da6f90646"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sample from integer uniform distribution with given lower and upper bounds. <br /></td></tr>
-<tr class="separator:ga747c72267689060bcdc8120da6f90646"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf41dc3633984a6226bfb7ddaa3bca756"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaf41dc3633984a6226bfb7ddaa3bca756"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___common.html#gaf41dc3633984a6226bfb7ddaa3bca756">Sgt::randWeibull</a> (double a, double b)</td></tr>
-<tr class="memdesc:gaf41dc3633984a6226bfb7ddaa3bca756"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sample from Weibull distribution with given a and b parameters. <br /></td></tr>
-<tr class="separator:gaf41dc3633984a6226bfb7ddaa3bca756"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>Utility classes, functions and constants. These will typically be included in most headers, and provide access to utility functions etc. for time, complex numbers, linear algebra, etc. </p>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 21 2015 15:34:13 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jun 5 2015 12:55:18 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

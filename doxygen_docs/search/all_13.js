@@ -1,8 +1,14 @@
 var searchData=
 [
-  ['v',['V',['../class_sgt_1_1_power_flow_model.html#adbcb675d3d8ad5c2aee33c4c179004fb',1,'Sgt::PowerFlowModel']]],
-  ['v_5f',['V_',['../struct_sgt_1_1_pf_bus.html#a25a3daa78d96f36cfed53e867843a5f3',1,'Sgt::PfBus']]],
-  ['validate',['validate',['../class_sgt_1_1_underground_line.html#afca83c971054903ffced6afc0a7b800f',1,'Sgt::UndergroundLine::validate()'],['../class_sgt_1_1_underground_line_stranded_shield.html#aa1814f84d2042fcfd660167fb94370d1',1,'Sgt::UndergroundLineStrandedShield::validate()']]],
-  ['validuntil',['validUntil',['../class_sgt_1_1_battery.html#afa740c73eaae8dbb35534ddcf805847b',1,'Sgt::Battery::validUntil()'],['../class_sgt_1_1_heartbeat_adaptor.html#abe07d9c4b591cf8e386e7cf50a456603',1,'Sgt::HeartbeatAdaptor::validUntil()'],['../class_sgt_1_1_sim_component_adaptor.html#a7dfd3e6e3b9fd8647793d66478991cac',1,'Sgt::SimComponentAdaptor::validUntil()'],['../class_sgt_1_1_simple_building.html#aa39322fb1d976ca3c2a76ed2bf6b0a44',1,'Sgt::SimpleBuilding::validUntil()']]],
-  ['voltageupdated',['voltageUpdated',['../class_sgt_1_1_bus.html#a6e39cc871db9a1b733518ae851dc5843',1,'Sgt::Bus']]]
+  ['undergroundline',['UndergroundLine',['../class_sgt_1_1_underground_line.html',1,'Sgt']]],
+  ['undergroundline',['UndergroundLine',['../class_sgt_1_1_underground_line.html#a0f7cc7e445af6ffd9cdc4e3991184d06',1,'Sgt::UndergroundLine']]],
+  ['undergroundlineparserplugin',['UndergroundLineParserPlugin',['../class_sgt_1_1_underground_line_parser_plugin.html',1,'Sgt']]],
+  ['undergroundlinestrandedshield',['UndergroundLineStrandedShield',['../class_sgt_1_1_underground_line_stranded_shield.html',1,'Sgt']]],
+  ['unit',['Unit',['../class_units_1_1_unit.html',1,'Units']]],
+  ['unit_3c_20d_2c_20v2_20_3e',['Unit&lt; D, V2 &gt;',['../class_units_1_1_unit.html',1,'Units']]],
+  ['unitquantity',['UnitQuantity',['../class_units_1_1_unit_quantity.html',1,'Units']]],
+  ['units',['Units',['../namespace_units.html',1,'']]],
+  ['update',['update',['../class_sgt_1_1_sim_component_adaptor.html#a012e295b20a8204a104c0e2e04f1d23d',1,'Sgt::SimComponentAdaptor']]],
+  ['updatestate',['updateState',['../class_sgt_1_1_battery.html#aed1b6be906fcb40317b6b5338530df14',1,'Sgt::Battery::updateState()'],['../class_sgt_1_1_heartbeat_adaptor.html#a25de9e1945b98c0ed5ac7bfab81d2efa',1,'Sgt::HeartbeatAdaptor::updateState()'],['../class_sgt_1_1_sim_component_adaptor.html#a55869db534f5b37c16479da48831cf8d',1,'Sgt::SimComponentAdaptor::updateState()'],['../class_sgt_1_1_sim_network.html#a95aee93f756728907ddc831565abc538',1,'Sgt::SimNetwork::updateState()'],['../class_sgt_1_1_simple_building.html#ac9f8f8b96ac9005be387a8db216fe45b',1,'Sgt::SimpleBuilding::updateState()'],['../class_sgt_1_1_time_series_zip.html#a5f8c3cb2326bbfb57c87d3b5abebd1eb',1,'Sgt::TimeSeriesZip::updateState()']]],
+  ['utilities',['Utilities',['../group___utilities.html',1,'']]]
 ];

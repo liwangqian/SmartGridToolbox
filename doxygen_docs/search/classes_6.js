@@ -9,7 +9,6 @@ var searchData=
   ['genericgenparserplugin',['GenericGenParserPlugin',['../class_sgt_1_1_generic_gen_parser_plugin.html',1,'Sgt']]],
   ['genericzip',['GenericZip',['../class_sgt_1_1_generic_zip.html',1,'Sgt']]],
   ['genericzipparserplugin',['GenericZipParserPlugin',['../class_sgt_1_1_generic_zip_parser_plugin.html',1,'Sgt']]],
-  ['getbynone',['GetByNone',['../struct_sgt_1_1_get_by_none.html',1,'Sgt']]],
   ['getter',['Getter',['../class_sgt_1_1_getter.html',1,'Sgt']]],
   ['getterinterface',['GetterInterface',['../class_sgt_1_1_getter_interface.html',1,'Sgt']]]
 ];

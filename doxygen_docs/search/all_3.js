@@ -1,7 +1,6 @@
 var searchData=
 [
   ['datatimeseries',['DataTimeSeries',['../class_sgt_1_1_data_time_series.html',1,'Sgt']]],
-  ['datatimeseries_3c_20t_2c_20double_20_3e',['DataTimeSeries&lt; T, double &gt;',['../class_sgt_1_1_data_time_series.html',1,'Sgt']]],
   ['dcpowerchanged',['dcPowerChanged',['../class_sgt_1_1_dc_power_source_abc.html#acb7382679e8d07e6f213afa0d6d1a1ce',1,'Sgt::DcPowerSourceAbc']]],
   ['dcpowersourceabc',['DcPowerSourceAbc',['../class_sgt_1_1_dc_power_source_abc.html',1,'Sgt']]],
   ['dependson',['dependsOn',['../class_sgt_1_1_sim_component_adaptor.html#a56a29e77e1f850d9bfb337b3c3232a9d',1,'Sgt::SimComponentAdaptor']]],
