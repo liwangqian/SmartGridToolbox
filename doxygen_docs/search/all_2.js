@@ -7,7 +7,6 @@ var searchData=
   ['col_3c_20complex_20_3e',['Col&lt; Complex &gt;',['../classarma_1_1_col.html',1,'arma']]],
   ['col_3c_20double_20_3e',['Col&lt; double &gt;',['../classarma_1_1_col.html',1,'arma']]],
   ['col_3c_20int_20_3e',['Col&lt; int &gt;',['../classarma_1_1_col.html',1,'arma']]],
-  ['common',['Common',['../group___common.html',1,'']]],
   ['commonbranch',['CommonBranch',['../class_sgt_1_1_common_branch.html',1,'Sgt']]],
   ['commonbranchparserplugin',['CommonBranchParserPlugin',['../class_sgt_1_1_common_branch_parser_plugin.html',1,'Sgt']]],
   ['component',['Component',['../class_sgt_1_1_component.html',1,'Sgt']]],
