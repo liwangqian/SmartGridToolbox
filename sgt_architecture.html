@@ -47,7 +47,9 @@
 				</p>
 				<h4><a name="sgt-utsl" class="anchor" href="#sgt-utsl"></a>Use the Source, Luke</h4>
 				<p>
-					At present, the SmartGridToolbox documentation is somewhat sketchy. Users are encouraged to explore the source code, either directly, or through the <a href="doxygen_docs/index.html">doxygen documentation</a> (organised by functional modules <a href="">here</a>). Core/Non-simulation functionalities are located in the <code>SgtCore</code> subdirectory, the simulation engine and components are located in <code>SgtSim</code>.
+					At present, the SmartGridToolbox documentation is somewhat sketchy. Users are encouraged to explore the source code, either directly, or through the <a href="doxygen_docs/index.html">doxygen documentation</a> (organised by functional modules <a href="doxygen_docs/modules.html">here</a>). 
+				</p>
+					In terms of the SmartGridToolbox directory structure, Core/Non-simulation functionalities are located in the <code>SgtCore</code> subdirectory, the simulation engine and components are located in <code>SgtSim</code>. The <code>src</code> directory contains the source code for simple applications (providing a good reference for how to use the SmartGridToolbox library. <code>test</code> provides unit tests, which can also be a good reference. <code>tutorials</code> contains annotated <a href="#tutorials">tutorials</a>, and <code>examples</code> contains more developed examples, supposed to act as a sample of how SmartGridToolbox can be used.
 				</p>
 				<p>
 					
@@ -56,13 +58,29 @@
 				<p>
 					Most objects in SmartGridToolbox models and simulations derive from the <code><a href="doxygen_docs/class_sgt_1_1_component.html">Component</a></code> class. The most important function of this class is to provide a unique key (a <code>std::string</code>) for each object. <code>Component</code>s are also able to provide a component type string, to print themselves, and to act as an access point to an objects <code>Property</code>s. 
 				</p>
-				<h4><a name="sgt-core" class="anchor" href="#sgt-core"></a>SgtCore: Core Functionality, Network Modelling and Power Flow</h4>
-				<p>
-					While SmartGridToolbox excels at dynamic simulations, it is also able to function as a stand alone library for modelling and solving power flow problems. As mentioned above, when doing this, the SgtCore library may be used on its own, without the SgtSim library.
-				</p>
-				<h5><a name="sgt-network" class="anchor" href="#sgt-component"></a>The Network Class and Power Flow Modelling</h5>
+				<h4><a name="sgt-network" class="anchor" href="#sgt-component"></a>The Network Class and Power Flow Modelling</h4>
 				</p>
 					SgtCore contains many utility classes and functions, but at its core is the power flow functionality. The overarching class used in modeling power flow problems is the <code><a href="doxygen_docs/class_sgt_1_1_network.html">Network</a></code> class.
+					
+				</p>
+				<p> 
+					Network objects act as a container for network Components. There are four classes of network components: <code><a href="doxygen_docs/class_sgt_1_1_bus.html">Bus</a></code>ses, <code><a href="doxygen_docs/class_sgt_1_1_branch_abc.html">Branch</a></code>es, <code><a href="doxygen_docs/class_sgt_1_1_gen_abc.html">Gen</a></code>s and <code><a href="doxygen_docs/class_sgt_1_1_zip_abc.html">Zip</a></code>s.
+				</p>
+				<p>
+					Busses are like conductor terminals: they are points or nodes in the network at which a single voltage exists. Branches are the lines, transformers and other connective components that join together busses. Gens (generators) normally represent generation of power, and physically act as injections of power from the ground to a bus. Zips are also power injections, but they normally represent network loads (negative injections), and follow the ZIP (constant Z, I, P component) load model.
+				</p>
+				<p>
+					Network modelling and power flow solving is covered in the <a href="network_tutorial.html">network tutorial</a>. It starts with creating or parsing a <code>Network</code> object. <code>Network::solvePowerFlow</code> may then be called. Different solvers can be used by calling <code>Network::setSolver</code>.
+				</p>
+				<h4><a name="sgt-sim" class="anchor" href="#sgt-sim"></a>The Simulation Class</h4>
+				<p>
+					The bread and butter of SmartGridToolbox is simulation. The <code><a href="doxygen_docs/class_sgt_1_1_simulation.html">Simulation</a></code> class is a container for simulation components, or <code><a href="doxygen_docs/class_sgt_1_1_sim_component.html">SimComponent</a></code>s, and is responsible for running the simulation and coordinating the time propagation and interaction between all of the components.
+					
+					A basic introduction to simulations can be found in the <a href="simulation_tutorial.html">simulation tutorial</a>. First, the user adds, or parses in, all of the <code><a href="doxygen_docs/class_sgt_1_1_sim_component.html">SimComponent</a></code>s and other simulation related information. <code>Simulation::init()</code> is then called, to initialize the simulation and all its components to the starting time, and to make sure that everything is valid. The simulation can then be progressed forward in time, typically by repeatedly calling <code>Simulation::doTimestep()</code> in a loop.
+				</p>
+				<h5><a name="sgt-sim" class="anchor" href="#sgt-sim-detailed"></a>A more detailed look at the simulation architecture</h5>
+				<p>
+					
 				</p>
 			</section>
 		</div>
