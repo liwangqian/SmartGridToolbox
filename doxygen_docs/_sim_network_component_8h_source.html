@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SmartGridToolbox
-   &#160;<span id="projectnumber">v2.0.0b1</span>
+   &#160;<span id="projectnumber">v2.0.0b2</span>
    </div>
   </td>
  </tr>
@@ -193,7 +193,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    {</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <a class="code" href="class_sgt_1_1_sim_overhead_line.html">SimOverheadLine</a>(<span class="keyword">const</span> <a class="code" href="class_sgt_1_1_overhead_line.html">OverheadLine</a>&amp; ohl) :</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                <a class="code" href="class_sgt_1_1_overhead_line.html#a2ef8aba3c19374b2b18ac28dc6688ac8">OverheadLine</a>(ohl)</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                <a class="code" href="class_sgt_1_1_overhead_line.html#a672cdf76a030061b6bceec20df3a27b3">OverheadLine</a>(ohl)</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            {</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                <span class="comment">// Empty.</span></div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            }</div>
@@ -228,11 +228,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="class_sgt_1_1_common_branch_html"><div class="ttname"><a href="class_sgt_1_1_common_branch.html">Sgt::CommonBranch</a></div><div class="ttdoc">A single phase transmission line or transformer. </div><div class="ttdef"><b>Definition:</b> CommonBranch.h:28</div></div>
 <div class="ttc" id="class_sgt_1_1_sim_common_branch_html"><div class="ttname"><a href="class_sgt_1_1_sim_common_branch.html">Sgt::SimCommonBranch</a></div><div class="ttdef"><b>Definition:</b> SimNetworkComponent.h:55</div></div>
 <div class="ttc" id="class_sgt_1_1_sim_single_phase_transformer_html"><div class="ttname"><a href="class_sgt_1_1_sim_single_phase_transformer.html">Sgt::SimSinglePhaseTransformer</a></div><div class="ttdef"><b>Definition:</b> SimNetworkComponent.h:109</div></div>
-<div class="ttc" id="class_sgt_1_1_dgy_transformer_html_abe2f4c723fd9447a72f6a79be8be48b7"><div class="ttname"><a href="class_sgt_1_1_dgy_transformer.html#abe2f4c723fd9447a72f6a79be8be48b7">Sgt::DgyTransformer::DgyTransformer</a></div><div class="ttdeci">DgyTransformer(const std::string &amp;id, Complex nomVRatioDY, Complex offNomRatioDY, Complex ZL)</div><div class="ttdoc">Constructor. </div><div class="ttdef"><b>Definition:</b> DgyTransformer.h:49</div></div>
-<div class="ttc" id="class_sgt_1_1_single_phase_transformer_html_a046fcc7ebef09488a8ac37470be1de1a"><div class="ttname"><a href="class_sgt_1_1_single_phase_transformer.html#a046fcc7ebef09488a8ac37470be1de1a">Sgt::SinglePhaseTransformer::SinglePhaseTransformer</a></div><div class="ttdeci">SinglePhaseTransformer(const std::string &amp;id, Complex nomVRatio, Complex offNomRatio, Complex ZL)</div><div class="ttdoc">Constructor. </div><div class="ttdef"><b>Definition:</b> SinglePhaseTransformer.h:49</div></div>
+<div class="ttc" id="class_sgt_1_1_overhead_line_html_a672cdf76a030061b6bceec20df3a27b3"><div class="ttname"><a href="class_sgt_1_1_overhead_line.html#a672cdf76a030061b6bceec20df3a27b3">Sgt::OverheadLine::OverheadLine</a></div><div class="ttdeci">OverheadLine(const std::string &amp;id, const Phases &amp;phases0, const Phases &amp;phases1, double L, const arma::Mat&lt; double &gt; &amp;condDist, const arma::Mat&lt; double &gt; subcondGmr, const arma::Col&lt; double &gt; &amp;subcondRPerL, double freq=50.0, double rhoEarth=100.0, const arma::Col&lt; unsigned int &gt; &amp;nInBundle=arma::Col&lt; unsigned int &gt;(), const arma::Col&lt; double &gt; &amp;adjSubcondDist=arma::Col&lt; double &gt;())</div><div class="ttdoc">Constructor. </div><div class="ttdef"><b>Definition:</b> OverheadLine.cc:21</div></div>
+<div class="ttc" id="class_sgt_1_1_dgy_transformer_html_abe2f4c723fd9447a72f6a79be8be48b7"><div class="ttname"><a href="class_sgt_1_1_dgy_transformer.html#abe2f4c723fd9447a72f6a79be8be48b7">Sgt::DgyTransformer::DgyTransformer</a></div><div class="ttdeci">DgyTransformer(const std::string &amp;id, Complex nomVRatioDY, Complex offNomRatioDY, Complex ZL)</div><div class="ttdoc">Constructor. </div><div class="ttdef"><b>Definition:</b> DgyTransformer.h:50</div></div>
+<div class="ttc" id="class_sgt_1_1_single_phase_transformer_html_a046fcc7ebef09488a8ac37470be1de1a"><div class="ttname"><a href="class_sgt_1_1_single_phase_transformer.html#a046fcc7ebef09488a8ac37470be1de1a">Sgt::SinglePhaseTransformer::SinglePhaseTransformer</a></div><div class="ttdeci">SinglePhaseTransformer(const std::string &amp;id, Complex nomVRatio, Complex offNomRatio, Complex ZL)</div><div class="ttdoc">Constructor. </div><div class="ttdef"><b>Definition:</b> SinglePhaseTransformer.h:50</div></div>
 <div class="ttc" id="class_sgt_1_1_sim_bus_html_a2136effc47e28791fcdc5f033411cd4e"><div class="ttname"><a href="class_sgt_1_1_sim_bus.html#a2136effc47e28791fcdc5f033411cd4e">Sgt::SimBus::initializeState</a></div><div class="ttdeci">virtual void initializeState() override</div><div class="ttdoc">Reset state of the object, time will be at negative infinity. </div><div class="ttdef"><b>Definition:</b> SimNetworkComponent.h:47</div></div>
 <div class="ttc" id="class_sgt_1_1_bus_html"><div class="ttname"><a href="class_sgt_1_1_bus.html">Sgt::Bus</a></div><div class="ttdoc">A Bus is a grouped set of conductors / terminals, one per phase. </div><div class="ttdef"><b>Definition:</b> Bus.h:34</div></div>
-<div class="ttc" id="class_sgt_1_1_overhead_line_html_a2ef8aba3c19374b2b18ac28dc6688ac8"><div class="ttname"><a href="class_sgt_1_1_overhead_line.html#a2ef8aba3c19374b2b18ac28dc6688ac8">Sgt::OverheadLine::OverheadLine</a></div><div class="ttdeci">OverheadLine(const std::string &amp;id, const Phases &amp;phases0, const Phases &amp;phases1, double L, const arma::Mat&lt; double &gt; &amp;condDist, const arma::Mat&lt; double &gt; subcondGmr, const arma::Col&lt; double &gt; &amp;subcondRPerL, double freq=50.0, double rhoEarth=100.0, const arma::Col&lt; int &gt; &amp;nInBundle=arma::Col&lt; int &gt;(), const arma::Col&lt; double &gt; &amp;adjSubcondDist=arma::Col&lt; double &gt;())</div><div class="ttdoc">Constructor. </div><div class="ttdef"><b>Definition:</b> OverheadLine.cc:21</div></div>
 <div class="ttc" id="class_sgt_1_1_dgy_transformer_html"><div class="ttname"><a href="class_sgt_1_1_dgy_transformer.html">Sgt::DgyTransformer</a></div><div class="ttdoc">Delta-grounded wye transformer. </div><div class="ttdef"><b>Definition:</b> DgyTransformer.h:24</div></div>
 <div class="ttc" id="class_sgt_1_1_sim_bus_html_a38889a9d216bb207b63ee7fbe4f2d423"><div class="ttname"><a href="class_sgt_1_1_sim_bus.html#a38889a9d216bb207b63ee7fbe4f2d423">Sgt::SimBus::SimBus</a></div><div class="ttdeci">SimBus(const Bus &amp;bus)</div><div class="ttdef"><b>Definition:</b> SimNetworkComponent.h:39</div></div>
 <div class="ttc" id="class_sgt_1_1_sim_generic_branch_html"><div class="ttname"><a href="class_sgt_1_1_sim_generic_branch.html">Sgt::SimGenericBranch</a></div><div class="ttdef"><b>Definition:</b> SimNetworkComponent.h:73</div></div>
@@ -249,7 +249,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jun 5 2015 13:37:27 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jun 15 2015 15:12:28 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

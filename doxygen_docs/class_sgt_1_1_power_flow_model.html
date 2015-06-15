@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SmartGridToolbox
-   &#160;<span id="projectnumber">v2.0.0b1</span>
+   &#160;<span id="projectnumber">v2.0.0b2</span>
    </div>
   </td>
  </tr>
@@ -93,9 +93,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pub-types">Public Types</a> &#124;
 <a href="class_sgt_1_1_power_flow_model-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Sgt::PowerFlowModel Class Reference<div class="ingroups"><a class="el" href="group___power_flow.html">Power Flow</a></div></div>  </div>
+<div class="title">Sgt::PowerFlowModel Class Reference<div class="ingroups"><a class="el" href="group___power_flow_core.html">Power Flow Core</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>A mathematical model of a network, suitable for solving the AC power flow problem.  
+ <a href="class_sgt_1_1_power_flow_model.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_power_flow_model_8h_source.html">PowerFlowModel.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -186,15 +191,15 @@ std::size_t&#160;</td><td class="memItemRight" valign="bottom"><b>nPv</b> ()</td
 std::size_t&#160;</td><td class="memItemRight" valign="bottom"><b>nSl</b> ()</td></tr>
 <tr class="separator:a07461aedfabc49033c480ea7a050e414"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Ordering of variables etc.</div></td></tr>
-<tr class="memitem:a37e7044cb4d88a1c5ba8d94422d5d426"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a37e7044cb4d88a1c5ba8d94422d5d426"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>iSl</b> (int i) const </td></tr>
-<tr class="separator:a37e7044cb4d88a1c5ba8d94422d5d426"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add41ac724232ecf60f456948e719dc5a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="add41ac724232ecf60f456948e719dc5a"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>iPq</b> (int i) const </td></tr>
-<tr class="separator:add41ac724232ecf60f456948e719dc5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a832f1e87c0d66ca8878278defb71a00f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a832f1e87c0d66ca8878278defb71a00f"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>iPv</b> (int i) const </td></tr>
-<tr class="separator:a832f1e87c0d66ca8878278defb71a00f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b25623fbccccf5ea89876cbad9b381e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1b25623fbccccf5ea89876cbad9b381e"></a>
+arma::uword&#160;</td><td class="memItemRight" valign="bottom"><b>iSl</b> (arma::uword i) const </td></tr>
+<tr class="separator:a1b25623fbccccf5ea89876cbad9b381e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeff0ade420d165a80c5d8fc298b74f97"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeff0ade420d165a80c5d8fc298b74f97"></a>
+arma::uword&#160;</td><td class="memItemRight" valign="bottom"><b>iPq</b> (arma::uword i) const </td></tr>
+<tr class="separator:aeff0ade420d165a80c5d8fc298b74f97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b96c94fe6c6561652c90a4a2de195d5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b96c94fe6c6561652c90a4a2de195d5"></a>
+arma::uword&#160;</td><td class="memItemRight" valign="bottom"><b>iPv</b> (arma::uword i) const </td></tr>
+<tr class="separator:a0b96c94fe6c6561652c90a4a2de195d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc6814db7345dc70aacbb3c49ec487e4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abc6814db7345dc70aacbb3c49ec487e4"></a>
 arma::span&#160;</td><td class="memItemRight" valign="bottom"><b>selSlFromAll</b> () const </td></tr>
 <tr class="separator:abc6814db7345dc70aacbb3c49ec487e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -220,14 +225,16 @@ const <a class="el" href="classarma_1_1_sp_mat.html">arma::SpMat</a>&lt; Complex
 <a class="el" href="classarma_1_1_sp_mat.html">arma::SpMat</a>&lt; Complex &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Y</b> ()</td></tr>
 <tr class="separator:a942d3f721e3f0f9d4a87c59fa5469e6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A mathematical model of a network, suitable for solving the AC power flow problem. </p>
+</div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>/Users/dgordon/Devel/SmartGridToolbox/SgtCore/<a class="el" href="_power_flow_model_8h_source.html">PowerFlowModel.h</a></li>
 <li>/Users/dgordon/Devel/SmartGridToolbox/SgtCore/PowerFlowModel.cc</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jun 5 2015 13:37:35 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jun 15 2015 15:12:35 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

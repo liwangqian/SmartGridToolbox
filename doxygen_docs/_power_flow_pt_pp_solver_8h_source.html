@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SmartGridToolbox
-   &#160;<span id="projectnumber">v2.0.0b1</span>
+   &#160;<span id="projectnumber">v2.0.0b2</span>
    </div>
   </td>
  </tr>
@@ -119,38 +119,41 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">class </span>Network;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">    /// @ingroup PowerFlow</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_sgt_1_1_power_flow_pt_pp_solver.html">   31</a></span>&#160;<span class="comment"></span>    <span class="keyword">class </span><a class="code" href="class_sgt_1_1_power_flow_pt_pp_solver.html">PowerFlowPtPpSolver</a> : <span class="keyword">public</span> <a class="code" href="class_sgt_1_1_power_flow_solver_interface.html">PowerFlowSolverInterface</a></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keyword">virtual</span> ~<a class="code" href="class_sgt_1_1_power_flow_pt_pp_solver.html">PowerFlowPtPpSolver</a>();</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">void</span> setNetwork(<a class="code" href="class_sgt_1_1_network.html">Network</a>* netw) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">bool</span> solveProblem() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">void</span> updateNetwork() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keyword">virtual</span> std::unique_ptr&lt;PowerModel&gt; makeModel();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">    /// @brief Optimal power flow (OPF) solver.</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">    ///</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">    /// Uses the external PowerTools++ library.</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">    /// @ingroup PowerFlowCore</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_sgt_1_1_power_flow_pt_pp_solver.html">   34</a></span>&#160;<span class="comment"></span>    <span class="keyword">class </span><a class="code" href="class_sgt_1_1_power_flow_pt_pp_solver.html">PowerFlowPtPpSolver</a> : <span class="keyword">public</span> <a class="code" href="class_sgt_1_1_power_flow_solver_interface.html">PowerFlowSolverInterface</a></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <span class="keyword">virtual</span> ~<a class="code" href="class_sgt_1_1_power_flow_pt_pp_solver.html">PowerFlowPtPpSolver</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">void</span> setNetwork(<a class="code" href="class_sgt_1_1_network.html">Network</a>* netw) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">bool</span> solveProblem() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">void</span> updateNetwork() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        </div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <a class="code" href="class_sgt_1_1_network.html">Network</a> * sgtNetw_{<span class="keyword">nullptr</span>};</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            Net* ptNetw_{<span class="keyword">nullptr</span>};</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    };</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#endif // POWER_FLOW_PT_PP_SOLVER_DOT_H</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keyword">virtual</span> std::unique_ptr&lt;PowerModel&gt; makeModel();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <a class="code" href="class_sgt_1_1_network.html">Network</a> * sgtNetw_{<span class="keyword">nullptr</span>};</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            Net* ptNetw_{<span class="keyword">nullptr</span>};</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    };</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif // POWER_FLOW_PT_PP_SOLVER_DOT_H</span></div>
 <div class="ttc" id="namespace_sgt_html"><div class="ttname"><a href="namespace_sgt.html">Sgt</a></div><div class="ttdef"><b>Definition:</b> Branch.cc:19</div></div>
-<div class="ttc" id="class_sgt_1_1_power_flow_solver_interface_html"><div class="ttname"><a href="class_sgt_1_1_power_flow_solver_interface.html">Sgt::PowerFlowSolverInterface</a></div><div class="ttdef"><b>Definition:</b> PowerFlowSolver.h:23</div></div>
-<div class="ttc" id="class_sgt_1_1_network_html"><div class="ttname"><a href="class_sgt_1_1_network.html">Sgt::Network</a></div><div class="ttdef"><b>Definition:</b> Network.h:60</div></div>
-<div class="ttc" id="class_sgt_1_1_power_flow_pt_pp_solver_html"><div class="ttname"><a href="class_sgt_1_1_power_flow_pt_pp_solver.html">Sgt::PowerFlowPtPpSolver</a></div><div class="ttdef"><b>Definition:</b> PowerFlowPtPpSolver.h:31</div></div>
+<div class="ttc" id="class_sgt_1_1_power_flow_solver_interface_html"><div class="ttname"><a href="class_sgt_1_1_power_flow_solver_interface.html">Sgt::PowerFlowSolverInterface</a></div><div class="ttdoc">Interface for power flow solvers operating on Network objects. </div><div class="ttdef"><b>Definition:</b> PowerFlowSolver.h:24</div></div>
+<div class="ttc" id="class_sgt_1_1_network_html"><div class="ttname"><a href="class_sgt_1_1_network.html">Sgt::Network</a></div><div class="ttdoc">Network component, describing an electricity network. </div><div class="ttdef"><b>Definition:</b> Network.h:61</div></div>
+<div class="ttc" id="class_sgt_1_1_power_flow_pt_pp_solver_html"><div class="ttname"><a href="class_sgt_1_1_power_flow_pt_pp_solver.html">Sgt::PowerFlowPtPpSolver</a></div><div class="ttdoc">Optimal power flow (OPF) solver. </div><div class="ttdef"><b>Definition:</b> PowerFlowPtPpSolver.h:34</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jun 5 2015 13:37:27 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jun 15 2015 15:12:28 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

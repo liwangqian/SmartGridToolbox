@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['bundlegmr',['bundleGmr',['../group___power_flow.html#ga9e6dd80d32f5e2d314011e4a8befa8e3',1,'Sgt']]]
+  ['bundlegmr',['bundleGmr',['../group___power_flow_core.html#ga80adb9acb0acb72da9071e9f604fee8f',1,'Sgt']]]
 ];

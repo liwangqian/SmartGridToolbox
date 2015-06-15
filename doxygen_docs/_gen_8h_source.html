@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SmartGridToolbox
-   &#160;<span id="projectnumber">v2.0.0b1</span>
+   &#160;<span id="projectnumber">v2.0.0b2</span>
    </div>
   </td>
  </tr>
@@ -117,7 +117,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">    /// @brief Common abstract base class for a generation at a bus.</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">    ///</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">    /// Implement some common functionality for convenience.</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">    /// @ingroup PowerFlow</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">    /// @ingroup PowerFlowCore</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_sgt_1_1_gen_abc.html">   29</a></span>&#160;<span class="comment"></span>    <span class="keyword">class </span><a class="code" href="class_sgt_1_1_gen_abc.html">GenAbc</a> : <span class="keyword">public</span> <a class="code" href="class_sgt_1_1_component.html">Component</a></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    {</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keyword">public</span>:</div>
@@ -283,7 +283,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    };</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="comment">    /// @brief A concrete, generic generation at a bus.</span></div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="comment">    /// @ingroup PowerFlow</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="comment">    /// @ingroup PowerFlowCore</span></div>
 <div class="line"><a name="l00195"></a><span class="lineno"><a class="line" href="class_sgt_1_1_generic_gen.html">  195</a></span>&#160;<span class="comment"></span>    <span class="keyword">class </span><a class="code" href="class_sgt_1_1_generic_gen.html">GenericGen</a> : <span class="keyword">public</span> <a class="code" href="class_sgt_1_1_gen_abc.html">GenAbc</a></div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    {</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="keyword">public</span>:</div>
@@ -481,13 +481,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;}</div>
 <div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;</div>
 <div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;<span class="preprocessor">#endif // GEN_DOT_H</span></div>
-<div class="ttc" id="class_sgt_1_1_component_html"><div class="ttname"><a href="class_sgt_1_1_component.html">Sgt::Component</a></div><div class="ttdoc">Base class for all Components. </div><div class="ttdef"><b>Definition:</b> Component.h:64</div></div>
+<div class="ttc" id="class_sgt_1_1_component_html"><div class="ttname"><a href="class_sgt_1_1_component.html">Sgt::Component</a></div><div class="ttdoc">Base class for all Components. </div><div class="ttdef"><b>Definition:</b> Component.h:68</div></div>
 <div class="ttc" id="namespace_sgt_html"><div class="ttname"><a href="namespace_sgt.html">Sgt</a></div><div class="ttdef"><b>Definition:</b> Branch.cc:19</div></div>
 <div class="ttc" id="class_sgt_1_1_generic_gen_html"><div class="ttname"><a href="class_sgt_1_1_generic_gen.html">Sgt::GenericGen</a></div><div class="ttdoc">A concrete, generic generation at a bus. </div><div class="ttdef"><b>Definition:</b> Gen.h:195</div></div>
 <div class="ttc" id="class_sgt_1_1_gen_abc_html_a2754778a2b0ed9bf130b3bb4a06af9b3"><div class="ttname"><a href="class_sgt_1_1_gen_abc.html#a2754778a2b0ed9bf130b3bb4a06af9b3">Sgt::GenAbc::JChanged</a></div><div class="ttdeci">virtual Event &amp; JChanged()</div><div class="ttdoc">Event triggered when the angular momentum changes. </div><div class="ttdef"><b>Definition:</b> Gen.h:169</div></div>
 <div class="ttc" id="class_sgt_1_1_gen_abc_html_ab0bf2b3bf3e530af3dea2d8ecc4e3961"><div class="ttname"><a href="class_sgt_1_1_gen_abc.html#ab0bf2b3bf3e530af3dea2d8ecc4e3961">Sgt::GenAbc::isInServiceChanged</a></div><div class="ttdeci">virtual Event &amp; isInServiceChanged()</div><div class="ttdoc">Event triggered when I go in or out of service. </div><div class="ttdef"><b>Definition:</b> Gen.h:157</div></div>
 <div class="ttc" id="classarma_1_1_col_html"><div class="ttname"><a href="classarma_1_1_col.html">arma::Col&lt; Complex &gt;</a></div></div>
-<div class="ttc" id="class_sgt_1_1_phases_html"><div class="ttname"><a href="class_sgt_1_1_phases.html">Sgt::Phases</a></div><div class="ttdef"><b>Definition:</b> PowerFlow.h:62</div></div>
+<div class="ttc" id="class_sgt_1_1_phases_html"><div class="ttname"><a href="class_sgt_1_1_phases.html">Sgt::Phases</a></div><div class="ttdoc">A set of network phases, each specified by a Phase value. </div><div class="ttdef"><b>Definition:</b> PowerFlow.h:63</div></div>
 <div class="ttc" id="class_sgt_1_1_gen_abc_html_a246ce730bc0a39dc1cd66081d6bcd534"><div class="ttname"><a href="class_sgt_1_1_gen_abc.html#a246ce730bc0a39dc1cd66081d6bcd534">Sgt::GenAbc::generationChanged</a></div><div class="ttdeci">virtual Event &amp; generationChanged()</div><div class="ttdoc">Event triggered when the amount of generated power changes. </div><div class="ttdef"><b>Definition:</b> Gen.h:163</div></div>
 <div class="ttc" id="class_sgt_1_1_event_html"><div class="ttname"><a href="class_sgt_1_1_event.html">Sgt::Event</a></div><div class="ttdoc">An event, when triggered, performs all of its registered actions. </div><div class="ttdef"><b>Definition:</b> Event.h:68</div></div>
 <div class="ttc" id="class_sgt_1_1_gen_abc_html_ae92c27b891201c4eb7474d30fbe4a73e"><div class="ttname"><a href="class_sgt_1_1_gen_abc.html#ae92c27b891201c4eb7474d30fbe4a73e">Sgt::GenAbc::setpointChanged</a></div><div class="ttdeci">virtual Event &amp; setpointChanged()</div><div class="ttdoc">Event triggered when a setpoint is changed. </div><div class="ttdef"><b>Definition:</b> Gen.h:175</div></div>
@@ -495,7 +495,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jun 5 2015 13:37:27 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jun 15 2015 15:12:28 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

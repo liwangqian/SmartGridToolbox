@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SmartGridToolbox
-   &#160;<span id="projectnumber">v2.0.0b1</span>
+   &#160;<span id="projectnumber">v2.0.0b2</span>
    </div>
   </td>
  </tr>
@@ -122,7 +122,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">class </span>ZipAbc;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">    /// @brief A Bus is a grouped set of conductors / terminals, one per phase.</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">    /// @ingroup PowerFlow</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">    /// @ingroup PowerFlowCore</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_sgt_1_1_bus.html">   34</a></span>&#160;<span class="comment"></span>    <span class="keyword">class </span><a class="code" href="class_sgt_1_1_bus.html">Bus</a> : <span class="keyword">public</span> <a class="code" href="class_sgt_1_1_component.html">Component</a>, <span class="keyword">public</span> <a class="code" href="class_sgt_1_1_has_properties.html">HasProperties</a>&lt;Bus&gt;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    {</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_sgt_1_1_network.html">Network</a>;</div>
@@ -443,7 +443,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;}</div>
 <div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;</div>
 <div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;<span class="preprocessor">#endif // BUS_DOT_H</span></div>
-<div class="ttc" id="class_sgt_1_1_component_html"><div class="ttname"><a href="class_sgt_1_1_component.html">Sgt::Component</a></div><div class="ttdoc">Base class for all Components. </div><div class="ttdef"><b>Definition:</b> Component.h:64</div></div>
+<div class="ttc" id="class_sgt_1_1_component_html"><div class="ttname"><a href="class_sgt_1_1_component.html">Sgt::Component</a></div><div class="ttdoc">Base class for all Components. </div><div class="ttdef"><b>Definition:</b> Component.h:68</div></div>
 <div class="ttc" id="namespace_sgt_html"><div class="ttname"><a href="namespace_sgt.html">Sgt</a></div><div class="ttdef"><b>Definition:</b> Branch.cc:19</div></div>
 <div class="ttc" id="class_sgt_1_1_bus_html_ae368f26c751fcbc17eebada984753a36"><div class="ttname"><a href="class_sgt_1_1_bus.html#ae368f26c751fcbc17eebada984753a36">Sgt::Bus::isInServiceChanged</a></div><div class="ttdeci">virtual Event &amp; isInServiceChanged()</div><div class="ttdoc">Event triggered when I go in or out of service. </div><div class="ttdef"><b>Definition:</b> Bus.h:306</div></div>
 <div class="ttc" id="class_sgt_1_1_bus_html_a90bd8470daeaa241e31e3ef781205ab5"><div class="ttname"><a href="class_sgt_1_1_bus.html#a90bd8470daeaa241e31e3ef781205ab5">Sgt::Bus::SYConst</a></div><div class="ttdeci">arma::Col&lt; Complex &gt; SYConst() const </div><div class="ttdoc">Complex power from constant impedance component. </div><div class="ttdef"><b>Definition:</b> Bus.cc:125</div></div>
@@ -452,11 +452,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="class_sgt_1_1_bus_html_ad9f21e84cb42c90e6bb951a463eb6f41"><div class="ttname"><a href="class_sgt_1_1_bus.html#ad9f21e84cb42c90e6bb951a463eb6f41">Sgt::Bus::SConst</a></div><div class="ttdeci">arma::Col&lt; Complex &gt; SConst() const </div><div class="ttdoc">Complex power component of zip. </div><div class="ttdef"><b>Definition:</b> Bus.cc:147</div></div>
 <div class="ttc" id="class_sgt_1_1_bus_html_abcb5534180b9d34adde25ddc2aa536c5"><div class="ttname"><a href="class_sgt_1_1_bus.html#abcb5534180b9d34adde25ddc2aa536c5">Sgt::Bus::SZip</a></div><div class="ttdeci">arma::Col&lt; Complex &gt; SZip() const </div><div class="ttdoc">Actual power of zips, including possible unserved load. </div><div class="ttdef"><b>Definition:</b> Bus.cc:164</div></div>
 <div class="ttc" id="class_sgt_1_1_bus_html_ace1ec94c3c968a8ab2369e4c1eb6e9b7"><div class="ttname"><a href="class_sgt_1_1_bus.html#ace1ec94c3c968a8ab2369e4c1eb6e9b7">Sgt::Bus::SIConst</a></div><div class="ttdeci">arma::Col&lt; Complex &gt; SIConst() const </div><div class="ttdoc">Complex power from constant current component of zip. </div><div class="ttdef"><b>Definition:</b> Bus.cc:142</div></div>
-<div class="ttc" id="class_sgt_1_1_network_html"><div class="ttname"><a href="class_sgt_1_1_network.html">Sgt::Network</a></div><div class="ttdef"><b>Definition:</b> Network.h:60</div></div>
+<div class="ttc" id="class_sgt_1_1_network_html"><div class="ttname"><a href="class_sgt_1_1_network.html">Sgt::Network</a></div><div class="ttdoc">Network component, describing an electricity network. </div><div class="ttdef"><b>Definition:</b> Network.h:61</div></div>
 <div class="ttc" id="classarma_1_1_col_html"><div class="ttname"><a href="classarma_1_1_col.html">arma::Col&lt; Complex &gt;</a></div></div>
-<div class="ttc" id="class_sgt_1_1_has_properties_html"><div class="ttname"><a href="class_sgt_1_1_has_properties.html">Sgt::HasProperties</a></div><div class="ttdef"><b>Definition:</b> Properties.h:51</div></div>
+<div class="ttc" id="class_sgt_1_1_has_properties_html"><div class="ttname"><a href="class_sgt_1_1_has_properties.html">Sgt::HasProperties</a></div><div class="ttdef"><b>Definition:</b> Properties.h:54</div></div>
 <div class="ttc" id="class_sgt_1_1_bus_html_a36f0a641ce40d808dea7ac191d1c45c2"><div class="ttname"><a href="class_sgt_1_1_bus.html#a36f0a641ce40d808dea7ac191d1c45c2">Sgt::Bus::setpointChanged</a></div><div class="ttdeci">virtual Event &amp; setpointChanged()</div><div class="ttdoc">Event triggered when bus setpoint has changed. </div><div class="ttdef"><b>Definition:</b> Bus.h:312</div></div>
-<div class="ttc" id="class_sgt_1_1_phases_html"><div class="ttname"><a href="class_sgt_1_1_phases.html">Sgt::Phases</a></div><div class="ttdef"><b>Definition:</b> PowerFlow.h:62</div></div>
+<div class="ttc" id="class_sgt_1_1_phases_html"><div class="ttname"><a href="class_sgt_1_1_phases.html">Sgt::Phases</a></div><div class="ttdoc">A set of network phases, each specified by a Phase value. </div><div class="ttdef"><b>Definition:</b> PowerFlow.h:63</div></div>
 <div class="ttc" id="class_sgt_1_1_bus_html_a956ec42ae19a09b68b4a35c690721702"><div class="ttname"><a href="class_sgt_1_1_bus.html#a956ec42ae19a09b68b4a35c690721702">Sgt::Bus::IConst</a></div><div class="ttdeci">arma::Col&lt; Complex &gt; IConst() const </div><div class="ttdoc">Constant current component of zip. </div><div class="ttdef"><b>Definition:</b> Bus.cc:130</div></div>
 <div class="ttc" id="class_sgt_1_1_bus_html_aa0aadd5e1d1d9aac66707b715c8507b8"><div class="ttname"><a href="class_sgt_1_1_bus.html#aa0aadd5e1d1d9aac66707b715c8507b8">Sgt::Bus::YConst</a></div><div class="ttdeci">arma::Col&lt; Complex &gt; YConst() const </div><div class="ttdoc">Constant impedance component of zip. </div><div class="ttdef"><b>Definition:</b> Bus.cc:113</div></div>
 <div class="ttc" id="class_sgt_1_1_event_html"><div class="ttname"><a href="class_sgt_1_1_event.html">Sgt::Event</a></div><div class="ttdoc">An event, when triggered, performs all of its registered actions. </div><div class="ttdef"><b>Definition:</b> Event.h:68</div></div>
@@ -466,7 +466,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jun 5 2015 13:37:27 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jun 15 2015 15:12:28 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

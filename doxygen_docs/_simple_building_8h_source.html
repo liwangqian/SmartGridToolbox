@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SmartGridToolbox
-   &#160;<span id="projectnumber">v2.0.0b1</span>
+   &#160;<span id="projectnumber">v2.0.0b2</span>
    </div>
   </td>
  </tr>
@@ -148,14 +148,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <a class="code" href="class_sgt_1_1_simple_building.html">SimpleBuilding</a>(<span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span>) :</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                <a class="code" href="class_sgt_1_1_zip_abc.html">ZipAbc</a>(<span class="keywordtype">id</span>, Phase::BAL),</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                dt_(posix_time::minutes(5)),</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                kb_(5 * kW / K),</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                Cb_(1.0e5 * kJ / K),</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                TbInit_(20.0 * K),</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                kh_(10.0 * kW / K),</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                kb_(5 * kwatt / kelvin),</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                Cb_(1.0e5 * kjoule / kelvin),</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                TbInit_(20.0 * kelvin),</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                kh_(10.0 * kwatt / kelvin),</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                copCool_(3.0),</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                copHeat_(4.0),</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                PMax_(20.0 * kW),</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                Ts_(20.0 * K),</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                PMax_(20.0 * kwatt),</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                Ts_(20.0 * kelvin),</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                weather_(<span class="keyword">nullptr</span>),</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                dQg_(<span class="keyword">nullptr</span>),</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                Tb_(0.0),</div>
@@ -241,9 +241,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            <span class="keywordtype">double</span> Tb() {<span class="keywordflow">return</span> Tb_;}</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">double</span> Te() {<span class="keywordflow">return</span> weather_-&gt;temperatureSeries()-&gt;value(<a class="code" href="class_sgt_1_1_sim_component_adaptor.html#af92866b78117e81a03277ce4f8435134">lastUpdated</a>());}</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            <span class="keywordtype">double</span> Te() {<span class="keywordflow">return</span> weather_-&gt;temperatureSeries()-&gt;value(<a class="code" href="class_sgt_1_1_sim_component_adaptor.html#af92866b78117e81a03277ce4f8435134">lastUpdated</a>());}</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">double</span> dQg() {<span class="keywordflow">return</span> dQg_-&gt;value(<a class="code" href="class_sgt_1_1_sim_component_adaptor.html#af92866b78117e81a03277ce4f8435134">lastUpdated</a>());}</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            <span class="keywordtype">double</span> dQg() {<span class="keywordflow">return</span> dQg_-&gt;value(<a class="code" href="class_sgt_1_1_sim_component_adaptor.html#af92866b78117e81a03277ce4f8435134">lastUpdated</a>());}</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            HvacMode mode() {<span class="keywordflow">return</span> mode_;}</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
@@ -304,7 +304,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jun 5 2015 13:37:27 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jun 15 2015 15:12:28 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

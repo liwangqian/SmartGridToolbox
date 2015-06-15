@@ -1,12 +1,12 @@
 var searchData=
 [
-  ['carson',['carson',['../group___power_flow.html#ga9470b17afa78357ce4dd237c3088c3d9',1,'Sgt']]],
+  ['carson',['carson',['../group___power_flow_core.html#ga9470b17afa78357ce4dd237c3088c3d9',1,'Sgt']]],
   ['cgram',['CGram',['../struct_sgt_1_1_c_gram.html',1,'Sgt']]],
   ['col',['Col',['../classarma_1_1_col.html',1,'arma']]],
   ['col_3c_20arma_3a_3auword_20_3e',['Col&lt; arma::uword &gt;',['../classarma_1_1_col.html',1,'arma']]],
   ['col_3c_20complex_20_3e',['Col&lt; Complex &gt;',['../classarma_1_1_col.html',1,'arma']]],
   ['col_3c_20double_20_3e',['Col&lt; double &gt;',['../classarma_1_1_col.html',1,'arma']]],
-  ['col_3c_20int_20_3e',['Col&lt; int &gt;',['../classarma_1_1_col.html',1,'arma']]],
+  ['col_3c_20unsigned_20int_20_3e',['Col&lt; unsigned int &gt;',['../classarma_1_1_col.html',1,'arma']]],
   ['commonbranch',['CommonBranch',['../class_sgt_1_1_common_branch.html',1,'Sgt']]],
   ['commonbranchparserplugin',['CommonBranchParserPlugin',['../class_sgt_1_1_common_branch_parser_plugin.html',1,'Sgt']]],
   ['component',['Component',['../class_sgt_1_1_component.html',1,'Sgt']]],
@@ -21,6 +21,5 @@ var searchData=
   ['convert_3c_20phases_20_3e',['convert&lt; Phases &gt;',['../struct_y_a_m_l_1_1convert_3_01_phases_01_4.html',1,'YAML']]],
   ['convert_3c_20ptime_20_3e',['convert&lt; ptime &gt;',['../struct_y_a_m_l_1_1convert_3_01ptime_01_4.html',1,'YAML']]],
   ['convert_3c_20time_20_3e',['convert&lt; Time &gt;',['../struct_y_a_m_l_1_1convert_3_01_time_01_4.html',1,'YAML']]],
-  ['core',['Core',['../group___core.html',1,'']]],
   ['currenttime',['currentTime',['../class_sgt_1_1_simulation.html#a119d13c734f281d27263e4e4972de775',1,'Sgt::Simulation']]]
 ];

@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SmartGridToolbox
-   &#160;<span id="projectnumber">v2.0.0b1</span>
+   &#160;<span id="projectnumber">v2.0.0b2</span>
    </div>
   </td>
  </tr>
@@ -94,9 +94,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#friends">Friends</a> &#124;
 <a href="class_sgt_1_1_phases-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Sgt::Phases Class Reference<div class="ingroups"><a class="el" href="group___power_flow.html">Power Flow</a></div></div>  </div>
+<div class="title">Sgt::Phases Class Reference<div class="ingroups"><a class="el" href="group___power_flow_core.html">Power Flow Core</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>A set of network phases, each specified by a Phase value.  
+ <a href="class_sgt_1_1_phases.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_power_flow_8h_source.html">PowerFlow.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -121,15 +126,15 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasPhase</b> (Phase p
 <tr class="memitem:a35d9e199ccda9ece638cceb819f28681"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a35d9e199ccda9ece638cceb819f28681"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>isSubsetOf</b> (const <a class="el" href="class_sgt_1_1_phases.html">Phases</a> &amp;other) const </td></tr>
 <tr class="separator:a35d9e199ccda9ece638cceb819f28681"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7cf51dc8f8fdb3fae806f55f0a0f3eb0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7cf51dc8f8fdb3fae806f55f0a0f3eb0"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> () const </td></tr>
-<tr class="separator:a7cf51dc8f8fdb3fae806f55f0a0f3eb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a625c5a656d2c25589c13f984e18bd1a6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a625c5a656d2c25589c13f984e18bd1a6"></a>
-Phase&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (int i) const </td></tr>
-<tr class="separator:a625c5a656d2c25589c13f984e18bd1a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c2f42df8033adca133e4afc0de2bdac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3c2f42df8033adca133e4afc0de2bdac"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>phaseIndex</b> (Phase p) const </td></tr>
-<tr class="separator:a3c2f42df8033adca133e4afc0de2bdac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a935e56c336b7d46d167762a79288a8e8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a935e56c336b7d46d167762a79288a8e8"></a>
+std::size_t&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> () const </td></tr>
+<tr class="separator:a935e56c336b7d46d167762a79288a8e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a919974a492f026e8645ddeedd724edfe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a919974a492f026e8645ddeedd724edfe"></a>
+Phase&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (std::size_t i) const </td></tr>
+<tr class="separator:a919974a492f026e8645ddeedd724edfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab40a1f7ffb81ceec93ac2972723276a2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab40a1f7ffb81ceec93ac2972723276a2"></a>
+std::size_t&#160;</td><td class="memItemRight" valign="bottom"><b>phaseIndex</b> (Phase p) const </td></tr>
+<tr class="separator:ab40a1f7ffb81ceec93ac2972723276a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f53f76e25c8f38d65c918a16092255f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8f53f76e25c8f38d65c918a16092255f"></a>
 IdxMap::iterator&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
 <tr class="separator:a8f53f76e25c8f38d65c918a16092255f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -161,14 +166,16 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const
 std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;os, const <a class="el" href="class_sgt_1_1_phases.html">Phases</a> &amp;p)</td></tr>
 <tr class="separator:ab4069bffb1d68b63eaaddb1054a66bc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A set of network phases, each specified by a Phase value. </p>
+</div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>/Users/dgordon/Devel/SmartGridToolbox/SgtCore/<a class="el" href="_power_flow_8h_source.html">PowerFlow.h</a></li>
 <li>/Users/dgordon/Devel/SmartGridToolbox/SgtCore/PowerFlow.cc</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jun 5 2015 13:37:35 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jun 15 2015 15:12:35 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

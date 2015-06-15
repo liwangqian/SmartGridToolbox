@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SmartGridToolbox
-   &#160;<span id="projectnumber">v2.0.0b1</span>
+   &#160;<span id="projectnumber">v2.0.0b2</span>
    </div>
   </td>
  </tr>
@@ -118,7 +118,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">    /// @brief A Zip is an injection into a bus with constant impedance / current / complex power components.</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">    ///</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">    /// Implement some common functionality for convenience.</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">    /// @ingroup PowerFlow</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">    /// @ingroup PowerFlowCore</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_sgt_1_1_zip_abc.html">   30</a></span>&#160;<span class="comment"></span>    <span class="keyword">class </span><a class="code" href="class_sgt_1_1_zip_abc.html">ZipAbc</a> : <span class="keyword">public</span> <a class="code" href="class_sgt_1_1_component.html">Component</a></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    {</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keyword">public</span>:</div>
@@ -236,7 +236,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    };</div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="comment">    /// @brief A concrete, generic ZIP at a bus.</span></div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="comment">    /// @ingroup PowerFlow</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="comment">    /// @ingroup PowerFlowCore</span></div>
 <div class="line"><a name="l00148"></a><span class="lineno"><a class="line" href="class_sgt_1_1_generic_zip.html">  148</a></span>&#160;<span class="comment"></span>    <span class="keyword">class </span><a class="code" href="class_sgt_1_1_generic_zip.html">GenericZip</a> : <span class="keyword">public</span> <a class="code" href="class_sgt_1_1_zip_abc.html">ZipAbc</a></div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    {</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keyword">public</span>:</div>
@@ -317,14 +317,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;}</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="preprocessor">#endif // ZIP_DOT_H</span></div>
-<div class="ttc" id="class_sgt_1_1_component_html"><div class="ttname"><a href="class_sgt_1_1_component.html">Sgt::Component</a></div><div class="ttdoc">Base class for all Components. </div><div class="ttdef"><b>Definition:</b> Component.h:64</div></div>
+<div class="ttc" id="class_sgt_1_1_component_html"><div class="ttname"><a href="class_sgt_1_1_component.html">Sgt::Component</a></div><div class="ttdoc">Base class for all Components. </div><div class="ttdef"><b>Definition:</b> Component.h:68</div></div>
 <div class="ttc" id="namespace_sgt_html"><div class="ttname"><a href="namespace_sgt.html">Sgt</a></div><div class="ttdef"><b>Definition:</b> Branch.cc:19</div></div>
 <div class="ttc" id="class_sgt_1_1_generic_zip_html_a403c18e467dd9df74e72a75b78f22586"><div class="ttname"><a href="class_sgt_1_1_generic_zip.html#a403c18e467dd9df74e72a75b78f22586">Sgt::GenericZip::YConst</a></div><div class="ttdeci">virtual arma::Col&lt; Complex &gt; YConst() const override</div><div class="ttdef"><b>Definition:</b> Zip.h:185</div></div>
 <div class="ttc" id="class_sgt_1_1_zip_abc_html_aae80169f0a68c883a41f5e7463a86a7a"><div class="ttname"><a href="class_sgt_1_1_zip_abc.html#aae80169f0a68c883a41f5e7463a86a7a">Sgt::ZipAbc::setpointChanged</a></div><div class="ttdeci">virtual Event &amp; setpointChanged()</div><div class="ttdoc">Event triggered when I go in or out of service. </div><div class="ttdef"><b>Definition:</b> Zip.h:128</div></div>
 <div class="ttc" id="class_sgt_1_1_zip_abc_html_a220bf933ef9e00276a58a204a8323dd9"><div class="ttname"><a href="class_sgt_1_1_zip_abc.html#a220bf933ef9e00276a58a204a8323dd9">Sgt::ZipAbc::YConst</a></div><div class="ttdeci">virtual arma::Col&lt; Complex &gt; YConst() const </div><div class="ttdef"><b>Definition:</b> Zip.h:95</div></div>
 <div class="ttc" id="class_sgt_1_1_zip_abc_html"><div class="ttname"><a href="class_sgt_1_1_zip_abc.html">Sgt::ZipAbc</a></div><div class="ttdoc">A Zip is an injection into a bus with constant impedance / current / complex power components...</div><div class="ttdef"><b>Definition:</b> Zip.h:30</div></div>
 <div class="ttc" id="classarma_1_1_col_html"><div class="ttname"><a href="classarma_1_1_col.html">arma::Col&lt; Complex &gt;</a></div></div>
-<div class="ttc" id="class_sgt_1_1_phases_html"><div class="ttname"><a href="class_sgt_1_1_phases.html">Sgt::Phases</a></div><div class="ttdef"><b>Definition:</b> PowerFlow.h:62</div></div>
+<div class="ttc" id="class_sgt_1_1_phases_html"><div class="ttname"><a href="class_sgt_1_1_phases.html">Sgt::Phases</a></div><div class="ttdoc">A set of network phases, each specified by a Phase value. </div><div class="ttdef"><b>Definition:</b> PowerFlow.h:63</div></div>
 <div class="ttc" id="class_sgt_1_1_zip_abc_html_aa91d155d55064abf16fe931597e13d24"><div class="ttname"><a href="class_sgt_1_1_zip_abc.html#aa91d155d55064abf16fe931597e13d24">Sgt::ZipAbc::injectionChanged</a></div><div class="ttdeci">virtual Event &amp; injectionChanged()</div><div class="ttdoc">Event triggered when I go in or out of service. </div><div class="ttdef"><b>Definition:</b> Zip.h:122</div></div>
 <div class="ttc" id="class_sgt_1_1_event_html"><div class="ttname"><a href="class_sgt_1_1_event.html">Sgt::Event</a></div><div class="ttdoc">An event, when triggered, performs all of its registered actions. </div><div class="ttdef"><b>Definition:</b> Event.h:68</div></div>
 <div class="ttc" id="class_sgt_1_1_zip_abc_html_a1af750b00d57ff7338e795b915e7d130"><div class="ttname"><a href="class_sgt_1_1_zip_abc.html#a1af750b00d57ff7338e795b915e7d130">Sgt::ZipAbc::isInServiceChanged</a></div><div class="ttdeci">virtual Event &amp; isInServiceChanged()</div><div class="ttdoc">Event triggered when I go in or out of service. </div><div class="ttdef"><b>Definition:</b> Zip.h:116</div></div>
@@ -332,7 +332,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jun 5 2015 13:37:27 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jun 15 2015 15:12:28 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

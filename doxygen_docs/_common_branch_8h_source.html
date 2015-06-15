@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SmartGridToolbox
-   &#160;<span id="projectnumber">v2.0.0b1</span>
+   &#160;<span id="projectnumber">v2.0.0b2</span>
    </div>
   </td>
  </tr>
@@ -116,7 +116,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_sgt.html">Sgt</a></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{<span class="comment"></span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">    /// @brief A single phase transmission line or transformer.</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">    /// @ingroup PowerFlow</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">    /// @ingroup PowerFlowCore</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_sgt_1_1_common_branch.html">   28</a></span>&#160;<span class="comment"></span>    <span class="keyword">class </span><a class="code" href="class_sgt_1_1_common_branch.html">CommonBranch</a> : <span class="keyword">public</span> <a class="code" href="class_sgt_1_1_branch_abc.html">BranchAbc</a></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    {</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keyword">public</span>:</div>
@@ -270,9 +270,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            <span class="comment">// Parameters:</span></div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            Complex tapRatio_{1.0}; <span class="comment">// Complex tap ratio, exp(i theta) (n_s / n_p).</span></div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            Complex YSeries_{czero}; <span class="comment">// Series admittance for top of pi.</span></div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            Complex YShunt_{czero}; <span class="comment">// Total shunt admittance for both legs of pi - each leg is half of this.</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            Complex tapRatio_{1.0, 0.0}; <span class="comment">// Complex tap ratio, exp(i theta) (n_s / n_p).</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            Complex YSeries_{0.0, 0.0}; <span class="comment">// Series admittance for top of pi.</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            Complex YShunt_{0.0, 0.0}; <span class="comment">// Total shunt admittance for both legs of pi - each leg is half of this.</span></div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            <span class="comment">// The following power ratings are rated to the voltage of the to bus, bus1.</span></div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            <span class="comment">// They are really current ratings that are multiplied by this voltage.</span></div>
@@ -290,7 +290,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;}</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="preprocessor">#endif // COMMON_BRANCH_DOT_H</span></div>
-<div class="ttc" id="class_sgt_1_1_component_html"><div class="ttname"><a href="class_sgt_1_1_component.html">Sgt::Component</a></div><div class="ttdoc">Base class for all Components. </div><div class="ttdef"><b>Definition:</b> Component.h:64</div></div>
+<div class="ttc" id="class_sgt_1_1_component_html"><div class="ttname"><a href="class_sgt_1_1_component.html">Sgt::Component</a></div><div class="ttdoc">Base class for all Components. </div><div class="ttdef"><b>Definition:</b> Component.h:68</div></div>
 <div class="ttc" id="namespace_sgt_html"><div class="ttname"><a href="namespace_sgt.html">Sgt</a></div><div class="ttdef"><b>Definition:</b> Branch.cc:19</div></div>
 <div class="ttc" id="class_sgt_1_1_common_branch_html"><div class="ttname"><a href="class_sgt_1_1_common_branch.html">Sgt::CommonBranch</a></div><div class="ttdoc">A single phase transmission line or transformer. </div><div class="ttdef"><b>Definition:</b> CommonBranch.h:28</div></div>
 <div class="ttc" id="class_sgt_1_1_branch_abc_html"><div class="ttname"><a href="class_sgt_1_1_branch_abc.html">Sgt::BranchAbc</a></div><div class="ttdoc">Common abstract base class for a branch. </div><div class="ttdef"><b>Definition:</b> Branch.h:32</div></div>
@@ -299,7 +299,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jun 5 2015 13:37:27 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jun 15 2015 15:12:28 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>
