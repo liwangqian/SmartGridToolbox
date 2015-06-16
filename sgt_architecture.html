@@ -56,6 +56,74 @@
 				<p>
 					Most objects in SmartGridToolbox models and simulations derive from the <code><a href="doxygen_docs/class_sgt_1_1_component.html">Component</a></code> class. The most important function of this class is to provide a unique key (a <code>std::string</code>) for each object. <code>Component</code>s are also able to provide a component type string, to print themselves, and to act as an access point to an objects <code>Property</code>s. 
 				</p>
+				<h5><a name="sgt-event" class="anchor" href="#sgt-event"></a>The Event and Action classes</h5>
+				<p>
+					The event processing interface in SmartGridToolbox revolves around two classes: the <code><a href="doxygen_docs/class_sgt_1_1_event.html">Event</a></code> class, and the <code><a href="doxygen_docs/class_sgt_1_1_event.html">Action</a></code> class. These two classes are frequently used in simulations, for example to communicate that a change in one component should trigger an update in another.
+				</p>
+				<p>
+					<code>Event</code> objects represent events that may be triggered. Each event holds a list of <code>Action</code> objects, that perform some arbitrary action when the event is triggered, in the form of a C++11 lambda.
+				</p>
+				<p>
+					The following example shows how events and actions work together:
+<pre><code>Event event("this is an event");
+event.addAction([] () {std::cout << "beep!" << std::endl;});
+event.trigger();
+</code></pre>
+					which will cause "beep!" to be printed.
+				</p>
+				<h5><a name="sgt-prop" class="anchor" href="#sgt-prop"></a>Properties</h5>
+				<p>
+					It is often useful (for example, when writing a GUI) to have a more dynamic representation of the properties of an object than is provided by the C++ syntax. We would sometimes like to dynamically add properties to a class, and to dynamically get and set them, without first knowing what the set of properties is for an object.
+				</p>
+				<p>
+					SmartGridToolbox defines a <code><a href="doxygen_docs/class_sgt_1_1_property.html">Property&ltT&gt</a></code> template class, that represents a property of type <code>T</code> (say, <code>int</code>, <code>double</code> or <code>arma::Col&ltComplex&gt</code>), that may be gotten and/or set. A non-template base class, <code><a href="doxygen_docs/class_sgt_1_1_property_base.html">PropertyBase</a></code>, provides a string-based interface for getting and setting properties when we don't know their type.
+					
+					For a class to implement properties, it should derive from the <code><a href="doxygen_docs/class_sgt_1_1_has_properties_interface.html">HasPropertiesInterface</a></code>, class.
+				</p>
+				<p>
+					The following code snippet shows properties in action:
+				</p>
+<pre><code>#include &ltSgtCore/Properties.h&gt
+
+class Foo : public Sgt::HasProperties&ltFoo>
+{
+    public:
+        SGT_PROPS_INIT(Foo);                                                               
+
+        int four() const {return 4;}
+        SGT_PROP_GET(fourProp, Foo, int, four);
+};
+
+class Bar : public Foo, public Sgt::HasProperties&ltBar&gt
+{
+    public:
+        SGT_PROPS_INIT(Bar);                                                               
+        SGT_PROPS_INHERIT(Bar, Foo);          
+
+        int x() const {return x_;}
+        void setX(int x) {x_ = x;}
+        SGT_PROP_GET_SET(xProp, Bar, int, x, setX);
+
+    public:
+        int x_{5};
+};
+        
+
+int main()
+{
+    Bar bar;
+    for (auto& p : bar.properties())
+    {
+        std::cout << "Property " << p.first << " : " << p.second->string(bar) << std::endl;
+    }
+    Sgt::PropertyBase& xProp = *bar.properties()["xProp"];
+    std::cout << "xProp as string : " << xProp.string(bar) << std::endl;
+    std::cout << "xProp as int : " << xProp.get&ltint&gt(bar) << std::endl;
+    xProp.set&ltint&gt(bar, 345);
+    std::cout << "bar.x() should now be 345 : " << bar.x() << std::endl;
+    xProp.setFromString(bar, "678");
+    std::cout << "bar.x() should now be 678 : " << bar.x() << std::endl;
+};</code></pre>
 				<h4><a name="sgt-power-flow" class="anchor" href="#sgt-power-flow"></a>Power Flow Problems</h4>
 				</p>
 					Power Flow modelling and solution forms a key part of SmartGridToolbox. The overarching class used in modeling power flow problems is the <code><a href="doxygen_docs/class_sgt_1_1_network.html">Network</a></code> class.
