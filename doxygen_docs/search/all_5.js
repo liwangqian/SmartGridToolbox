@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['foo',['Foo',['../class_foo.html',1,'']]],
   ['foundation',['Foundation',['../group___foundation.html',1,'']]],
   ['freq_5f',['freq_',['../class_sgt_1_1_underground_line.html#a597d64c84df07744c587e3f723ef5ea7',1,'Sgt::UndergroundLine']]],
   ['from_5fstring',['from_string',['../group___utilities.html#gae13287ed53132b053e5bb7015ae35958',1,'Sgt']]],

@@ -1,7 +1,6 @@
 var searchData=
 [
   ['badtargexception',['BadTargException',['../class_sgt_1_1_bad_targ_exception.html',1,'Sgt']]],
-  ['bar',['Bar',['../class_bar.html',1,'']]],
   ['battery',['Battery',['../class_sgt_1_1_battery.html',1,'Sgt']]],
   ['batteryparserplugin',['BatteryParserPlugin',['../class_sgt_1_1_battery_parser_plugin.html',1,'Sgt']]],
   ['branchabc',['BranchAbc',['../class_sgt_1_1_branch_abc.html',1,'Sgt']]],
