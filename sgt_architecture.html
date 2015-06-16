@@ -18,11 +18,11 @@
 				<p>
 					SmartGridToolbox is a library that can be used to rapidly develop simulations of of smart grid and microgrid systems. It is written in C++11, and users will need access to a compiler that can handle this C++ specification.
 				</p>
-				<h4><a name="sgt-library" class="anchor" href="#sgt-library"></a>SmartGridToolbox libraries</h4>
+				<h4><a name="sgt-libraries" class="anchor" href="#sgt-libraries"></a>SmartGridToolbox Libraries</h4>
 				<p>
 					SmartGridToolbox consists of two libraries: <strong>SgtCore</strong> , which contains core utilities and powerflow modelling tools and solvers, and <strong>SgtSim</strong>, which contains the simulation architecture and simulation components. SgtCore may be used in a standalone manner, for non-simulation based tasks. SgtSim is built on top of SgtCore. In the following, we will assume that SmartGridToolbox has already been compiled and installed in the default location, <code>/usr/local</code>.
 				</p>
-				<h4><a name="sgt-library" class="anchor" href="#sgt-library"></a>Including and linking the SmartGridToolbox libraries</h4>
+				<h5><a name="sgt-libraries-including" class="anchor" href="#sgt-libraries-including"></a>Including and linking the SmartGridToolbox libraries</h5>
 				<p>
 					SmartGridToolbox programs will need to link to the SmartGridToolbox libraries, and will need to include the relevant SmartGridToolbox header files.
 				</p>
@@ -40,7 +40,7 @@
 					SmartGridToolbox uses the GNU autotools build system, and builds libraries using libtool. By default, static libraries only are built; for dynamic libraries, SmartGridToolbox should be <code>configure</code>d with the <code>--enable-shared</code> option.
 				</p>
 				<p>
-					The easiest cross-platform way to link to your application is to also use libtool with the GNU autotools. <code>SmartGridToolbox/examples/ResidentialA/Makefile.am</code> gives an example of how to do this. Libtool handles all library dependencies, and correctly handles shared libraries in a manner that is appropriate for the architecture.
+					The easiest cross-platform way to link to your application is to also use libtool with the GNU autotools. <code>SmartGridToolbox/tutorials/Simulation/Makefile.am</code> gives an example of how to do this. Libtool handles all library dependencies, and correctly handles shared libraries in a manner that is appropriate for the architecture.
 				</p>
 				<p>
 					Otherwise, you must choose	the correct static and dynamic libraries. To statically link a program, the following link flags will work: <code>-lSgtCore -lSgtSim -larmadillo -lboost_date_time -lyaml-cpp</code>. If your program is using <code>SgtCore</code> only, then obviously the <code>-lSgtSim</code> flag should be omitted.
@@ -49,28 +49,26 @@
 				<p>
 					At present, the SmartGridToolbox documentation is somewhat sketchy. Users are encouraged to explore the source code, either directly, or through the <a href="doxygen_docs/index.html">doxygen documentation</a> (organised by functional modules <a href="doxygen_docs/modules.html">here</a>). 
 				</p>
-					In terms of the SmartGridToolbox directory structure, Core/Non-simulation functionalities are located in the <code>SgtCore</code> subdirectory, the simulation engine and components are located in <code>SgtSim</code>. The <code>src</code> directory contains the source code for simple applications (providing a good reference for how to use the SmartGridToolbox library. <code>test</code> provides unit tests, which can also be a good reference. <code>tutorials</code> contains annotated <a href="#tutorials">tutorials</a>, and <code>examples</code> contains more developed examples, supposed to act as a sample of how SmartGridToolbox can be used.
+					In terms of the SmartGridToolbox directory structure, core and non-simulation functionalities are located in the <code>SgtCore</code> subdirectory and the simulation engine and components are located in <code>SgtSim</code>. The <code>src</code> directory contains the source code for simple applications (providing a good reference for how to use the SmartGridToolbox library. <code>test</code> provides unit tests, which can also be a good reference. <code>tutorials</code> contains annotated <a href="#tutorials">tutorials</a>, and <code>examples</code> contains more developed examples, which give a sample of how SmartGridToolbox can be used.
 				</p>
-				<p>
-					
-				</p>
-				<h4><a name="sgt-component" class="anchor" href="#sgt-component"></a>The Component Class</h4>
+				<h4><a name="sgt-foundation" class="anchor" href="#sgt-foundation"></a>SmartGridToolbox Foundation Classes and Functions</h4>
+				<h5><a name="sgt-component" class="anchor" href="#sgt-component"></a>The Component class</h5>
 				<p>
 					Most objects in SmartGridToolbox models and simulations derive from the <code><a href="doxygen_docs/class_sgt_1_1_component.html">Component</a></code> class. The most important function of this class is to provide a unique key (a <code>std::string</code>) for each object. <code>Component</code>s are also able to provide a component type string, to print themselves, and to act as an access point to an objects <code>Property</code>s. 
 				</p>
-				<h4><a name="sgt-network" class="anchor" href="#sgt-component"></a>The Network Class and Power Flow Modelling</h4>
+				<h4><a name="sgt-power-flow" class="anchor" href="#sgt-power-flow"></a>Power Flow Problems</h4>
 				</p>
-					SgtCore contains many utility classes and functions, but at its core is the power flow functionality. The overarching class used in modeling power flow problems is the <code><a href="doxygen_docs/class_sgt_1_1_network.html">Network</a></code> class.
+					Power Flow modelling and solution forms a key part of SmartGridToolbox. The overarching class used in modeling power flow problems is the <code><a href="doxygen_docs/class_sgt_1_1_network.html">Network</a></code> class.
 					
 				</p>
 				<p> 
 					Network objects act as a container for network Components. There are four classes of network components: <code><a href="doxygen_docs/class_sgt_1_1_bus.html">Bus</a></code>ses, <code><a href="doxygen_docs/class_sgt_1_1_branch_abc.html">Branch</a></code>es, <code><a href="doxygen_docs/class_sgt_1_1_gen_abc.html">Gen</a></code>s and <code><a href="doxygen_docs/class_sgt_1_1_zip_abc.html">Zip</a></code>s.
 				</p>
 				<p>
-					Busses are like conductor terminals: they are points or nodes in the network at which a single voltage exists. Branches are the lines, transformers and other connective components that join together busses. Gens (generators) normally represent generation of power, and physically act as injections of power from the ground to a bus. Zips are also power injections, but they normally represent network loads (negative injections), and follow the ZIP (constant Z, I, P component) load model.
+					To understand how these components work together, the reader should first understand the classic power flow (or optimal power flow) problem, which is beyond the scope of this documentation. Briefly, though, busses are like conductor terminals: they are points or nodes in the network at which a single voltage exists. Branches are the lines, transformers and other connective components that join together busses. Gens (generators) normally represent generation of power, and act as injections of power from the ground to a bus. Zips are also power injections into a bus, but they normally represent network loads (consumption), and thus the injection is usually negative. They follow the commonly used ZIP (constant Z, I, P component) load model. The power flow problem revolves around finding the voltages and power injections at each bus so that the Kirchoff network laws and are satisfied while also satisfying requirements on the power injections and/or voltages.
 				</p>
 				<p>
-					Network modelling and power flow solving is covered in the <a href="network_tutorial.html">network tutorial</a>. It starts with creating or parsing a <code>Network</code> object. <code>Network::solvePowerFlow</code> may then be called. Different solvers can be used by calling <code>Network::setSolver</code>.
+					Network modelling and power flow solving is covered in the <a href="network_tutorial.html">network tutorial</a>. It starts with creating or parsing a <code>Network</code> object. <code>Network::solvePowerFlow</code> may then be called. Different solvers can be used by calling <code>Network::setSolver</code>; the default is to use the <a href="doxygen_docs/class_sgt_1_1_power_flow_nr_solver.html">Newton-Raphson AC power flow solver</a>, but an <a href="doxygen_docs/class_sgt_1_1_power_flow_pt_pp_solver.html">OPF solver</a> based on the PowerTools library is also available, and other solvers such as a DC power flow solver are planned.
 				</p>
 				<h4><a name="sgt-sim" class="anchor" href="#sgt-sim"></a>The Simulation Class</h4>
 				<p>
@@ -80,7 +78,22 @@
 				</p>
 				<h5><a name="sgt-sim" class="anchor" href="#sgt-sim-detailed"></a>A more detailed look at the simulation architecture</h5>
 				<p>
-					
+					SmartGridToolbox 
+				</p>
+				<p>
+					Each <code>SimComponent</code> is required or able to implement several simulation related methods. 
+					<dl>
+						<dt><code>Time validUntil() const</code></dt>
+						<dd>return the time when the component is scheduled to do its next update (in the absense of being explicitly called on to update by another component).</dd>
+						<dt><code>void initializeState()</code></dt>
+						<dd>set the state of the component to its initial state.</dd>
+						<dt><code>void updateState(Time t)</code></dt>
+						<dd>update the state of the component to time t.</dd>
+					</dl>
+					Each component will implement one these differently, depending on its behaviour.
+				</p>
+				<p>
+					When <code>Simulation::init()</code> is called, <code>initState</code> gets called for each of the components.
 				</p>
 			</section>
 		</div>
