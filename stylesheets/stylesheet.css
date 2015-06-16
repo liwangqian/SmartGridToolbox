@@ -166,8 +166,10 @@ pre {
 }
 
 pre code {
+  display: block;
   margin: 10px 0px;
   font-size: 75%;
+  line-height: 1.5;
 }
 
 blockquote {

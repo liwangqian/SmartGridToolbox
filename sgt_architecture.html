@@ -82,7 +82,6 @@ event.trigger();
 				</p>
 				<p>
 					The following code snippet shows properties in action:
-				</p>
 <pre><code>#include &ltSgtCore/Properties.h&gt
 
 class Foo : public Sgt::HasProperties&ltFoo>
@@ -124,8 +123,9 @@ int main()
     xProp.setFromString(bar, "678");
     std::cout << "bar.x() should now be 678 : " << bar.x() << std::endl;
 };</code></pre>
-				<h4><a name="sgt-power-flow" class="anchor" href="#sgt-power-flow"></a>Power Flow Problems</h4>
 				</p>
+				<h4><a name="sgt-power-flow" class="anchor" href="#sgt-power-flow"></a>Power Flow Problems</h4>
+				<p>
 					Power Flow modelling and solution forms a key part of SmartGridToolbox. The overarching class used in modeling power flow problems is the <code><a href="doxygen_docs/class_sgt_1_1_network.html">Network</a></code> class.
 					
 				</p>
@@ -138,7 +138,7 @@ int main()
 				<p>
 					Network modelling and power flow solving is covered in the <a href="network_tutorial.html">network tutorial</a>. It starts with creating or parsing a <code>Network</code> object. <code>Network::solvePowerFlow</code> may then be called. Different solvers can be used by calling <code>Network::setSolver</code>; the default is to use the <a href="doxygen_docs/class_sgt_1_1_power_flow_nr_solver.html">Newton-Raphson AC power flow solver</a>, but an <a href="doxygen_docs/class_sgt_1_1_power_flow_pt_pp_solver.html">OPF solver</a> based on the PowerTools library is also available, and other solvers such as a DC power flow solver are planned.
 				</p>
-				<h4><a name="sgt-sim" class="anchor" href="#sgt-sim"></a>The Simulation Class</h4>
+				<h4><a name="sgt-sim" class="anchor" href="#sgt-sim"></a>Simulations</h4>
 				<p>
 					The bread and butter of SmartGridToolbox is simulation. The <code><a href="doxygen_docs/class_sgt_1_1_simulation.html">Simulation</a></code> class is a container for simulation components, or <code><a href="doxygen_docs/class_sgt_1_1_sim_component.html">SimComponent</a></code>s, and is responsible for running the simulation and coordinating the time propagation and interaction between all of the components.
 					
@@ -146,22 +146,38 @@ int main()
 				</p>
 				<h5><a name="sgt-sim" class="anchor" href="#sgt-sim-detailed"></a>A more detailed look at the simulation architecture</h5>
 				<p>
-					SmartGridToolbox 
+					SmartGridToolbox simulations are event driven, meaning that there is no underlying timesteps; instead, all of the components of the simulation decide when they next need to update, and components may also trigger contingent updates on other components.
+				</p>
+				<p> 
+					At the start of a simulation, <code>initState()</code> is called for all components to make sure they are in a valid initial state.
 				</p>
 				<p>
-					Each <code>SimComponent</code> is required or able to implement several simulation related methods. 
+					Before starting each new timestep, the <code>validUntil()</code> function is queried for components to decide when they would next like to update. The updates that are determined by this function are termed <em>scheduled updates</em>. (There is another kind of update, a <em>contingent update</em>, that is triggered by mutual interactions between components during a timestep; this will be discussed later).
+				</p>
+				<p>
+					The soonest scheduled update time is chosen to form the next timestep. All components with a scheduled update at the selected time are updated, using the <code>updateState(Time t)</code> method, in order of dependency. If the update to A depends on the state of B but not vice-versa, then B will be updated first. Such dependencies help the simulation to avoid having to unnecessarily redo updates, but are not strictly necessary.
+				</p>
+				<p>
+					At the end of each timestep, it may be the case that some components have not explicitly updated their state, since they did not request an update at the current time and were not asked to update by any dependent components during the timestep. This is normal behaviour.
+				</p>
+				<p>
+					Each component can emit several <code>Event</code>s during the simulation cycle:
 					<dl>
-						<dt><code>Time validUntil() const</code></dt>
-						<dd>return the time when the component is scheduled to do its next update (in the absense of being explicitly called on to update by another component).</dd>
-						<dt><code>void initializeState()</code></dt>
-						<dd>set the state of the component to its initial state.</dd>
-						<dt><code>void updateState(Time t)</code></dt>
-						<dd>update the state of the component to time t.</dd>
+						<dt><code>willUpdate()</code></dt><dd>Emitted directly prior to <code>updateState()</code>.</dd>
+						<dt><code>didUpdate()</code></dt><dd>Emitted directly after <code>updateState()</code>.</dd>
+						<dt><code>needsUpdate()</code></dt><dd>Signals that the component should update at some time during the current timestep, either via a scheduled update if it occurs first, or a contingent update (see below).</dd>
+						<dt><code>willStartNewTimestep()</code></dt><dd>Signals that the component is just about to update, and that its last update was prior to the current timestep.</dd>
+						<dt><code>didCompleteTimestep()</code></dt><dd>Signals that there are no more updates left in this timestep, and the component was one of the ones that updated this timestep.</dd>
 					</dl>
-					Each component will implement one these differently, depending on its behaviour.
 				</p>
 				<p>
-					When <code>Simulation::init()</code> is called, <code>initState</code> gets called for each of the components.
+					<code>needsUpdate()</code> is key to understanding contingent updates. Suppose, for example, that we have a network with a number of time varying loads. At their creation, these loads will register that they can push an update on the network object, through code that looks like, e.g. <code>load.injectionChanged().addAction([&network] () {network.needsUpdate().trigger();})</code>. Then, when their <code>injectionChanged()</code> event is triggered, the network's <code>needsUpdate()</code> event will also be triggered. This has a flow on effect that the simulation will schedule a contingent update for the network.
+				</p>
+				<p>
+					However, this (and all other) contingent updates will be postponed until all the scheduled events have completed. This prevents the situation where a dependent component (i.e. the network) is repeatedly asked to update its state by multiple components (i.e. the loads); instead, each of the loads triggers the network's <code>needsUpdate</code> event, which is then executed once only, after all scheduled updates have finished. 
+				</p>
+				<p>
+					Also note that a contingent update may be pre-empted by a component (e.g. the network) itself undergoing a scheduled update, in which case the contingent update won't occur.
 				</p>
 			</section>
 		</div>
