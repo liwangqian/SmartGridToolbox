@@ -28,13 +28,12 @@
 				</p>
 				<p>
 					Header files may be included individually, as follows, e.g.:
-<pre><code>#include &ltSgtCore/Network.h&gt
-#include &ltSgtSim/Simulation.h&gt
-</code></pre>
+<script type="text/html" class="code">#include <SgtCore/Network.h>
+#include <SgtSim/Simulation.h></script>
 					or they may be all included automatically using 
-<pre><code>#include &ltSgtCore.h&gt
-#include &ltSgtSim.h&gt
-</code></pre>
+<script type="text/html" class="code">#include <SgtCore.h>
+#include <SgtSim.h>
+</script>
 				</p>
 				<p>
 					SmartGridToolbox uses the GNU autotools build system, and builds libraries using libtool. By default, static libraries only are built; for dynamic libraries, SmartGridToolbox should be <code>configure</code>d with the <code>--enable-shared</code> option.
@@ -47,14 +46,14 @@
 				</p>
 				<h4><a name="sgt-utsl" class="anchor" href="#sgt-utsl"></a>Use the Source, Luke</h4>
 				<p>
-					At present, the SmartGridToolbox documentation is somewhat sketchy. Users are encouraged to explore the source code, either directly, or through the <a href="doxygen_docs/index.html">doxygen documentation</a> (organised by functional modules <a href="doxygen_docs/modules.html">here</a>). 
+					At present, the SmartGridToolbox documentation is somewhat sketchy. Users are encouraged to explore the source code, either directly, or through the <a href="doxygen_docs/index.html">doxygen documentation</a> (organised by functional modules <a href="doxygen_docs/modules.html">here</a>).
 				</p>
-					In terms of the SmartGridToolbox directory structure, core and non-simulation functionalities are located in the <code>SgtCore</code> subdirectory and the simulation engine and components are located in <code>SgtSim</code>. The <code>src</code> directory contains the source code for simple applications (providing a good reference for how to use the SmartGridToolbox library. <code>test</code> provides unit tests, which can also be a good reference. <code>tutorials</code> contains annotated <a href="#tutorials">tutorials</a>, and <code>examples</code> contains more developed examples, which give a sample of how SmartGridToolbox can be used.
+				In terms of the SmartGridToolbox directory structure, core and non-simulation functionalities are located in the <code>SgtCore</code> subdirectory and the simulation engine and components are located in <code>SgtSim</code>. The <code>src</code> directory contains the source code for simple applications (providing a good reference for how to use the SmartGridToolbox library. <code>test</code> provides unit tests, which can also be a good reference. <code>tutorials</code> contains annotated <a href="#tutorials">tutorials</a>, and <code>examples</code> contains more developed examples, which give a sample of how SmartGridToolbox can be used.
 				</p>
 				<h4><a name="sgt-foundation" class="anchor" href="#sgt-foundation"></a>SmartGridToolbox Foundation Classes and Functions</h4>
 				<h5><a name="sgt-component" class="anchor" href="#sgt-component"></a>The Component class</h5>
 				<p>
-					Most objects in SmartGridToolbox models and simulations derive from the <code><a href="doxygen_docs/class_sgt_1_1_component.html">Component</a></code> class. The most important function of this class is to provide a unique key (a <code>std::string</code>) for each object. <code>Component</code>s are also able to provide a component type string, to print themselves, and to act as an access point to an objects <code>Property</code>s. 
+					Most objects in SmartGridToolbox models and simulations derive from the <code><a href="doxygen_docs/class_sgt_1_1_component.html">Component</a></code> class. The most important function of this class is to provide a unique key (a <code>std::string</code>) for each object. <code>Component</code>s are also able to provide a component type string, to print themselves, and to act as an access point to an objects <code>Property</code>s.
 				</p>
 				<h5><a name="sgt-event" class="anchor" href="#sgt-event"></a>The Event and Action classes</h5>
 				<p>
@@ -65,10 +64,10 @@
 				</p>
 				<p>
 					The following example shows how events and actions work together:
-<pre><code>Event event("this is an event");
+<script type="text/html" class="code">Event event("this is an event");
 event.addAction([] () {std::cout << "beep!" << std::endl;});
 event.trigger();
-</code></pre>
+</script>
 					which will cause "beep!" to be printed.
 				</p>
 				<h5><a name="sgt-prop" class="anchor" href="#sgt-prop"></a>Properties</h5>
@@ -77,14 +76,13 @@ event.trigger();
 				</p>
 				<p>
 					SmartGridToolbox defines a <code><a href="doxygen_docs/class_sgt_1_1_property.html">Property&ltT&gt</a></code> template class, that represents a property of type <code>T</code> (say, <code>int</code>, <code>double</code> or <code>arma::Col&ltComplex&gt</code>), that may be gotten and/or set. A non-template base class, <code><a href="doxygen_docs/class_sgt_1_1_property_base.html">PropertyBase</a></code>, provides a string-based interface for getting and setting properties when we don't know their type.
-					
 					For a class to implement properties, it should derive from the <code><a href="doxygen_docs/class_sgt_1_1_has_properties_interface.html">HasPropertiesInterface</a></code>, class.
 				</p>
 				<p>
-					The following code snippet shows properties in action:
-<pre><code>#include &ltSgtCore/Properties.h&gt
+					The following example shows properties in action:
+<script type="text/html" class="code">#include <SgtCore/Properties.h>
 
-class Foo : public Sgt::HasProperties&ltFoo>
+class Foo : public Sgt::HasProperties<Foo>
 {
     public:
         SGT_PROPS_INIT(Foo);                                                               
@@ -93,7 +91,7 @@ class Foo : public Sgt::HasProperties&ltFoo>
         SGT_PROP_GET(fourProp, Foo, int, four);
 };
 
-class Bar : public Foo, public Sgt::HasProperties&ltBar&gt
+class Bar : public Foo, public Sgt::HasProperties<Bar>
 {
     public:
         SGT_PROPS_INIT(Bar);                                                               
@@ -117,19 +115,18 @@ int main()
     }
     Sgt::PropertyBase& xProp = *bar.properties()["xProp"];
     std::cout << "xProp as string : " << xProp.string(bar) << std::endl;
-    std::cout << "xProp as const int& : " << xProp.get&ltconst int&&gt(bar) << std::endl;
-    xProp.set&ltconst int&&gt(bar, 345);
+    std::cout << "xProp as const int& : " << xProp.get<const int&>(bar) << std::endl;
+    xProp.set<const int&>(bar, 345);
     std::cout << "bar.x() should now be 345 : " << bar.x() << std::endl;
     xProp.setFromString(bar, "678");
     std::cout << "bar.x() should now be 678 : " << bar.x() << std::endl;
-};</code></pre>
+};</script>
 				</p>
 				<h4><a name="sgt-power-flow" class="anchor" href="#sgt-power-flow"></a>Power Flow Problems</h4>
 				<p>
 					Power Flow modelling and solution forms a key part of SmartGridToolbox. The overarching class used in modeling power flow problems is the <code><a href="doxygen_docs/class_sgt_1_1_network.html">Network</a></code> class.
-					
 				</p>
-				<p> 
+				<p>
 					Network objects act as a container for network Components. There are four classes of network components: <code><a href="doxygen_docs/class_sgt_1_1_bus.html">Bus</a></code>ses, <code><a href="doxygen_docs/class_sgt_1_1_branch_abc.html">Branch</a></code>es, <code><a href="doxygen_docs/class_sgt_1_1_gen_abc.html">Gen</a></code>s and <code><a href="doxygen_docs/class_sgt_1_1_zip_abc.html">Zip</a></code>s.
 				</p>
 				<p>
@@ -141,14 +138,13 @@ int main()
 				<h4><a name="sgt-sim" class="anchor" href="#sgt-sim"></a>Simulations</h4>
 				<p>
 					The bread and butter of SmartGridToolbox is simulation. The <code><a href="doxygen_docs/class_sgt_1_1_simulation.html">Simulation</a></code> class is a container for simulation components, or <code><a href="doxygen_docs/class_sgt_1_1_sim_component.html">SimComponent</a></code>s, and is responsible for running the simulation and coordinating the time propagation and interaction between all of the components.
-					
 					A basic introduction to simulations can be found in the <a href="simulation_tutorial.html">simulation tutorial</a>. First, the user adds, or parses in, all of the <code><a href="doxygen_docs/class_sgt_1_1_sim_component.html">SimComponent</a></code>s and other simulation related information. <code>Simulation::init()</code> is then called, to initialize the simulation and all its components to the starting time, and to make sure that everything is valid. The simulation can then be progressed forward in time, typically by repeatedly calling <code>Simulation::doTimestep()</code> in a loop.
 				</p>
 				<h5><a name="sgt-sim" class="anchor" href="#sgt-sim-detailed"></a>A more detailed look at the simulation architecture</h5>
 				<p>
 					SmartGridToolbox simulations are event driven, meaning that there is no underlying timesteps; instead, all of the components of the simulation decide when they next need to update, and components may also trigger contingent updates on other components.
 				</p>
-				<p> 
+				<p>
 					At the start of a simulation, <code>initState()</code> is called for all components to make sure they are in a valid initial state.
 				</p>
 				<p>
@@ -163,23 +159,33 @@ int main()
 				<p>
 					Each component can emit several <code>Event</code>s during the simulation cycle:
 					<dl>
-						<dt><code>willUpdate()</code></dt><dd>Emitted directly prior to <code>updateState()</code>.</dd>
-						<dt><code>didUpdate()</code></dt><dd>Emitted directly after <code>updateState()</code>.</dd>
-						<dt><code>needsUpdate()</code></dt><dd>Signals that the component should update at some time during the current timestep, either via a scheduled update if it occurs first, or a contingent update (see below).</dd>
-						<dt><code>willStartNewTimestep()</code></dt><dd>Signals that the component is just about to update, and that its last update was prior to the current timestep.</dd>
-						<dt><code>didCompleteTimestep()</code></dt><dd>Signals that there are no more updates left in this timestep, and the component was one of the ones that updated this timestep.</dd>
+						<dt><code>willUpdate()</code></dt>
+						<dd>Emitted directly prior to <code>updateState()</code>.</dd>
+						<dt><code>didUpdate()</code></dt>
+						<dd>Emitted directly after <code>updateState()</code>.</dd>
+						<dt><code>needsUpdate()</code></dt>
+						<dd>Signals that the component should update at some time during the current timestep, either via a scheduled update if it occurs first, or a contingent update (see below).
+						</dd>
+						<dt><code>willStartNewTimestep()</code></dt>
+						<dd>Signals that the component is just about to update, and that its last update was prior to the current timestep.
+						</dd>
+						<dt><code>didCompleteTimestep()</code></dt>
+						<dd>Signals that there are no more updates left in this timestep, and the component was one of the ones that updated this timestep.
+						</dd>
 					</dl>
 				</p>
 				<p>
 					<code>needsUpdate()</code> is key to understanding contingent updates. Suppose, for example, that we have a network with a number of time varying loads. At their creation, these loads will register that they can push an update on the network object, through code that looks like, e.g. <code>load.injectionChanged().addAction([&network] () {network.needsUpdate().trigger();})</code>. Then, when their <code>injectionChanged()</code> event is triggered, the network's <code>needsUpdate()</code> event will also be triggered. This has a flow on effect that the simulation will schedule a contingent update for the network.
 				</p>
 				<p>
-					However, this (and all other) contingent updates will be postponed until all the scheduled events have completed. This prevents the situation where a dependent component (i.e. the network) is repeatedly asked to update its state by multiple components (i.e. the loads); instead, each of the loads triggers the network's <code>needsUpdate</code> event, which is then executed once only, after all scheduled updates have finished. 
+					However, this (and all other) contingent updates will be postponed until all the scheduled events have completed. This prevents the situation where a dependent component (i.e. the network) is repeatedly asked to update its state by multiple components (i.e. the loads); instead, each of the loads triggers the network's <code>needsUpdate</code> event, which is then executed once only, after all scheduled updates have finished.
 				</p>
 				<p>
 					Also note that a contingent update may be pre-empted by a component (e.g. the network) itself undergoing a scheduled update, in which case the contingent update won't occur.
 				</p>
 			</section>
 		</div>
+		<script src="embed_code.js"></script>
+		<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
 	</body>
 </html>
