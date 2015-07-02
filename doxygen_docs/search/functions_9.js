@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['kron',['kron',['../group___power_flow_core.html#gae24d94dc2870f058428ec0ae14e7b6c1',1,'Sgt']]]
+  ['jchanged',['JChanged',['../class_sgt_1_1_gen_abc.html#a2754778a2b0ed9bf130b3bb4a06af9b3',1,'Sgt::GenAbc']]]
 ];

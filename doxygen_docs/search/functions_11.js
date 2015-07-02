@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['undergroundline',['UndergroundLine',['../class_sgt_1_1_underground_line.html#ad1c86702d878380e408fb0f6cc86d834',1,'Sgt::UndergroundLine']]],
-  ['update',['update',['../class_sgt_1_1_sim_component.html#a2d6eda2441fcb1eb623b3d8d4c65a574',1,'Sgt::SimComponent']]],
-  ['updatestate',['updateState',['../class_sgt_1_1_battery.html#aed1b6be906fcb40317b6b5338530df14',1,'Sgt::Battery::updateState()'],['../class_sgt_1_1_heartbeat.html#a8339ab15f50e96eee9ce282de117b4d4',1,'Sgt::Heartbeat::updateState()'],['../class_sgt_1_1_sim_component.html#a88678c18b6f7d736f283962e55d18c55',1,'Sgt::SimComponent::updateState()'],['../class_sgt_1_1_sim_network.html#a95aee93f756728907ddc831565abc538',1,'Sgt::SimNetwork::updateState()'],['../class_sgt_1_1_simple_building.html#ac9f8f8b96ac9005be387a8db216fe45b',1,'Sgt::SimpleBuilding::updateState()'],['../class_sgt_1_1_time_series_zip.html#ab00c970afaf690e8616521a19e5ef8e9',1,'Sgt::TimeSeriesZip::updateState()']]]
+  ['tapratio',['tapRatio',['../class_sgt_1_1_common_branch.html#aca48b051357236e6fd6aff2ddb670c2f',1,'Sgt::CommonBranch']]],
+  ['timeseries',['timeSeries',['../class_sgt_1_1_simulation.html#a28ec0d2203ac52ee422617317bb14d44',1,'Sgt::Simulation::timeSeries(const std::string &amp;id, bool crashOnFail=true) const '],['../class_sgt_1_1_simulation.html#a682f0d6c06958c7daf1f2153b6b20048',1,'Sgt::Simulation::timeSeries(const std::string &amp;id, bool crashOnFail=true)']]],
+  ['timestepdidcomplete',['timestepDidComplete',['../class_sgt_1_1_simulation.html#ad190f8f9eb37d07c8a101f49e12d5951',1,'Sgt::Simulation']]],
+  ['timestepwillstart',['timestepWillStart',['../class_sgt_1_1_simulation.html#a05ca47be0230ee065792737c56bb2520',1,'Sgt::Simulation']]],
+  ['timezone',['timezone',['../class_sgt_1_1_simulation.html#a28f06270cbc10befeb04b6ed908afea2',1,'Sgt::Simulation']]],
+  ['toyamlstring',['toYamlString',['../group___utilities.html#gae975ed475ef00424f8096561728acaa6',1,'Sgt']]]
 ];

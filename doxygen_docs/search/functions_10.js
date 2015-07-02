@@ -1,9 +1,27 @@
 var searchData=
 [
-  ['tapratio',['tapRatio',['../class_sgt_1_1_common_branch.html#aca48b051357236e6fd6aff2ddb670c2f',1,'Sgt::CommonBranch']]],
-  ['timeseries',['timeSeries',['../class_sgt_1_1_simulation.html#a28ec0d2203ac52ee422617317bb14d44',1,'Sgt::Simulation::timeSeries(const std::string &amp;id, bool crashOnFail=true) const '],['../class_sgt_1_1_simulation.html#a682f0d6c06958c7daf1f2153b6b20048',1,'Sgt::Simulation::timeSeries(const std::string &amp;id, bool crashOnFail=true)']]],
-  ['timestepdidcomplete',['timestepDidComplete',['../class_sgt_1_1_simulation.html#ad190f8f9eb37d07c8a101f49e12d5951',1,'Sgt::Simulation']]],
-  ['timestepwillstart',['timestepWillStart',['../class_sgt_1_1_simulation.html#a05ca47be0230ee065792737c56bb2520',1,'Sgt::Simulation']]],
-  ['timezone',['timezone',['../class_sgt_1_1_simulation.html#a28f06270cbc10befeb04b6ed908afea2',1,'Sgt::Simulation']]],
-  ['toyamlstring',['toYamlString',['../group___utilities.html#gae975ed475ef00424f8096561728acaa6',1,'Sgt']]]
+  ['s',['S',['../class_sgt_1_1_power_flow_model.html#a061f7a372e5420aec6745f55b50c4926',1,'Sgt::PowerFlowModel']]],
+  ['sconst',['SConst',['../class_sgt_1_1_bus.html#ad9f21e84cb42c90e6bb951a463eb6f41',1,'Sgt::Bus']]],
+  ['setendtime',['setEndTime',['../class_sgt_1_1_simulation.html#a58c7422a4cbfd90156849bd2f28e141d',1,'Sgt::Simulation']]],
+  ['setlatlong',['setLatLong',['../class_sgt_1_1_simulation.html#a5679de69e64f34cdb18bf667d235b204',1,'Sgt::Simulation']]],
+  ['setpointchanged',['setpointChanged',['../class_sgt_1_1_bus.html#a36f0a641ce40d808dea7ac191d1c45c2',1,'Sgt::Bus::setpointChanged()'],['../class_sgt_1_1_gen_abc.html#ae92c27b891201c4eb7474d30fbe4a73e',1,'Sgt::GenAbc::setpointChanged()'],['../class_sgt_1_1_zip_abc.html#aae80169f0a68c883a41f5e7463a86a7a',1,'Sgt::ZipAbc::setpointChanged()']]],
+  ['setrank',['setRank',['../class_sgt_1_1_sim_component.html#ab0a20452b21d5a0940a520cd09a9ae74',1,'Sgt::SimComponent']]],
+  ['setstarttime',['setStartTime',['../class_sgt_1_1_simulation.html#a8dcec8b7f44e8ab451ca9fc042445d0b',1,'Sgt::Simulation']]],
+  ['settimezone',['setTimezone',['../class_sgt_1_1_simulation.html#a362413493a74762e04fd99aef4083b1c',1,'Sgt::Simulation']]],
+  ['sgen',['SGen',['../class_sgt_1_1_bus.html#a2be59a08b93bd36f96cea8d14e9eec7f',1,'Sgt::Bus']]],
+  ['sgenrequested',['SGenRequested',['../class_sgt_1_1_bus.html#a23533a6dad25fe46e249c151a6047e41',1,'Sgt::Bus']]],
+  ['siconst',['SIConst',['../class_sgt_1_1_bus.html#ace1ec94c3c968a8ab2369e4c1eb6e9b7',1,'Sgt::Bus']]],
+  ['simcomponent',['simComponent',['../class_sgt_1_1_simulation.html#aef3df845ae2e59af7b4c2f64a618154d',1,'Sgt::Simulation::simComponent(const std::string &amp;id, bool crashOnFail=true) const '],['../class_sgt_1_1_simulation.html#ae07e89c882c221c25b725596730bb676',1,'Sgt::Simulation::simComponent(const std::string &amp;id, bool crashOnFail=true)']]],
+  ['simcomponents',['simComponents',['../class_sgt_1_1_simulation.html#a37289ace30aebd0ffc37caf1ebc6b185',1,'Sgt::Simulation::simComponents() const '],['../class_sgt_1_1_simulation.html#a40b232b82150f8188ce0dba40fba3e82',1,'Sgt::Simulation::simComponents()']]],
+  ['simulation',['Simulation',['../class_sgt_1_1_simulation.html#a4e05bd25b86db74d83a081d6b170625e',1,'Sgt::Simulation']]],
+  ['singlephasetransformer',['SinglePhaseTransformer',['../class_sgt_1_1_single_phase_transformer.html#a046fcc7ebef09488a8ac37470be1de1a',1,'Sgt::SinglePhaseTransformer']]],
+  ['solarirradiance',['solarIrradiance',['../namespace_sgt.html#a7f5889a1cb8370dca4d3f3c11a79a262',1,'Sgt']]],
+  ['solarirradiancevec',['solarIrradianceVec',['../namespace_sgt.html#a96c643ed05a47e8ba6b6e2ce1504239a',1,'Sgt']]],
+  ['solarpower',['solarPower',['../namespace_sgt.html#a41021df8dd2060c5a1d15a4ddd1e2b2e',1,'Sgt']]],
+  ['solveproblem',['solveProblem',['../class_sgt_1_1_power_flow_nr_solver.html#ae5c64a499fa9143c29390e963fccb5a7',1,'Sgt::PowerFlowNrSolver']]],
+  ['starttime',['startTime',['../class_sgt_1_1_simulation.html#a9bdf2d2eb71bdc1392f8bb070e98c800',1,'Sgt::Simulation']]],
+  ['sunpos',['sunPos',['../namespace_sgt.html#a77c2384a530cd993b49f1e1bdbf9536a',1,'Sgt']]],
+  ['syconst',['SYConst',['../class_sgt_1_1_bus.html#a90bd8470daeaa241e31e3ef781205ab5',1,'Sgt::Bus']]],
+  ['szip',['SZip',['../class_sgt_1_1_bus.html#abcb5534180b9d34adde25ddc2aa536c5',1,'Sgt::Bus']]],
+  ['sziprequested',['SZipRequested',['../class_sgt_1_1_bus.html#a4f2803bc506ed4cd6185cfb4a1535f9d',1,'Sgt::Bus']]]
 ];

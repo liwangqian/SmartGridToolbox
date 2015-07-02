@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['needsupdate',['needsUpdate',['../class_sgt_1_1_sim_component.html#a4fd6b34b9830f5b7405eede7a5fc5939',1,'Sgt::SimComponent']]],
-  ['newsimcomponent',['newSimComponent',['../class_sgt_1_1_simulation.html#a7ada935a68dc18fbf628de809ee87c26',1,'Sgt::Simulation']]]
+  ['lastupdated',['lastUpdated',['../class_sgt_1_1_sim_component.html#a86c99350177ab50913b998987854cb4e',1,'Sgt::SimComponent']]],
+  ['latlong',['latLong',['../class_sgt_1_1_simulation.html#a8c18b3f7c9c74052aaecbd82d089b60f',1,'Sgt::Simulation']]],
+  ['logcomponents',['logComponents',['../class_sgt_1_1_simulation.html#a8b619618272095d37879b052dcd2f409',1,'Sgt::Simulation']]]
 ];
