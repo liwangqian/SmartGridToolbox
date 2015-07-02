@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SmartGridToolbox
-   &#160;<span id="projectnumber">v2.0.0b2</span>
+   &#160;<span id="projectnumber">v2.0.0b3</span>
    </div>
   </td>
  </tr>
@@ -121,9 +121,20 @@ template&lt;typename T &gt; </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
 Reporting and errors.</h2></td></tr>
-<tr class="memitem:ga4cb534117e92b9d13c8f992637aeae1c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga4cb534117e92b9d13c8f992637aeae1c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Sgt::error</b> ()</td></tr>
-<tr class="separator:ga4cb534117e92b9d13c8f992637aeae1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad56590ffec984b1df59c3d2f96ff5f2c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gad56590ffec984b1df59c3d2f96ff5f2c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>sgtError</b>(msg)&#160;&#160;&#160;{std::ostringstream ss; ss &lt;&lt; &quot;SmartGridToolbox: &quot; &lt;&lt; __PRETTY_FUNCTION__ &lt;&lt; &quot;: &quot; &lt;&lt; msg; throw std::runtime_error(ss.str());}</td></tr>
+<tr class="separator:gad56590ffec984b1df59c3d2f96ff5f2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7ecbb08faa0ba7e359e3f751db6722f7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga7ecbb08faa0ba7e359e3f751db6722f7"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>sgtAssert</b>(cond,  msg)&#160;&#160;&#160;if (!(cond)) sgtError(msg);</td></tr>
+<tr class="separator:ga7ecbb08faa0ba7e359e3f751db6722f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa9b4f30bca1bb4cebcc62dc40d7cd90d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaa9b4f30bca1bb4cebcc62dc40d7cd90d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SGT_DEBUG</b>(x)</td></tr>
+<tr class="separator:gaa9b4f30bca1bb4cebcc62dc40d7cd90d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga15fe38ceb2ccd81e932f662f2478b916"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga15fe38ceb2ccd81e932f662f2478b916"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>LogLevel</b> { <b>NONE</b>, 
+<b>NORMAL</b>, 
+<b>VERBOSE</b>
+ }</td></tr>
+<tr class="separator:ga15fe38ceb2ccd81e932f662f2478b916"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
 String conversion.</h2></td></tr>
@@ -337,7 +348,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 16 2015 16:12:38 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jul 2 2015 11:58:44 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

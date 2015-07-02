@@ -5,7 +5,7 @@ var searchData=
   ['parserloop',['ParserLoop',['../struct_sgt_1_1_parser_base_1_1_parser_loop.html',1,'Sgt::ParserBase']]],
   ['parserplugin',['ParserPlugin',['../class_sgt_1_1_parser_plugin.html',1,'Sgt']]],
   ['parsing',['Parsing',['../group___parsing.html',1,'']]],
-  ['pdc',['PDc',['../class_sgt_1_1_battery.html#ac7836c442ba3b52ee51ad0b6167471de',1,'Sgt::Battery::PDc()'],['../class_sgt_1_1_inverter_abc.html#a22a41c301b69abbb244f7359c6a97e1e',1,'Sgt::InverterAbc::PDc()']]],
+  ['pdc',['PDc',['../class_sgt_1_1_battery.html#ac7836c442ba3b52ee51ad0b6167471de',1,'Sgt::Battery::PDc()'],['../class_sgt_1_1_inverter_abc.html#a6515afdd00f01db7b2284a1d8ee37eb6',1,'Sgt::InverterAbc::PDc()']]],
   ['pfbranch',['PfBranch',['../struct_sgt_1_1_pf_branch.html',1,'Sgt']]],
   ['pfbus',['PfBus',['../struct_sgt_1_1_pf_bus.html',1,'Sgt']]],
   ['pfnode',['PfNode',['../struct_sgt_1_1_pf_node.html',1,'Sgt']]],
@@ -20,6 +20,5 @@ var searchData=
   ['powerflowsolverparserplugin',['PowerFlowSolverParserPlugin',['../class_sgt_1_1_power_flow_solver_parser_plugin.html',1,'Sgt']]],
   ['precedes',['precedes',['../class_sgt_1_1_wo_node.html#adf44321a7e5e969175e2784c1619cbc3',1,'Sgt::WoNode']]],
   ['property',['Property',['../class_sgt_1_1_property.html',1,'Sgt']]],
-  ['propertybase',['PropertyBase',['../class_sgt_1_1_property_base.html',1,'Sgt']]],
-  ['propertybase1',['PropertyBase1',['../class_sgt_1_1_property_base1.html',1,'Sgt']]]
+  ['propertyabc',['PropertyAbc',['../class_sgt_1_1_property_abc.html',1,'Sgt']]]
 ];

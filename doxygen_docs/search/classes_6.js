@@ -10,5 +10,5 @@ var searchData=
   ['genericzip',['GenericZip',['../class_sgt_1_1_generic_zip.html',1,'Sgt']]],
   ['genericzipparserplugin',['GenericZipParserPlugin',['../class_sgt_1_1_generic_zip_parser_plugin.html',1,'Sgt']]],
   ['getter',['Getter',['../class_sgt_1_1_getter.html',1,'Sgt']]],
-  ['getterinterface',['GetterInterface',['../class_sgt_1_1_getter_interface.html',1,'Sgt']]]
+  ['getterabc',['GetterAbc',['../class_sgt_1_1_getter_abc.html',1,'Sgt']]]
 ];

@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SmartGridToolbox
-   &#160;<span id="projectnumber">v2.0.0b2</span>
+   &#160;<span id="projectnumber">v2.0.0b3</span>
    </div>
   </td>
  </tr>
@@ -103,7 +103,7 @@ Inheritance diagram for Sgt::Setter&lt; Targ, T &gt;:</div>
  <div class="center">
   <img src="class_sgt_1_1_setter.png" usemap="#Sgt::Setter&lt; Targ, T &gt;_map" alt=""/>
   <map id="Sgt::Setter&lt; Targ, T &gt;_map" name="Sgt::Setter&lt; Targ, T &gt;_map">
-<area href="class_sgt_1_1_setter_interface.html" alt="Sgt::SetterInterface&lt; T &gt;" shape="rect" coords="0,0,150,24"/>
+<area href="class_sgt_1_1_setter_abc.html" alt="Sgt::SetterAbc&lt; T &gt;" shape="rect" coords="0,0,135,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -112,19 +112,19 @@ Public Types</h2></td></tr>
 <tr class="memitem:a8406d4cfed48ab262d0857274a0b8e53"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8406d4cfed48ab262d0857274a0b8e53"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>Set</b> = void(Targ &amp;, const T &amp;)</td></tr>
 <tr class="separator:a8406d4cfed48ab262d0857274a0b8e53"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_types_class_sgt_1_1_setter_interface"><td colspan="2" onclick="javascript:toggleInherit('pub_types_class_sgt_1_1_setter_interface')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="class_sgt_1_1_setter_interface.html">Sgt::SetterInterface&lt; T &gt;</a></td></tr>
-<tr class="memitem:a5cde2b5c864daa1762a4fd3cef833383 inherit pub_types_class_sgt_1_1_setter_interface"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5cde2b5c864daa1762a4fd3cef833383"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>Set</b> = void(<a class="el" href="class_sgt_1_1_has_properties_interface.html">HasPropertiesInterface</a> &amp;, const T &amp;)</td></tr>
-<tr class="separator:a5cde2b5c864daa1762a4fd3cef833383 inherit pub_types_class_sgt_1_1_setter_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_class_sgt_1_1_setter_abc"><td colspan="2" onclick="javascript:toggleInherit('pub_types_class_sgt_1_1_setter_abc')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="class_sgt_1_1_setter_abc.html">Sgt::SetterAbc&lt; T &gt;</a></td></tr>
+<tr class="memitem:aaa3c4d003f398a280d7b13ddec086c60 inherit pub_types_class_sgt_1_1_setter_abc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaa3c4d003f398a280d7b13ddec086c60"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>Set</b> = void(<a class="el" href="class_sgt_1_1_has_properties_abc.html">HasPropertiesAbc</a> &amp;, const T &amp;)</td></tr>
+<tr class="separator:aaa3c4d003f398a280d7b13ddec086c60 inherit pub_types_class_sgt_1_1_setter_abc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a14db9c1d852eae227744e84d1f971b3d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a14db9c1d852eae227744e84d1f971b3d"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Setter</b> (Set setArg)</td></tr>
 <tr class="separator:a14db9c1d852eae227744e84d1f971b3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37af43184612a7bc6fd498bfb09c9ba1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a37af43184612a7bc6fd498bfb09c9ba1"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>set</b> (<a class="el" href="class_sgt_1_1_has_properties_interface.html">HasPropertiesInterface</a> &amp;targ, const T &amp;val) const override</td></tr>
-<tr class="separator:a37af43184612a7bc6fd498bfb09c9ba1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a678bd2ae73250757cd125173cabc5e0b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a678bd2ae73250757cd125173cabc5e0b"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>set</b> (<a class="el" href="class_sgt_1_1_has_properties_abc.html">HasPropertiesAbc</a> &amp;targ, const T &amp;val) const override</td></tr>
+<tr class="separator:a678bd2ae73250757cd125173cabc5e0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac317f13ac47a0910455640a2e5024a78"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac317f13ac47a0910455640a2e5024a78"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>set</b> (Targ &amp;targ, const T &amp;val) const </td></tr>
 <tr class="separator:ac317f13ac47a0910455640a2e5024a78"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -135,7 +135,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>set</b> (Targ &amp;ta
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 16 2015 16:12:48 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jul 2 2015 11:58:54 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

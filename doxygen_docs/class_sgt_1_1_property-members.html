@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SmartGridToolbox
-   &#160;<span id="projectnumber">v2.0.0b2</span>
+   &#160;<span id="projectnumber">v2.0.0b3</span>
    </div>
   </td>
  </tr>
@@ -96,19 +96,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p>This is the complete list of members for <a class="el" href="class_sgt_1_1_property.html">Sgt::Property&lt; T &gt;</a>, including all inherited members.</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>get</b>(const HasPropertiesInterface &amp;targ) const  (defined in <a class="el" href="class_sgt_1_1_property.html">Sgt::Property&lt; T &gt;</a>)</td><td class="entry"><a class="el" href="class_sgt_1_1_property.html">Sgt::Property&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>get</b>(const HasPropertiesAbc &amp;targ) const  (defined in <a class="el" href="class_sgt_1_1_property.html">Sgt::Property&lt; T &gt;</a>)</td><td class="entry"><a class="el" href="class_sgt_1_1_property.html">Sgt::Property&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr bgcolor="#f0f0f0"><td class="entry"><b>isGettable</b>() override (defined in <a class="el" href="class_sgt_1_1_property.html">Sgt::Property&lt; T &gt;</a>)</td><td class="entry"><a class="el" href="class_sgt_1_1_property.html">Sgt::Property&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>isSettable</b>() override (defined in <a class="el" href="class_sgt_1_1_property_base1.html">Sgt::PropertyBase1&lt; T &gt;</a>)</td><td class="entry"><a class="el" href="class_sgt_1_1_property_base1.html">Sgt::PropertyBase1&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>Property</b>(std::unique_ptr&lt; GetterInterface&lt; T &gt;&gt; getter, std::unique_ptr&lt; SetterInterface&lt; T &gt;&gt; setter) (defined in <a class="el" href="class_sgt_1_1_property.html">Sgt::Property&lt; T &gt;</a>)</td><td class="entry"><a class="el" href="class_sgt_1_1_property.html">Sgt::Property&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>PropertyBase1</b>(std::unique_ptr&lt; SetterInterface&lt; T &gt;&gt; setter) (defined in <a class="el" href="class_sgt_1_1_property_base1.html">Sgt::PropertyBase1&lt; T &gt;</a>)</td><td class="entry"><a class="el" href="class_sgt_1_1_property_base1.html">Sgt::PropertyBase1&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>set</b>(HasPropertiesInterface &amp;targ, const T &amp;val) const  (defined in <a class="el" href="class_sgt_1_1_property_base1.html">Sgt::PropertyBase1&lt; T &gt;</a>)</td><td class="entry"><a class="el" href="class_sgt_1_1_property_base1.html">Sgt::PropertyBase1&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>setFromString</b>(HasPropertiesInterface &amp;targ, const std::string &amp;str) override (defined in <a class="el" href="class_sgt_1_1_property_base1.html">Sgt::PropertyBase1&lt; T &gt;</a>)</td><td class="entry"><a class="el" href="class_sgt_1_1_property_base1.html">Sgt::PropertyBase1&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>string</b>(const HasPropertiesInterface &amp;targ) (defined in <a class="el" href="class_sgt_1_1_property.html">Sgt::Property&lt; T &gt;</a>)</td><td class="entry"><a class="el" href="class_sgt_1_1_property.html">Sgt::Property&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>~PropertyBase</b>()=default (defined in <a class="el" href="class_sgt_1_1_property_base.html">Sgt::PropertyBase</a>)</td><td class="entry"><a class="el" href="class_sgt_1_1_property_base.html">Sgt::PropertyBase</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>isSettable</b>() override (defined in <a class="el" href="class_sgt_1_1_property.html">Sgt::Property&lt; T &gt;</a>)</td><td class="entry"><a class="el" href="class_sgt_1_1_property.html">Sgt::Property&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>Property</b>(std::unique_ptr&lt; GetterAbc&lt; T &gt;&gt; getter, std::unique_ptr&lt; SetterAbc&lt; T &gt;&gt; setter) (defined in <a class="el" href="class_sgt_1_1_property.html">Sgt::Property&lt; T &gt;</a>)</td><td class="entry"><a class="el" href="class_sgt_1_1_property.html">Sgt::Property&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>set</b>(HasPropertiesAbc &amp;targ, const T &amp;val) const  (defined in <a class="el" href="class_sgt_1_1_property.html">Sgt::Property&lt; T &gt;</a>)</td><td class="entry"><a class="el" href="class_sgt_1_1_property.html">Sgt::Property&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>setFromString</b>(HasPropertiesAbc &amp;targ, const std::string &amp;str) override (defined in <a class="el" href="class_sgt_1_1_property.html">Sgt::Property&lt; T &gt;</a>)</td><td class="entry"><a class="el" href="class_sgt_1_1_property.html">Sgt::Property&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>string</b>(const HasPropertiesAbc &amp;targ) override (defined in <a class="el" href="class_sgt_1_1_property.html">Sgt::Property&lt; T &gt;</a>)</td><td class="entry"><a class="el" href="class_sgt_1_1_property.html">Sgt::Property&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>~PropertyAbc</b>()=default (defined in <a class="el" href="class_sgt_1_1_property_abc.html">Sgt::PropertyAbc</a>)</td><td class="entry"><a class="el" href="class_sgt_1_1_property_abc.html">Sgt::PropertyAbc</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 16 2015 16:12:47 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jul 2 2015 11:58:54 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['willstartnewtimestep',['willStartNewTimestep',['../class_sgt_1_1_sim_component_adaptor.html#ad48d08af91904e165335d6749995b060',1,'Sgt::SimComponentAdaptor']]],
-  ['willupdate',['willUpdate',['../class_sgt_1_1_sim_component_adaptor.html#a3e21ef7f8e14b4526711ff152047994a',1,'Sgt::SimComponentAdaptor']]]
+  ['willstartnewtimestep',['willStartNewTimestep',['../class_sgt_1_1_sim_component.html#aff6a90c9738f4bddc662639ccee42608',1,'Sgt::SimComponent']]],
+  ['willupdate',['willUpdate',['../class_sgt_1_1_sim_component.html#aaa5a54f26535a91409b9e055bce76c55',1,'Sgt::SimComponent']]]
 ];

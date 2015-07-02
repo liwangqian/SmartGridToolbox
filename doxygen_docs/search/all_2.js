@@ -10,8 +10,6 @@ var searchData=
   ['commonbranch',['CommonBranch',['../class_sgt_1_1_common_branch.html',1,'Sgt']]],
   ['commonbranchparserplugin',['CommonBranchParserPlugin',['../class_sgt_1_1_common_branch_parser_plugin.html',1,'Sgt']]],
   ['component',['Component',['../class_sgt_1_1_component.html',1,'Sgt']]],
-  ['componentinterface',['ComponentInterface',['../class_sgt_1_1_component_interface.html',1,'Sgt']]],
-  ['componenttemplate',['ComponentTemplate',['../class_sgt_1_1_component_template.html',1,'Sgt']]],
   ['consttimeseries',['ConstTimeSeries',['../class_sgt_1_1_const_time_series.html',1,'Sgt']]],
   ['convert_3c_20arma_3a_3acol_3c_20t_20_3e_20_3e',['convert&lt; arma::Col&lt; T &gt; &gt;',['../struct_y_a_m_l_1_1convert_3_01arma_1_1_col_3_01_t_01_4_01_4.html',1,'YAML']]],
   ['convert_3c_20arma_3a_3amat_3c_20t_20_3e_20_3e',['convert&lt; arma::Mat&lt; T &gt; &gt;',['../struct_y_a_m_l_1_1convert_3_01arma_1_1_mat_3_01_t_01_4_01_4.html',1,'YAML']]],

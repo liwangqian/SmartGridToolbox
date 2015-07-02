@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SmartGridToolbox
-   &#160;<span id="projectnumber">v2.0.0b2</span>
+   &#160;<span id="projectnumber">v2.0.0b3</span>
    </div>
   </td>
  </tr>
@@ -101,14 +101,12 @@ Inheritance diagram for Sgt::SolarPv:</div>
  <div class="center">
   <img src="class_sgt_1_1_solar_pv.png" usemap="#Sgt::SolarPv_map" alt=""/>
   <map id="Sgt::SolarPv_map" name="Sgt::SolarPv_map">
-<area href="class_sgt_1_1_dc_power_source_abc.html" title="DC power source. " alt="Sgt::DcPowerSourceAbc" shape="rect" coords="88,224,254,248"/>
-<area href="class_sgt_1_1_sim_component.html" title="A base class for SimComponents. " alt="Sgt::SimComponent" shape="rect" coords="88,168,254,192"/>
-<area href="class_sgt_1_1_sim_component_adaptor.html" title="Adaptor that can be used add SimComponent functionality. " alt="Sgt::SimComponentAdaptor" shape="rect" coords="0,112,166,136"/>
-<area href="class_sgt_1_1_component.html" title="Base class for all Components. " alt="Sgt::Component" shape="rect" coords="176,112,342,136"/>
-<area href="class_sgt_1_1_component_interface.html" title="Base interface for all Components. " alt="Sgt::ComponentInterface" shape="rect" coords="0,56,166,80"/>
-<area href="class_sgt_1_1_component_interface.html" title="Base interface for all Components. " alt="Sgt::ComponentInterface" shape="rect" coords="176,56,342,80"/>
-<area href="class_sgt_1_1_has_properties_interface.html" alt="Sgt::HasPropertiesInterface" shape="rect" coords="0,0,166,24"/>
-<area href="class_sgt_1_1_has_properties_interface.html" alt="Sgt::HasPropertiesInterface" shape="rect" coords="176,0,342,24"/>
+<area href="class_sgt_1_1_dc_power_source_abc.html" title="DC power source. " alt="Sgt::DcPowerSourceAbc" shape="rect" coords="154,224,452,248"/>
+<area href="class_sgt_1_1_sim_component.html" title="A base class for components of a Simulation. " alt="Sgt::SimComponent" shape="rect" coords="154,168,452,192"/>
+<area href="class_sgt_1_1_component.html" title="Base class for all Components. " alt="Sgt::Component" shape="rect" coords="154,112,452,136"/>
+<area href="class_sgt_1_1_shared.html" alt="Sgt::Shared&lt; Component &gt;" shape="rect" coords="0,56,298,80"/>
+<area href="class_sgt_1_1_has_properties.html" alt="Sgt::HasProperties&lt; Component &gt;" shape="rect" coords="308,56,606,80"/>
+<area href="class_sgt_1_1_has_properties_abc.html" alt="Sgt::HasPropertiesAbc" shape="rect" coords="308,0,606,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -118,7 +116,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab4a096a0352bf8679a8d95d5d3f6ffbd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab4a096a0352bf8679a8d95d5d3f6ffbd"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>SolarPv</b> (const std::string &amp;id)</td></tr>
 <tr class="separator:ab4a096a0352bf8679a8d95d5d3f6ffbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">ComponentInterface virtual overridden functions.</div></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Component virtual overridden functions.</div></td></tr>
 <tr class="memitem:adce65bfc11fa6481fd6f6ad6d57ffe61"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adce65bfc11fa6481fd6f6ad6d57ffe61"></a>
 virtual const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>componentType</b> () const override</td></tr>
 <tr class="separator:adce65bfc11fa6481fd6f6ad6d57ffe61"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -139,94 +137,70 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setPlaneArea</b> (dou
 virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>PDc</b> () const override</td></tr>
 <tr class="separator:a9ca9358454158f48d81095fd04227f71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_sgt_1_1_dc_power_source_abc"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_sgt_1_1_dc_power_source_abc')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_sgt_1_1_dc_power_source_abc.html">Sgt::DcPowerSourceAbc</a></td></tr>
-<tr class="memitem:a78df72d05f312c7631bf64aab449455f inherit pub_methods_class_sgt_1_1_dc_power_source_abc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a78df72d05f312c7631bf64aab449455f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>DcPowerSourceAbc</b> (const std::string &amp;id)</td></tr>
-<tr class="separator:a78df72d05f312c7631bf64aab449455f inherit pub_methods_class_sgt_1_1_dc_power_source_abc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71c6b13de5382b33022458d8a1bb6889 inherit pub_methods_class_sgt_1_1_dc_power_source_abc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a71c6b13de5382b33022458d8a1bb6889"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>DcPowerSourceAbc</b> ()</td></tr>
+<tr class="separator:a71c6b13de5382b33022458d8a1bb6889 inherit pub_methods_class_sgt_1_1_dc_power_source_abc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb7382679e8d07e6f213afa0d6d1a1ce inherit pub_methods_class_sgt_1_1_dc_power_source_abc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acb7382679e8d07e6f213afa0d6d1a1ce"></a>
 virtual <a class="el" href="class_sgt_1_1_event.html">Event</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_dc_power_source_abc.html#acb7382679e8d07e6f213afa0d6d1a1ce">dcPowerChanged</a> ()</td></tr>
 <tr class="memdesc:acb7382679e8d07e6f213afa0d6d1a1ce inherit pub_methods_class_sgt_1_1_dc_power_source_abc"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sgt_1_1_event.html" title="An event, when triggered, performs all of its registered actions. ">Event</a> triggered when I go in or out of service. <br /></td></tr>
 <tr class="separator:acb7382679e8d07e6f213afa0d6d1a1ce inherit pub_methods_class_sgt_1_1_dc_power_source_abc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_sgt_1_1_sim_component"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_sgt_1_1_sim_component')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_sgt_1_1_sim_component.html">Sgt::SimComponent</a></td></tr>
-<tr class="memitem:a78524614b019c4f92fa401510317c976 inherit pub_methods_class_sgt_1_1_sim_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a78524614b019c4f92fa401510317c976"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>SimComponent</b> (const std::string &amp;id)</td></tr>
-<tr class="separator:a78524614b019c4f92fa401510317c976 inherit pub_methods_class_sgt_1_1_sim_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_class_sgt_1_1_sim_component_adaptor"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_sgt_1_1_sim_component_adaptor')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_sgt_1_1_sim_component_adaptor.html">Sgt::SimComponentAdaptor</a></td></tr>
-<tr class="memitem:ad50ccf80ea6e2cf4cd2eb583b7c753a0 inherit pub_methods_class_sgt_1_1_sim_component_adaptor"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad50ccf80ea6e2cf4cd2eb583b7c753a0"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>SimComponentAdaptor</b> ()=default</td></tr>
-<tr class="separator:ad50ccf80ea6e2cf4cd2eb583b7c753a0 inherit pub_methods_class_sgt_1_1_sim_component_adaptor"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21fe39c7a8f7fabed60143af9dd7af7b inherit pub_methods_class_sgt_1_1_sim_component_adaptor"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a21fe39c7a8f7fabed60143af9dd7af7b"></a>
-virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~SimComponentAdaptor</b> ()=default</td></tr>
-<tr class="separator:a21fe39c7a8f7fabed60143af9dd7af7b inherit pub_methods_class_sgt_1_1_sim_component_adaptor"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0f3aef84f5a0dfb9a6e0bb6866ab53b inherit pub_methods_class_sgt_1_1_sim_component_adaptor"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_sim_component_adaptor.html#af0f3aef84f5a0dfb9a6e0bb6866ab53b">initialize</a> ()</td></tr>
-<tr class="memdesc:af0f3aef84f5a0dfb9a6e0bb6866ab53b inherit pub_methods_class_sgt_1_1_sim_component_adaptor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize state of the object.  <a href="#af0f3aef84f5a0dfb9a6e0bb6866ab53b">More...</a><br /></td></tr>
-<tr class="separator:af0f3aef84f5a0dfb9a6e0bb6866ab53b inherit pub_methods_class_sgt_1_1_sim_component_adaptor"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a012e295b20a8204a104c0e2e04f1d23d inherit pub_methods_class_sgt_1_1_sim_component_adaptor"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a012e295b20a8204a104c0e2e04f1d23d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_sim_component_adaptor.html#a012e295b20a8204a104c0e2e04f1d23d">update</a> (Time t)</td></tr>
-<tr class="memdesc:a012e295b20a8204a104c0e2e04f1d23d inherit pub_methods_class_sgt_1_1_sim_component_adaptor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bring state up to time t. <br /></td></tr>
-<tr class="separator:a012e295b20a8204a104c0e2e04f1d23d inherit pub_methods_class_sgt_1_1_sim_component_adaptor"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af92866b78117e81a03277ce4f8435134 inherit pub_methods_class_sgt_1_1_sim_component_adaptor"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af92866b78117e81a03277ce4f8435134"></a>
-Time&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_sim_component_adaptor.html#af92866b78117e81a03277ce4f8435134">lastUpdated</a> () const </td></tr>
-<tr class="memdesc:af92866b78117e81a03277ce4f8435134 inherit pub_methods_class_sgt_1_1_sim_component_adaptor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current step for the object. <br /></td></tr>
-<tr class="separator:af92866b78117e81a03277ce4f8435134 inherit pub_methods_class_sgt_1_1_sim_component_adaptor"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ca6cad4449ca4e4129657cb57d4fd7d inherit pub_methods_class_sgt_1_1_sim_component_adaptor"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9ca6cad4449ca4e4129657cb57d4fd7d"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_sim_component_adaptor.html#a9ca6cad4449ca4e4129657cb57d4fd7d">rank</a> () const </td></tr>
-<tr class="memdesc:a9ca6cad4449ca4e4129657cb57d4fd7d inherit pub_methods_class_sgt_1_1_sim_component_adaptor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the rank of the object. <br /></td></tr>
-<tr class="separator:a9ca6cad4449ca4e4129657cb57d4fd7d inherit pub_methods_class_sgt_1_1_sim_component_adaptor"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd25a31ddf5d6c657028ed16dd48edcb inherit pub_methods_class_sgt_1_1_sim_component_adaptor"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abd25a31ddf5d6c657028ed16dd48edcb"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_sim_component_adaptor.html#abd25a31ddf5d6c657028ed16dd48edcb">setRank</a> (int <a class="el" href="class_sgt_1_1_sim_component_adaptor.html#a9ca6cad4449ca4e4129657cb57d4fd7d">rank</a>)</td></tr>
-<tr class="memdesc:abd25a31ddf5d6c657028ed16dd48edcb inherit pub_methods_class_sgt_1_1_sim_component_adaptor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the rank of the object. <br /></td></tr>
-<tr class="separator:abd25a31ddf5d6c657028ed16dd48edcb inherit pub_methods_class_sgt_1_1_sim_component_adaptor"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f1d74b549741730a1eb93908624eeca inherit pub_methods_class_sgt_1_1_sim_component_adaptor"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6f1d74b549741730a1eb93908624eeca"></a>
-const std::vector&lt; std::weak_ptr&lt; const <a class="el" href="class_sgt_1_1_sim_component_adaptor.html">SimComponentAdaptor</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>dependencies</b> () const </td></tr>
-<tr class="separator:a6f1d74b549741730a1eb93908624eeca inherit pub_methods_class_sgt_1_1_sim_component_adaptor"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56a29e77e1f850d9bfb337b3c3232a9d inherit pub_methods_class_sgt_1_1_sim_component_adaptor"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a56a29e77e1f850d9bfb337b3c3232a9d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_sim_component_adaptor.html#a56a29e77e1f850d9bfb337b3c3232a9d">dependsOn</a> (std::shared_ptr&lt; const <a class="el" href="class_sgt_1_1_sim_component_adaptor.html">SimComponentAdaptor</a> &gt; b)</td></tr>
-<tr class="memdesc:a56a29e77e1f850d9bfb337b3c3232a9d inherit pub_methods_class_sgt_1_1_sim_component_adaptor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Components on which I depend will update first. <br /></td></tr>
-<tr class="separator:a56a29e77e1f850d9bfb337b3c3232a9d inherit pub_methods_class_sgt_1_1_sim_component_adaptor"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e21ef7f8e14b4526711ff152047994a inherit pub_methods_class_sgt_1_1_sim_component_adaptor"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3e21ef7f8e14b4526711ff152047994a"></a>
-<a class="el" href="class_sgt_1_1_event.html">Event</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_sim_component_adaptor.html#a3e21ef7f8e14b4526711ff152047994a">willUpdate</a> ()</td></tr>
-<tr class="memdesc:a3e21ef7f8e14b4526711ff152047994a inherit pub_methods_class_sgt_1_1_sim_component_adaptor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triggered just before my update. <br /></td></tr>
-<tr class="separator:a3e21ef7f8e14b4526711ff152047994a inherit pub_methods_class_sgt_1_1_sim_component_adaptor"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff12ae9c127b6a6c58595b147170c46f inherit pub_methods_class_sgt_1_1_sim_component_adaptor"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff12ae9c127b6a6c58595b147170c46f"></a>
-<a class="el" href="class_sgt_1_1_event.html">Event</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_sim_component_adaptor.html#aff12ae9c127b6a6c58595b147170c46f">didUpdate</a> ()</td></tr>
-<tr class="memdesc:aff12ae9c127b6a6c58595b147170c46f inherit pub_methods_class_sgt_1_1_sim_component_adaptor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triggered after my update. <br /></td></tr>
-<tr class="separator:aff12ae9c127b6a6c58595b147170c46f inherit pub_methods_class_sgt_1_1_sim_component_adaptor"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50e3877fea9fd10c4827f9b785710b12 inherit pub_methods_class_sgt_1_1_sim_component_adaptor"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a50e3877fea9fd10c4827f9b785710b12"></a>
-<a class="el" href="class_sgt_1_1_event.html">Event</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_sim_component_adaptor.html#a50e3877fea9fd10c4827f9b785710b12">needsUpdate</a> ()</td></tr>
-<tr class="memdesc:a50e3877fea9fd10c4827f9b785710b12 inherit pub_methods_class_sgt_1_1_sim_component_adaptor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triggered when I am flagged for future update. <br /></td></tr>
-<tr class="separator:a50e3877fea9fd10c4827f9b785710b12 inherit pub_methods_class_sgt_1_1_sim_component_adaptor"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad48d08af91904e165335d6749995b060 inherit pub_methods_class_sgt_1_1_sim_component_adaptor"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad48d08af91904e165335d6749995b060"></a>
-<a class="el" href="class_sgt_1_1_event.html">Event</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_sim_component_adaptor.html#ad48d08af91904e165335d6749995b060">willStartNewTimestep</a> ()</td></tr>
-<tr class="memdesc:ad48d08af91904e165335d6749995b060 inherit pub_methods_class_sgt_1_1_sim_component_adaptor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triggered when I am about to update to a new timestep. <br /></td></tr>
-<tr class="separator:ad48d08af91904e165335d6749995b060 inherit pub_methods_class_sgt_1_1_sim_component_adaptor"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab1de226f0651f9f4742bb92dd96a877 inherit pub_methods_class_sgt_1_1_sim_component_adaptor"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aab1de226f0651f9f4742bb92dd96a877"></a>
-<a class="el" href="class_sgt_1_1_event.html">Event</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_sim_component_adaptor.html#aab1de226f0651f9f4742bb92dd96a877">didCompleteTimestep</a> ()</td></tr>
-<tr class="memdesc:aab1de226f0651f9f4742bb92dd96a877 inherit pub_methods_class_sgt_1_1_sim_component_adaptor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triggered when I just updated, completing the current timestep. <br /></td></tr>
-<tr class="separator:aab1de226f0651f9f4742bb92dd96a877 inherit pub_methods_class_sgt_1_1_sim_component_adaptor"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7dfd3e6e3b9fd8647793d66478991cac inherit pub_methods_class_sgt_1_1_sim_component_adaptor"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7dfd3e6e3b9fd8647793d66478991cac"></a>
-virtual Time&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_sim_component_adaptor.html#a7dfd3e6e3b9fd8647793d66478991cac">validUntil</a> () const </td></tr>
-<tr class="memdesc:a7dfd3e6e3b9fd8647793d66478991cac inherit pub_methods_class_sgt_1_1_sim_component_adaptor"><td class="mdescLeft">&#160;</td><td class="mdescRight">What is the latest time that I should update? <br /></td></tr>
-<tr class="separator:a7dfd3e6e3b9fd8647793d66478991cac inherit pub_methods_class_sgt_1_1_sim_component_adaptor"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_class_sgt_1_1_component_interface"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_sgt_1_1_component_interface')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_sgt_1_1_component_interface.html">Sgt::ComponentInterface</a></td></tr>
-<tr class="memitem:ac095bfecd5a4535fd3efa7f3d36e18bb inherit pub_methods_class_sgt_1_1_component_interface"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac095bfecd5a4535fd3efa7f3d36e18bb"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ComponentInterface</b> ()=default</td></tr>
-<tr class="separator:ac095bfecd5a4535fd3efa7f3d36e18bb inherit pub_methods_class_sgt_1_1_component_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72967da7c2b252d91a627243764a57eb inherit pub_methods_class_sgt_1_1_component_interface"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a72967da7c2b252d91a627243764a57eb"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ComponentInterface</b> (const <a class="el" href="class_sgt_1_1_component_interface.html">ComponentInterface</a> &amp;from)=default</td></tr>
-<tr class="separator:a72967da7c2b252d91a627243764a57eb inherit pub_methods_class_sgt_1_1_component_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c7462d531bf54b86c9340fccebf1335 inherit pub_methods_class_sgt_1_1_component_interface"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3c7462d531bf54b86c9340fccebf1335"></a>
-virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~ComponentInterface</b> ()=default</td></tr>
-<tr class="separator:a3c7462d531bf54b86c9340fccebf1335 inherit pub_methods_class_sgt_1_1_component_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_class_sgt_1_1_has_properties_interface"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_sgt_1_1_has_properties_interface')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_sgt_1_1_has_properties_interface.html">Sgt::HasPropertiesInterface</a></td></tr>
-<tr class="memitem:a5b6315c7ec427ece9e7539c1cedf5ece inherit pub_methods_class_sgt_1_1_has_properties_interface"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5b6315c7ec427ece9e7539c1cedf5ece"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>HasPropertiesInterface</b> (const <a class="el" href="class_sgt_1_1_has_properties_interface.html">HasPropertiesInterface</a> &amp;from)=default</td></tr>
-<tr class="separator:a5b6315c7ec427ece9e7539c1cedf5ece inherit pub_methods_class_sgt_1_1_has_properties_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad309df459abc4ebaac872b17059083df inherit pub_methods_class_sgt_1_1_has_properties_interface"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad309df459abc4ebaac872b17059083df"></a>
-virtual const std::map&lt; std::string, std::shared_ptr&lt; <a class="el" href="class_sgt_1_1_property_base.html">PropertyBase</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>properties</b> () const =0</td></tr>
-<tr class="separator:ad309df459abc4ebaac872b17059083df inherit pub_methods_class_sgt_1_1_has_properties_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f1ecf3086e7b07ab0a28b78eba7ed89 inherit pub_methods_class_sgt_1_1_has_properties_interface"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3f1ecf3086e7b07ab0a28b78eba7ed89"></a>
-virtual std::map&lt; std::string, std::shared_ptr&lt; <a class="el" href="class_sgt_1_1_property_base.html">PropertyBase</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>properties</b> ()=0</td></tr>
-<tr class="separator:a3f1ecf3086e7b07ab0a28b78eba7ed89 inherit pub_methods_class_sgt_1_1_has_properties_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1abada826a73f085178eebb2fcb987b inherit pub_methods_class_sgt_1_1_sim_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af1abada826a73f085178eebb2fcb987b"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>SimComponent</b> ()</td></tr>
+<tr class="separator:af1abada826a73f085178eebb2fcb987b inherit pub_methods_class_sgt_1_1_sim_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3bfc1447fae3ce118d5854239cbe4dc inherit pub_methods_class_sgt_1_1_sim_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae3bfc1447fae3ce118d5854239cbe4dc"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~SimComponent</b> ()=default</td></tr>
+<tr class="separator:ae3bfc1447fae3ce118d5854239cbe4dc inherit pub_methods_class_sgt_1_1_sim_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a212acdcd8fb0308c81c0d69d91a06622 inherit pub_methods_class_sgt_1_1_sim_component"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_sim_component.html#a212acdcd8fb0308c81c0d69d91a06622">initialize</a> ()</td></tr>
+<tr class="memdesc:a212acdcd8fb0308c81c0d69d91a06622 inherit pub_methods_class_sgt_1_1_sim_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize state of the object.  <a href="#a212acdcd8fb0308c81c0d69d91a06622">More...</a><br /></td></tr>
+<tr class="separator:a212acdcd8fb0308c81c0d69d91a06622 inherit pub_methods_class_sgt_1_1_sim_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d6eda2441fcb1eb623b3d8d4c65a574 inherit pub_methods_class_sgt_1_1_sim_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2d6eda2441fcb1eb623b3d8d4c65a574"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_sim_component.html#a2d6eda2441fcb1eb623b3d8d4c65a574">update</a> (Time t)</td></tr>
+<tr class="memdesc:a2d6eda2441fcb1eb623b3d8d4c65a574 inherit pub_methods_class_sgt_1_1_sim_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bring state up to time t. <br /></td></tr>
+<tr class="separator:a2d6eda2441fcb1eb623b3d8d4c65a574 inherit pub_methods_class_sgt_1_1_sim_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86c99350177ab50913b998987854cb4e inherit pub_methods_class_sgt_1_1_sim_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a86c99350177ab50913b998987854cb4e"></a>
+Time&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_sim_component.html#a86c99350177ab50913b998987854cb4e">lastUpdated</a> () const </td></tr>
+<tr class="memdesc:a86c99350177ab50913b998987854cb4e inherit pub_methods_class_sgt_1_1_sim_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current step for the object. <br /></td></tr>
+<tr class="separator:a86c99350177ab50913b998987854cb4e inherit pub_methods_class_sgt_1_1_sim_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5522dfc1450bbac847a32b94911c4d3 inherit pub_methods_class_sgt_1_1_sim_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa5522dfc1450bbac847a32b94911c4d3"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_sim_component.html#aa5522dfc1450bbac847a32b94911c4d3">rank</a> () const </td></tr>
+<tr class="memdesc:aa5522dfc1450bbac847a32b94911c4d3 inherit pub_methods_class_sgt_1_1_sim_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the rank of the object. <br /></td></tr>
+<tr class="separator:aa5522dfc1450bbac847a32b94911c4d3 inherit pub_methods_class_sgt_1_1_sim_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0a20452b21d5a0940a520cd09a9ae74 inherit pub_methods_class_sgt_1_1_sim_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab0a20452b21d5a0940a520cd09a9ae74"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_sim_component.html#ab0a20452b21d5a0940a520cd09a9ae74">setRank</a> (int <a class="el" href="class_sgt_1_1_sim_component.html#aa5522dfc1450bbac847a32b94911c4d3">rank</a>)</td></tr>
+<tr class="memdesc:ab0a20452b21d5a0940a520cd09a9ae74 inherit pub_methods_class_sgt_1_1_sim_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the rank of the object. <br /></td></tr>
+<tr class="separator:ab0a20452b21d5a0940a520cd09a9ae74 inherit pub_methods_class_sgt_1_1_sim_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad816e2c22c92ca7b04696dd237f97704 inherit pub_methods_class_sgt_1_1_sim_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad816e2c22c92ca7b04696dd237f97704"></a>
+const std::vector&lt; std::weak_ptr&lt; const <a class="el" href="class_sgt_1_1_sim_component.html">SimComponent</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>dependencies</b> () const </td></tr>
+<tr class="separator:ad816e2c22c92ca7b04696dd237f97704 inherit pub_methods_class_sgt_1_1_sim_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a793d5b0a65f1bb4b21f8d26b090343 inherit pub_methods_class_sgt_1_1_sim_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8a793d5b0a65f1bb4b21f8d26b090343"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_sim_component.html#a8a793d5b0a65f1bb4b21f8d26b090343">dependsOn</a> (std::shared_ptr&lt; const <a class="el" href="class_sgt_1_1_sim_component.html">SimComponent</a> &gt; b)</td></tr>
+<tr class="memdesc:a8a793d5b0a65f1bb4b21f8d26b090343 inherit pub_methods_class_sgt_1_1_sim_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Components on which I depend will update first. <br /></td></tr>
+<tr class="separator:a8a793d5b0a65f1bb4b21f8d26b090343 inherit pub_methods_class_sgt_1_1_sim_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa5a54f26535a91409b9e055bce76c55 inherit pub_methods_class_sgt_1_1_sim_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaa5a54f26535a91409b9e055bce76c55"></a>
+<a class="el" href="class_sgt_1_1_event.html">Event</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_sim_component.html#aaa5a54f26535a91409b9e055bce76c55">willUpdate</a> ()</td></tr>
+<tr class="memdesc:aaa5a54f26535a91409b9e055bce76c55 inherit pub_methods_class_sgt_1_1_sim_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triggered just before my update. <br /></td></tr>
+<tr class="separator:aaa5a54f26535a91409b9e055bce76c55 inherit pub_methods_class_sgt_1_1_sim_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af960c5fa7671f16077aba53af4207755 inherit pub_methods_class_sgt_1_1_sim_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af960c5fa7671f16077aba53af4207755"></a>
+<a class="el" href="class_sgt_1_1_event.html">Event</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_sim_component.html#af960c5fa7671f16077aba53af4207755">didUpdate</a> ()</td></tr>
+<tr class="memdesc:af960c5fa7671f16077aba53af4207755 inherit pub_methods_class_sgt_1_1_sim_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triggered after my update. <br /></td></tr>
+<tr class="separator:af960c5fa7671f16077aba53af4207755 inherit pub_methods_class_sgt_1_1_sim_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fd6b34b9830f5b7405eede7a5fc5939 inherit pub_methods_class_sgt_1_1_sim_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4fd6b34b9830f5b7405eede7a5fc5939"></a>
+<a class="el" href="class_sgt_1_1_event.html">Event</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_sim_component.html#a4fd6b34b9830f5b7405eede7a5fc5939">needsUpdate</a> ()</td></tr>
+<tr class="memdesc:a4fd6b34b9830f5b7405eede7a5fc5939 inherit pub_methods_class_sgt_1_1_sim_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triggered when I am flagged for future update. <br /></td></tr>
+<tr class="separator:a4fd6b34b9830f5b7405eede7a5fc5939 inherit pub_methods_class_sgt_1_1_sim_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff6a90c9738f4bddc662639ccee42608 inherit pub_methods_class_sgt_1_1_sim_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff6a90c9738f4bddc662639ccee42608"></a>
+<a class="el" href="class_sgt_1_1_event.html">Event</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_sim_component.html#aff6a90c9738f4bddc662639ccee42608">willStartNewTimestep</a> ()</td></tr>
+<tr class="memdesc:aff6a90c9738f4bddc662639ccee42608 inherit pub_methods_class_sgt_1_1_sim_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triggered when I am about to update to a new timestep. <br /></td></tr>
+<tr class="separator:aff6a90c9738f4bddc662639ccee42608 inherit pub_methods_class_sgt_1_1_sim_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae48f234ad36fa49246ab64eb74976fe1 inherit pub_methods_class_sgt_1_1_sim_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae48f234ad36fa49246ab64eb74976fe1"></a>
+<a class="el" href="class_sgt_1_1_event.html">Event</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_sim_component.html#ae48f234ad36fa49246ab64eb74976fe1">didCompleteTimestep</a> ()</td></tr>
+<tr class="memdesc:ae48f234ad36fa49246ab64eb74976fe1 inherit pub_methods_class_sgt_1_1_sim_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triggered when I just updated, completing the current timestep. <br /></td></tr>
+<tr class="separator:ae48f234ad36fa49246ab64eb74976fe1 inherit pub_methods_class_sgt_1_1_sim_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01def22f157cf64285666b88d7cdb258 inherit pub_methods_class_sgt_1_1_sim_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a01def22f157cf64285666b88d7cdb258"></a>
+virtual Time&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_sim_component.html#a01def22f157cf64285666b88d7cdb258">validUntil</a> () const </td></tr>
+<tr class="memdesc:a01def22f157cf64285666b88d7cdb258 inherit pub_methods_class_sgt_1_1_sim_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">What is the latest time that I should update? <br /></td></tr>
+<tr class="separator:a01def22f157cf64285666b88d7cdb258 inherit pub_methods_class_sgt_1_1_sim_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_sgt_1_1_component"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_sgt_1_1_component')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_sgt_1_1_component.html">Sgt::Component</a></td></tr>
 <tr class="memitem:afcf7b3b3b2af7f05924fa267475fd5b0 inherit pub_methods_class_sgt_1_1_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afcf7b3b3b2af7f05924fa267475fd5b0"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>SGT_PROPS_INIT</b> (<a class="el" href="class_sgt_1_1_component.html">Component</a>)</td></tr>
@@ -234,6 +208,12 @@ virtual std::map&lt; std::string, std::shared_ptr&lt; <a class="el" href="class_
 <tr class="memitem:a7f9f8e8f3cca786e627973151fbb770b inherit pub_methods_class_sgt_1_1_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7f9f8e8f3cca786e627973151fbb770b"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Component</b> (const std::string &amp;id)</td></tr>
 <tr class="separator:a7f9f8e8f3cca786e627973151fbb770b inherit pub_methods_class_sgt_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad583cec82dd71f37c396266897d626b4 inherit pub_methods_class_sgt_1_1_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad583cec82dd71f37c396266897d626b4"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Component</b> (const <a class="el" href="class_sgt_1_1_component.html">Component</a> &amp;from)=default</td></tr>
+<tr class="separator:ad583cec82dd71f37c396266897d626b4 inherit pub_methods_class_sgt_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec7f53786c5553963caa7c956b27b979 inherit pub_methods_class_sgt_1_1_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aec7f53786c5553963caa7c956b27b979"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~Component</b> ()=default</td></tr>
+<tr class="separator:aec7f53786c5553963caa7c956b27b979 inherit pub_methods_class_sgt_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af056c58815ed24174d1800a5a89763fc inherit pub_methods_class_sgt_1_1_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af056c58815ed24174d1800a5a89763fc"></a>
 virtual const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>id</b> () const </td></tr>
 <tr class="separator:af056c58815ed24174d1800a5a89763fc inherit pub_methods_class_sgt_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -243,9 +223,32 @@ virtual const std::string &amp;&#160;</td><td class="memItemRight" valign="botto
 <tr class="memitem:aaff23bfbc3a842855079bdbe69d9eb4b inherit pub_methods_class_sgt_1_1_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaff23bfbc3a842855079bdbe69d9eb4b"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>SGT_PROP_GET</b> (componentType, <a class="el" href="class_sgt_1_1_component.html">Component</a>, const std::string &amp;, componentType)</td></tr>
 <tr class="separator:aaff23bfbc3a842855079bdbe69d9eb4b inherit pub_methods_class_sgt_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8dad693e0879c2d1b98b02f71a01579 inherit pub_methods_class_sgt_1_1_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac8dad693e0879c2d1b98b02f71a01579"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> (std::ostream &amp;os) const override</td></tr>
-<tr class="separator:ac8dad693e0879c2d1b98b02f71a01579 inherit pub_methods_class_sgt_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a245b8004e331d96c1424da2f19e8b2c6 inherit pub_methods_class_sgt_1_1_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a245b8004e331d96c1424da2f19e8b2c6"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> (std::ostream &amp;os) const </td></tr>
+<tr class="separator:a245b8004e331d96c1424da2f19e8b2c6 inherit pub_methods_class_sgt_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_sgt_1_1_shared"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_sgt_1_1_shared')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_sgt_1_1_shared.html">Sgt::Shared&lt; Component &gt;</a></td></tr>
+<tr class="memitem:a57a6077c10a959e9d3736cc95bd37037 inherit pub_methods_class_sgt_1_1_shared"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a57a6077c10a959e9d3736cc95bd37037"></a>
+std::shared_ptr&lt; const <a class="el" href="class_sgt_1_1_component.html">Component</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>shared_from_this</b> () const</td></tr>
+<tr class="separator:a57a6077c10a959e9d3736cc95bd37037 inherit pub_methods_class_sgt_1_1_shared"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1d14b22d35ac6b20523c55d6e958963 inherit pub_methods_class_sgt_1_1_shared"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad1d14b22d35ac6b20523c55d6e958963"></a>
+std::shared_ptr&lt; <a class="el" href="class_sgt_1_1_component.html">Component</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>shared_from_this</b> ()</td></tr>
+<tr class="separator:ad1d14b22d35ac6b20523c55d6e958963 inherit pub_methods_class_sgt_1_1_shared"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad96aa3c5c08988f15da0f3b3ae1cf45c inherit pub_methods_class_sgt_1_1_shared"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad96aa3c5c08988f15da0f3b3ae1cf45c"></a>
+std::shared_ptr&lt; U &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>shared</b> () const</td></tr>
+<tr class="separator:ad96aa3c5c08988f15da0f3b3ae1cf45c inherit pub_methods_class_sgt_1_1_shared"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d1d57265125b9a29ebd2f0aaf51c1d1 inherit pub_methods_class_sgt_1_1_shared"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6d1d57265125b9a29ebd2f0aaf51c1d1"></a>
+std::shared_ptr&lt; U &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>shared</b> ()</td></tr>
+<tr class="separator:a6d1d57265125b9a29ebd2f0aaf51c1d1 inherit pub_methods_class_sgt_1_1_shared"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_sgt_1_1_has_properties_abc"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_sgt_1_1_has_properties_abc')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_sgt_1_1_has_properties_abc.html">Sgt::HasPropertiesAbc</a></td></tr>
+<tr class="memitem:af4983bb8eb0d5255f792bff18e7faf67 inherit pub_methods_class_sgt_1_1_has_properties_abc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af4983bb8eb0d5255f792bff18e7faf67"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>HasPropertiesAbc</b> (const <a class="el" href="class_sgt_1_1_has_properties_abc.html">HasPropertiesAbc</a> &amp;from)=default</td></tr>
+<tr class="separator:af4983bb8eb0d5255f792bff18e7faf67 inherit pub_methods_class_sgt_1_1_has_properties_abc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4321868df3da13bd74bf04c7d1141e7 inherit pub_methods_class_sgt_1_1_has_properties_abc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac4321868df3da13bd74bf04c7d1141e7"></a>
+virtual const std::map&lt; std::string, std::shared_ptr&lt; <a class="el" href="class_sgt_1_1_property_abc.html">PropertyAbc</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>properties</b> () const =0</td></tr>
+<tr class="separator:ac4321868df3da13bd74bf04c7d1141e7 inherit pub_methods_class_sgt_1_1_has_properties_abc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a450c91a45f2f12ca20f29ea1a771459a inherit pub_methods_class_sgt_1_1_has_properties_abc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a450c91a45f2f12ca20f29ea1a771459a"></a>
+virtual std::map&lt; std::string, std::shared_ptr&lt; <a class="el" href="class_sgt_1_1_property_abc.html">PropertyAbc</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>properties</b> ()=0</td></tr>
+<tr class="separator:a450c91a45f2f12ca20f29ea1a771459a inherit pub_methods_class_sgt_1_1_has_properties_abc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -257,26 +260,30 @@ static const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom
 <tr class="memitem:abc6ab1c5e0f868beec3bb8ff73d570bc inherit pub_static_methods_class_sgt_1_1_dc_power_source_abc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abc6ab1c5e0f868beec3bb8ff73d570bc"></a>
 static const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>sComponentType</b> ()</td></tr>
 <tr class="separator:abc6ab1c5e0f868beec3bb8ff73d570bc inherit pub_static_methods_class_sgt_1_1_dc_power_source_abc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_static_methods_class_sgt_1_1_sim_component_adaptor"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_sgt_1_1_sim_component_adaptor')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="class_sgt_1_1_sim_component_adaptor.html">Sgt::SimComponentAdaptor</a></td></tr>
-<tr class="memitem:a05ab91220325c84288912d7e716909aa inherit pub_static_methods_class_sgt_1_1_sim_component_adaptor"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a05ab91220325c84288912d7e716909aa"></a>
+<tr class="inherit_header pub_static_methods_class_sgt_1_1_sim_component"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_sgt_1_1_sim_component')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="class_sgt_1_1_sim_component.html">Sgt::SimComponent</a></td></tr>
+<tr class="memitem:a49fb532032c582cd50090f54ac665fbd inherit pub_static_methods_class_sgt_1_1_sim_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a49fb532032c582cd50090f54ac665fbd"></a>
 static const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>sComponentType</b> ()</td></tr>
-<tr class="separator:a05ab91220325c84288912d7e716909aa inherit pub_static_methods_class_sgt_1_1_sim_component_adaptor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a49fb532032c582cd50090f54ac665fbd inherit pub_static_methods_class_sgt_1_1_sim_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_class_sgt_1_1_component"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_sgt_1_1_component')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="class_sgt_1_1_component.html">Sgt::Component</a></td></tr>
 <tr class="memitem:a1676eea467c2f985eac0255a13d227b6 inherit pub_static_methods_class_sgt_1_1_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1676eea467c2f985eac0255a13d227b6"></a>
 static const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>sComponentType</b> ()</td></tr>
 <tr class="separator:a1676eea467c2f985eac0255a13d227b6 inherit pub_static_methods_class_sgt_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_methods_class_sgt_1_1_has_properties"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_sgt_1_1_has_properties')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="class_sgt_1_1_has_properties.html">Sgt::HasProperties&lt; Component &gt;</a></td></tr>
+<tr class="memitem:a72ccd61afdf3c369a1ee1c6f0db77243 inherit pub_static_methods_class_sgt_1_1_has_properties"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a72ccd61afdf3c369a1ee1c6f0db77243"></a>
+static std::map&lt; std::string, std::shared_ptr&lt; <a class="el" href="class_sgt_1_1_property_abc.html">PropertyAbc</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>sMap</b> ()</td></tr>
+<tr class="separator:a72ccd61afdf3c369a1ee1c6f0db77243 inherit pub_static_methods_class_sgt_1_1_has_properties"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pro_methods_class_sgt_1_1_sim_component_adaptor"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_sgt_1_1_sim_component_adaptor')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_sgt_1_1_sim_component_adaptor.html">Sgt::SimComponentAdaptor</a></td></tr>
-<tr class="memitem:a20c7209a11e759463314023ed20121ea inherit pro_methods_class_sgt_1_1_sim_component_adaptor"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a20c7209a11e759463314023ed20121ea"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_sim_component_adaptor.html#a20c7209a11e759463314023ed20121ea">initializeState</a> ()</td></tr>
-<tr class="memdesc:a20c7209a11e759463314023ed20121ea inherit pro_methods_class_sgt_1_1_sim_component_adaptor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset state of the object, time will be at negative infinity. <br /></td></tr>
-<tr class="separator:a20c7209a11e759463314023ed20121ea inherit pro_methods_class_sgt_1_1_sim_component_adaptor"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55869db534f5b37c16479da48831cf8d inherit pro_methods_class_sgt_1_1_sim_component_adaptor"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a55869db534f5b37c16479da48831cf8d"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_sim_component_adaptor.html#a55869db534f5b37c16479da48831cf8d">updateState</a> (Time t)</td></tr>
-<tr class="memdesc:a55869db534f5b37c16479da48831cf8d inherit pro_methods_class_sgt_1_1_sim_component_adaptor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bring state up to time current time. <br /></td></tr>
-<tr class="separator:a55869db534f5b37c16479da48831cf8d inherit pro_methods_class_sgt_1_1_sim_component_adaptor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_class_sgt_1_1_sim_component"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_sgt_1_1_sim_component')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_sgt_1_1_sim_component.html">Sgt::SimComponent</a></td></tr>
+<tr class="memitem:a98299daaacdbe4e2176344e06dd23bec inherit pro_methods_class_sgt_1_1_sim_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a98299daaacdbe4e2176344e06dd23bec"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_sim_component.html#a98299daaacdbe4e2176344e06dd23bec">initializeState</a> ()</td></tr>
+<tr class="memdesc:a98299daaacdbe4e2176344e06dd23bec inherit pro_methods_class_sgt_1_1_sim_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset state of the object, time will be at negative infinity. <br /></td></tr>
+<tr class="separator:a98299daaacdbe4e2176344e06dd23bec inherit pro_methods_class_sgt_1_1_sim_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88678c18b6f7d736f283962e55d18c55 inherit pro_methods_class_sgt_1_1_sim_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a88678c18b6f7d736f283962e55d18c55"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_sim_component.html#a88678c18b6f7d736f283962e55d18c55">updateState</a> (Time t)</td></tr>
+<tr class="memdesc:a88678c18b6f7d736f283962e55d18c55 inherit pro_methods_class_sgt_1_1_sim_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bring state up to time current time. <br /></td></tr>
+<tr class="separator:a88678c18b6f7d736f283962e55d18c55 inherit pro_methods_class_sgt_1_1_sim_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>/Users/dgordon/Devel/SmartGridToolbox/SgtSim/<a class="el" href="_solar_pv_8h_source.html">SolarPv.h</a></li>
@@ -285,7 +292,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 16 2015 16:12:53 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jul 2 2015 11:58:58 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

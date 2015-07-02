@@ -14,6 +14,5 @@ var searchData=
   ['powerflowsolverinterface',['PowerFlowSolverInterface',['../class_sgt_1_1_power_flow_solver_interface.html',1,'Sgt']]],
   ['powerflowsolverparserplugin',['PowerFlowSolverParserPlugin',['../class_sgt_1_1_power_flow_solver_parser_plugin.html',1,'Sgt']]],
   ['property',['Property',['../class_sgt_1_1_property.html',1,'Sgt']]],
-  ['propertybase',['PropertyBase',['../class_sgt_1_1_property_base.html',1,'Sgt']]],
-  ['propertybase1',['PropertyBase1',['../class_sgt_1_1_property_base1.html',1,'Sgt']]]
+  ['propertyabc',['PropertyAbc',['../class_sgt_1_1_property_abc.html',1,'Sgt']]]
 ];

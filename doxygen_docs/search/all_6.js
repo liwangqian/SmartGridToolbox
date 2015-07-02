@@ -11,6 +11,6 @@ var searchData=
   ['genericzip',['GenericZip',['../class_sgt_1_1_generic_zip.html',1,'Sgt']]],
   ['genericzipparserplugin',['GenericZipParserPlugin',['../class_sgt_1_1_generic_zip_parser_plugin.html',1,'Sgt']]],
   ['getter',['Getter',['../class_sgt_1_1_getter.html',1,'Sgt']]],
-  ['getterinterface',['GetterInterface',['../class_sgt_1_1_getter_interface.html',1,'Sgt']]],
+  ['getterabc',['GetterAbc',['../class_sgt_1_1_getter_abc.html',1,'Sgt']]],
   ['gmrphase_5f',['gmrPhase_',['../class_sgt_1_1_underground_line.html#a0f25b5bf132cf295e53701c61825ddbc',1,'Sgt::UndergroundLine']]]
 ];

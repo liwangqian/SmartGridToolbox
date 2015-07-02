@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['needsupdate',['needsUpdate',['../class_sgt_1_1_sim_component_adaptor.html#a50e3877fea9fd10c4827f9b785710b12',1,'Sgt::SimComponentAdaptor']]],
+  ['needsupdate',['needsUpdate',['../class_sgt_1_1_sim_component.html#a4fd6b34b9830f5b7405eede7a5fc5939',1,'Sgt::SimComponent']]],
   ['network',['Network',['../class_sgt_1_1_network.html',1,'Sgt']]],
   ['newsimcomponent',['newSimComponent',['../class_sgt_1_1_simulation.html#a7ada935a68dc18fbf628de809ee87c26',1,'Sgt::Simulation']]],
   ['nodes_5f',['nodes_',['../struct_sgt_1_1_pf_bus.html#a56baa2bc45df607d7a7e0728d0652089',1,'Sgt::PfBus']]],

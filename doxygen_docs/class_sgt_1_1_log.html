@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SmartGridToolbox
-   &#160;<span id="projectnumber">v2.0.0b2</span>
+   &#160;<span id="projectnumber">v2.0.0b3</span>
    </div>
   </td>
  </tr>
@@ -91,6 +91,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="class_sgt_1_1_log-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -105,18 +106,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2f7c51a91d02dc1c2bcc064055c125fc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2f7c51a91d02dc1c2bcc064055c125fc"></a>
-std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>message</b> ()</td></tr>
-<tr class="separator:a2f7c51a91d02dc1c2bcc064055c125fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66fe1aa3634978df234cdf8c72510849"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a66fe1aa3634978df234cdf8c72510849"></a>
-std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>warning</b> ()</td></tr>
-<tr class="separator:a66fe1aa3634978df234cdf8c72510849"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a459d0fbc75de72f034ab8c8ffde8aa9f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a459d0fbc75de72f034ab8c8ffde8aa9f"></a>
-std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>debug</b> ()</td></tr>
-<tr class="separator:a459d0fbc75de72f034ab8c8ffde8aa9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c09cbf512a6382294d1029c5410c559"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5c09cbf512a6382294d1029c5410c559"></a>
+std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>message</b> (LogLevel level=LogLevel::NORMAL)</td></tr>
+<tr class="separator:a5c09cbf512a6382294d1029c5410c559"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3042f278d0650bbcdfac2944d0028000"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3042f278d0650bbcdfac2944d0028000"></a>
+std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>warning</b> (LogLevel level=LogLevel::NORMAL)</td></tr>
+<tr class="separator:a3042f278d0650bbcdfac2944d0028000"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab38ddaed33a304129b91ac3e24be4871"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab38ddaed33a304129b91ac3e24be4871"></a>
 std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>error</b> ()</td></tr>
 <tr class="separator:ab38ddaed33a304129b91ac3e24be4871"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd9e6b454e4f8734cd06121140327fb2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abd9e6b454e4f8734cd06121140327fb2"></a>
+std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>debug</b> (LogLevel level=LogLevel::NONE)</td></tr>
+<tr class="separator:abd9e6b454e4f8734cd06121140327fb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a12319425dd2f73b4982511515dff6e8e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a12319425dd2f73b4982511515dff6e8e"></a>
+static LogLevel&#160;</td><td class="memItemRight" valign="bottom"><b>messageLogLevel</b> = LogLevel::NORMAL</td></tr>
+<tr class="separator:a12319425dd2f73b4982511515dff6e8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a664f6ab79d349508183f5e9d860e579b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a664f6ab79d349508183f5e9d860e579b"></a>
+static LogLevel&#160;</td><td class="memItemRight" valign="bottom"><b>warningLogLevel</b> = LogLevel::NORMAL</td></tr>
+<tr class="separator:a664f6ab79d349508183f5e9d860e579b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12edc1cf7e8a85cdb634846392ff9a83"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a12edc1cf7e8a85cdb634846392ff9a83"></a>
+static LogLevel&#160;</td><td class="memItemRight" valign="bottom"><b>debugLogLevel</b> = LogLevel::NONE</td></tr>
+<tr class="separator:a12edc1cf7e8a85cdb634846392ff9a83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -126,7 +139,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>LogIndent</b></td></
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Logging object. </p>
-<p>Use e.g. Log().message &lt;&lt; "this is a message" &lt;&lt; std::endl; </p>
+<p>Use e.g. Log().message() &lt;&lt; "this is a message" &lt;&lt; std::endl; </p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>/Users/dgordon/Devel/SmartGridToolbox/SgtCore/<a class="el" href="_common_8h_source.html">Common.h</a></li>
 <li>/Users/dgordon/Devel/SmartGridToolbox/SgtCore/Common.cc</li>
@@ -134,7 +147,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>LogIndent</b></td></
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 16 2015 16:12:45 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jul 2 2015 11:58:52 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>
