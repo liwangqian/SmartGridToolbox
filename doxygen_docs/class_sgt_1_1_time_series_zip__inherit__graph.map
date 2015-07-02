@@ -1,0 +1,10 @@
+<map id="Sgt::TimeSeriesZip" name="Sgt::TimeSeriesZip">
+<area shape="rect" id="node2" href="$class_sgt_1_1_sim_zip_abc.html" title="Abstract base class for SimZip. " alt="" coords="5,325,119,351"/>
+<area shape="rect" id="node3" href="$class_sgt_1_1_sim_component.html" title="A base class for components of a Simulation. " alt="" coords="77,252,218,277"/>
+<area shape="rect" id="node9" href="$class_sgt_1_1_heartbeat.html" title="Utility base class for a component that updates with a regular &quot;tick&quot; dt. " alt="" coords="143,325,250,351"/>
+<area shape="rect" id="node4" href="$class_sgt_1_1_component.html" title="Base class for all Components. " alt="" coords="158,179,275,204"/>
+<area shape="rect" id="node10" href="$class_sgt_1_1_zip_abc.html" title="A Zip is an injection into a bus with constant impedance / current / complex power components..." alt="" coords="242,252,332,277"/>
+<area shape="rect" id="node5" href="$class_sgt_1_1_shared.html" title="Sgt::Shared\&lt; Component \&gt;" alt="" coords="27,99,211,124"/>
+<area shape="rect" id="node7" href="$class_sgt_1_1_has_properties.html" title="Sgt::HasProperties\l\&lt; Component \&gt;" alt="" coords="247,92,381,131"/>
+<area shape="rect" id="node8" href="$class_sgt_1_1_has_properties_abc.html" title="Sgt::HasPropertiesAbc" alt="" coords="243,12,399,37"/>
+</map>

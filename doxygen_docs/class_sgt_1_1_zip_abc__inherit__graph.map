@@ -1,0 +1,10 @@
+<map id="Sgt::ZipAbc" name="Sgt::ZipAbc">
+<area shape="rect" id="node7" href="$class_sgt_1_1_generic_zip.html" title="A concrete, generic ZIP at a bus. " alt="" coords="5,325,119,351"/>
+<area shape="rect" id="node8" href="$class_sgt_1_1_simple_building.html" title="Sgt::SimpleBuilding" alt="" coords="143,325,280,351"/>
+<area shape="rect" id="node9" href="$class_sgt_1_1_simple_zip_inverter.html" title="DC power to n&#45;phase AC converter. " alt="" coords="304,325,458,351"/>
+<area shape="rect" id="node10" href="$class_sgt_1_1_time_series_zip.html" title="Sgt::TimeSeriesZip" alt="" coords="482,325,616,351"/>
+<area shape="rect" id="node2" href="$class_sgt_1_1_component.html" title="Base class for all Components. " alt="" coords="237,179,354,204"/>
+<area shape="rect" id="node3" href="$class_sgt_1_1_shared.html" title="Sgt::Shared\&lt; Component \&gt;" alt="" coords="106,99,290,124"/>
+<area shape="rect" id="node5" href="$class_sgt_1_1_has_properties.html" title="Sgt::HasProperties\l\&lt; Component \&gt;" alt="" coords="326,92,460,131"/>
+<area shape="rect" id="node6" href="$class_sgt_1_1_has_properties_abc.html" title="Sgt::HasPropertiesAbc" alt="" coords="322,12,478,37"/>
+</map>

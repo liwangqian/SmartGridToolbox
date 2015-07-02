@@ -1,0 +1,6 @@
+<map id="Sgt::GenAbc" name="Sgt::GenAbc">
+<area shape="rect" id="node2" href="$class_sgt_1_1_component.html" title="Base class for all Components. " alt="" coords="156,179,274,204"/>
+<area shape="rect" id="node3" href="$class_sgt_1_1_shared.html" title="Sgt::Shared\&lt; Component \&gt;" alt="" coords="26,99,209,124"/>
+<area shape="rect" id="node5" href="$class_sgt_1_1_has_properties.html" title="Sgt::HasProperties\l\&lt; Component \&gt;" alt="" coords="246,92,379,131"/>
+<area shape="rect" id="node6" href="$class_sgt_1_1_has_properties_abc.html" title="Sgt::HasPropertiesAbc" alt="" coords="241,12,397,37"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="Sgt::Bus" name="Sgt::Bus">
+<area shape="rect" id="node2" href="$class_sgt_1_1_component.html" title="Base class for all Components. " alt="" coords="189,185,307,211"/>
+<area shape="rect" id="node3" href="$class_sgt_1_1_shared.html" title="Sgt::Shared\&lt; Component \&gt;" alt="" coords="19,99,203,124"/>
+<area shape="rect" id="node5" href="$class_sgt_1_1_has_properties.html" title="Sgt::HasProperties\l\&lt; Component \&gt;" alt="" coords="227,92,360,131"/>
+<area shape="rect" id="node6" href="$class_sgt_1_1_has_properties_abc.html" title="Sgt::HasPropertiesAbc" alt="" coords="279,12,436,37"/>
+<area shape="rect" id="node7" href="$class_sgt_1_1_has_properties.html" title="Sgt::HasProperties\l\&lt; Bus \&gt;" alt="" coords="331,179,464,217"/>
+</map>
