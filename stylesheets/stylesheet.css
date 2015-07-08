@@ -354,6 +354,14 @@ Full-Width Styles
   background: #212121;
 }
 
+.note {
+	border:1px solid grey;
+	margin-top:20px;
+	padding:10px;
+	padding-top:0px;
+	font-size:90%;
+}
+
 /*******************************************************************************
 Small Device Styles
 *******************************************************************************/

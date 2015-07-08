@@ -55,6 +55,13 @@
 				<p>
 					Most objects in SmartGridToolbox models and simulations derive from the <code><a href="doxygen_docs/class_sgt_1_1_component.html">Component</a></code> class. The most important function of this class is to provide a unique key (a <code>std::string</code>) for each object. <code>Component</code>s are also able to provide a component type string, to print themselves, and to act as an access point to an objects <code>Property</code>s.
 				</p>
+				<p>
+					For classes that directly derive from <code>Component</code>, it is normally best to use virtual inheritance. For example:
+					<pre><code>class ZipAbc : virtual public Component</code></pre>
+				</p>
+				<p>
+					This has to do with the possibility multiple inheritance in SmartGridToolbox. Multiple inheritance is a contentious issue in C++, and, indeed, object-oriented languages in general. Although it is often best to avoid multiple inheritance altogether, or to severely restrict its use, SmartGridToolbox <a href=#sgt-mult>does, in a couple of very restricted situations, use multiple inheritance</a>, and we would argue that this is a correct and/or pragmatic design choice in the circumstances. 
+				</p>
 				<h5><a name="sgt-event" class="anchor" href="#sgt-event"></a>The Event and Action classes</h5>
 				<p>
 					The event processing interface in SmartGridToolbox revolves around two classes: the <code><a href="doxygen_docs/class_sgt_1_1_event.html">Event</a></code> class, and the <code><a href="doxygen_docs/class_sgt_1_1_event.html">Action</a></code> class. These two classes are frequently used in simulations, for example to communicate that a change in one component should trigger an update in another.
@@ -183,7 +190,31 @@ int main()
 				<p>
 					Also note that a contingent update may be pre-empted by a component (e.g. the network) itself undergoing a scheduled update, in which case the contingent update won't occur.
 				</p>
-			</section>
+				<h5><a name="sgt-simcomponents" class="anchor" href="#sgt-simcomponents"></a>The SimComponent class</h5>
+				<p>
+					In the discussions above, we have been referring to the <code><a href="doxygen_docs/class_sgt_1_1_sim_component.html">SimComponent</a></code> class as being the base class for all components of the simulation. This class derives from the <code><a href="doxygen_docs/class_sgt_1_1_component.html">Component</a></code> class, using public virtual inheritance. Thus, all SimComponents are Components, meaning that they have an id, component properties, can print themselves, and so on. To this, they add the behaviour discussed in the previous section: being able to initialize their state, update their state, and so on. Some of this functionality is handled using the (non-virtual interface) NVI idiom: the non-virtual public member functions <code>initialize()</code> and <code>update(Time t)</code> call protected virtual functions <code>initializeState()</code>, <code>updateState(Time t)</code>, and it is the latter that may be overridden if necessary when creating derived classes, along with the public virtual function <code>validUntil()</code>.
+				</p>
+				<div class="note">
+					<h5><a name="sgt-mult" class="anchor" href="#sgt-mult"></a>A note about multiple inheritance, composition, etc.</h5>
+					<p>
+						The following discussion is mainly for those interested in software design issues, particularly as they apply to C++.
+					<p>
+						You may have noted that <code>SimComponent</code>, as well as non-simulation component classes such as <code>Bus</code>, have <code>Component</code> as a virtual base class. Similarly, all classes deriving from <code>SimComponent</code> use virtual inheritance. You may be aware that virtual inheritance is a mechanism used in C++ for dealing with the "dreaded diamond", where a base class is inherited via two possible pathways due to multiple inheritance. Virtual inheritance guarantees that only one copy of the base class ever exists in the hierarchy.
+						
+						Full-blown multiple inheritance is sometimes frowned upon in object-oriented circles, with various principles and idioms being used to circumvent it, such as <a href="https://en.wikipedia.org/wiki/Composition_over_inheritance">Composition Over Inheritance</a>, <a href="https://en.wikipedia.org/wiki/Mixin">Mixin Style</a> or only allowing abstract interfaces to be multiply inherited. <code><a href="doxygen_docs/class_sgt_1_1_sim_bus.html">SimBus</a></code>, <code><a href="doxygen_docs/class_sgt_1_1_sim_branch.html">SimBranch</a></code>, <code><a href="doxygen_docs/class_sgt_1_1_sim_gen.html">SimGen</a></code> and <code><a href="doxygen_docs/class_sgt_1_1_sim_zip.html">SimZip</a></code> are examples of more general classes that use composition instead of multiple inheritance, often a better design choice.
+					</p>
+					<p>
+						There are only a couple of highly specialized classes in SmartGridToolbox where you will see multiple inheritance used - for example, <code><a href="doxygen_docs/class_sgt_1_1_simple_zip_inverter.html">SimpleZipInverter</a></code>. Although the inheritance diagram for this particular class is quite complicated, we feel we have made a good design choice in this case, for design and pragmatic reasons that have to do with the specifics of that particular case.
+					</p>
+					<p>
+						One consequence of all this is that when inheriting from <code>Component</code> or <code>SimComponent</code>, it is best to use virtual inheritance. <code>SimComponent</code> has <code>Component</code> as a virtual base. Note that this has consequences for the order of initialization during construction. Briefly, a class with a virtual base (e.g. <code>Component</code>) should initialize the virtual base. Any initializations of that base that take place further up the inheritance hierarchy will be ignored. So in the hierarchy above, <code>Component</code> is <a href="doxygen_docs/_inverter_8h_source.html">initialized</a> by <code>SimpleZipInverter</code>.
+					</p>
+				</div>
+				<h5><a name="sgt-simnetwork" class="anchor" href="#sgt-simnetwork"></a>The SimNetwork class</h5>
+				<p>
+					As discussed above, there exists in SmartGridToolbox a non-simulation-based framework for network modelling and solving. In simulations, this framework is used by wrapping non-simulation-based <code><a href="doxygen_docs/class_sgt_1_1_network.html">Network</a></code>s in simulation-based <code><a href="doxygen_docs/class_sgt_1_1_network.html">SimNetwork</a></code>s, by wrapping, for example, <code><a href="doxygen_docs/class_sgt_1_1_branch_abc.html">Branch</a></code> objects in <code><a href="doxygen_docs/class_sgt_1_1_sim_branch.html">SimBranch</a></code>es, and so on. Composition is used, meaning that <code>SimNetwork</code>s have an associated <code>Network</code>, <code>SimBranch</code>es have an associated <code>BranchAbc</code>, and so on.
+				</p>
+			</section> 
 		</div>
 		<script src="scripts/embed_code.js"></script>
 		<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
