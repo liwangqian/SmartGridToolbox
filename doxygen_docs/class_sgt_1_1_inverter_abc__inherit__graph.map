@@ -1,5 +1,5 @@
 <map id="Sgt::InverterAbc" name="Sgt::InverterAbc">
-<area shape="rect" id="node8" href="$class_sgt_1_1_simple_inverter_abc.html" title="Sgt::SimpleInverterAbc" alt="" coords="136,399,294,424"/>
+<area shape="rect" id="node8" href="$class_sgt_1_1_simple_inverter_abc.html" title="An inverter with a simple constant efficiency. " alt="" coords="136,399,294,424"/>
 <area shape="rect" id="node2" href="$class_sgt_1_1_sim_component.html" title="A base class for components of a Simulation. " alt="" coords="145,252,285,277"/>
 <area shape="rect" id="node3" href="$class_sgt_1_1_component.html" title="Base class for all Components. " alt="" coords="156,179,274,204"/>
 <area shape="rect" id="node4" href="$class_sgt_1_1_shared.html" title="Sgt::Shared\&lt; Component \&gt;" alt="" coords="26,99,209,124"/>

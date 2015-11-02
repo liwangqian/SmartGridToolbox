@@ -8,6 +8,7 @@ var searchData=
   ['pfbus',['PfBus',['../struct_sgt_1_1_pf_bus.html',1,'Sgt']]],
   ['pfnode',['PfNode',['../struct_sgt_1_1_pf_node.html',1,'Sgt']]],
   ['phases',['Phases',['../class_sgt_1_1_phases.html',1,'Sgt']]],
+  ['powerflowfdsolver',['PowerFlowFdSolver',['../class_sgt_1_1_power_flow_fd_solver.html',1,'Sgt']]],
   ['powerflowmodel',['PowerFlowModel',['../class_sgt_1_1_power_flow_model.html',1,'Sgt']]],
   ['powerflownrsolver',['PowerFlowNrSolver',['../class_sgt_1_1_power_flow_nr_solver.html',1,'Sgt']]],
   ['powerflowptppsolver',['PowerFlowPtPpSolver',['../class_sgt_1_1_power_flow_pt_pp_solver.html',1,'Sgt']]],

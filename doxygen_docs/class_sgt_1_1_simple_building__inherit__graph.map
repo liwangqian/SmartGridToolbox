@@ -1,10 +1,9 @@
 <map id="Sgt::SimpleBuilding" name="Sgt::SimpleBuilding">
-<area shape="rect" id="node2" href="$class_sgt_1_1_component.html" title="Base class for all Components. " alt="" coords="496,40,614,65"/>
-<area shape="rect" id="node7" href="$class_sgt_1_1_zip_abc.html" title="A Zip is an injection into a bus with constant impedance / current / complex power components..." alt="" coords="862,40,952,65"/>
-<area shape="rect" id="node10" href="$class_sgt_1_1_sim_component.html" title="A base class for components of a Simulation. " alt="" coords="662,91,802,116"/>
-<area shape="rect" id="node3" href="$class_sgt_1_1_shared.html" title="Sgt::Shared\&lt; Component \&gt;" alt="" coords="264,12,448,37"/>
-<area shape="rect" id="node5" href="$class_sgt_1_1_has_properties.html" title="Sgt::HasProperties\l\&lt; Component \&gt;" alt="" coords="290,61,423,100"/>
-<area shape="rect" id="node6" href="$class_sgt_1_1_has_properties_abc.html" title="Sgt::HasPropertiesAbc" alt="" coords="33,68,189,93"/>
-<area shape="rect" id="node8" href="$class_sgt_1_1_sim_zip.html" title="Simulation zip, corresponding to a ZipAbc in a SimNetwork&#39;s network(). " alt="" coords="1012,91,1102,116"/>
-<area shape="rect" id="node9" href="$class_sgt_1_1_sim_zip_abc.html" title="Abstract base class for SimZip. " alt="" coords="850,91,964,116"/>
+<area shape="rect" id="node2" href="$class_sgt_1_1_sim_zip_abc.html" title="Abstract base class for SimZip. " alt="" coords="101,325,214,351"/>
+<area shape="rect" id="node3" href="$class_sgt_1_1_sim_component.html" title="A base class for components of a Simulation. " alt="" coords="91,252,232,277"/>
+<area shape="rect" id="node4" href="$class_sgt_1_1_component.html" title="Base class for all Components. " alt="" coords="156,179,274,204"/>
+<area shape="rect" id="node9" href="$class_sgt_1_1_zip_abc.html" title="A Zip is an injection into a bus with constant impedance / current / complex power components..." alt="" coords="238,325,328,351"/>
+<area shape="rect" id="node5" href="$class_sgt_1_1_shared.html" title="Sgt::Shared\&lt; Component \&gt;" alt="" coords="26,99,209,124"/>
+<area shape="rect" id="node7" href="$class_sgt_1_1_has_properties.html" title="Sgt::HasProperties\l\&lt; Component \&gt;" alt="" coords="246,92,379,131"/>
+<area shape="rect" id="node8" href="$class_sgt_1_1_has_properties_abc.html" title="Sgt::HasPropertiesAbc" alt="" coords="241,12,397,37"/>
 </map>

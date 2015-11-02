@@ -1,6 +1,7 @@
 var searchData=
 [
   ['carson',['carson',['../group___power_flow_core.html#ga9470b17afa78357ce4dd237c3088c3d9',1,'Sgt']]],
+  ['cb',['Cb',['../class_sgt_1_1_simple_building.html#a65f0a1fc84f45527e5fa4e32864c30f3',1,'Sgt::SimpleBuilding']]],
   ['cgram',['CGram',['../struct_sgt_1_1_c_gram.html',1,'Sgt']]],
   ['col',['Col',['../classarma_1_1_col.html',1,'arma']]],
   ['col_3c_20arma_3a_3auword_20_3e',['Col&lt; arma::uword &gt;',['../classarma_1_1_col.html',1,'arma']]],
@@ -10,6 +11,7 @@ var searchData=
   ['commonbranch',['CommonBranch',['../class_sgt_1_1_common_branch.html',1,'Sgt']]],
   ['commonbranchparserplugin',['CommonBranchParserPlugin',['../class_sgt_1_1_common_branch_parser_plugin.html',1,'Sgt']]],
   ['component',['Component',['../class_sgt_1_1_component.html',1,'Sgt']]],
+  ['component',['Component',['../class_sgt_1_1_component.html#a4c92ed17f833ebcf15268dc22ff78593',1,'Sgt::Component']]],
   ['consttimeseries',['ConstTimeSeries',['../class_sgt_1_1_const_time_series.html',1,'Sgt']]],
   ['convert_3c_20arma_3a_3acol_3c_20t_20_3e_20_3e',['convert&lt; arma::Col&lt; T &gt; &gt;',['../struct_y_a_m_l_1_1convert_3_01arma_1_1_col_3_01_t_01_4_01_4.html',1,'YAML']]],
   ['convert_3c_20arma_3a_3amat_3c_20t_20_3e_20_3e',['convert&lt; arma::Mat&lt; T &gt; &gt;',['../struct_y_a_m_l_1_1convert_3_01arma_1_1_mat_3_01_t_01_4_01_4.html',1,'YAML']]],
@@ -19,5 +21,8 @@ var searchData=
   ['convert_3c_20phases_20_3e',['convert&lt; Phases &gt;',['../struct_y_a_m_l_1_1convert_3_01_phases_01_4.html',1,'YAML']]],
   ['convert_3c_20ptime_20_3e',['convert&lt; ptime &gt;',['../struct_y_a_m_l_1_1convert_3_01ptime_01_4.html',1,'YAML']]],
   ['convert_3c_20time_20_3e',['convert&lt; Time &gt;',['../struct_y_a_m_l_1_1convert_3_01_time_01_4.html',1,'YAML']]],
+  ['cop',['cop',['../class_sgt_1_1_simple_building.html#a457a4d00410ca781d2247970df0e6921',1,'Sgt::SimpleBuilding']]],
+  ['copcool',['copCool',['../class_sgt_1_1_simple_building.html#acda32f3c801f8c36fc518b2f1d57780b',1,'Sgt::SimpleBuilding']]],
+  ['copheat',['copHeat',['../class_sgt_1_1_simple_building.html#a842901f6fde4aff397ff1b3ea0899f35',1,'Sgt::SimpleBuilding']]],
   ['currenttime',['currentTime',['../class_sgt_1_1_simulation.html#a119d13c734f281d27263e4e4972de775',1,'Sgt::Simulation']]]
 ];

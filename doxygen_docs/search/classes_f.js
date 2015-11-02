@@ -28,7 +28,6 @@ var searchData=
   ['simzipparserplugin',['SimZipParserPlugin',['../class_sgt_1_1_sim_zip_parser_plugin.html',1,'Sgt']]],
   ['singlephasetransformer',['SinglePhaseTransformer',['../class_sgt_1_1_single_phase_transformer.html',1,'Sgt']]],
   ['singlephasetransformerparserplugin',['SinglePhaseTransformerParserPlugin',['../class_sgt_1_1_single_phase_transformer_parser_plugin.html',1,'Sgt']]],
-  ['solarirradiance',['SolarIrradiance',['../struct_sgt_1_1_solar_irradiance.html',1,'Sgt']]],
   ['solarpv',['SolarPv',['../class_sgt_1_1_solar_pv.html',1,'Sgt']]],
   ['solarpvparserplugin',['SolarPvParserPlugin',['../class_sgt_1_1_solar_pv_parser_plugin.html',1,'Sgt']]],
   ['sparsehelper',['SparseHelper',['../class_sgt_1_1_sparse_helper.html',1,'Sgt']]],

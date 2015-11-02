@@ -1,4 +1,5 @@
 <map id="Sgt::PowerFlowSolverInterface" name="Sgt::PowerFlowSolverInterface">
-<area shape="rect" id="node2" href="$class_sgt_1_1_power_flow_nr_solver.html" title="Newton&#45;Raphson AC power flow solver. " alt="" coords="5,79,172,104"/>
-<area shape="rect" id="node3" href="$class_sgt_1_1_power_flow_pt_pp_solver.html" title="Optimal power flow (OPF) solver. " alt="" coords="195,79,377,104"/>
+<area shape="rect" id="node2" href="$class_sgt_1_1_power_flow_fd_solver.html" title="Fast&#45;decoupled NR power flow solver. " alt="" coords="5,79,173,104"/>
+<area shape="rect" id="node3" href="$class_sgt_1_1_power_flow_nr_solver.html" title="Newton&#45;Raphson AC power flow solver. " alt="" coords="197,79,363,104"/>
+<area shape="rect" id="node4" href="$class_sgt_1_1_power_flow_pt_pp_solver.html" title="Optimal power flow (OPF) solver. " alt="" coords="387,79,568,104"/>
 </map>

@@ -1,8 +1,10 @@
 <map id="Sgt::Weather" name="Sgt::Weather">
-<area shape="rect" id="node2" href="$class_sgt_1_1_heartbeat.html" title="Utility base class for a component that updates with a regular &quot;tick&quot; dt. " alt="" coords="161,325,269,351"/>
-<area shape="rect" id="node3" href="$class_sgt_1_1_sim_component.html" title="A base class for components of a Simulation. " alt="" coords="145,252,285,277"/>
-<area shape="rect" id="node4" href="$class_sgt_1_1_component.html" title="Base class for all Components. " alt="" coords="156,179,274,204"/>
-<area shape="rect" id="node5" href="$class_sgt_1_1_shared.html" title="Sgt::Shared\&lt; Component \&gt;" alt="" coords="26,99,209,124"/>
-<area shape="rect" id="node7" href="$class_sgt_1_1_has_properties.html" title="Sgt::HasProperties\l\&lt; Component \&gt;" alt="" coords="246,92,379,131"/>
+<area shape="rect" id="node2" href="$class_sgt_1_1_heartbeat.html" title="Utility base class for a component that updates with a regular &quot;tick&quot; dt. " alt="" coords="129,343,237,368"/>
+<area shape="rect" id="node3" href="$class_sgt_1_1_sim_component.html" title="A base class for components of a Simulation. " alt="" coords="113,256,253,281"/>
+<area shape="rect" id="node4" href="$class_sgt_1_1_component.html" title="Base class for all Components. " alt="" coords="124,181,242,207"/>
+<area shape="rect" id="node5" href="$class_sgt_1_1_shared.html" title="Sgt::Shared\&lt; Component \&gt;" alt="" coords="31,100,215,125"/>
+<area shape="rect" id="node7" href="$class_sgt_1_1_has_properties.html" title="Sgt::HasProperties\l\&lt; Component \&gt;" alt="" coords="246,93,379,132"/>
 <area shape="rect" id="node8" href="$class_sgt_1_1_has_properties_abc.html" title="Sgt::HasPropertiesAbc" alt="" coords="241,12,397,37"/>
+<area shape="rect" id="node9" href="$struct_sgt_1_1_weather_model.html" title="Sgt::WeatherModel" alt="" coords="261,343,396,368"/>
+<area shape="rect" id="node10" href="$struct_sgt_1_1_lat_long.html" title="Simple struct storing a latitude and longitude. " alt="" coords="280,256,377,281"/>
 </map>

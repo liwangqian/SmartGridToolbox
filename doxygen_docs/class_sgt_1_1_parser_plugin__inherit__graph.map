@@ -17,7 +17,7 @@
 <area shape="rect" id="node17" href="$class_sgt_1_1_sim_gen_parser_plugin.html" title="ParserPlugin that parses SimGen objects. " alt="" coords="233,945,406,984"/>
 <area shape="rect" id="node18" href="$class_sgt_1_1_sim_global_parser_plugin.html" title="ParserPlugin that parses simulation information. " alt="" coords="226,1008,413,1047"/>
 <area shape="rect" id="node19" href="$class_sgt_1_1_sim_matpower_parser_plugin.html" title="ParserPlugin that parses matpower networks. " alt="" coords="216,1071,423,1109"/>
-<area shape="rect" id="node20" href="$class_sgt_1_1_sim_network_parser_plugin.html" title="ParserPlugin that parses the network keyword, adding a new SimNetwork to the model. " alt="" coords="221,1133,418,1172"/>
+<area shape="rect" id="node20" href="$class_sgt_1_1_sim_network_parser_plugin.html" title="ParserPlugin that parses the sim_network keyword, adding a new SimNetwork to the model. " alt="" coords="221,1133,418,1172"/>
 <area shape="rect" id="node21" href="$class_sgt_1_1_simple_building_parser_plugin.html" title="Sgt::SimpleBuildingParser\lPlugin\&lt; Simulation \&gt;" alt="" coords="232,1196,408,1235"/>
 <area shape="rect" id="node22" href="$class_sgt_1_1_sim_zip_parser_plugin.html" title="ParserPlugin that parses SimZip objects. " alt="" coords="237,1259,403,1297"/>
 <area shape="rect" id="node23" href="$class_sgt_1_1_single_phase_transformer_parser_plugin.html" title="ParserPlugin that parses SinglePhaseTransformer objects. " alt="" coords="222,1321,418,1360"/>

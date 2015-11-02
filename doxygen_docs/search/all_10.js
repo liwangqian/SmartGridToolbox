@@ -8,6 +8,7 @@ var searchData=
   ['rank',['rank',['../class_sgt_1_1_sim_component.html#aa5522dfc1450bbac847a32b94911c4d3',1,'Sgt::SimComponent']]],
   ['replacesimcomponent',['replaceSimComponent',['../class_sgt_1_1_simulation.html#a6947d847b7908b6318c854878168d7c6',1,'Sgt::Simulation']]],
   ['replacesimcomponentwithnew',['replaceSimComponentWithNew',['../class_sgt_1_1_simulation.html#aa6b29b40d4d08987043d46190f58c5c4',1,'Sgt::Simulation']]],
+  ['resperlneut_5f',['resPerLNeut_',['../class_sgt_1_1_underground_line.html#aa9182e43ff056e653ae8b881118b16c5',1,'Sgt::UndergroundLine']]],
   ['resperlphase_5f',['resPerLPhase_',['../class_sgt_1_1_underground_line.html#ad0284f6115d586a2ece9db17ad5147bf',1,'Sgt::UndergroundLine']]],
   ['rhoearth_5f',['rhoEarth_',['../class_sgt_1_1_underground_line.html#a3919ffe5c56e9b332214c58ef83e9ad4',1,'Sgt::UndergroundLine']]]
 ];
