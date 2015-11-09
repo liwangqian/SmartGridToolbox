@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SmartGridToolbox
-   &#160;<span id="projectnumber">v2.1.0</span>
+   &#160;<span id="projectnumber">v3.0.0</span>
    </div>
   </td>
  </tr>
@@ -96,10 +96,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p>This is the complete list of members for <a class="el" href="class_sgt_1_1_network.html">Sgt::Network</a>, including all inherited members.</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>addBranch</b>(BranchPtr branch, const std::string &amp;bus0Id, const std::string &amp;bus1Id) (defined in <a class="el" href="class_sgt_1_1_network.html">Sgt::Network</a>)</td><td class="entry"><a class="el" href="class_sgt_1_1_network.html">Sgt::Network</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>addBus</b>(BusPtr bus) (defined in <a class="el" href="class_sgt_1_1_network.html">Sgt::Network</a>)</td><td class="entry"><a class="el" href="class_sgt_1_1_network.html">Sgt::Network</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>addGen</b>(GenPtr gen, const std::string &amp;busId) (defined in <a class="el" href="class_sgt_1_1_network.html">Sgt::Network</a>)</td><td class="entry"><a class="el" href="class_sgt_1_1_network.html">Sgt::Network</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>addZip</b>(ZipPtr zip, const std::string &amp;busId) (defined in <a class="el" href="class_sgt_1_1_network.html">Sgt::Network</a>)</td><td class="entry"><a class="el" href="class_sgt_1_1_network.html">Sgt::Network</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>addBranch</b>(std::shared_ptr&lt; BranchAbc &gt; branch, const std::string &amp;bus0Id, const std::string &amp;bus1Id) (defined in <a class="el" href="class_sgt_1_1_network.html">Sgt::Network</a>)</td><td class="entry"><a class="el" href="class_sgt_1_1_network.html">Sgt::Network</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>addBus</b>(std::shared_ptr&lt; Bus &gt; bus) (defined in <a class="el" href="class_sgt_1_1_network.html">Sgt::Network</a>)</td><td class="entry"><a class="el" href="class_sgt_1_1_network.html">Sgt::Network</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>addGen</b>(std::shared_ptr&lt; GenAbc &gt; gen, const std::string &amp;busId) (defined in <a class="el" href="class_sgt_1_1_network.html">Sgt::Network</a>)</td><td class="entry"><a class="el" href="class_sgt_1_1_network.html">Sgt::Network</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>addZip</b>(std::shared_ptr&lt; ZipAbc &gt; zip, const std::string &amp;busId) (defined in <a class="el" href="class_sgt_1_1_network.html">Sgt::Network</a>)</td><td class="entry"><a class="el" href="class_sgt_1_1_network.html">Sgt::Network</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>branch</b>(const std::string &amp;id) const  (defined in <a class="el" href="class_sgt_1_1_network.html">Sgt::Network</a>)</td><td class="entry"><a class="el" href="class_sgt_1_1_network.html">Sgt::Network</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr bgcolor="#f0f0f0"><td class="entry"><b>branch</b>(const std::string &amp;id) (defined in <a class="el" href="class_sgt_1_1_network.html">Sgt::Network</a>)</td><td class="entry"><a class="el" href="class_sgt_1_1_network.html">Sgt::Network</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>branches</b>() const  (defined in <a class="el" href="class_sgt_1_1_network.html">Sgt::Network</a>)</td><td class="entry"><a class="el" href="class_sgt_1_1_network.html">Sgt::Network</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
@@ -145,7 +145,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Nov 2 2015 14:28:24 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 9 2015 14:49:03 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

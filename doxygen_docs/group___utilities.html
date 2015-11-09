@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SmartGridToolbox
-   &#160;<span id="projectnumber">v2.1.0</span>
+   &#160;<span id="projectnumber">v3.0.0</span>
    </div>
   </td>
  </tr>
@@ -302,34 +302,11 @@ constexpr LatLong&#160;</td><td class="memItemRight" valign="bottom"><b>Sgt::gre
 <tr class="separator:ga04542f5526e44684632b6859b5ead142"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
-Basic vector algebra in n dimensions.</h2></td></tr>
-<tr class="memitem:gaa12f54a3320f2fa61cd50eaddb8c06c2"><td class="memTemplParams" colspan="2"><a class="anchor" id="gaa12f54a3320f2fa61cd50eaddb8c06c2"></a>
-template&lt;typename T , std::size_t d&gt; </td></tr>
-<tr class="memitem:gaa12f54a3320f2fa61cd50eaddb8c06c2"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Sgt::dot</b> (const Array&lt; T, d &gt; &amp;v1, const Array&lt; T, d &gt; &amp;v2)</td></tr>
-<tr class="separator:gaa12f54a3320f2fa61cd50eaddb8c06c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga01834615a4ae9f0d9cae1f04145cbef9"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga01834615a4ae9f0d9cae1f04145cbef9"></a>
-template&lt;typename T , std::size_t d, typename S &gt; </td></tr>
-<tr class="memitem:ga01834615a4ae9f0d9cae1f04145cbef9"><td class="memTemplItemLeft" align="right" valign="top">Array&lt; T, d &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Sgt::operator*</b> (const Array&lt; T, d &gt; &amp;v, const S &amp;s)</td></tr>
-<tr class="separator:ga01834615a4ae9f0d9cae1f04145cbef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga728409b60ad608ce6f53e321c346a3df"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga728409b60ad608ce6f53e321c346a3df"></a>
-template&lt;typename T , std::size_t d, typename S &gt; </td></tr>
-<tr class="memitem:ga728409b60ad608ce6f53e321c346a3df"><td class="memTemplItemLeft" align="right" valign="top">Array&lt; T, d &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Sgt::operator*</b> (const S &amp;s, const Array&lt; T, d &gt; &amp;v)</td></tr>
-<tr class="separator:ga728409b60ad608ce6f53e321c346a3df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga41b23c7d8dc6469d5009593e7def64e6"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga41b23c7d8dc6469d5009593e7def64e6"></a>
-template&lt;typename T , std::size_t d&gt; </td></tr>
-<tr class="memitem:ga41b23c7d8dc6469d5009593e7def64e6"><td class="memTemplItemLeft" align="right" valign="top">Array&lt; T, d &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Sgt::operator+</b> (const Array&lt; T, d &gt; &amp;lhs, const Array&lt; T, d &gt; &amp;rhs)</td></tr>
-<tr class="separator:ga41b23c7d8dc6469d5009593e7def64e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1454f0fb5897731b6e822800547c46d6"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga1454f0fb5897731b6e822800547c46d6"></a>
-template&lt;typename T , std::size_t d&gt; </td></tr>
-<tr class="memitem:ga1454f0fb5897731b6e822800547c46d6"><td class="memTemplItemLeft" align="right" valign="top">Array&lt; T, d &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Sgt::operator-</b> (const Array&lt; T, d &gt; &amp;lhs, const Array&lt; T, d &gt; &amp;rhs)</td></tr>
-<tr class="separator:ga1454f0fb5897731b6e822800547c46d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
 Random number generation.</h2></td></tr>
-<tr class="memitem:gaa5962c244adcacc0570ba33189207fee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaa5962c244adcacc0570ba33189207fee"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___utilities.html#gaa5962c244adcacc0570ba33189207fee">Sgt::randDiscrete</a> (const double *probs, int nProbs)</td></tr>
-<tr class="memdesc:gaa5962c244adcacc0570ba33189207fee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sample from discrete distribution with nProbs given probabilities. <br /></td></tr>
-<tr class="separator:gaa5962c244adcacc0570ba33189207fee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga69e152ed4bbba20b4ccc086a1df2629e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga69e152ed4bbba20b4ccc086a1df2629e"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___utilities.html#ga69e152ed4bbba20b4ccc086a1df2629e">Sgt::randDiscrete</a> (const double probs[], int nProbs)</td></tr>
+<tr class="memdesc:ga69e152ed4bbba20b4ccc086a1df2629e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sample from discrete distribution with nProbs given probabilities. <br /></td></tr>
+<tr class="separator:ga69e152ed4bbba20b4ccc086a1df2629e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8994ff617877a65cb01cd3b8a1a22f0d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga8994ff617877a65cb01cd3b8a1a22f0d"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___utilities.html#ga8994ff617877a65cb01cd3b8a1a22f0d">Sgt::randNormal</a> (double mu, double sig)</td></tr>
 <tr class="memdesc:ga8994ff617877a65cb01cd3b8a1a22f0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sample from normal distribution with given mean and s.d. <br /></td></tr>
@@ -353,7 +330,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Nov 2 2015 14:28:23 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 9 2015 14:49:02 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

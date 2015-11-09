@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SmartGridToolbox
-   &#160;<span id="projectnumber">v2.1.0</span>
+   &#160;<span id="projectnumber">v3.0.0</span>
    </div>
   </td>
  </tr>
@@ -126,9 +126,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    {</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">void</span> setNetwork(<a class="code" href="class_sgt_1_1_network.html">Network</a>* netw)<span class="keyword"> override</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">void</span> setNetwork(<a class="code" href="class_sgt_1_1_network.html">Network</a>&amp; netw)<span class="keyword"> override</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">            </span>{</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                netw_ = netw;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                netw_ = &amp;netw;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            }</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">bool</span> solveProblem() <span class="keyword">override</span>;</div>
@@ -140,7 +140,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keywordtype">void</span> init(<a class="code" href="class_sgt_1_1_network.html">Network</a>* netw);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keywordtype">void</span> init(<a class="code" href="class_sgt_1_1_network.html">Network</a>&amp; netw);</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            </div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
@@ -161,12 +161,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="namespace_sgt_html"><div class="ttname"><a href="namespace_sgt.html">Sgt</a></div><div class="ttdoc">The primary namespace for SmartGridToolbox. </div></div>
 <div class="ttc" id="class_sgt_1_1_power_flow_solver_interface_html"><div class="ttname"><a href="class_sgt_1_1_power_flow_solver_interface.html">Sgt::PowerFlowSolverInterface</a></div><div class="ttdoc">Interface for power flow solvers operating on Network objects. </div><div class="ttdef"><b>Definition:</b> PowerFlowSolver.h:24</div></div>
 <div class="ttc" id="classarma_1_1_sp_mat_html"><div class="ttname"><a href="classarma_1_1_sp_mat.html">arma::SpMat&lt; double &gt;</a></div></div>
-<div class="ttc" id="class_sgt_1_1_network_html"><div class="ttname"><a href="class_sgt_1_1_network.html">Sgt::Network</a></div><div class="ttdoc">Network component, describing an electricity network. </div><div class="ttdef"><b>Definition:</b> Network.h:60</div></div>
+<div class="ttc" id="class_sgt_1_1_network_html"><div class="ttname"><a href="class_sgt_1_1_network.html">Sgt::Network</a></div><div class="ttdoc">Network component, describing an electricity network. </div><div class="ttdef"><b>Definition:</b> Network.h:36</div></div>
 <div class="ttc" id="class_sgt_1_1_power_flow_fd_solver_html"><div class="ttname"><a href="class_sgt_1_1_power_flow_fd_solver.html">Sgt::PowerFlowFdSolver</a></div><div class="ttdoc">Fast-decoupled NR power flow solver. </div><div class="ttdef"><b>Definition:</b> PowerFlowFdSolver.h:33</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Nov 2 2015 14:28:23 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 9 2015 14:49:02 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

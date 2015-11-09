@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SmartGridToolbox
-   &#160;<span id="projectnumber">v2.1.0</span>
+   &#160;<span id="projectnumber">v3.0.0</span>
    </div>
   </td>
  </tr>
@@ -124,9 +124,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">            /// @brief Return the branch that I wrap (const). </span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"></span>            <span class="keyword">virtual</span> std::shared_ptr&lt;const BranchAbc&gt; <a class="code" href="class_sgt_1_1_sim_branch_abc.html#af071262f15337ab3dfcc168954a14a51">branch</a>() <span class="keyword">const</span> = 0;<span class="comment"></span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"></span>            <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="class_sgt_1_1_branch_abc.html">BranchAbc</a>&amp; <a class="code" href="class_sgt_1_1_sim_branch_abc.html#a399bf60fd26b4fd20cc66f222f3b9b59">branch</a>() <span class="keyword">const</span> = 0;<span class="comment"></span></div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">            /// @brief Return the branch that I wrap (non-const). </span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment"></span>            <span class="keyword">virtual</span> std::shared_ptr&lt;BranchAbc&gt; <a class="code" href="class_sgt_1_1_sim_branch_abc.html#af071262f15337ab3dfcc168954a14a51">branch</a>() = 0;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment"></span>            <span class="keyword">virtual</span> <a class="code" href="class_sgt_1_1_branch_abc.html">BranchAbc</a>&amp; <a class="code" href="class_sgt_1_1_sim_branch_abc.html#a399bf60fd26b4fd20cc66f222f3b9b59">branch</a>() = 0;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">            /// @brief Do anything I need to do to add myself to the simNetwork.</span></div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">            ///</span></div>
@@ -142,44 +142,45 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    {</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <a class="code" href="class_sgt_1_1_sim_branch.html">SimBranch</a>(std::shared_ptr&lt;BranchAbc&gt; <a class="code" href="class_sgt_1_1_sim_branch.html#a18d8c68c22dbf4be288422fa712ad260">branch</a>) :</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                <a class="code" href="class_sgt_1_1_component.html#a4c92ed17f833ebcf15268dc22ff78593">Component</a>(branch-&gt;id()),</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                branch_(branch)</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <a class="code" href="class_sgt_1_1_sim_branch.html">SimBranch</a>(<a class="code" href="class_sgt_1_1_branch_abc.html">BranchAbc</a>&amp; <a class="code" href="class_sgt_1_1_sim_branch.html#a1b945537e70a39d556de371ce1b6b3b2">branch</a>) :</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                <a class="code" href="class_sgt_1_1_component.html#a4c92ed17f833ebcf15268dc22ff78593">Component</a>(branch.id()),</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                branch_(&amp;branch)</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            {</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                <span class="comment">// Empty.</span></div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            }</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_sgt_1_1_sim_branch.html#a18d8c68c22dbf4be288422fa712ad260">   60</a></span>&#160;            std::shared_ptr&lt;const BranchAbc&gt; <a class="code" href="class_sgt_1_1_sim_branch.html#a18d8c68c22dbf4be288422fa712ad260">branch</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_sgt_1_1_sim_branch.html#a1b945537e70a39d556de371ce1b6b3b2">   60</a></span>&#160;            <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="class_sgt_1_1_branch_abc.html">BranchAbc</a>&amp; <a class="code" href="class_sgt_1_1_sim_branch.html#a1b945537e70a39d556de371ce1b6b3b2">branch</a>()<span class="keyword"> const override</span></div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">            </span>{</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                <span class="keywordflow">return</span> branch_;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                <span class="keywordflow">return</span> *branch_;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            }</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            </div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_sgt_1_1_sim_branch.html#a83246be1d8cf0cf80c50f3c5c12f2252">   65</a></span>&#160;            std::shared_ptr&lt;BranchAbc&gt; <a class="code" href="class_sgt_1_1_sim_branch.html#a83246be1d8cf0cf80c50f3c5c12f2252">branch</a>()</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            {</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                <span class="keywordflow">return</span> branch_;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_sgt_1_1_sim_branch.html#a772b2247a1e0f020bdfeb1e8dc5a94fe">   65</a></span>&#160;            <span class="keyword">virtual</span> <a class="code" href="class_sgt_1_1_branch_abc.html">BranchAbc</a>&amp; <a class="code" href="class_sgt_1_1_sim_branch.html#a772b2247a1e0f020bdfeb1e8dc5a94fe">branch</a>()<span class="keyword"> override</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">            </span>{</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                <span class="keywordflow">return</span> *branch_;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            }</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            std::shared_ptr&lt;BranchAbc&gt; branch_;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <a class="code" href="class_sgt_1_1_branch_abc.html">BranchAbc</a>* branch_;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    };</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#endif // SIM_BRANCH_DOT_H</span></div>
-<div class="ttc" id="class_sgt_1_1_sim_branch_abc_html_af071262f15337ab3dfcc168954a14a51"><div class="ttname"><a href="class_sgt_1_1_sim_branch_abc.html#af071262f15337ab3dfcc168954a14a51">Sgt::SimBranchAbc::branch</a></div><div class="ttdeci">virtual std::shared_ptr&lt; const BranchAbc &gt; branch() const  =0</div><div class="ttdoc">Return the branch that I wrap (const). </div></div>
 <div class="ttc" id="class_sgt_1_1_sim_branch_abc_html"><div class="ttname"><a href="class_sgt_1_1_sim_branch_abc.html">Sgt::SimBranchAbc</a></div><div class="ttdoc">Abstract base class for SimBranch. </div><div class="ttdef"><b>Definition:</b> SimBranch.h:30</div></div>
 <div class="ttc" id="namespace_sgt_html"><div class="ttname"><a href="namespace_sgt.html">Sgt</a></div><div class="ttdoc">The primary namespace for SmartGridToolbox. </div></div>
 <div class="ttc" id="class_sgt_1_1_sim_branch_html"><div class="ttname"><a href="class_sgt_1_1_sim_branch.html">Sgt::SimBranch</a></div><div class="ttdoc">Simulation branch, corresponding to a BranchAbc in a SimNetwork&#39;s network(). </div><div class="ttdef"><b>Definition:</b> SimBranch.h:49</div></div>
-<div class="ttc" id="class_sgt_1_1_sim_branch_html_a83246be1d8cf0cf80c50f3c5c12f2252"><div class="ttname"><a href="class_sgt_1_1_sim_branch.html#a83246be1d8cf0cf80c50f3c5c12f2252">Sgt::SimBranch::branch</a></div><div class="ttdeci">std::shared_ptr&lt; BranchAbc &gt; branch()</div><div class="ttdoc">Return the branch that I wrap (non-const). </div><div class="ttdef"><b>Definition:</b> SimBranch.h:65</div></div>
+<div class="ttc" id="class_sgt_1_1_sim_branch_abc_html_a399bf60fd26b4fd20cc66f222f3b9b59"><div class="ttname"><a href="class_sgt_1_1_sim_branch_abc.html#a399bf60fd26b4fd20cc66f222f3b9b59">Sgt::SimBranchAbc::branch</a></div><div class="ttdeci">virtual const BranchAbc &amp; branch() const  =0</div><div class="ttdoc">Return the branch that I wrap (const). </div></div>
 <div class="ttc" id="class_sgt_1_1_sim_branch_abc_html_a753fedf8d2e7d4fc57ab2c7e699dd303"><div class="ttname"><a href="class_sgt_1_1_sim_branch_abc.html#a753fedf8d2e7d4fc57ab2c7e699dd303">Sgt::SimBranchAbc::linkToSimNetwork</a></div><div class="ttdeci">virtual void linkToSimNetwork(SimNetwork &amp;simNetwork)</div><div class="ttdoc">Do anything I need to do to add myself to the simNetwork. </div><div class="ttdef"><b>Definition:</b> SimBranch.cc:5</div></div>
+<div class="ttc" id="class_sgt_1_1_branch_abc_html"><div class="ttname"><a href="class_sgt_1_1_branch_abc.html">Sgt::BranchAbc</a></div><div class="ttdoc">Common abstract base class for a branch. </div><div class="ttdef"><b>Definition:</b> Branch.h:32</div></div>
+<div class="ttc" id="class_sgt_1_1_sim_branch_html_a1b945537e70a39d556de371ce1b6b3b2"><div class="ttname"><a href="class_sgt_1_1_sim_branch.html#a1b945537e70a39d556de371ce1b6b3b2">Sgt::SimBranch::branch</a></div><div class="ttdeci">virtual const BranchAbc &amp; branch() const  override</div><div class="ttdoc">Return the branch that I wrap (const). </div><div class="ttdef"><b>Definition:</b> SimBranch.h:60</div></div>
+<div class="ttc" id="class_sgt_1_1_sim_branch_html_a772b2247a1e0f020bdfeb1e8dc5a94fe"><div class="ttname"><a href="class_sgt_1_1_sim_branch.html#a772b2247a1e0f020bdfeb1e8dc5a94fe">Sgt::SimBranch::branch</a></div><div class="ttdeci">virtual BranchAbc &amp; branch() override</div><div class="ttdoc">Return the branch that I wrap (non-const). </div><div class="ttdef"><b>Definition:</b> SimBranch.h:65</div></div>
 <div class="ttc" id="class_sgt_1_1_sim_component_html"><div class="ttname"><a href="class_sgt_1_1_sim_component.html">Sgt::SimComponent</a></div><div class="ttdoc">A base class for components of a Simulation. </div><div class="ttdef"><b>Definition:</b> SimComponent.h:26</div></div>
 <div class="ttc" id="class_sgt_1_1_component_html_a4c92ed17f833ebcf15268dc22ff78593"><div class="ttname"><a href="class_sgt_1_1_component.html#a4c92ed17f833ebcf15268dc22ff78593">Sgt::Component::Component</a></div><div class="ttdeci">Component()</div><div class="ttdoc">Default constructor required by g++4.8 but not clang++. </div><div class="ttdef"><b>Definition:</b> Component.h:85</div></div>
 <div class="ttc" id="class_sgt_1_1_sim_network_html"><div class="ttname"><a href="class_sgt_1_1_sim_network.html">Sgt::SimNetwork</a></div><div class="ttdoc">SimNetwork : A SimComponent for an electrical network. </div><div class="ttdef"><b>Definition:</b> SimNetwork.h:25</div></div>
-<div class="ttc" id="class_sgt_1_1_sim_branch_html_a18d8c68c22dbf4be288422fa712ad260"><div class="ttname"><a href="class_sgt_1_1_sim_branch.html#a18d8c68c22dbf4be288422fa712ad260">Sgt::SimBranch::branch</a></div><div class="ttdeci">std::shared_ptr&lt; const BranchAbc &gt; branch() const </div><div class="ttdoc">Return the branch that I wrap (const). </div><div class="ttdef"><b>Definition:</b> SimBranch.h:60</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Nov 2 2015 14:28:23 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 9 2015 14:49:02 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SmartGridToolbox
-   &#160;<span id="projectnumber">v2.1.0</span>
+   &#160;<span id="projectnumber">v3.0.0</span>
    </div>
   </td>
  </tr>
@@ -96,14 +96,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p>This is the complete list of members for <a class="el" href="class_sgt_1_1_sim_bus_abc.html">Sgt::SimBusAbc</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="class_sgt_1_1_sim_bus_abc.html#a85f3fe2373cd4cc6baed93ee8d80ae1c">bus</a>() const  =0</td><td class="entry"><a class="el" href="class_sgt_1_1_sim_bus_abc.html">Sgt::SimBusAbc</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_sgt_1_1_sim_bus_abc.html#a25d4ad2c15f94c8f94b27127f749ca49">bus</a>()=0</td><td class="entry"><a class="el" href="class_sgt_1_1_sim_bus_abc.html">Sgt::SimBusAbc</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_sgt_1_1_component.html#a4c92ed17f833ebcf15268dc22ff78593">Component</a>()</td><td class="entry"><a class="el" href="class_sgt_1_1_component.html">Sgt::Component</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>Component</b>(const std::string &amp;id) (defined in <a class="el" href="class_sgt_1_1_component.html">Sgt::Component</a>)</td><td class="entry"><a class="el" href="class_sgt_1_1_component.html">Sgt::Component</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>Component</b>(const Component &amp;from)=default (defined in <a class="el" href="class_sgt_1_1_component.html">Sgt::Component</a>)</td><td class="entry"><a class="el" href="class_sgt_1_1_component.html">Sgt::Component</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>componentType</b>() const  override (defined in <a class="el" href="class_sgt_1_1_sim_component.html">Sgt::SimComponent</a>)</td><td class="entry"><a class="el" href="class_sgt_1_1_sim_component.html">Sgt::SimComponent</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>dependencies</b>() const  (defined in <a class="el" href="class_sgt_1_1_sim_component.html">Sgt::SimComponent</a>)</td><td class="entry"><a class="el" href="class_sgt_1_1_sim_component.html">Sgt::SimComponent</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_sgt_1_1_sim_component.html#a8a793d5b0a65f1bb4b21f8d26b090343">dependsOn</a>(std::shared_ptr&lt; const SimComponent &gt; b)</td><td class="entry"><a class="el" href="class_sgt_1_1_sim_component.html">Sgt::SimComponent</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_sgt_1_1_sim_component.html#a077c2da024d7e059beb48c7bdd06aa3c">addDependency</a>(SimComponent &amp;comp, SimComponent &amp;dependentComp, bool forceUpdate)</td><td class="entry"><a class="el" href="class_sgt_1_1_sim_component.html">Sgt::SimComponent</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_sgt_1_1_sim_bus_abc.html#a313af1bffa22df28541b15f89e20e1ab">bus</a>() const  =0</td><td class="entry"><a class="el" href="class_sgt_1_1_sim_bus_abc.html">Sgt::SimBusAbc</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_sgt_1_1_sim_bus_abc.html#ade1a10cb4cf7bd5a2ff2c5535dee4066">bus</a>()=0</td><td class="entry"><a class="el" href="class_sgt_1_1_sim_bus_abc.html">Sgt::SimBusAbc</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_sgt_1_1_component.html#a4c92ed17f833ebcf15268dc22ff78593">Component</a>()</td><td class="entry"><a class="el" href="class_sgt_1_1_component.html">Sgt::Component</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>Component</b>(const std::string &amp;id) (defined in <a class="el" href="class_sgt_1_1_component.html">Sgt::Component</a>)</td><td class="entry"><a class="el" href="class_sgt_1_1_component.html">Sgt::Component</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>Component</b>(const Component &amp;from)=default (defined in <a class="el" href="class_sgt_1_1_component.html">Sgt::Component</a>)</td><td class="entry"><a class="el" href="class_sgt_1_1_component.html">Sgt::Component</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>componentType</b>() const  override (defined in <a class="el" href="class_sgt_1_1_sim_component.html">Sgt::SimComponent</a>)</td><td class="entry"><a class="el" href="class_sgt_1_1_sim_component.html">Sgt::SimComponent</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>dependencies</b>() const  (defined in <a class="el" href="class_sgt_1_1_sim_component.html">Sgt::SimComponent</a>)</td><td class="entry"><a class="el" href="class_sgt_1_1_sim_component.html">Sgt::SimComponent</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_sgt_1_1_sim_component.html#ae48f234ad36fa49246ab64eb74976fe1">didCompleteTimestep</a>()</td><td class="entry"><a class="el" href="class_sgt_1_1_sim_component.html">Sgt::SimComponent</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_sgt_1_1_sim_component.html#af960c5fa7671f16077aba53af4207755">didUpdate</a>()</td><td class="entry"><a class="el" href="class_sgt_1_1_sim_component.html">Sgt::SimComponent</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>HasPropertiesAbc</b>()=default (defined in <a class="el" href="class_sgt_1_1_has_properties_abc.html">Sgt::HasPropertiesAbc</a>)</td><td class="entry"><a class="el" href="class_sgt_1_1_has_properties_abc.html">Sgt::HasPropertiesAbc</a></td><td class="entry"></td></tr>
@@ -140,7 +140,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Nov 2 2015 14:28:24 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 9 2015 14:49:03 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

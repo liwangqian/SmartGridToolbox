@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SmartGridToolbox
-   &#160;<span id="projectnumber">v2.1.0</span>
+   &#160;<span id="projectnumber">v3.0.0</span>
    </div>
   </td>
  </tr>
@@ -112,74 +112,73 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;SgtCore/Gen.h&gt;</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_sgt.html">Sgt</a></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{<span class="comment"></span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">    /// @brief Abstract base class for SimGen.</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">    /// </span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">    /// Depending on how the derived class works, gen() could either be provided by containment or inheritance.</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_sgt_1_1_sim_gen_abc.html">   30</a></span>&#160;<span class="comment"></span>    <span class="keyword">class </span><a class="code" href="class_sgt_1_1_sim_gen_abc.html">SimGenAbc</a> : <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="class_sgt_1_1_sim_component.html">SimComponent</a></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">            /// @brief Return the gen that I wrap (const). </span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"></span>            <span class="keyword">virtual</span> std::shared_ptr&lt;const GenAbc&gt; <a class="code" href="class_sgt_1_1_sim_gen_abc.html#a9ba4d7dc31cf5cb2aec00eb921ee816a">gen</a>() <span class="keyword">const</span> = 0;<span class="comment"></span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">            /// @brief Return the gen that I wrap (non-const). </span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment"></span>            <span class="keyword">virtual</span> std::shared_ptr&lt;GenAbc&gt; <a class="code" href="class_sgt_1_1_sim_gen_abc.html#a9ba4d7dc31cf5cb2aec00eb921ee816a">gen</a>() = 0;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">            /// @brief Do anything I need to do to add myself to the simNetwork.</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">            ///</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">            /// Important: my gen must separately be added to SimNetwork&#39;s Network. This is to prevent any possible</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">            /// confusion about whether it is already added on not.</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment"></span>            <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_sgt_1_1_sim_gen_abc.html#a2c4baea68c07038a230a3f10f5d4c4f8">linkToSimNetwork</a>(<a class="code" href="class_sgt_1_1_sim_network.html">SimNetwork</a>&amp; simNetwork);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    };</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">    /// @brief Simulation gen, corresponding to a GenAbc in a SimNetwork&#39;s network(). </span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">    /// </span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">    /// gen() is provided by containment which is enough for a normal network gen types. </span></div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_sgt_1_1_sim_gen.html">   49</a></span>&#160;<span class="comment"></span>    <span class="keyword">class </span><a class="code" href="class_sgt_1_1_sim_gen.html">SimGen</a> : <span class="keyword">public</span> <a class="code" href="class_sgt_1_1_sim_gen_abc.html">SimGenAbc</a></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <a class="code" href="class_sgt_1_1_sim_gen.html">SimGen</a>(std::shared_ptr&lt;GenAbc&gt; <a class="code" href="class_sgt_1_1_sim_gen.html#ac270e63c748be449c0f0456765d1a745">gen</a>) :</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                <a class="code" href="class_sgt_1_1_component.html#a4c92ed17f833ebcf15268dc22ff78593">Component</a>(gen-&gt;id()),</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                gen_(gen)</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                <span class="comment">// Empty.</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_sgt_1_1_sim_gen.html#ac270e63c748be449c0f0456765d1a745">   60</a></span>&#160;            std::shared_ptr&lt;const GenAbc&gt; <a class="code" href="class_sgt_1_1_sim_gen.html#ac270e63c748be449c0f0456765d1a745">gen</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">            </span>{</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                <span class="keywordflow">return</span> gen_;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            }</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            </div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_sgt_1_1_sim_gen.html#a39d4e72b76750b79bba3f1e980086a2c">   65</a></span>&#160;            std::shared_ptr&lt;GenAbc&gt; <a class="code" href="class_sgt_1_1_sim_gen.html#a39d4e72b76750b79bba3f1e980086a2c">gen</a>()</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            {</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                <span class="keywordflow">return</span> gen_;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_sgt.html">Sgt</a></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{<span class="comment"></span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">    /// @brief Abstract base class for SimGen.</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">    /// </span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">    /// Depending on how the derived class works, gen() could either be provided by containment or inheritance.</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_sgt_1_1_sim_gen_abc.html">   28</a></span>&#160;<span class="comment"></span>    <span class="keyword">class </span><a class="code" href="class_sgt_1_1_sim_gen_abc.html">SimGenAbc</a> : <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="class_sgt_1_1_sim_component.html">SimComponent</a></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">            /// @brief Return the gen that I wrap (const). </span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"></span>            <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="class_sgt_1_1_gen_abc.html">GenAbc</a>&amp; <a class="code" href="class_sgt_1_1_sim_gen_abc.html#acc2089b184a97d4b80bf176843d9a6d3">gen</a>() <span class="keyword">const</span> = 0;<span class="comment"></span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">            /// @brief Return the gen that I wrap (non-const). </span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"></span>            <span class="keyword">virtual</span> <a class="code" href="class_sgt_1_1_gen_abc.html">GenAbc</a>&amp; <a class="code" href="class_sgt_1_1_sim_gen_abc.html#acc2089b184a97d4b80bf176843d9a6d3">gen</a>() = 0;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">            /// @brief Do anything I need to do to add myself to the simNetwork.</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">            ///</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">            /// Important: my gen must separately be added to SimNetwork&#39;s Network. This is to prevent any possible</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">            /// confusion about whether it is already added on not.</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment"></span>            <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_sgt_1_1_sim_gen_abc.html#a2c4baea68c07038a230a3f10f5d4c4f8">linkToSimNetwork</a>(<a class="code" href="class_sgt_1_1_sim_network.html">SimNetwork</a>&amp; simNetwork);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    };</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">    /// @brief Simulation gen, corresponding to a GenAbc in a SimNetwork&#39;s network(). </span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">    /// </span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">    /// gen() is provided by containment which is enough for a normal network gen types. </span></div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_sgt_1_1_sim_gen.html">   47</a></span>&#160;<span class="comment"></span>    <span class="keyword">class </span><a class="code" href="class_sgt_1_1_sim_gen.html">SimGen</a> : <span class="keyword">public</span> <a class="code" href="class_sgt_1_1_sim_gen_abc.html">SimGenAbc</a></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <a class="code" href="class_sgt_1_1_sim_gen.html">SimGen</a>(<a class="code" href="class_sgt_1_1_gen_abc.html">GenAbc</a>&amp; <a class="code" href="class_sgt_1_1_sim_gen.html#af0cf5df3e705644d96fd87cba5b10140">gen</a>) :</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <a class="code" href="class_sgt_1_1_component.html#a4c92ed17f833ebcf15268dc22ff78593">Component</a>(gen.id()),</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                gen_(&amp;gen)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                <span class="comment">// Empty.</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_sgt_1_1_sim_gen.html#af0cf5df3e705644d96fd87cba5b10140">   58</a></span>&#160;            <span class="keyword">const</span> <a class="code" href="class_sgt_1_1_gen_abc.html">GenAbc</a>&amp; <a class="code" href="class_sgt_1_1_sim_gen.html#af0cf5df3e705644d96fd87cba5b10140">gen</a>()<span class="keyword"> const override</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">            </span>{</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                <span class="keywordflow">return</span> *gen_;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_sgt_1_1_sim_gen.html#a2df84d58d5d28e9b7db9c60f0a6ecc0e">   63</a></span>&#160;            <a class="code" href="class_sgt_1_1_gen_abc.html">GenAbc</a>&amp; <a class="code" href="class_sgt_1_1_sim_gen.html#a2df84d58d5d28e9b7db9c60f0a6ecc0e">gen</a>()<span class="keyword"> override</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">            </span>{</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                <span class="keywordflow">return</span> *gen_;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            std::shared_ptr&lt;GenAbc&gt; gen_;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    };</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#endif // SIM_GEN_DOT_H</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <a class="code" href="class_sgt_1_1_gen_abc.html">GenAbc</a>* gen_;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    };</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#endif // SIM_GEN_DOT_H</span></div>
 <div class="ttc" id="namespace_sgt_html"><div class="ttname"><a href="namespace_sgt.html">Sgt</a></div><div class="ttdoc">The primary namespace for SmartGridToolbox. </div></div>
-<div class="ttc" id="class_sgt_1_1_sim_gen_html_a39d4e72b76750b79bba3f1e980086a2c"><div class="ttname"><a href="class_sgt_1_1_sim_gen.html#a39d4e72b76750b79bba3f1e980086a2c">Sgt::SimGen::gen</a></div><div class="ttdeci">std::shared_ptr&lt; GenAbc &gt; gen()</div><div class="ttdoc">Return the gen that I wrap (non-const). </div><div class="ttdef"><b>Definition:</b> SimGen.h:65</div></div>
-<div class="ttc" id="class_sgt_1_1_sim_gen_html_ac270e63c748be449c0f0456765d1a745"><div class="ttname"><a href="class_sgt_1_1_sim_gen.html#ac270e63c748be449c0f0456765d1a745">Sgt::SimGen::gen</a></div><div class="ttdeci">std::shared_ptr&lt; const GenAbc &gt; gen() const </div><div class="ttdoc">Return the gen that I wrap (const). </div><div class="ttdef"><b>Definition:</b> SimGen.h:60</div></div>
-<div class="ttc" id="class_sgt_1_1_sim_gen_html"><div class="ttname"><a href="class_sgt_1_1_sim_gen.html">Sgt::SimGen</a></div><div class="ttdoc">Simulation gen, corresponding to a GenAbc in a SimNetwork&#39;s network(). </div><div class="ttdef"><b>Definition:</b> SimGen.h:49</div></div>
+<div class="ttc" id="class_sgt_1_1_sim_gen_html_a2df84d58d5d28e9b7db9c60f0a6ecc0e"><div class="ttname"><a href="class_sgt_1_1_sim_gen.html#a2df84d58d5d28e9b7db9c60f0a6ecc0e">Sgt::SimGen::gen</a></div><div class="ttdeci">GenAbc &amp; gen() override</div><div class="ttdoc">Return the gen that I wrap (non-const). </div><div class="ttdef"><b>Definition:</b> SimGen.h:63</div></div>
+<div class="ttc" id="class_sgt_1_1_sim_gen_html"><div class="ttname"><a href="class_sgt_1_1_sim_gen.html">Sgt::SimGen</a></div><div class="ttdoc">Simulation gen, corresponding to a GenAbc in a SimNetwork&#39;s network(). </div><div class="ttdef"><b>Definition:</b> SimGen.h:47</div></div>
 <div class="ttc" id="class_sgt_1_1_sim_component_html"><div class="ttname"><a href="class_sgt_1_1_sim_component.html">Sgt::SimComponent</a></div><div class="ttdoc">A base class for components of a Simulation. </div><div class="ttdef"><b>Definition:</b> SimComponent.h:26</div></div>
-<div class="ttc" id="class_sgt_1_1_sim_gen_abc_html_a9ba4d7dc31cf5cb2aec00eb921ee816a"><div class="ttname"><a href="class_sgt_1_1_sim_gen_abc.html#a9ba4d7dc31cf5cb2aec00eb921ee816a">Sgt::SimGenAbc::gen</a></div><div class="ttdeci">virtual std::shared_ptr&lt; const GenAbc &gt; gen() const  =0</div><div class="ttdoc">Return the gen that I wrap (const). </div></div>
 <div class="ttc" id="class_sgt_1_1_component_html_a4c92ed17f833ebcf15268dc22ff78593"><div class="ttname"><a href="class_sgt_1_1_component.html#a4c92ed17f833ebcf15268dc22ff78593">Sgt::Component::Component</a></div><div class="ttdeci">Component()</div><div class="ttdoc">Default constructor required by g++4.8 but not clang++. </div><div class="ttdef"><b>Definition:</b> Component.h:85</div></div>
 <div class="ttc" id="class_sgt_1_1_sim_network_html"><div class="ttname"><a href="class_sgt_1_1_sim_network.html">Sgt::SimNetwork</a></div><div class="ttdoc">SimNetwork : A SimComponent for an electrical network. </div><div class="ttdef"><b>Definition:</b> SimNetwork.h:25</div></div>
-<div class="ttc" id="class_sgt_1_1_sim_gen_abc_html"><div class="ttname"><a href="class_sgt_1_1_sim_gen_abc.html">Sgt::SimGenAbc</a></div><div class="ttdoc">Abstract base class for SimGen. </div><div class="ttdef"><b>Definition:</b> SimGen.h:30</div></div>
+<div class="ttc" id="class_sgt_1_1_sim_gen_html_af0cf5df3e705644d96fd87cba5b10140"><div class="ttname"><a href="class_sgt_1_1_sim_gen.html#af0cf5df3e705644d96fd87cba5b10140">Sgt::SimGen::gen</a></div><div class="ttdeci">const GenAbc &amp; gen() const  override</div><div class="ttdoc">Return the gen that I wrap (const). </div><div class="ttdef"><b>Definition:</b> SimGen.h:58</div></div>
+<div class="ttc" id="class_sgt_1_1_sim_gen_abc_html"><div class="ttname"><a href="class_sgt_1_1_sim_gen_abc.html">Sgt::SimGenAbc</a></div><div class="ttdoc">Abstract base class for SimGen. </div><div class="ttdef"><b>Definition:</b> SimGen.h:28</div></div>
 <div class="ttc" id="class_sgt_1_1_sim_gen_abc_html_a2c4baea68c07038a230a3f10f5d4c4f8"><div class="ttname"><a href="class_sgt_1_1_sim_gen_abc.html#a2c4baea68c07038a230a3f10f5d4c4f8">Sgt::SimGenAbc::linkToSimNetwork</a></div><div class="ttdeci">virtual void linkToSimNetwork(SimNetwork &amp;simNetwork)</div><div class="ttdoc">Do anything I need to do to add myself to the simNetwork. </div><div class="ttdef"><b>Definition:</b> SimGen.cc:5</div></div>
+<div class="ttc" id="class_sgt_1_1_gen_abc_html"><div class="ttname"><a href="class_sgt_1_1_gen_abc.html">Sgt::GenAbc</a></div><div class="ttdoc">Common abstract base class for a generation at a bus. </div><div class="ttdef"><b>Definition:</b> Gen.h:29</div></div>
+<div class="ttc" id="class_sgt_1_1_sim_gen_abc_html_acc2089b184a97d4b80bf176843d9a6d3"><div class="ttname"><a href="class_sgt_1_1_sim_gen_abc.html#acc2089b184a97d4b80bf176843d9a6d3">Sgt::SimGenAbc::gen</a></div><div class="ttdeci">virtual const GenAbc &amp; gen() const  =0</div><div class="ttdoc">Return the gen that I wrap (const). </div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Nov 2 2015 14:28:23 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 9 2015 14:49:02 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

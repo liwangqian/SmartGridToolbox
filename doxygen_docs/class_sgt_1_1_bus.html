@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SmartGridToolbox
-   &#160;<span id="projectnumber">v2.1.0</span>
+   &#160;<span id="projectnumber">v3.0.0</span>
    </div>
   </td>
  </tr>
@@ -129,18 +129,12 @@ Collaboration diagram for Sgt::Bus:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a54796ce7ac164421f9d33f5bcc508e3e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a54796ce7ac164421f9d33f5bcc508e3e"></a>
-typedef std::shared_ptr&lt; <a class="el" href="class_sgt_1_1_gen_abc.html">GenAbc</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GenPtr</b></td></tr>
-<tr class="separator:a54796ce7ac164421f9d33f5bcc508e3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a765d7787f7f1fae4924938b0a0d60b03"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a765d7787f7f1fae4924938b0a0d60b03"></a>
-typedef std::vector&lt; GenPtr &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GenVec</b></td></tr>
-<tr class="separator:a765d7787f7f1fae4924938b0a0d60b03"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a739e65e35994c09138f9288a68434d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1a739e65e35994c09138f9288a68434d"></a>
-typedef std::shared_ptr&lt; <a class="el" href="class_sgt_1_1_zip_abc.html">ZipAbc</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ZipPtr</b></td></tr>
-<tr class="separator:a1a739e65e35994c09138f9288a68434d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acaf288df7845f378c7af278eaae02425"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acaf288df7845f378c7af278eaae02425"></a>
-typedef std::vector&lt; ZipPtr &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ZipVec</b></td></tr>
-<tr class="separator:acaf288df7845f378c7af278eaae02425"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a524058d1e299e7af5496cab2b15d3abd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a524058d1e299e7af5496cab2b15d3abd"></a>
+typedef std::vector&lt; <a class="el" href="class_sgt_1_1_gen_abc.html">GenAbc</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GenVec</b></td></tr>
+<tr class="separator:a524058d1e299e7af5496cab2b15d3abd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af818837f87dd47003d3a7080a5828b78"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af818837f87dd47003d3a7080a5828b78"></a>
+typedef std::vector&lt; <a class="el" href="class_sgt_1_1_zip_abc.html">ZipAbc</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ZipVec</b></td></tr>
+<tr class="separator:af818837f87dd47003d3a7080a5828b78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -184,9 +178,9 @@ virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>VBase</b> (
 <tr class="memitem:a0817d59a466ea621ab119c3e828f39ff"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0817d59a466ea621ab119c3e828f39ff"></a>
 const GenVec&#160;</td><td class="memItemRight" valign="bottom"><b>gens</b> () const </td></tr>
 <tr class="separator:a0817d59a466ea621ab119c3e828f39ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a473b31943df70d6114c8f1e96107b0f4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a473b31943df70d6114c8f1e96107b0f4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addGen</b> (GenPtr gen)</td></tr>
-<tr class="separator:a473b31943df70d6114c8f1e96107b0f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afaed5c6bee60fd5fb4fd6e5bfdef5dc5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afaed5c6bee60fd5fb4fd6e5bfdef5dc5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addGen</b> (<a class="el" href="class_sgt_1_1_gen_abc.html">GenAbc</a> &amp;gen)</td></tr>
+<tr class="separator:afaed5c6bee60fd5fb4fd6e5bfdef5dc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6860dedb77c4711046bdd4b8398b46bc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6860dedb77c4711046bdd4b8398b46bc"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>removeAllGens</b> ()</td></tr>
 <tr class="separator:a6860dedb77c4711046bdd4b8398b46bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -220,9 +214,9 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>JGen</b> () const <
 <tr class="memitem:a5f04a90e9934d884964f5a9275cc4f40"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5f04a90e9934d884964f5a9275cc4f40"></a>
 const ZipVec&#160;</td><td class="memItemRight" valign="bottom"><b>zips</b> () const </td></tr>
 <tr class="separator:a5f04a90e9934d884964f5a9275cc4f40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a786afdcd232618d7230ceb0574e87360"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a786afdcd232618d7230ceb0574e87360"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addZip</b> (ZipPtr zip)</td></tr>
-<tr class="separator:a786afdcd232618d7230ceb0574e87360"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad518ead710f022768cc8cf077b293545"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad518ead710f022768cc8cf077b293545"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addZip</b> (<a class="el" href="class_sgt_1_1_zip_abc.html">ZipAbc</a> &amp;zip)</td></tr>
+<tr class="separator:ad518ead710f022768cc8cf077b293545"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d566ddc6005a5fdb45afd81a9c5e51a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7d566ddc6005a5fdb45afd81a9c5e51a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>removeAllZips</b> ()</td></tr>
 <tr class="separator:a7d566ddc6005a5fdb45afd81a9c5e51a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -458,7 +452,7 @@ static std::map&lt; std::string, std::shared_ptr&lt; <a class="el" href="class_s
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Nov 2 2015 14:28:23 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 9 2015 14:49:03 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SmartGridToolbox
-   &#160;<span id="projectnumber">v2.1.0</span>
+   &#160;<span id="projectnumber">v3.0.0</span>
    </div>
   </td>
  </tr>
@@ -112,74 +112,73 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;SgtCore/Zip.h&gt;</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_sgt.html">Sgt</a></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{<span class="comment"></span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">    /// @brief Abstract base class for SimZip.</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">    /// </span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">    /// Depending on how the derived class works, zip() could either be provided by containment or inheritance.</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_sgt_1_1_sim_zip_abc.html">   30</a></span>&#160;<span class="comment"></span>    <span class="keyword">class </span><a class="code" href="class_sgt_1_1_sim_zip_abc.html">SimZipAbc</a> : <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="class_sgt_1_1_sim_component.html">SimComponent</a></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">            /// @brief Return the zip that I wrap (const). </span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"></span>            <span class="keyword">virtual</span> std::shared_ptr&lt;const ZipAbc&gt; <a class="code" href="class_sgt_1_1_sim_zip_abc.html#a43558c57f7755501d2989e502f8becdc">zip</a>() <span class="keyword">const</span> = 0;<span class="comment"></span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">            /// @brief Return the zip that I wrap (non-const). </span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment"></span>            <span class="keyword">virtual</span> std::shared_ptr&lt;ZipAbc&gt; <a class="code" href="class_sgt_1_1_sim_zip_abc.html#a43558c57f7755501d2989e502f8becdc">zip</a>() = 0;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">            /// @brief Do anything I need to do to add myself to the simNetwork.</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">            ///</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">            /// Important: my zip must separately be added to SimNetwork&#39;s Network. This is to prevent any possible</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">            /// confusion about whether it is already added on not.</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment"></span>            <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_sgt_1_1_sim_zip_abc.html#a0f7c7b85362898c2daf58c07e70f41f8">linkToSimNetwork</a>(<a class="code" href="class_sgt_1_1_sim_network.html">SimNetwork</a>&amp; simNetwork);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    };</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">    /// @brief Simulation zip, corresponding to a ZipAbc in a SimNetwork&#39;s network(). </span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">    /// </span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">    /// zip() is provided by containment which is enough for a normal network zip types. </span></div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_sgt_1_1_sim_zip.html">   49</a></span>&#160;<span class="comment"></span>    <span class="keyword">class </span><a class="code" href="class_sgt_1_1_sim_zip.html">SimZip</a> : <span class="keyword">public</span> <a class="code" href="class_sgt_1_1_sim_zip_abc.html">SimZipAbc</a></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <a class="code" href="class_sgt_1_1_sim_zip.html">SimZip</a>(std::shared_ptr&lt;ZipAbc&gt; <a class="code" href="class_sgt_1_1_sim_zip.html#a4a2f84ebe757ece6ac2dea28bf118f7f">zip</a>) :</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                <a class="code" href="class_sgt_1_1_component.html#a4c92ed17f833ebcf15268dc22ff78593">Component</a>(zip-&gt;id()),</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                zip_(zip)</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                <span class="comment">// Empty.</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_sgt_1_1_sim_zip.html#a4a2f84ebe757ece6ac2dea28bf118f7f">   60</a></span>&#160;            std::shared_ptr&lt;const ZipAbc&gt; <a class="code" href="class_sgt_1_1_sim_zip.html#a4a2f84ebe757ece6ac2dea28bf118f7f">zip</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">            </span>{</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                <span class="keywordflow">return</span> zip_;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            }</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            </div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_sgt_1_1_sim_zip.html#a8238baa86394f76150b50094f4369b91">   65</a></span>&#160;            std::shared_ptr&lt;ZipAbc&gt; <a class="code" href="class_sgt_1_1_sim_zip.html#a8238baa86394f76150b50094f4369b91">zip</a>()</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            {</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                <span class="keywordflow">return</span> zip_;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_sgt.html">Sgt</a></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{<span class="comment"></span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">    /// @brief Abstract base class for SimZip.</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">    /// </span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">    /// Depending on how the derived class works, zip() could either be provided by containment or inheritance.</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_sgt_1_1_sim_zip_abc.html">   28</a></span>&#160;<span class="comment"></span>    <span class="keyword">class </span><a class="code" href="class_sgt_1_1_sim_zip_abc.html">SimZipAbc</a> : <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="class_sgt_1_1_sim_component.html">SimComponent</a></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">            /// @brief Return the zip that I wrap (const). </span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"></span>            <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="class_sgt_1_1_zip_abc.html">ZipAbc</a>&amp; <a class="code" href="class_sgt_1_1_sim_zip_abc.html#a2cc9a88fd08302c141d3dbafb758dca4">zip</a>() <span class="keyword">const</span> = 0;<span class="comment"></span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">            /// @brief Return the zip that I wrap (non-const). </span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"></span>            <span class="keyword">virtual</span> <a class="code" href="class_sgt_1_1_zip_abc.html">ZipAbc</a>&amp; <a class="code" href="class_sgt_1_1_sim_zip_abc.html#a2cc9a88fd08302c141d3dbafb758dca4">zip</a>() = 0;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">            /// @brief Do anything I need to do to add myself to the simNetwork.</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">            ///</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">            /// Important: my zip must separately be added to SimNetwork&#39;s Network. This is to prevent any possible</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">            /// confusion about whether it is already added on not.</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment"></span>            <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_sgt_1_1_sim_zip_abc.html#a0f7c7b85362898c2daf58c07e70f41f8">linkToSimNetwork</a>(<a class="code" href="class_sgt_1_1_sim_network.html">SimNetwork</a>&amp; simNetwork);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    };</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">    /// @brief Simulation zip, corresponding to a ZipAbc in a SimNetwork&#39;s network(). </span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">    /// </span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">    /// zip() is provided by containment which is enough for a normal network zip types. </span></div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_sgt_1_1_sim_zip.html">   47</a></span>&#160;<span class="comment"></span>    <span class="keyword">class </span><a class="code" href="class_sgt_1_1_sim_zip.html">SimZip</a> : <span class="keyword">public</span> <a class="code" href="class_sgt_1_1_sim_zip_abc.html">SimZipAbc</a></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <a class="code" href="class_sgt_1_1_sim_zip.html">SimZip</a>(<a class="code" href="class_sgt_1_1_zip_abc.html">ZipAbc</a>&amp; <a class="code" href="class_sgt_1_1_sim_zip.html#a14086c05d8676ab313c49cf386173bf7">zip</a>) :</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <a class="code" href="class_sgt_1_1_component.html#a4c92ed17f833ebcf15268dc22ff78593">Component</a>(zip.id()),</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                zip_(&amp;zip)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                <span class="comment">// Empty.</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_sgt_1_1_sim_zip.html#a14086c05d8676ab313c49cf386173bf7">   58</a></span>&#160;            <span class="keyword">const</span> <a class="code" href="class_sgt_1_1_zip_abc.html">ZipAbc</a>&amp; <a class="code" href="class_sgt_1_1_sim_zip.html#a14086c05d8676ab313c49cf386173bf7">zip</a>()<span class="keyword"> const override</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">            </span>{</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                <span class="keywordflow">return</span> *zip_;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_sgt_1_1_sim_zip.html#a3ce28162d30e8848ed39d9c9c034f734">   63</a></span>&#160;            <a class="code" href="class_sgt_1_1_zip_abc.html">ZipAbc</a>&amp; <a class="code" href="class_sgt_1_1_sim_zip.html#a3ce28162d30e8848ed39d9c9c034f734">zip</a>()<span class="keyword"> override</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">            </span>{</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                <span class="keywordflow">return</span> *zip_;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            std::shared_ptr&lt;ZipAbc&gt; zip_;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    };</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#endif // SIM_ZIP_DOT_H</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <a class="code" href="class_sgt_1_1_zip_abc.html">ZipAbc</a>* zip_;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    };</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#endif // SIM_ZIP_DOT_H</span></div>
+<div class="ttc" id="class_sgt_1_1_sim_zip_abc_html_a2cc9a88fd08302c141d3dbafb758dca4"><div class="ttname"><a href="class_sgt_1_1_sim_zip_abc.html#a2cc9a88fd08302c141d3dbafb758dca4">Sgt::SimZipAbc::zip</a></div><div class="ttdeci">virtual const ZipAbc &amp; zip() const  =0</div><div class="ttdoc">Return the zip that I wrap (const). </div></div>
 <div class="ttc" id="namespace_sgt_html"><div class="ttname"><a href="namespace_sgt.html">Sgt</a></div><div class="ttdoc">The primary namespace for SmartGridToolbox. </div></div>
-<div class="ttc" id="class_sgt_1_1_sim_zip_abc_html"><div class="ttname"><a href="class_sgt_1_1_sim_zip_abc.html">Sgt::SimZipAbc</a></div><div class="ttdoc">Abstract base class for SimZip. </div><div class="ttdef"><b>Definition:</b> SimZip.h:30</div></div>
-<div class="ttc" id="class_sgt_1_1_sim_zip_abc_html_a43558c57f7755501d2989e502f8becdc"><div class="ttname"><a href="class_sgt_1_1_sim_zip_abc.html#a43558c57f7755501d2989e502f8becdc">Sgt::SimZipAbc::zip</a></div><div class="ttdeci">virtual std::shared_ptr&lt; const ZipAbc &gt; zip() const  =0</div><div class="ttdoc">Return the zip that I wrap (const). </div></div>
-<div class="ttc" id="class_sgt_1_1_sim_zip_html_a8238baa86394f76150b50094f4369b91"><div class="ttname"><a href="class_sgt_1_1_sim_zip.html#a8238baa86394f76150b50094f4369b91">Sgt::SimZip::zip</a></div><div class="ttdeci">std::shared_ptr&lt; ZipAbc &gt; zip()</div><div class="ttdoc">Return the zip that I wrap (non-const). </div><div class="ttdef"><b>Definition:</b> SimZip.h:65</div></div>
+<div class="ttc" id="class_sgt_1_1_sim_zip_abc_html"><div class="ttname"><a href="class_sgt_1_1_sim_zip_abc.html">Sgt::SimZipAbc</a></div><div class="ttdoc">Abstract base class for SimZip. </div><div class="ttdef"><b>Definition:</b> SimZip.h:28</div></div>
+<div class="ttc" id="class_sgt_1_1_sim_zip_html_a14086c05d8676ab313c49cf386173bf7"><div class="ttname"><a href="class_sgt_1_1_sim_zip.html#a14086c05d8676ab313c49cf386173bf7">Sgt::SimZip::zip</a></div><div class="ttdeci">const ZipAbc &amp; zip() const  override</div><div class="ttdoc">Return the zip that I wrap (const). </div><div class="ttdef"><b>Definition:</b> SimZip.h:58</div></div>
+<div class="ttc" id="class_sgt_1_1_sim_zip_html_a3ce28162d30e8848ed39d9c9c034f734"><div class="ttname"><a href="class_sgt_1_1_sim_zip.html#a3ce28162d30e8848ed39d9c9c034f734">Sgt::SimZip::zip</a></div><div class="ttdeci">ZipAbc &amp; zip() override</div><div class="ttdoc">Return the zip that I wrap (non-const). </div><div class="ttdef"><b>Definition:</b> SimZip.h:63</div></div>
 <div class="ttc" id="class_sgt_1_1_sim_zip_abc_html_a0f7c7b85362898c2daf58c07e70f41f8"><div class="ttname"><a href="class_sgt_1_1_sim_zip_abc.html#a0f7c7b85362898c2daf58c07e70f41f8">Sgt::SimZipAbc::linkToSimNetwork</a></div><div class="ttdeci">virtual void linkToSimNetwork(SimNetwork &amp;simNetwork)</div><div class="ttdoc">Do anything I need to do to add myself to the simNetwork. </div><div class="ttdef"><b>Definition:</b> SimZip.cc:5</div></div>
 <div class="ttc" id="class_sgt_1_1_sim_component_html"><div class="ttname"><a href="class_sgt_1_1_sim_component.html">Sgt::SimComponent</a></div><div class="ttdoc">A base class for components of a Simulation. </div><div class="ttdef"><b>Definition:</b> SimComponent.h:26</div></div>
-<div class="ttc" id="class_sgt_1_1_sim_zip_html_a4a2f84ebe757ece6ac2dea28bf118f7f"><div class="ttname"><a href="class_sgt_1_1_sim_zip.html#a4a2f84ebe757ece6ac2dea28bf118f7f">Sgt::SimZip::zip</a></div><div class="ttdeci">std::shared_ptr&lt; const ZipAbc &gt; zip() const </div><div class="ttdoc">Return the zip that I wrap (const). </div><div class="ttdef"><b>Definition:</b> SimZip.h:60</div></div>
-<div class="ttc" id="class_sgt_1_1_sim_zip_html"><div class="ttname"><a href="class_sgt_1_1_sim_zip.html">Sgt::SimZip</a></div><div class="ttdoc">Simulation zip, corresponding to a ZipAbc in a SimNetwork&#39;s network(). </div><div class="ttdef"><b>Definition:</b> SimZip.h:49</div></div>
+<div class="ttc" id="class_sgt_1_1_sim_zip_html"><div class="ttname"><a href="class_sgt_1_1_sim_zip.html">Sgt::SimZip</a></div><div class="ttdoc">Simulation zip, corresponding to a ZipAbc in a SimNetwork&#39;s network(). </div><div class="ttdef"><b>Definition:</b> SimZip.h:47</div></div>
+<div class="ttc" id="class_sgt_1_1_zip_abc_html"><div class="ttname"><a href="class_sgt_1_1_zip_abc.html">Sgt::ZipAbc</a></div><div class="ttdoc">A Zip is an injection into a bus with constant impedance / current / complex power components...</div><div class="ttdef"><b>Definition:</b> Zip.h:30</div></div>
 <div class="ttc" id="class_sgt_1_1_component_html_a4c92ed17f833ebcf15268dc22ff78593"><div class="ttname"><a href="class_sgt_1_1_component.html#a4c92ed17f833ebcf15268dc22ff78593">Sgt::Component::Component</a></div><div class="ttdeci">Component()</div><div class="ttdoc">Default constructor required by g++4.8 but not clang++. </div><div class="ttdef"><b>Definition:</b> Component.h:85</div></div>
 <div class="ttc" id="class_sgt_1_1_sim_network_html"><div class="ttname"><a href="class_sgt_1_1_sim_network.html">Sgt::SimNetwork</a></div><div class="ttdoc">SimNetwork : A SimComponent for an electrical network. </div><div class="ttdef"><b>Definition:</b> SimNetwork.h:25</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Nov 2 2015 14:28:23 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 9 2015 14:49:02 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

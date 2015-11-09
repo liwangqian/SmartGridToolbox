@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SmartGridToolbox
-   &#160;<span id="projectnumber">v2.1.0</span>
+   &#160;<span id="projectnumber">v3.0.0</span>
    </div>
   </td>
  </tr>
@@ -152,14 +152,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">        /// @name Network access.</span></div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">        /// @{</span></div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            std::shared_ptr&lt;const Network&gt; network()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keyword">const</span> <a class="code" href="class_sgt_1_1_network.html">Network</a>&amp; network()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">            </span>{</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                <span class="keywordflow">return</span> network_;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                <span class="keywordflow">return</span> *network_;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            }</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            std::shared_ptr&lt;Network&gt; network()</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <a class="code" href="class_sgt_1_1_network.html">Network</a>&amp; network()</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <span class="keywordflow">return</span> network_;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <span class="keywordflow">return</span> *network_;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            }</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">        /// @}</span></div>
@@ -187,13 +187,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#endif // SIM_NETWORK_DOT_H</span></div>
 <div class="ttc" id="namespace_sgt_html"><div class="ttname"><a href="namespace_sgt.html">Sgt</a></div><div class="ttdoc">The primary namespace for SmartGridToolbox. </div></div>
 <div class="ttc" id="class_sgt_1_1_sim_component_html"><div class="ttname"><a href="class_sgt_1_1_sim_component.html">Sgt::SimComponent</a></div><div class="ttdoc">A base class for components of a Simulation. </div><div class="ttdef"><b>Definition:</b> SimComponent.h:26</div></div>
+<div class="ttc" id="class_sgt_1_1_network_html"><div class="ttname"><a href="class_sgt_1_1_network.html">Sgt::Network</a></div><div class="ttdoc">Network component, describing an electricity network. </div><div class="ttdef"><b>Definition:</b> Network.h:36</div></div>
 <div class="ttc" id="class_sgt_1_1_component_html_a4c92ed17f833ebcf15268dc22ff78593"><div class="ttname"><a href="class_sgt_1_1_component.html#a4c92ed17f833ebcf15268dc22ff78593">Sgt::Component::Component</a></div><div class="ttdeci">Component()</div><div class="ttdoc">Default constructor required by g++4.8 but not clang++. </div><div class="ttdef"><b>Definition:</b> Component.h:85</div></div>
 <div class="ttc" id="class_sgt_1_1_sim_network_html"><div class="ttname"><a href="class_sgt_1_1_sim_network.html">Sgt::SimNetwork</a></div><div class="ttdoc">SimNetwork : A SimComponent for an electrical network. </div><div class="ttdef"><b>Definition:</b> SimNetwork.h:25</div></div>
 <div class="ttc" id="class_sgt_1_1_sim_network_html_a95aee93f756728907ddc831565abc538"><div class="ttname"><a href="class_sgt_1_1_sim_network.html#a95aee93f756728907ddc831565abc538">Sgt::SimNetwork::updateState</a></div><div class="ttdeci">virtual void updateState(Time t) override</div><div class="ttdoc">Bring state up to time current time. </div><div class="ttdef"><b>Definition:</b> SimNetwork.cc:20</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Nov 2 2015 14:28:23 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 9 2015 14:49:02 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

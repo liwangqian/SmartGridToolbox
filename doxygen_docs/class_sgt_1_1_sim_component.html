@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SmartGridToolbox
-   &#160;<span id="projectnumber">v2.1.0</span>
+   &#160;<span id="projectnumber">v3.0.0</span>
    </div>
   </td>
  </tr>
@@ -180,14 +180,6 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_sim_component.html#ab0a20452b21d5a0940a520cd09a9ae74">setRank</a> (int <a class="el" href="class_sgt_1_1_sim_component.html#aa5522dfc1450bbac847a32b94911c4d3">rank</a>)</td></tr>
 <tr class="memdesc:ab0a20452b21d5a0940a520cd09a9ae74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the rank of the object. <br /></td></tr>
 <tr class="separator:ab0a20452b21d5a0940a520cd09a9ae74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Dependencies.</div></td></tr>
-<tr class="memitem:ad816e2c22c92ca7b04696dd237f97704"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad816e2c22c92ca7b04696dd237f97704"></a>
-const std::vector&lt; std::weak_ptr&lt; const <a class="el" href="class_sgt_1_1_sim_component.html">SimComponent</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>dependencies</b> () const </td></tr>
-<tr class="separator:ad816e2c22c92ca7b04696dd237f97704"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a793d5b0a65f1bb4b21f8d26b090343"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8a793d5b0a65f1bb4b21f8d26b090343"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_sim_component.html#a8a793d5b0a65f1bb4b21f8d26b090343">dependsOn</a> (std::shared_ptr&lt; const <a class="el" href="class_sgt_1_1_sim_component.html">SimComponent</a> &gt; b)</td></tr>
-<tr class="memdesc:a8a793d5b0a65f1bb4b21f8d26b090343"><td class="mdescLeft">&#160;</td><td class="mdescRight">Components on which I depend will update first. <br /></td></tr>
-<tr class="separator:a8a793d5b0a65f1bb4b21f8d26b090343"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Events</div></td></tr>
 <tr class="memitem:aaa5a54f26535a91409b9e055bce76c55"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaa5a54f26535a91409b9e055bce76c55"></a>
 <a class="el" href="class_sgt_1_1_event.html">Event</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_sim_component.html#aaa5a54f26535a91409b9e055bce76c55">willUpdate</a> ()</td></tr>
@@ -291,6 +283,15 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_sim_component.html#a88678c18b6f7d736f283962e55d18c55">updateState</a> (Time t)</td></tr>
 <tr class="memdesc:a88678c18b6f7d736f283962e55d18c55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bring state up to time current time. <br /></td></tr>
 <tr class="separator:a88678c18b6f7d736f283962e55d18c55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Dependencies.</h2></td></tr>
+<tr class="memitem:a077c2da024d7e059beb48c7bdd06aa3c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_sim_component.html#a077c2da024d7e059beb48c7bdd06aa3c">addDependency</a> (<a class="el" href="class_sgt_1_1_sim_component.html">SimComponent</a> &amp;comp, <a class="el" href="class_sgt_1_1_sim_component.html">SimComponent</a> &amp;dependentComp, bool forceUpdate)</td></tr>
+<tr class="memdesc:a077c2da024d7e059beb48c7bdd06aa3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a dependency of one component on another.  <a href="#a077c2da024d7e059beb48c7bdd06aa3c">More...</a><br /></td></tr>
+<tr class="separator:a077c2da024d7e059beb48c7bdd06aa3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a802010ec2e052e259260f6b8e2a53f31"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a802010ec2e052e259260f6b8e2a53f31"></a>
+const std::vector&lt; const <a class="el" href="class_sgt_1_1_sim_component.html">SimComponent</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>dependencies</b> () const </td></tr>
+<tr class="separator:a802010ec2e052e259260f6b8e2a53f31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A base class for components of a <a class="el" href="class_sgt_1_1_simulation.html" title="Simulation: steps time according to discrete event simulation principles. ">Simulation</a>. </p>
@@ -313,6 +314,56 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 </div>
 </div>
+<a class="anchor" id="a077c2da024d7e059beb48c7bdd06aa3c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Sgt::SimComponent::addDependency </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_sgt_1_1_sim_component.html">SimComponent</a> &amp;&#160;</td>
+          <td class="paramname"><em>comp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_sgt_1_1_sim_component.html">SimComponent</a> &amp;&#160;</td>
+          <td class="paramname"><em>dependentComp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>forceUpdate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add a dependency of one component on another. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">comp</td><td><a class="el" href="class_sgt_1_1_sim_component.html" title="A base class for components of a Simulation. ">SimComponent</a> on which <code>dependentComp</code> depends. </td></tr>
+    <tr><td class="paramname">dependentComp</td><td><a class="el" href="class_sgt_1_1_sim_component.html" title="A base class for components of a Simulation. ">SimComponent</a> that depends on <code>comp</code>. </td></tr>
+    <tr><td class="paramname">forceUpdate</td><td>Should an update of <code>comp</code> force a contingent update of <code>dependentComp</code>? If there is an update of <code>dependentComp</code>, then it is guaranteed to occur after <code>comp</code>, so long as there aren't any circular dependencies. If <code>forceUpdate</code> is true, then an update of <code>comp</code> will guarantee (using a contingent update) that <code>dependentComp</code> also updates. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>/Users/dgordon/Devel/SmartGridToolbox/SgtSim/<a class="el" href="_sim_component_8h_source.html">SimComponent.h</a></li>
 <li>/Users/dgordon/Devel/SmartGridToolbox/SgtSim/SimComponent.cc</li>
@@ -320,7 +371,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Nov 2 2015 14:28:24 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 9 2015 14:49:03 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

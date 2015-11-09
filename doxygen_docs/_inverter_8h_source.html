@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SmartGridToolbox
-   &#160;<span id="projectnumber">v2.1.0</span>
+   &#160;<span id="projectnumber">v3.0.0</span>
    </div>
   </td>
  </tr>
@@ -130,7 +130,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">            /// @name Inverter specific member functions.</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">            /// @{</span></div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">void</span> addDcPowerSource(std::shared_ptr&lt;DcPowerSourceAbc&gt; source);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">void</span> addDcPowerSource(<a class="code" href="class_sgt_1_1_dc_power_source_abc.html">DcPowerSourceAbc</a>&amp; source);</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">double</span> efficiency(<span class="keywordtype">double</span> powerDc) <span class="keyword">const</span> = 0;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment"></span></div>
@@ -138,7 +138,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_sgt_1_1_inverter_abc.html#a6515afdd00f01db7b2284a1d8ee37eb6">   46</a></span>&#160;<span class="comment"></span>            <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="class_sgt_1_1_inverter_abc.html#a6515afdd00f01db7b2284a1d8ee37eb6">PDc</a>()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">            </span>{</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                <span class="keywordflow">return</span> std::accumulate(sources_.begin(), sources_.end(), 0.0,</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                        [] (<span class="keywordtype">double</span> tot, <span class="keyword">const</span> std::shared_ptr&lt;DcPowerSourceAbc&gt;&amp; source)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                        [] (<span class="keywordtype">double</span> tot, <span class="keyword">const</span> <a class="code" href="class_sgt_1_1_dc_power_source_abc.html">DcPowerSourceAbc</a>* source)</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                        {<span class="keywordflow">return</span> tot + source-&gt;PDc();});</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            }</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment"></span></div>
@@ -149,7 +149,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            std::vector&lt;std::shared_ptr&lt;DcPowerSourceAbc&gt;&gt; sources_;   <span class="comment">///&lt; My DC power sources.</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            std::vector&lt;const DcPowerSourceAbc*&gt; sources_;   <span class="comment">///&lt; My DC power sources.</span></div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment"></span>    };</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">    /// @brief An inverter with a simple constant efficiency.</span></div>
@@ -243,21 +243,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="comment">            /// @name InverterAbc virtual overridden member functions.</span></div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="comment">            /// @{</span></div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">void</span> addDcPowerSource(std::shared_ptr&lt;DcPowerSourceAbc&gt; source) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">void</span> addDcPowerSource(<a class="code" href="class_sgt_1_1_dc_power_source_abc.html">DcPowerSourceAbc</a>&amp; source) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="comment">            /// @}</span></div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="comment"></span>            <span class="comment"></span></div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="comment">            /// @name SimZipAbc virtual overridden member functions.</span></div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="comment">            /// @{</span></div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="comment"></span>            </div>
-<div class="line"><a name="l00161"></a><span class="lineno"><a class="line" href="class_sgt_1_1_simple_zip_inverter.html#aaa037622231f4924ee525fd0c5d7c292">  161</a></span>&#160;            <span class="keyword">virtual</span> std::shared_ptr&lt;const ZipAbc&gt; <a class="code" href="class_sgt_1_1_simple_zip_inverter.html#aaa037622231f4924ee525fd0c5d7c292">zip</a>()<span class="keyword"> const override</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno"><a class="line" href="class_sgt_1_1_simple_zip_inverter.html#a75a05af11819941093cfce38e22267e8">  161</a></span>&#160;            <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="class_sgt_1_1_zip_abc.html">ZipAbc</a>&amp; <a class="code" href="class_sgt_1_1_simple_zip_inverter.html#a75a05af11819941093cfce38e22267e8">zip</a>()<span class="keyword"> const override</span></div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="keyword">            </span>{</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                <span class="keywordflow">return</span> shared&lt;const ZipAbc&gt;();</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            }</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
-<div class="line"><a name="l00166"></a><span class="lineno"><a class="line" href="class_sgt_1_1_simple_zip_inverter.html#a5aa408f0eb91a2d1effc906e647383ec">  166</a></span>&#160;            <span class="keyword">virtual</span> std::shared_ptr&lt;ZipAbc&gt; <a class="code" href="class_sgt_1_1_simple_zip_inverter.html#a5aa408f0eb91a2d1effc906e647383ec">zip</a>()<span class="keyword"> override</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno"><a class="line" href="class_sgt_1_1_simple_zip_inverter.html#a60752c43d6a465f3c3fcabed9a2438b0">  166</a></span>&#160;            <span class="keyword">virtual</span> <a class="code" href="class_sgt_1_1_zip_abc.html">ZipAbc</a>&amp; <a class="code" href="class_sgt_1_1_simple_zip_inverter.html#a60752c43d6a465f3c3fcabed9a2438b0">zip</a>()<span class="keyword"> override</span></div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="keyword">            </span>{</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                <span class="keywordflow">return</span> shared&lt;ZipAbc&gt;();</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            }</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="comment">            /// @}</span></div>
@@ -305,23 +305,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="preprocessor">#endif // INVERTER_DOT_H</span></div>
 <div class="ttc" id="namespace_sgt_html"><div class="ttname"><a href="namespace_sgt.html">Sgt</a></div><div class="ttdoc">The primary namespace for SmartGridToolbox. </div></div>
-<div class="ttc" id="class_sgt_1_1_sim_zip_abc_html"><div class="ttname"><a href="class_sgt_1_1_sim_zip_abc.html">Sgt::SimZipAbc</a></div><div class="ttdoc">Abstract base class for SimZip. </div><div class="ttdef"><b>Definition:</b> SimZip.h:30</div></div>
+<div class="ttc" id="class_sgt_1_1_dc_power_source_abc_html"><div class="ttname"><a href="class_sgt_1_1_dc_power_source_abc.html">Sgt::DcPowerSourceAbc</a></div><div class="ttdoc">DC power source. </div><div class="ttdef"><b>Definition:</b> DcPowerSource.h:27</div></div>
+<div class="ttc" id="class_sgt_1_1_sim_zip_abc_html"><div class="ttname"><a href="class_sgt_1_1_sim_zip_abc.html">Sgt::SimZipAbc</a></div><div class="ttdoc">Abstract base class for SimZip. </div><div class="ttdef"><b>Definition:</b> SimZip.h:28</div></div>
 <div class="ttc" id="class_sgt_1_1_inverter_abc_html_a6515afdd00f01db7b2284a1d8ee37eb6"><div class="ttname"><a href="class_sgt_1_1_inverter_abc.html#a6515afdd00f01db7b2284a1d8ee37eb6">Sgt::InverterAbc::PDc</a></div><div class="ttdeci">virtual double PDc() const </div><div class="ttdoc">Total DC power from all sources. </div><div class="ttdef"><b>Definition:</b> Inverter.h:46</div></div>
 <div class="ttc" id="class_sgt_1_1_simple_zip_inverter_html"><div class="ttname"><a href="class_sgt_1_1_simple_zip_inverter.html">Sgt::SimpleZipInverter</a></div><div class="ttdoc">DC power to n-phase AC converter. </div><div class="ttdef"><b>Definition:</b> Inverter.h:109</div></div>
+<div class="ttc" id="class_sgt_1_1_simple_zip_inverter_html_a75a05af11819941093cfce38e22267e8"><div class="ttname"><a href="class_sgt_1_1_simple_zip_inverter.html#a75a05af11819941093cfce38e22267e8">Sgt::SimpleZipInverter::zip</a></div><div class="ttdeci">virtual const ZipAbc &amp; zip() const  override</div><div class="ttdoc">Return the zip that I wrap (const). </div><div class="ttdef"><b>Definition:</b> Inverter.h:161</div></div>
 <div class="ttc" id="class_sgt_1_1_inverter_abc_html"><div class="ttname"><a href="class_sgt_1_1_inverter_abc.html">Sgt::InverterAbc</a></div><div class="ttdoc">DC power to n-phase AC converter. </div><div class="ttdef"><b>Definition:</b> Inverter.h:27</div></div>
 <div class="ttc" id="class_sgt_1_1_sim_component_html"><div class="ttname"><a href="class_sgt_1_1_sim_component.html">Sgt::SimComponent</a></div><div class="ttdoc">A base class for components of a Simulation. </div><div class="ttdef"><b>Definition:</b> SimComponent.h:26</div></div>
-<div class="ttc" id="class_sgt_1_1_simple_zip_inverter_html_aaa037622231f4924ee525fd0c5d7c292"><div class="ttname"><a href="class_sgt_1_1_simple_zip_inverter.html#aaa037622231f4924ee525fd0c5d7c292">Sgt::SimpleZipInverter::zip</a></div><div class="ttdeci">virtual std::shared_ptr&lt; const ZipAbc &gt; zip() const  override</div><div class="ttdoc">Return the zip that I wrap (const). </div><div class="ttdef"><b>Definition:</b> Inverter.h:161</div></div>
 <div class="ttc" id="class_sgt_1_1_simple_inverter_abc_html"><div class="ttname"><a href="class_sgt_1_1_simple_inverter_abc.html">Sgt::SimpleInverterAbc</a></div><div class="ttdoc">An inverter with a simple constant efficiency. </div><div class="ttdef"><b>Definition:</b> Inverter.h:64</div></div>
 <div class="ttc" id="class_sgt_1_1_zip_abc_html"><div class="ttname"><a href="class_sgt_1_1_zip_abc.html">Sgt::ZipAbc</a></div><div class="ttdoc">A Zip is an injection into a bus with constant impedance / current / complex power components...</div><div class="ttdef"><b>Definition:</b> Zip.h:30</div></div>
 <div class="ttc" id="classarma_1_1_col_html"><div class="ttname"><a href="classarma_1_1_col.html">arma::Col&lt; Complex &gt;</a></div></div>
 <div class="ttc" id="class_sgt_1_1_component_html_a4c92ed17f833ebcf15268dc22ff78593"><div class="ttname"><a href="class_sgt_1_1_component.html#a4c92ed17f833ebcf15268dc22ff78593">Sgt::Component::Component</a></div><div class="ttdeci">Component()</div><div class="ttdoc">Default constructor required by g++4.8 but not clang++. </div><div class="ttdef"><b>Definition:</b> Component.h:85</div></div>
-<div class="ttc" id="class_sgt_1_1_simple_zip_inverter_html_a5aa408f0eb91a2d1effc906e647383ec"><div class="ttname"><a href="class_sgt_1_1_simple_zip_inverter.html#a5aa408f0eb91a2d1effc906e647383ec">Sgt::SimpleZipInverter::zip</a></div><div class="ttdeci">virtual std::shared_ptr&lt; ZipAbc &gt; zip() override</div><div class="ttdoc">Return the zip that I wrap (non-const). </div><div class="ttdef"><b>Definition:</b> Inverter.h:166</div></div>
 <div class="ttc" id="class_sgt_1_1_phases_html"><div class="ttname"><a href="class_sgt_1_1_phases.html">Sgt::Phases</a></div><div class="ttdoc">A set of network phases, each specified by a Phase value. </div><div class="ttdef"><b>Definition:</b> PowerFlow.h:63</div></div>
+<div class="ttc" id="class_sgt_1_1_simple_zip_inverter_html_a60752c43d6a465f3c3fcabed9a2438b0"><div class="ttname"><a href="class_sgt_1_1_simple_zip_inverter.html#a60752c43d6a465f3c3fcabed9a2438b0">Sgt::SimpleZipInverter::zip</a></div><div class="ttdeci">virtual ZipAbc &amp; zip() override</div><div class="ttdoc">Return the zip that I wrap (non-const). </div><div class="ttdef"><b>Definition:</b> Inverter.h:166</div></div>
 <div class="ttc" id="class_sgt_1_1_inverter_abc_html_aaa4fd1b1ae0c456ed0d2a4317fd29616"><div class="ttname"><a href="class_sgt_1_1_inverter_abc.html#aaa4fd1b1ae0c456ed0d2a4317fd29616">Sgt::InverterAbc::availableP</a></div><div class="ttdeci">virtual double availableP() const </div><div class="ttdoc">Real power output. </div><div class="ttdef"><b>Definition:</b> Inverter.cc:26</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Nov 2 2015 14:28:23 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 9 2015 14:49:02 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

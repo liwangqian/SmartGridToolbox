@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SmartGridToolbox
-   &#160;<span id="projectnumber">v2.1.0</span>
+   &#160;<span id="projectnumber">v3.0.0</span>
    </div>
   </td>
  </tr>
@@ -130,6 +130,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>acquireTimeSeries()
 : <a class="el" href="class_sgt_1_1_simulation.html#a361651766ecfb48176c37f60e9001df7">Sgt::Simulation</a>
 </li>
+<li>addDependency()
+: <a class="el" href="class_sgt_1_1_sim_component.html#a077c2da024d7e059beb48c7bdd06aa3c">Sgt::SimComponent</a>
+</li>
 <li>admittanceChanged()
 : <a class="el" href="class_sgt_1_1_branch_abc.html#a067b91e3693e2ed59df10d7348284dce">Sgt::BranchAbc</a>
 </li>
@@ -144,12 +147,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <h3><a class="anchor" id="index_b"></a>- b -</h3><ul>
 <li>branch()
-: <a class="el" href="class_sgt_1_1_sim_branch.html#a18d8c68c22dbf4be288422fa712ad260">Sgt::SimBranch</a>
-, <a class="el" href="class_sgt_1_1_sim_branch_abc.html#af071262f15337ab3dfcc168954a14a51">Sgt::SimBranchAbc</a>
+: <a class="el" href="class_sgt_1_1_sim_branch.html#a1b945537e70a39d556de371ce1b6b3b2">Sgt::SimBranch</a>
+, <a class="el" href="class_sgt_1_1_sim_branch_abc.html#a399bf60fd26b4fd20cc66f222f3b9b59">Sgt::SimBranchAbc</a>
 </li>
 <li>bus()
-: <a class="el" href="class_sgt_1_1_sim_bus.html#a0bb731d7d94173ac9af4611ef9762b19">Sgt::SimBus</a>
-, <a class="el" href="class_sgt_1_1_sim_bus_abc.html#a85f3fe2373cd4cc6baed93ee8d80ae1c">Sgt::SimBusAbc</a>
+: <a class="el" href="class_sgt_1_1_sim_bus.html#ae220dd8574357077e5dff0e0fc6e0adf">Sgt::SimBus</a>
+, <a class="el" href="class_sgt_1_1_sim_bus_abc.html#a313af1bffa22df28541b15f89e20e1ab">Sgt::SimBusAbc</a>
 </li>
 </ul>
 
@@ -179,9 +182,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <h3><a class="anchor" id="index_d"></a>- d -</h3><ul>
 <li>dcPowerChanged()
 : <a class="el" href="class_sgt_1_1_dc_power_source_abc.html#acb7382679e8d07e6f213afa0d6d1a1ce">Sgt::DcPowerSourceAbc</a>
-</li>
-<li>dependsOn()
-: <a class="el" href="class_sgt_1_1_sim_component.html#a8a793d5b0a65f1bb4b21f8d26b090343">Sgt::SimComponent</a>
 </li>
 <li>dfs()
 : <a class="el" href="class_sgt_1_1_wo_node.html#a17343c32fa0d0603b58cf0e4f7047d1b">Sgt::WoNode</a>
@@ -232,8 +232,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
 <li>gen()
-: <a class="el" href="class_sgt_1_1_sim_gen.html#ac270e63c748be449c0f0456765d1a745">Sgt::SimGen</a>
-, <a class="el" href="class_sgt_1_1_sim_gen_abc.html#a9ba4d7dc31cf5cb2aec00eb921ee816a">Sgt::SimGenAbc</a>
+: <a class="el" href="class_sgt_1_1_sim_gen.html#af0cf5df3e705644d96fd87cba5b10140">Sgt::SimGen</a>
+, <a class="el" href="class_sgt_1_1_sim_gen_abc.html#acc2089b184a97d4b80bf176843d9a6d3">Sgt::SimGenAbc</a>
 </li>
 <li>generationChanged()
 : <a class="el" href="class_sgt_1_1_gen_abc.html#a246ce730bc0a39dc1cd66081d6bcd534">Sgt::GenAbc</a>
@@ -444,7 +444,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="struct_sgt_1_1_pf_bus.html#a8ea102d3488cab61d5a5167437b69fa2">Sgt::PfBus</a>
 </li>
 <li>set_dQgSeries()
-: <a class="el" href="class_sgt_1_1_simple_building.html#a9c2c7704e3733c9db343eb582d512e40">Sgt::SimpleBuilding</a>
+: <a class="el" href="class_sgt_1_1_simple_building.html#a307d51993dfab10ec5005eeba9870ca0">Sgt::SimpleBuilding</a>
 </li>
 <li>setEndTime()
 : <a class="el" href="class_sgt_1_1_simulation.html#a58c7422a4cbfd90156849bd2f28e141d">Sgt::Simulation</a>
@@ -491,8 +491,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="class_sgt_1_1_solar_pv.html#abb8ffba12dc12a51324a6b3433e387c4">Sgt::SolarPv</a>
 </li>
 <li>setWeather()
-: <a class="el" href="class_sgt_1_1_simple_building.html#ab622d627ea6bcf10216786f6a4c497c3">Sgt::SimpleBuilding</a>
-, <a class="el" href="class_sgt_1_1_solar_pv.html#a5b9a68e28f8c37ca0aa3ff61b274f70c">Sgt::SolarPv</a>
+: <a class="el" href="class_sgt_1_1_simple_building.html#ab2dc34ff415ec82a826d5deaf9486d7f">Sgt::SimpleBuilding</a>
+, <a class="el" href="class_sgt_1_1_solar_pv.html#a2b4edd5bde9ca61cea491b407b1095bb">Sgt::SolarPv</a>
 </li>
 <li>SGen()
 : <a class="el" href="class_sgt_1_1_bus.html#a2be59a08b93bd36f96cea8d14e9eec7f">Sgt::Bus</a>
@@ -504,10 +504,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="class_sgt_1_1_bus.html#ace1ec94c3c968a8ab2369e4c1eb6e9b7">Sgt::Bus</a>
 </li>
 <li>simComponent()
-: <a class="el" href="class_sgt_1_1_simulation.html#aef3df845ae2e59af7b4c2f64a618154d">Sgt::Simulation</a>
+: <a class="el" href="class_sgt_1_1_simulation.html#a056a92634571e045b647c30e7a77c5bd">Sgt::Simulation</a>
 </li>
 <li>simComponents()
-: <a class="el" href="class_sgt_1_1_simulation.html#a37289ace30aebd0ffc37caf1ebc6b185">Sgt::Simulation</a>
+: <a class="el" href="class_sgt_1_1_simulation.html#a7f7f50d0de51a70249e4e8ca9d74b09f">Sgt::Simulation</a>
 </li>
 <li>Simulation()
 : <a class="el" href="class_sgt_1_1_simulation.html#a4e05bd25b86db74d83a081d6b170625e">Sgt::Simulation</a>
@@ -550,7 +550,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="class_sgt_1_1_simple_building.html#adca3900f3e08b735505e3bda77e03657">Sgt::SimpleBuilding</a>
 </li>
 <li>timeSeries()
-: <a class="el" href="class_sgt_1_1_simulation.html#a28ec0d2203ac52ee422617317bb14d44">Sgt::Simulation</a>
+: <a class="el" href="class_sgt_1_1_simulation.html#a18e9231efd2cba1955e525cb9dada55d">Sgt::Simulation</a>
 </li>
 <li>timestepDidComplete()
 : <a class="el" href="class_sgt_1_1_simulation.html#ad190f8f9eb37d07c8a101f49e12d5951">Sgt::Simulation</a>
@@ -650,11 +650,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="struct_sgt_1_1_spherical_angles.html#af6659d1fdc1a548f2d7d7b488fea1d98">Sgt::SphericalAngles</a>
 </li>
 <li>zip()
-: <a class="el" href="class_sgt_1_1_simple_building.html#a2a2f94b7f1d1f06f83fd20d8b5b8165c">Sgt::SimpleBuilding</a>
-, <a class="el" href="class_sgt_1_1_simple_zip_inverter.html#aaa037622231f4924ee525fd0c5d7c292">Sgt::SimpleZipInverter</a>
-, <a class="el" href="class_sgt_1_1_sim_zip.html#a4a2f84ebe757ece6ac2dea28bf118f7f">Sgt::SimZip</a>
-, <a class="el" href="class_sgt_1_1_sim_zip_abc.html#a43558c57f7755501d2989e502f8becdc">Sgt::SimZipAbc</a>
-, <a class="el" href="class_sgt_1_1_time_series_zip.html#a2419e1b07e5b33ce983e86360bf78277">Sgt::TimeSeriesZip</a>
+: <a class="el" href="class_sgt_1_1_simple_building.html#aae9654b0155453f7a2929af926b68a85">Sgt::SimpleBuilding</a>
+, <a class="el" href="class_sgt_1_1_simple_zip_inverter.html#a75a05af11819941093cfce38e22267e8">Sgt::SimpleZipInverter</a>
+, <a class="el" href="class_sgt_1_1_sim_zip.html#a14086c05d8676ab313c49cf386173bf7">Sgt::SimZip</a>
+, <a class="el" href="class_sgt_1_1_sim_zip_abc.html#a2cc9a88fd08302c141d3dbafb758dca4">Sgt::SimZipAbc</a>
+, <a class="el" href="class_sgt_1_1_time_series_zip.html#a6e9978bc35027c85fea177932dd68318">Sgt::TimeSeriesZip</a>
 </li>
 <li>ZPhase()
 : <a class="el" href="class_sgt_1_1_overhead_line.html#a81a6bb2e9afa8e225f7a44c8605ba5cb">Sgt::OverheadLine</a>
@@ -674,7 +674,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Nov 2 2015 14:28:25 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 9 2015 14:49:04 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

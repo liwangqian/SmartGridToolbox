@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SmartGridToolbox
-   &#160;<span id="projectnumber">v2.1.0</span>
+   &#160;<span id="projectnumber">v3.0.0</span>
    </div>
   </td>
  </tr>
@@ -118,7 +118,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
 <div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="struct_sgt_1_1_weather_model.html">   27</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_sgt_1_1_weather_model.html">WeatherModel</a></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="struct_sgt_1_1_lat_long.html">LatLong</a> latLong{greenwich};</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="struct_sgt_1_1_lat_long.html">LatLong</a> latLong{greenwich.lat_, greenwich.long_};</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordtype">double</span> altitude{0.0};</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        std::function&lt;double (const Time&amp;)&gt; temperature{[](<span class="keyword">const</span> Time&amp;){<span class="keywordflow">return</span> 20.0;}}; <span class="comment">// Centigrade.</span></div>
@@ -126,11 +126,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        std::function&lt;Irradiance (const Time&amp;)&gt; irradiance{[](<span class="keyword">const</span> Time&amp;)-&gt;<a class="code" href="struct_sgt_1_1_irradiance.html">Irradiance</a>{</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keywordflow">return</span> {{{0.0, 0.0, 0.0}}, 0.0, 0.0};}};</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        std::function&lt;Array&lt;double, 3&gt; (<span class="keyword">const</span> Time&amp;)&gt; windVector{[](<span class="keyword">const</span> Time&amp;)-&gt;Array&lt;double, 3&gt;{</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <span class="keywordflow">return</span> {{0.0, 0.0, 0.0}};}};</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        std::function&lt;arma::Col&lt;double&gt;::fixed&lt;3&gt; (<span class="keyword">const</span> Time&amp;)&gt; windVector{</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            [](<span class="keyword">const</span> Time&amp;)-&gt;<a class="code" href="classarma_1_1_col.html">arma::Col&lt;double&gt;::fixed&lt;3&gt;</a>{<span class="keywordflow">return</span> {{0.0, 0.0, 0.0}};}};</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        std::function&lt;Array&lt;double, 3&gt; (<span class="keyword">const</span> Time&amp;, <span class="keyword">const</span> <a class="code" href="struct_sgt_1_1_spherical_angles.html">SphericalAngles</a>&amp;)&gt; cloudAttenuationFactors{</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            [](<span class="keyword">const</span> Time&amp;, <span class="keyword">const</span> <a class="code" href="struct_sgt_1_1_spherical_angles.html">SphericalAngles</a>&amp; angs)-&gt;Array&lt;double, 3&gt;{<span class="keywordflow">return</span> {{1.0, 1.0, 1.0}};}}; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        std::function&lt;arma::Col&lt;double&gt;::fixed&lt;3&gt; (<span class="keyword">const</span> Time&amp;, <span class="keyword">const</span> <a class="code" href="struct_sgt_1_1_spherical_angles.html">SphericalAngles</a>&amp;)&gt; cloudAttenuationFactors{</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            [](<span class="keyword">const</span> Time&amp;, <span class="keyword">const</span> <a class="code" href="struct_sgt_1_1_spherical_angles.html">SphericalAngles</a>&amp; angs)-&gt;<a class="code" href="classarma_1_1_col.html">arma::Col&lt;double&gt;::fixed&lt;3&gt;</a>{<span class="keywordflow">return</span> {{1.0, 1.0, 1.0}};}}; </div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="comment">// No attenuation for any component by default.</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="comment">// Utility functions:</span></div>
@@ -138,11 +138,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        {</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            temperature = [f](<span class="keyword">const</span> Time&amp; t){<span class="keywordflow">return</span> f(t);};</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordtype">void</span> setTemperature(std::shared_ptr&lt;<a class="code" href="class_sgt_1_1_time_series.html">TimeSeries&lt;Time, double&gt;</a>&gt; series)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordtype">void</span> setTemperatureSeries(<span class="keyword">const</span> <a class="code" href="class_sgt_1_1_time_series.html">TimeSeries&lt;Time, double&gt;</a>&amp; series)</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            temperature = [series](<span class="keyword">const</span> Time&amp; t){<span class="keywordflow">return</span> series-&gt;value(t);};</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            temperature = [&amp;series](<span class="keyword">const</span> Time&amp; t){<span class="keywordflow">return</span> series.value(t);};</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        }</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">void</span> setTemperature(<span class="keywordtype">double</span> val)</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">void</span> setTemperatureConst(<span class="keywordtype">double</span> val)</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        {</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            temperature = [val](<span class="keyword">const</span> Time&amp; t){<span class="keywordflow">return</span> val;};</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        }</div>
@@ -151,12 +151,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        {</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            irradiance = [f](<span class="keyword">const</span> Time&amp; t){<span class="keywordflow">return</span> f(t);};</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        }</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordtype">void</span> setIrradiance(std::shared_ptr&lt;<a class="code" href="class_sgt_1_1_time_series.html">TimeSeries</a>&lt;Time, <a class="code" href="classarma_1_1_col.html">arma::Col&lt;double&gt;</a>&gt;&gt; series)</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordtype">void</span> setIrradianceSeries(<span class="keyword">const</span> <a class="code" href="class_sgt_1_1_time_series.html">TimeSeries</a>&lt;Time, <a class="code" href="classarma_1_1_col.html">arma::Col&lt;double&gt;</a>&gt;&amp; series)</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            irradiance = [series](<span class="keyword">const</span> Time&amp; t)-&gt;<a class="code" href="struct_sgt_1_1_irradiance.html">Irradiance</a>{</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                <span class="keyword">auto</span> val = series-&gt;value(t); <span class="keywordflow">return</span> {{{val(0), val(1), val(2)}}, val(3), val(4)};};</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            irradiance = [&amp;series](<span class="keyword">const</span> Time&amp; t)-&gt;<a class="code" href="struct_sgt_1_1_irradiance.html">Irradiance</a>{</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                <span class="keyword">auto</span> val = series.value(t); <span class="keywordflow">return</span> {{{val(0), val(1), val(2)}}, val(3), val(4)};};</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordtype">void</span> setIrradiance(<span class="keyword">const</span> <a class="code" href="struct_sgt_1_1_irradiance.html">Irradiance</a>&amp; val)</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordtype">void</span> setIrradianceConst(<span class="keyword">const</span> <a class="code" href="struct_sgt_1_1_irradiance.html">Irradiance</a>&amp; val)</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        {</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            irradiance = [val](<span class="keyword">const</span> Time&amp; t){<span class="keywordflow">return</span> val;};</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div>
@@ -169,12 +169,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        {</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            windVector = [f](<span class="keyword">const</span> Time&amp; t){<span class="keywordflow">return</span> f(t);};</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        }</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordtype">void</span> setWindVector(std::shared_ptr&lt;<a class="code" href="class_sgt_1_1_time_series.html">TimeSeries</a>&lt;Time, <a class="code" href="classarma_1_1_col.html">arma::Col&lt;double&gt;</a>&gt;&gt; series)</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordtype">void</span> setWindVectorSeries(<span class="keyword">const</span> <a class="code" href="class_sgt_1_1_time_series.html">TimeSeries</a>&lt;Time, <a class="code" href="classarma_1_1_col.html">arma::Col&lt;double&gt;</a>&gt;&amp; series)</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        {</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            windVector = [series](<span class="keyword">const</span> Time&amp; t)-&gt;Array&lt;double, 3&gt;{</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                <span class="keyword">auto</span> val = series-&gt;value(t); <span class="keywordflow">return</span> {{val(0), val(1), val(2)}};};</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            windVector = [&amp;series](<span class="keyword">const</span> Time&amp; t)-&gt;<a class="code" href="classarma_1_1_col.html">arma::Col&lt;double&gt;::fixed&lt;3&gt;</a>{</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                <span class="keyword">auto</span> val = series.value(t); <span class="keywordflow">return</span> {{val(0), val(1), val(2)}};};</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        }</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordtype">void</span> setWindVector(<span class="keyword">const</span> Array&lt;double, 3&gt;&amp; val)</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordtype">void</span> setWindVectorConst(<span class="keyword">const</span> <a class="code" href="classarma_1_1_col.html">arma::Col&lt;double&gt;::fixed&lt;3&gt;</a>&amp; val)</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        {</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            windVector = [val](<span class="keyword">const</span> Time&amp; t){<span class="keywordflow">return</span> val;};</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        }</div>
@@ -183,12 +183,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        {</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            cloudAttenuationFactors = [f](<span class="keyword">const</span> Time&amp; t, <span class="keyword">const</span> <a class="code" href="struct_sgt_1_1_spherical_angles.html">SphericalAngles</a>&amp;){<span class="keywordflow">return</span> f(t);};</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        }</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordtype">void</span> setCloudAttenuationFactors(std::shared_ptr&lt;<a class="code" href="class_sgt_1_1_time_series.html">TimeSeries</a>&lt;Time, <a class="code" href="classarma_1_1_col.html">arma::Col&lt;double&gt;</a>&gt;&gt; series)</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordtype">void</span> setCloudAttenuationFactorsSeries(<span class="keyword">const</span> <a class="code" href="class_sgt_1_1_time_series.html">TimeSeries</a>&lt;Time, <a class="code" href="classarma_1_1_col.html">arma::Col&lt;double&gt;</a>&gt;&amp; series)</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        {</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            cloudAttenuationFactors = [series](<span class="keyword">const</span> Time&amp; t, <span class="keyword">const</span> <a class="code" href="struct_sgt_1_1_spherical_angles.html">SphericalAngles</a>&amp;)-&gt;Array&lt;double, 3&gt;{</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                <span class="keyword">auto</span> val = series-&gt;value(t); <span class="keywordflow">return</span> {{val(0), val(1), val(2)}};};</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            cloudAttenuationFactors = [&amp;series](<span class="keyword">const</span> Time&amp; t, <span class="keyword">const</span> <a class="code" href="struct_sgt_1_1_spherical_angles.html">SphericalAngles</a>&amp;)-&gt;<a class="code" href="classarma_1_1_col.html">arma::Col&lt;double&gt;::fixed&lt;3&gt;</a>{</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                <span class="keyword">auto</span> val = series.value(t); <span class="keywordflow">return</span> {{val(0), val(1), val(2)}};};</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        }</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordtype">void</span> setCloudAttenuationFactors(<span class="keyword">const</span> Array&lt;double, 3&gt;&amp; val)</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordtype">void</span> setCloudAttenuationFactorsConst(<span class="keyword">const</span> <a class="code" href="classarma_1_1_col.html">arma::Col&lt;double&gt;::fixed&lt;3&gt;</a>&amp; val)</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        {</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            cloudAttenuationFactors = [val](<span class="keyword">const</span> Time&amp; t, <span class="keyword">const</span> <a class="code" href="struct_sgt_1_1_spherical_angles.html">SphericalAngles</a>&amp;){<span class="keywordflow">return</span> val;};</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        }</div>
@@ -250,12 +250,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                <span class="keywordflow">return</span> model.irradiance(<a class="code" href="class_sgt_1_1_sim_component.html#a86c99350177ab50913b998987854cb4e">lastUpdated</a>());</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            }</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            </div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            Array&lt;double, 3&gt; windVector()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            <a class="code" href="classarma_1_1_col.html">arma::Col&lt;double&gt;::fixed</a>&lt;3&gt; windVector()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="keyword">            </span>{</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                <span class="keywordflow">return</span> model.windVector(<a class="code" href="class_sgt_1_1_sim_component.html#a86c99350177ab50913b998987854cb4e">lastUpdated</a>());</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            }</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            </div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            Array&lt;double, 3&gt; cloudAttenuationFactors()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            <a class="code" href="classarma_1_1_col.html">arma::Col&lt;double&gt;::fixed</a>&lt;3&gt; cloudAttenuationFactors()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="keyword">            </span>{</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                <span class="keywordflow">return</span> model.cloudAttenuationFactors(<a class="code" href="class_sgt_1_1_sim_component.html#a86c99350177ab50913b998987854cb4e">lastUpdated</a>(), <a class="code" href="namespace_sgt.html#a2f4725c73c632e8c6a8a52400c0a7996">sunPos</a>(utcTime(<a class="code" href="class_sgt_1_1_sim_component.html#a86c99350177ab50913b998987854cb4e">lastUpdated</a>()), model.latLong));</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            }</div>
@@ -269,10 +269,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="class_sgt_1_1_weather_html"><div class="ttname"><a href="class_sgt_1_1_weather.html">Sgt::Weather</a></div><div class="ttdef"><b>Definition:</b> Weather.h:109</div></div>
 <div class="ttc" id="class_sgt_1_1_heartbeat_html"><div class="ttname"><a href="class_sgt_1_1_heartbeat.html">Sgt::Heartbeat</a></div><div class="ttdoc">Utility base class for a component that updates with a regular "tick" dt. </div><div class="ttdef"><b>Definition:</b> Heartbeat.h:23</div></div>
 <div class="ttc" id="struct_sgt_1_1_irradiance_html"><div class="ttname"><a href="struct_sgt_1_1_irradiance.html">Sgt::Irradiance</a></div><div class="ttdef"><b>Definition:</b> SolarGeom.h:53</div></div>
-<div class="ttc" id="classarma_1_1_col_html"><div class="ttname"><a href="classarma_1_1_col.html">arma::Col&lt; double &gt;</a></div></div>
+<div class="ttc" id="classarma_1_1_col_html"><div class="ttname"><a href="classarma_1_1_col.html">arma::Col</a></div><div class="ttdef"><b>Definition:</b> KluSolver.h:21</div></div>
 <div class="ttc" id="class_sgt_1_1_component_html_a4c92ed17f833ebcf15268dc22ff78593"><div class="ttname"><a href="class_sgt_1_1_component.html#a4c92ed17f833ebcf15268dc22ff78593">Sgt::Component::Component</a></div><div class="ttdeci">Component()</div><div class="ttdoc">Default constructor required by g++4.8 but not clang++. </div><div class="ttdef"><b>Definition:</b> Component.h:85</div></div>
 <div class="ttc" id="namespace_sgt_html_a2f4725c73c632e8c6a8a52400c0a7996"><div class="ttname"><a href="namespace_sgt.html#a2f4725c73c632e8c6a8a52400c0a7996">Sgt::sunPos</a></div><div class="ttdeci">SphericalAngles sunPos(const posix_time::ptime &amp;utcTime, const LatLong &amp;location)</div><div class="ttdoc">Spherical angles of the sun at a given time and location. </div><div class="ttdef"><b>Definition:</b> Sun.cc:31</div></div>
-<div class="ttc" id="class_sgt_1_1_time_series_html"><div class="ttname"><a href="class_sgt_1_1_time_series.html">Sgt::TimeSeries</a></div><div class="ttdoc">Base class for time series objects: functions of time. </div><div class="ttdef"><b>Definition:</b> TimeSeries.h:35</div></div>
+<div class="ttc" id="class_sgt_1_1_time_series_html"><div class="ttname"><a href="class_sgt_1_1_time_series.html">Sgt::TimeSeries&lt; Time, double &gt;</a></div></div>
 <div class="ttc" id="struct_sgt_1_1_lat_long_html"><div class="ttname"><a href="struct_sgt_1_1_lat_long.html">Sgt::LatLong</a></div><div class="ttdoc">Simple struct storing a latitude and longitude. </div><div class="ttdef"><b>Definition:</b> Common.h:365</div></div>
 <div class="ttc" id="class_sgt_1_1_sim_component_html_a86c99350177ab50913b998987854cb4e"><div class="ttname"><a href="class_sgt_1_1_sim_component.html#a86c99350177ab50913b998987854cb4e">Sgt::SimComponent::lastUpdated</a></div><div class="ttdeci">Time lastUpdated() const </div><div class="ttdoc">Get the current step for the object. </div><div class="ttdef"><b>Definition:</b> SimComponent.h:113</div></div>
 <div class="ttc" id="struct_sgt_1_1_spherical_angles_html"><div class="ttname"><a href="struct_sgt_1_1_spherical_angles.html">Sgt::SphericalAngles</a></div><div class="ttdef"><b>Definition:</b> SolarGeom.h:22</div></div>
@@ -280,7 +280,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Nov 2 2015 14:28:23 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 9 2015 14:49:02 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

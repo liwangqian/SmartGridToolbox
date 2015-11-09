@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['randdiscrete',['randDiscrete',['../group___utilities.html#gaa5962c244adcacc0570ba33189207fee',1,'Sgt']]],
+  ['randdiscrete',['randDiscrete',['../group___utilities.html#ga69e152ed4bbba20b4ccc086a1df2629e',1,'Sgt']]],
   ['randnormal',['randNormal',['../group___utilities.html#ga8994ff617877a65cb01cd3b8a1a22f0d',1,'Sgt']]],
   ['randuniform',['randUniform',['../group___utilities.html#ga1ae47f9b9323006e23fd3fe48f587f35',1,'Sgt']]],
   ['randuniformint',['randUniformInt',['../group___utilities.html#ga747c72267689060bcdc8120da6f90646',1,'Sgt']]],

@@ -5,7 +5,7 @@ var searchData=
   ['tbinit',['TbInit',['../class_sgt_1_1_simple_building.html#ae8b594ce92a152e3755ff8e21b958b82',1,'Sgt::SimpleBuilding']]],
   ['tcell',['TCell',['../class_sgt_1_1_solar_pv.html#abe6334729bc749fd12d161542f281b0d',1,'Sgt::SolarPv::TCell(const Time &amp;t) const '],['../class_sgt_1_1_solar_pv.html#ad073ba5ae23329ee514af9778f3a8c83',1,'Sgt::SolarPv::TCell() const ']]],
   ['te',['Te',['../class_sgt_1_1_simple_building.html#adca3900f3e08b735505e3bda77e03657',1,'Sgt::SimpleBuilding']]],
-  ['timeseries',['timeSeries',['../class_sgt_1_1_simulation.html#a28ec0d2203ac52ee422617317bb14d44',1,'Sgt::Simulation::timeSeries(const std::string &amp;id, bool crashOnFail=true) const '],['../class_sgt_1_1_simulation.html#a682f0d6c06958c7daf1f2153b6b20048',1,'Sgt::Simulation::timeSeries(const std::string &amp;id, bool crashOnFail=true)']]],
+  ['timeseries',['timeSeries',['../class_sgt_1_1_simulation.html#a18e9231efd2cba1955e525cb9dada55d',1,'Sgt::Simulation::timeSeries(const std::string &amp;id, bool crashOnFail=true) const '],['../class_sgt_1_1_simulation.html#a30bf98fcda8751ae6128a40fb3e36201',1,'Sgt::Simulation::timeSeries(const std::string &amp;id, bool crashOnFail=true)']]],
   ['timestepdidcomplete',['timestepDidComplete',['../class_sgt_1_1_simulation.html#ad190f8f9eb37d07c8a101f49e12d5951',1,'Sgt::Simulation']]],
   ['timestepwillstart',['timestepWillStart',['../class_sgt_1_1_simulation.html#a05ca47be0230ee065792737c56bb2520',1,'Sgt::Simulation']]],
   ['timezone',['timezone',['../class_sgt_1_1_simulation.html#a28f06270cbc10befeb04b6ed908afea2',1,'Sgt::Simulation']]],

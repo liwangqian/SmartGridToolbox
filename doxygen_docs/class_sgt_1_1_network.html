@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SmartGridToolbox
-   &#160;<span id="projectnumber">v2.1.0</span>
+   &#160;<span id="projectnumber">v3.0.0</span>
    </div>
   </td>
  </tr>
@@ -130,63 +130,63 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>freq</b> () const <
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setFreq</b> (double freq)</td></tr>
 <tr class="separator:ad458d1a5d169ff24985177dd5036cd52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Network Components:</div></td></tr>
-<tr class="memitem:a5da88f2b48faa0829bf64dedfce539f8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5da88f2b48faa0829bf64dedfce539f8"></a>
-const BusVec &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>busses</b> () const </td></tr>
-<tr class="separator:a5da88f2b48faa0829bf64dedfce539f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a8e8d3db93f3cbdc68ebab34f8a03a6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7a8e8d3db93f3cbdc68ebab34f8a03a6"></a>
-ConstBusPtr&#160;</td><td class="memItemRight" valign="bottom"><b>bus</b> (const std::string &amp;id) const </td></tr>
-<tr class="separator:a7a8e8d3db93f3cbdc68ebab34f8a03a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b1e703d9403a5ef5c9111334ce9b9d7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9b1e703d9403a5ef5c9111334ce9b9d7"></a>
-BusPtr&#160;</td><td class="memItemRight" valign="bottom"><b>bus</b> (const std::string &amp;id)</td></tr>
-<tr class="separator:a9b1e703d9403a5ef5c9111334ce9b9d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:affa1739bb83b7ea60efb4df4c3b97060"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="affa1739bb83b7ea60efb4df4c3b97060"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addBus</b> (BusPtr bus)</td></tr>
-<tr class="separator:affa1739bb83b7ea60efb4df4c3b97060"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62629d9ddf9711ed5f267c7ba3f21f3b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a62629d9ddf9711ed5f267c7ba3f21f3b"></a>
-ConstBusPtr&#160;</td><td class="memItemRight" valign="bottom"><b>referenceBus</b> () const </td></tr>
-<tr class="separator:a62629d9ddf9711ed5f267c7ba3f21f3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a3a7d21eff2e7936c541a23b8b274b8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a3a7d21eff2e7936c541a23b8b274b8"></a>
-BusPtr&#160;</td><td class="memItemRight" valign="bottom"><b>referenceBus</b> ()</td></tr>
-<tr class="separator:a3a3a7d21eff2e7936c541a23b8b274b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a245c568fd8b9b840037310a07f1f5ceb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a245c568fd8b9b840037310a07f1f5ceb"></a>
+const std::vector&lt; <a class="el" href="class_sgt_1_1_bus.html">Bus</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>busses</b> () const </td></tr>
+<tr class="separator:a245c568fd8b9b840037310a07f1f5ceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9bc14e1533d689d56f1d75693248578"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af9bc14e1533d689d56f1d75693248578"></a>
+const <a class="el" href="class_sgt_1_1_bus.html">Bus</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>bus</b> (const std::string &amp;id) const </td></tr>
+<tr class="separator:af9bc14e1533d689d56f1d75693248578"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07ad79302cd9d5bf9fd29004c2042c96"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a07ad79302cd9d5bf9fd29004c2042c96"></a>
+<a class="el" href="class_sgt_1_1_bus.html">Bus</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>bus</b> (const std::string &amp;id)</td></tr>
+<tr class="separator:a07ad79302cd9d5bf9fd29004c2042c96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0042d9573c4b2c1c3d8e70cc884e38af"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0042d9573c4b2c1c3d8e70cc884e38af"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addBus</b> (std::shared_ptr&lt; <a class="el" href="class_sgt_1_1_bus.html">Bus</a> &gt; bus)</td></tr>
+<tr class="separator:a0042d9573c4b2c1c3d8e70cc884e38af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab83089a20e2545603d44d98b51b57192"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab83089a20e2545603d44d98b51b57192"></a>
+const <a class="el" href="class_sgt_1_1_bus.html">Bus</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>referenceBus</b> () const </td></tr>
+<tr class="separator:ab83089a20e2545603d44d98b51b57192"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bdad79fb02c0adae85bc32c8406835f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4bdad79fb02c0adae85bc32c8406835f"></a>
+<a class="el" href="class_sgt_1_1_bus.html">Bus</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>referenceBus</b> ()</td></tr>
+<tr class="separator:a4bdad79fb02c0adae85bc32c8406835f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d778f2877fb8338b0e475c096128982"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d778f2877fb8338b0e475c096128982"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setReferenceBus</b> (const std::string &amp;id)</td></tr>
 <tr class="separator:a4d778f2877fb8338b0e475c096128982"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0139ad302340c445207d60b3ef4bb3a8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0139ad302340c445207d60b3ef4bb3a8"></a>
-const BranchVec &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>branches</b> () const </td></tr>
-<tr class="separator:a0139ad302340c445207d60b3ef4bb3a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a846d6ed4e83524cdf9c2317f5e3a474b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a846d6ed4e83524cdf9c2317f5e3a474b"></a>
-ConstBranchPtr&#160;</td><td class="memItemRight" valign="bottom"><b>branch</b> (const std::string &amp;id) const </td></tr>
-<tr class="separator:a846d6ed4e83524cdf9c2317f5e3a474b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a823c3f3346071dc67482e537f47408c7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a823c3f3346071dc67482e537f47408c7"></a>
-BranchPtr&#160;</td><td class="memItemRight" valign="bottom"><b>branch</b> (const std::string &amp;id)</td></tr>
-<tr class="separator:a823c3f3346071dc67482e537f47408c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aacf1831bb6853e0fe82cb0fd887099c7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aacf1831bb6853e0fe82cb0fd887099c7"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>addBranch</b> (BranchPtr branch, const std::string &amp;bus0Id, const std::string &amp;bus1Id)</td></tr>
-<tr class="separator:aacf1831bb6853e0fe82cb0fd887099c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff2407ca33a6c951c75c37bdd7e88d07"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff2407ca33a6c951c75c37bdd7e88d07"></a>
-const GenVec &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>gens</b> () const </td></tr>
-<tr class="separator:aff2407ca33a6c951c75c37bdd7e88d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeab0bc6d4cc33180dcfe5ed1bb5be076"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeab0bc6d4cc33180dcfe5ed1bb5be076"></a>
-ConstGenPtr&#160;</td><td class="memItemRight" valign="bottom"><b>gen</b> (const std::string &amp;id) const </td></tr>
-<tr class="separator:aeab0bc6d4cc33180dcfe5ed1bb5be076"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed53bdebae9629833caf54f63ee790f1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aed53bdebae9629833caf54f63ee790f1"></a>
-GenPtr&#160;</td><td class="memItemRight" valign="bottom"><b>gen</b> (const std::string &amp;id)</td></tr>
-<tr class="separator:aed53bdebae9629833caf54f63ee790f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb9a4c0da3917ad545b3d2d77783e16f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abb9a4c0da3917ad545b3d2d77783e16f"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>addGen</b> (GenPtr gen, const std::string &amp;busId)</td></tr>
-<tr class="separator:abb9a4c0da3917ad545b3d2d77783e16f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c007ec5eb4c84bed2e705d325dcb9c8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4c007ec5eb4c84bed2e705d325dcb9c8"></a>
-const ZipVec &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>zips</b> () const </td></tr>
-<tr class="separator:a4c007ec5eb4c84bed2e705d325dcb9c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa28b7c2e99466f813cf4e80778aacd86"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa28b7c2e99466f813cf4e80778aacd86"></a>
-ConstZipPtr&#160;</td><td class="memItemRight" valign="bottom"><b>zip</b> (const std::string &amp;id) const </td></tr>
-<tr class="separator:aa28b7c2e99466f813cf4e80778aacd86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4706a5b58abaae598581b3c30995f4cb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4706a5b58abaae598581b3c30995f4cb"></a>
-ZipPtr&#160;</td><td class="memItemRight" valign="bottom"><b>zip</b> (const std::string &amp;id)</td></tr>
-<tr class="separator:a4706a5b58abaae598581b3c30995f4cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ccfad48e281a25faf5af25c4a8f94ee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6ccfad48e281a25faf5af25c4a8f94ee"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>addZip</b> (ZipPtr zip, const std::string &amp;busId)</td></tr>
-<tr class="separator:a6ccfad48e281a25faf5af25c4a8f94ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54c4a80abe2fb8a2febeebde0e4d2e94"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a54c4a80abe2fb8a2febeebde0e4d2e94"></a>
+const std::vector&lt; <a class="el" href="class_sgt_1_1_branch_abc.html">BranchAbc</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>branches</b> () const </td></tr>
+<tr class="separator:a54c4a80abe2fb8a2febeebde0e4d2e94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a335109095b07ef85d8e621145c4e30be"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a335109095b07ef85d8e621145c4e30be"></a>
+const <a class="el" href="class_sgt_1_1_branch_abc.html">BranchAbc</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>branch</b> (const std::string &amp;id) const </td></tr>
+<tr class="separator:a335109095b07ef85d8e621145c4e30be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab794bf9d10f57e259b0a089d50917737"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab794bf9d10f57e259b0a089d50917737"></a>
+<a class="el" href="class_sgt_1_1_branch_abc.html">BranchAbc</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>branch</b> (const std::string &amp;id)</td></tr>
+<tr class="separator:ab794bf9d10f57e259b0a089d50917737"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7d9be059b29b0d14d72bb8dda8d3050"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af7d9be059b29b0d14d72bb8dda8d3050"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>addBranch</b> (std::shared_ptr&lt; <a class="el" href="class_sgt_1_1_branch_abc.html">BranchAbc</a> &gt; branch, const std::string &amp;bus0Id, const std::string &amp;bus1Id)</td></tr>
+<tr class="separator:af7d9be059b29b0d14d72bb8dda8d3050"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7182fa975290854fab4e38c27258c76c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7182fa975290854fab4e38c27258c76c"></a>
+const std::vector&lt; <a class="el" href="class_sgt_1_1_gen_abc.html">GenAbc</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>gens</b> () const </td></tr>
+<tr class="separator:a7182fa975290854fab4e38c27258c76c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9632b90a18f05897b926ff4d574c81a9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9632b90a18f05897b926ff4d574c81a9"></a>
+const <a class="el" href="class_sgt_1_1_gen_abc.html">GenAbc</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>gen</b> (const std::string &amp;id) const </td></tr>
+<tr class="separator:a9632b90a18f05897b926ff4d574c81a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53b402a735d21b8c7178578566373883"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a53b402a735d21b8c7178578566373883"></a>
+<a class="el" href="class_sgt_1_1_gen_abc.html">GenAbc</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>gen</b> (const std::string &amp;id)</td></tr>
+<tr class="separator:a53b402a735d21b8c7178578566373883"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af40b7891bafe1fc2f37df2ef61942429"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af40b7891bafe1fc2f37df2ef61942429"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>addGen</b> (std::shared_ptr&lt; <a class="el" href="class_sgt_1_1_gen_abc.html">GenAbc</a> &gt; gen, const std::string &amp;busId)</td></tr>
+<tr class="separator:af40b7891bafe1fc2f37df2ef61942429"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7279279b7ebf93dde2ca5ac04d12a30"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa7279279b7ebf93dde2ca5ac04d12a30"></a>
+const std::vector&lt; <a class="el" href="class_sgt_1_1_zip_abc.html">ZipAbc</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>zips</b> () const </td></tr>
+<tr class="separator:aa7279279b7ebf93dde2ca5ac04d12a30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3928a68884f4b863922b7625a0bb5291"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3928a68884f4b863922b7625a0bb5291"></a>
+const <a class="el" href="class_sgt_1_1_zip_abc.html">ZipAbc</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>zip</b> (const std::string &amp;id) const </td></tr>
+<tr class="separator:a3928a68884f4b863922b7625a0bb5291"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0a0be89a9db3944bc885725bce063d4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa0a0be89a9db3944bc885725bce063d4"></a>
+<a class="el" href="class_sgt_1_1_zip_abc.html">ZipAbc</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>zip</b> (const std::string &amp;id)</td></tr>
+<tr class="separator:aa0a0be89a9db3944bc885725bce063d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accafd6bd207d5bc0b0fe2a8044b9492d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="accafd6bd207d5bc0b0fe2a8044b9492d"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>addZip</b> (std::shared_ptr&lt; <a class="el" href="class_sgt_1_1_zip_abc.html">ZipAbc</a> &gt; zip, const std::string &amp;busId)</td></tr>
+<tr class="separator:accafd6bd207d5bc0b0fe2a8044b9492d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Per-Unit Conversions:</div></td></tr>
 <tr class="memitem:a9114497b9ec901e4170cc8dcb3ff2273"><td class="memTemplParams" colspan="2"><a class="anchor" id="a9114497b9ec901e4170cc8dcb3ff2273"></a>
 template&lt;typename T &gt; </td></tr>
@@ -229,12 +229,12 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a025cf82ebb6faade5d93ef2666d2cd31"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><b>pu2I</b> (const T &amp;pu, double VBase) const </td></tr>
 <tr class="separator:a025cf82ebb6faade5d93ef2666d2cd31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Power-Flow problem:</div></td></tr>
-<tr class="memitem:aeacd9a2797127e66a1ac83dffc1555bc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeacd9a2797127e66a1ac83dffc1555bc"></a>
-const <a class="el" href="class_sgt_1_1_power_flow_solver_interface.html">PowerFlowSolverInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>solver</b> () const </td></tr>
-<tr class="separator:aeacd9a2797127e66a1ac83dffc1555bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d33502a3eda7c504fafc2b2d6dee20b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3d33502a3eda7c504fafc2b2d6dee20b"></a>
-<a class="el" href="class_sgt_1_1_power_flow_solver_interface.html">PowerFlowSolverInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>solver</b> ()</td></tr>
-<tr class="separator:a3d33502a3eda7c504fafc2b2d6dee20b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ba6d226db66f23e949d1d30eaf6fb15"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4ba6d226db66f23e949d1d30eaf6fb15"></a>
+const <a class="el" href="class_sgt_1_1_power_flow_solver_interface.html">PowerFlowSolverInterface</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>solver</b> () const </td></tr>
+<tr class="separator:a4ba6d226db66f23e949d1d30eaf6fb15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac810ed1ba6eb2adfdb3f8e1518f5786e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac810ed1ba6eb2adfdb3f8e1518f5786e"></a>
+<a class="el" href="class_sgt_1_1_power_flow_solver_interface.html">PowerFlowSolverInterface</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>solver</b> ()</td></tr>
+<tr class="separator:ac810ed1ba6eb2adfdb3f8e1518f5786e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a321686c89c2104cbe3c8bde299d5bee7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a321686c89c2104cbe3c8bde299d5bee7"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setSolver</b> (std::unique_ptr&lt; <a class="el" href="class_sgt_1_1_power_flow_solver_interface.html">PowerFlowSolverInterface</a> &gt; solver)</td></tr>
 <tr class="separator:a321686c89c2104cbe3c8bde299d5bee7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -268,7 +268,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> (st
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Nov 2 2015 14:28:24 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 9 2015 14:49:03 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>
