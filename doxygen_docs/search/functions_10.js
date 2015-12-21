@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['s',['S',['../class_sgt_1_1_power_flow_model.html#a061f7a372e5420aec6745f55b50c4926',1,'Sgt::PowerFlowModel']]],
-  ['sconst',['SConst',['../class_sgt_1_1_bus.html#ad9f21e84cb42c90e6bb951a463eb6f41',1,'Sgt::Bus']]],
+  ['sconst',['SConst',['../class_sgt_1_1_bus.html#ae0ad1c965296b6adbb77fed6ee039449',1,'Sgt::Bus']]],
   ['set_5fdqgseries',['set_dQgSeries',['../class_sgt_1_1_simple_building.html#a307d51993dfab10ec5005eeba9870ca0',1,'Sgt::SimpleBuilding']]],
   ['setendtime',['setEndTime',['../class_sgt_1_1_simulation.html#a58c7422a4cbfd90156849bd2f28e141d',1,'Sgt::Simulation']]],
   ['setlatlong',['setLatLong',['../class_sgt_1_1_simulation.html#a5679de69e64f34cdb18bf667d235b204',1,'Sgt::Simulation']]],
@@ -17,10 +16,11 @@ var searchData=
   ['settempcoeffpmax',['setTempCoeffPMax',['../class_sgt_1_1_solar_pv.html#adb3f830a4c76a17756f801dd66559330',1,'Sgt::SolarPv']]],
   ['settimezone',['setTimezone',['../class_sgt_1_1_simulation.html#a362413493a74762e04fd99aef4083b1c',1,'Sgt::Simulation']]],
   ['settref',['setTRef',['../class_sgt_1_1_solar_pv.html#abb8ffba12dc12a51324a6b3433e387c4',1,'Sgt::SolarPv']]],
+  ['setv',['setV',['../class_sgt_1_1_power_flow_model.html#abe1ccaba61de322f3101aa6b142b68eb',1,'Sgt::PowerFlowModel']]],
   ['setweather',['setWeather',['../class_sgt_1_1_simple_building.html#ab2dc34ff415ec82a826d5deaf9486d7f',1,'Sgt::SimpleBuilding::setWeather()'],['../class_sgt_1_1_solar_pv.html#a2b4edd5bde9ca61cea491b407b1095bb',1,'Sgt::SolarPv::setWeather()']]],
-  ['sgen',['SGen',['../class_sgt_1_1_bus.html#a2be59a08b93bd36f96cea8d14e9eec7f',1,'Sgt::Bus']]],
-  ['sgenrequested',['SGenRequested',['../class_sgt_1_1_bus.html#a23533a6dad25fe46e249c151a6047e41',1,'Sgt::Bus']]],
-  ['siconst',['SIConst',['../class_sgt_1_1_bus.html#ace1ec94c3c968a8ab2369e4c1eb6e9b7',1,'Sgt::Bus']]],
+  ['sgen',['SGen',['../class_sgt_1_1_bus.html#a4fe80b42cd204c22ad2c5c42cc2f56f2',1,'Sgt::Bus']]],
+  ['sgenrequested',['SGenRequested',['../class_sgt_1_1_bus.html#a13e382296f2e1f5679191e974ae15c29',1,'Sgt::Bus']]],
+  ['siconst',['SIConst',['../class_sgt_1_1_bus.html#a04d73a7b88b59b85a616507dfb683505',1,'Sgt::Bus']]],
   ['simcomponent',['simComponent',['../class_sgt_1_1_simulation.html#a056a92634571e045b647c30e7a77c5bd',1,'Sgt::Simulation::simComponent(const std::string &amp;id, bool crashOnFail=true) const '],['../class_sgt_1_1_simulation.html#a0b659d328d75fd47ab5242461adf5f24',1,'Sgt::Simulation::simComponent(const std::string &amp;id, bool crashOnFail=true)']]],
   ['simcomponents',['simComponents',['../class_sgt_1_1_simulation.html#a7f7f50d0de51a70249e4e8ca9d74b09f',1,'Sgt::Simulation::simComponents() const '],['../class_sgt_1_1_simulation.html#a572b53664363547489aa04839771f7ad',1,'Sgt::Simulation::simComponents()']]],
   ['simulation',['Simulation',['../class_sgt_1_1_simulation.html#a4e05bd25b86db74d83a081d6b170625e',1,'Sgt::Simulation']]],
@@ -28,10 +28,10 @@ var searchData=
   ['skydiffuseirradiance',['skyDiffuseIrradiance',['../namespace_sgt.html#a70058c8b97a1d5828f843b19588b64fa',1,'Sgt']]],
   ['solarirradiance',['solarIrradiance',['../namespace_sgt.html#a714cd776b9f02bdc58d41db6b5b560d0',1,'Sgt']]],
   ['solarpower',['solarPower',['../namespace_sgt.html#a0472d823c024a896bc9682341f642953',1,'Sgt']]],
-  ['solveproblem',['solveProblem',['../class_sgt_1_1_power_flow_nr_solver.html#ae5c64a499fa9143c29390e963fccb5a7',1,'Sgt::PowerFlowNrSolver']]],
+  ['solveproblem',['solveProblem',['../class_sgt_1_1_power_flow_nr_rect_solver.html#a55d0a36a733745a5c52841a407259dfb',1,'Sgt::PowerFlowNrRectSolver']]],
   ['starttime',['startTime',['../class_sgt_1_1_simulation.html#a9bdf2d2eb71bdc1392f8bb070e98c800',1,'Sgt::Simulation']]],
   ['sunpos',['sunPos',['../namespace_sgt.html#a2f4725c73c632e8c6a8a52400c0a7996',1,'Sgt']]],
-  ['syconst',['SYConst',['../class_sgt_1_1_bus.html#a90bd8470daeaa241e31e3ef781205ab5',1,'Sgt::Bus']]],
-  ['szip',['SZip',['../class_sgt_1_1_bus.html#abcb5534180b9d34adde25ddc2aa536c5',1,'Sgt::Bus']]],
-  ['sziprequested',['SZipRequested',['../class_sgt_1_1_bus.html#a4f2803bc506ed4cd6185cfb4a1535f9d',1,'Sgt::Bus']]]
+  ['syconst',['SYConst',['../class_sgt_1_1_bus.html#ae982c422cf0b10f0ce2d94b529736f6c',1,'Sgt::Bus']]],
+  ['szip',['SZip',['../class_sgt_1_1_bus.html#a766ca825619b9048cc5fb4b1c9ade5ad',1,'Sgt::Bus']]],
+  ['sziprequested',['SZipRequested',['../class_sgt_1_1_bus.html#a31855c8bc728561badf1f2cec59ccef8',1,'Sgt::Bus']]]
 ];

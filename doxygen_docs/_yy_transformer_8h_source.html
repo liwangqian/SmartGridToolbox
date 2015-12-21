@@ -142,7 +142,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">            /// @param ZL The leakage impedance, must be &gt; 0.</span></div>
 <div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_sgt_1_1_yy_transformer.html#a89a70a1ab314a5e74ac3bff4df5718c4">   51</a></span>&#160;<span class="comment"></span>            <a class="code" href="class_sgt_1_1_yy_transformer.html#a89a70a1ab314a5e74ac3bff4df5718c4">YyTransformer</a>(<span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span>, Complex a, Complex ZL, Complex YM) :</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <a class="code" href="class_sgt_1_1_component.html">Component</a>(id),</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                <a class="code" href="class_sgt_1_1_branch_abc.html">BranchAbc</a>(Phase::A | Phase::B | Phase::C, Phase::A | Phase::B | Phase::C),</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                <a class="code" href="class_sgt_1_1_branch_abc.html">BranchAbc</a>(Phase::<a class="code" href="struct_a.html">A</a> | Phase::B | Phase::C, Phase::<a class="code" href="struct_a.html">A</a> | Phase::B | Phase::C),</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                a_(a),</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                YL_(1.0 / ZL),</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                YM_(YM)</div>
@@ -231,6 +231,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="preprocessor">#endif // YY_TRANSFORMER_DOT_H</span></div>
 <div class="ttc" id="class_sgt_1_1_component_html"><div class="ttname"><a href="class_sgt_1_1_component.html">Sgt::Component</a></div><div class="ttdoc">Base class for all Components. </div><div class="ttdef"><b>Definition:</b> Component.h:64</div></div>
 <div class="ttc" id="namespace_sgt_html"><div class="ttname"><a href="namespace_sgt.html">Sgt</a></div><div class="ttdoc">The primary namespace for SmartGridToolbox. </div></div>
+<div class="ttc" id="struct_a_html"><div class="ttname"><a href="struct_a.html">A</a></div><div class="ttdef"><b>Definition:</b> helloworld_works.cc:86</div></div>
 <div class="ttc" id="class_sgt_1_1_branch_abc_html"><div class="ttname"><a href="class_sgt_1_1_branch_abc.html">Sgt::BranchAbc</a></div><div class="ttdoc">Common abstract base class for a branch. </div><div class="ttdef"><b>Definition:</b> Branch.h:32</div></div>
 <div class="ttc" id="class_sgt_1_1_yy_transformer_html"><div class="ttname"><a href="class_sgt_1_1_yy_transformer.html">Sgt::YyTransformer</a></div><div class="ttdoc">Wye-wye transformer. </div><div class="ttdef"><b>Definition:</b> YyTransformer.h:26</div></div>
 <div class="ttc" id="class_sgt_1_1_yy_transformer_html_a89a70a1ab314a5e74ac3bff4df5718c4"><div class="ttname"><a href="class_sgt_1_1_yy_transformer.html#a89a70a1ab314a5e74ac3bff4df5718c4">Sgt::YyTransformer::YyTransformer</a></div><div class="ttdeci">YyTransformer(const std::string &amp;id, Complex a, Complex ZL, Complex YM)</div><div class="ttdoc">Constructor. </div><div class="ttdef"><b>Definition:</b> YyTransformer.h:51</div></div>
@@ -238,7 +239,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Nov 9 2015 14:49:02 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 21 2015 12:13:38 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

@@ -227,9 +227,9 @@ const std::vector&lt; const <a class="el" href="class_sgt_1_1_sim_component.html
 <tr class="memitem:a7f9f8e8f3cca786e627973151fbb770b inherit pub_methods_class_sgt_1_1_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7f9f8e8f3cca786e627973151fbb770b"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Component</b> (const std::string &amp;id)</td></tr>
 <tr class="separator:a7f9f8e8f3cca786e627973151fbb770b inherit pub_methods_class_sgt_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad583cec82dd71f37c396266897d626b4 inherit pub_methods_class_sgt_1_1_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad583cec82dd71f37c396266897d626b4"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Component</b> (const <a class="el" href="class_sgt_1_1_component.html">Component</a> &amp;from)=default</td></tr>
-<tr class="separator:ad583cec82dd71f37c396266897d626b4 inherit pub_methods_class_sgt_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0b8e4e1f2aefdd58567ef7a70d47ed4 inherit pub_methods_class_sgt_1_1_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad0b8e4e1f2aefdd58567ef7a70d47ed4"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Component</b> (const <a class="el" href="class_sgt_1_1_component.html">Component</a> &amp;from)=delete</td></tr>
+<tr class="separator:ad0b8e4e1f2aefdd58567ef7a70d47ed4 inherit pub_methods_class_sgt_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec7f53786c5553963caa7c956b27b979 inherit pub_methods_class_sgt_1_1_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aec7f53786c5553963caa7c956b27b979"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~Component</b> ()=default</td></tr>
 <tr class="separator:aec7f53786c5553963caa7c956b27b979 inherit pub_methods_class_sgt_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -307,10 +307,11 @@ Protected Member Functions</h2></td></tr>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_time_series_zip.html#ab00c970afaf690e8616521a19e5ef8e9">updateState</a> (Time t) override</td></tr>
 <tr class="memdesc:ab00c970afaf690e8616521a19e5ef8e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bring state up to time current time. <br /></td></tr>
 <tr class="separator:ab00c970afaf690e8616521a19e5ef8e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04308f25ee9f79f9af754f80c9749000"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classarma_1_1_col.html">arma::Col</a>&lt; Complex &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_time_series_zip.html#a04308f25ee9f79f9af754f80c9749000">YConst</a> () const  override</td></tr>
+<tr class="memitem:a04308f25ee9f79f9af754f80c9749000"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a04308f25ee9f79f9af754f80c9749000"></a>
+virtual <a class="el" href="classarma_1_1_col.html">arma::Col</a>&lt; Complex &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>YConst</b> () const  override</td></tr>
 <tr class="separator:a04308f25ee9f79f9af754f80c9749000"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03ddda9415743864ee54c2c007ef2992"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a03ddda9415743864ee54c2c007ef2992"></a>
-virtual <a class="el" href="classarma_1_1_col.html">arma::Col</a>&lt; Complex &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>IConst</b> () const  override</td></tr>
+<tr class="memitem:a03ddda9415743864ee54c2c007ef2992"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classarma_1_1_col.html">arma::Col</a>&lt; Complex &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sgt_1_1_time_series_zip.html#a03ddda9415743864ee54c2c007ef2992">IConst</a> () const  override</td></tr>
+<tr class="memdesc:a03ddda9415743864ee54c2c007ef2992"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant current component.  <a href="#a03ddda9415743864ee54c2c007ef2992">More...</a><br /></td></tr>
 <tr class="separator:a03ddda9415743864ee54c2c007ef2992"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82964474486c22c38c97eecd2df20303"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a82964474486c22c38c97eecd2df20303"></a>
 virtual <a class="el" href="classarma_1_1_col.html">arma::Col</a>&lt; Complex &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>SConst</b> () const  override</td></tr>
@@ -323,7 +324,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="separator:a19278f08ba4e2435c22324fcdc95b8d4 inherit pro_methods_class_sgt_1_1_heartbeat"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a04308f25ee9f79f9af754f80c9749000"></a>
+<a class="anchor" id="a03ddda9415743864ee54c2c007ef2992"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -331,7 +332,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classarma_1_1_col.html">arma::Col</a>&lt;Complex&gt; Sgt::TimeSeriesZip::YConst </td>
+          <td class="memname">virtual <a class="el" href="classarma_1_1_col.html">arma::Col</a>&lt;Complex&gt; Sgt::TimeSeriesZip::IConst </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -343,9 +344,11 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
   </tr>
 </table>
 </div><div class="memdoc">
-<p>These are implemented for convenience, so subclasses don't have to reimplement them unless they have a non-zero value. </p>
 
-<p>Reimplemented from <a class="el" href="class_sgt_1_1_zip_abc.html#a220bf933ef9e00276a58a204a8323dd9">Sgt::ZipAbc</a>.</p>
+<p>Constant current component. </p>
+<p>Relative to phase of V. Actual current will be IConst V / |V|, so that S doesn't depend on phase of V. </p>
+
+<p>Reimplemented from <a class="el" href="class_sgt_1_1_zip_abc.html#a1bd1c0621f70fd65e1748df082ef11c9">Sgt::ZipAbc</a>.</p>
 
 </div>
 </div>
@@ -355,7 +358,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Nov 9 2015 14:49:03 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 21 2015 12:13:39 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

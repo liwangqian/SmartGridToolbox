@@ -134,7 +134,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment"></span>    <span class="keyword">enum class</span> Phase : unsigned int</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    {</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        BAL = 0x1,     <span class="comment">// Balanced/one-phase.</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        A   = 0x2,     <span class="comment">// Three phase A.</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="struct_a.html">A</a>   = 0x2,     <span class="comment">// Three phase A.</span></div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        B   = 0x4,     <span class="comment">// Three phase B.</span></div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        C   = 0x8,     <span class="comment">// Three phase C.</span></div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        G   = 0x10,    <span class="comment">// Ground.</span></div>
@@ -209,7 +209,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment">    /// @param rhoEarth The conductivity of the earth, ohm metres.</span></div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment">    /// @return Line impedance matrix Z, s.t. I_phase = Z Delta V_phase.</span></div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment">    /// @ingroup PowerFlowCore</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment"></span>    arma::Mat&lt;Complex&gt; <a class="code" href="group___power_flow_core.html#ga9470b17afa78357ce4dd237c3088c3d9">carson</a>(arma::uword nWire, <span class="keyword">const</span> arma::Mat&lt;double&gt;&amp; Dij, <span class="keyword">const</span> <a class="code" href="classarma_1_1_col.html">arma::Col&lt;double&gt;</a> resPerL,</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment"></span>    arma::Mat&lt;Complex&gt; carson(arma::uword nWire, <span class="keyword">const</span> arma::Mat&lt;double&gt;&amp; Dij, <span class="keyword">const</span> <a class="code" href="classarma_1_1_col.html">arma::Col&lt;double&gt;</a> resPerL,</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                              <span class="keywordtype">double</span> L, <span class="keywordtype">double</span> freq, <span class="keywordtype">double</span> rhoEarth);</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment">    /// @brief Apply the kron reduction to line impedance matrix Z.</span></div>
@@ -217,13 +217,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment">    /// @param nPhase The number of phases, not including nWire grounded neutral wires that will be eliminated</span></div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment">    /// @return The impedance nPhase x nPhase matrix ZPhase, having eliminated nWire grounded neutrals.</span></div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment">    /// @ingroup PowerFlowCore</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment"></span>    arma::Mat&lt;Complex&gt; <a class="code" href="group___power_flow_core.html#gae24d94dc2870f058428ec0ae14e7b6c1">kron</a>(<span class="keyword">const</span> arma::Mat&lt;Complex&gt;&amp; Z, arma::uword nPhase);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment"></span>    arma::Mat&lt;Complex&gt; kron(<span class="keyword">const</span> arma::Mat&lt;Complex&gt;&amp; Z, arma::uword nPhase);</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="comment">    /// @brief Calculate the nodal admittance matrix YNode from the line impedance ZLine.</span></div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="comment">    /// @param ZLine The line impedance matrix.</span></div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="comment">    /// @return The nodal admittance matrix YNode.</span></div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="comment">    /// @ingroup PowerFlowCore</span></div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="comment"></span>    arma::Mat&lt;Complex&gt; <a class="code" href="group___power_flow_core.html#gac77aa4c2855649f65d6642d4bbdfd8ae">ZLine2YNode</a>(<span class="keyword">const</span> arma::Mat&lt;Complex&gt;&amp; ZLine);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="comment"></span>    arma::Mat&lt;Complex&gt; ZLine2YNode(<span class="keyword">const</span> arma::Mat&lt;Complex&gt;&amp; ZLine);</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="comment"></span></div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="comment">    /// @brief Calculate the GMR of a bundled conductor.</span></div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="comment">    ///</span></div>
@@ -239,60 +239,106 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="comment">    /// @return The transformed vector: 0 = 0, 1 = +, 2 = -.</span></div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="comment">    /// @ingroup PowerFlowCore</span></div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="comment">    ///</span></div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="comment">    /// IMPORTANT: as per the theory section, we use a scaled sequence transformation that is unitary and therefore</span></div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="comment">    /// preserves scalars like total power. Let B = sqrt(3) A^-1, where A is the usual sequence transformation</span></div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="comment">    /// matrix. Then v_123 = B v_abc. A positive sequence vector V+ = [V_A, V_A exp(-2 pi / 3), V_A exp(2 pi / 3)]</span></div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="comment">    /// then transforms to sqrt(3) [0, V_A, 0]; note the sqrt(3) factor.</span></div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="comment"></span>    <a class="code" href="classarma_1_1_col.html">arma::Col&lt;Complex&gt;</a> <a class="code" href="group___power_flow_core.html#gaa8f8d94dfd0cf58317e2e04f52231a9d">toScaledSequence</a>(<span class="keyword">const</span> <a class="code" href="classarma_1_1_col.html">arma::Col&lt;Complex&gt;</a>&amp; v);</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="comment"></span></div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="comment">    /// @brief To sequence components transform for matrix.</span></div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="comment">    /// @param M A 3 x 3 matrix, 0 = A, 1 = B, 2 = C.</span></div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="comment">    /// @return The transformed matrix: 0 = 0, 1 = +, 2 = -.</span></div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="comment">    /// @ingroup PowerFlowCore</span></div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="comment">    ///</span></div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="comment">    /// IMPORTANT: as per the theory section, we use a scaled sequence transformation that is unitary and therefore</span></div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="comment">    /// preserves scalars like total power. Let B = sqrt(3) A^-1, where A is the usual sequence transformation</span></div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="comment">    /// matrix. Then v_123 = B v_abc. A positive sequence vector V+ = [V_A, V_A exp(-2 pi / 3), V_A exp(2 pi / 3)]</span></div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="comment">    /// then transforms to sqrt(3) [0, V_A, 0]; note the sqrt(3) factor.</span></div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="comment"></span>    arma::Mat&lt;Complex&gt; <a class="code" href="group___power_flow_core.html#gaa8f8d94dfd0cf58317e2e04f52231a9d">toScaledSequence</a>(<span class="keyword">const</span> arma::Mat&lt;Complex&gt;&amp; M);</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="comment">    /// @brief From sequence components transform for vector.</span></div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="comment">    /// @param v A 3 x 1 vector, 0 = 0, 1 = +, 2 = -.</span></div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="comment">    /// @return The transformed vector: 0 = A, 1 = B, 2 = C.</span></div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="comment">    /// @ingroup PowerFlowCore</span></div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="comment">    ///</span></div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="comment">    /// IMPORTANT: as per the theory section, we use a scaled sequence transformation that is unitary and therefore</span></div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="comment">    /// preserves scalars like total power. Let B = sqrt(3) A^-1, where A is the usual sequence transformation</span></div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="comment">    /// matrix. Then v_123 = B v_abc. A positive sequence vector V+ = [V_A, V_A exp(-2 pi / 3), V_A exp(2 pi / 3)]</span></div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="comment">    /// then transforms to sqrt(3) [0, V_A, 0]; note the sqrt(3) factor.</span></div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="comment"></span>    <a class="code" href="classarma_1_1_col.html">arma::Col&lt;Complex&gt;</a> <a class="code" href="group___power_flow_core.html#ga8c6b0c8dc75db51fdcd07b0641735bfb">fromScaledSequence</a>(<span class="keyword">const</span> <a class="code" href="classarma_1_1_col.html">arma::Col&lt;Complex&gt;</a>&amp; v);</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="comment"></span></div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="comment">    /// @brief From sequence components transform for matrix.</span></div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="comment">    /// @param M A 3 x 3 matrix, 0 = 0, 1 = +, 2 = -.</span></div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="comment">    /// @return The transformed matrix: 0 = A, 1 = B, 2 = C.</span></div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="comment">    /// @ingroup PowerFlowCore</span></div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="comment">    ///</span></div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="comment">    /// IMPORTANT: as per the theory section, we use a scaled sequence transformation that is unitary and therefore</span></div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="comment">    /// preserves scalars like total power. Let B = sqrt(3) A^-1, where A is the usual sequence transformation</span></div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="comment">    /// matrix. Then v_123 = B v_abc. A positive sequence vector V+ = [V_A, V_A exp(-2 pi / 3), V_A exp(2 pi / 3)]</span></div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="comment">    /// then transforms to sqrt(3) [0, V_A, 0]; note the sqrt(3) factor.</span></div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="comment"></span>    arma::Mat&lt;Complex&gt; <a class="code" href="group___power_flow_core.html#ga8c6b0c8dc75db51fdcd07b0641735bfb">fromScaledSequence</a>(<span class="keyword">const</span> arma::Mat&lt;Complex&gt;&amp; M);</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;}</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="preprocessor">#endif // POWERFLOW_DOT_H</span></div>
-<div class="ttc" id="group___power_flow_core_html_ga9470b17afa78357ce4dd237c3088c3d9"><div class="ttname"><a href="group___power_flow_core.html#ga9470b17afa78357ce4dd237c3088c3d9">Sgt::carson</a></div><div class="ttdeci">arma::Mat&lt; Complex &gt; carson(arma::uword nWire, const arma::Mat&lt; double &gt; &amp;Dij, const arma::Col&lt; double &gt; resPerL, double L, double freq, double rhoEarth)</div><div class="ttdoc">Apply Carson&#39;s equations. </div><div class="ttdef"><b>Definition:</b> PowerFlow.cc:195</div></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="comment">    /// v_123 = A^-1 v_abc and M_123 = A^-1 M_abc A.</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="comment"></span>    <a class="code" href="classarma_1_1_col.html">arma::Col&lt;Complex&gt;</a> <a class="code" href="group___power_flow_core.html#gac82cd607d019a960ebee6b13a6a8d956">toSequence</a>(<span class="keyword">const</span> <a class="code" href="classarma_1_1_col.html">arma::Col&lt;Complex&gt;</a>&amp; v);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="comment">    /// @brief To sequence components transform for matrix.</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="comment">    /// @param M A 3 x 3 matrix, 0 = A, 1 = B, 2 = C.</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="comment">    /// @return The transformed matrix: 0 = 0, 1 = +, 2 = -.</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="comment">    /// @ingroup PowerFlowCore</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="comment">    ///</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="comment">    /// v_123 = A^-1 v_abc and M_123 = A^-1 M_abc A.</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="comment"></span>    arma::Mat&lt;Complex&gt; <a class="code" href="group___power_flow_core.html#gac82cd607d019a960ebee6b13a6a8d956">toSequence</a>(<span class="keyword">const</span> arma::Mat&lt;Complex&gt;&amp; M);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="comment">    /// @brief From sequence components transform for vector.</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="comment">    /// @param v A 3 x 1 vector, 0 = 0, 1 = +, 2 = -.</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="comment">    /// @return The transformed vector: 0 = A, 1 = B, 2 = C.</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="comment">    /// @ingroup PowerFlowCore</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="comment">    ///</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="comment">    /// v_123 = A^-1 v_abc and M_123 = A^-1 M_abc A.</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="comment"></span>    <a class="code" href="classarma_1_1_col.html">arma::Col&lt;Complex&gt;</a> <a class="code" href="group___power_flow_core.html#ga9b4ec6c45ac0fab516f0eb2643ab779e">fromSequence</a>(<span class="keyword">const</span> <a class="code" href="classarma_1_1_col.html">arma::Col&lt;Complex&gt;</a>&amp; v);</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="comment">    /// @brief From sequence components transform for matrix.</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="comment">    /// @param M A 3 x 3 matrix, 0 = 0, 1 = +, 2 = -.</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="comment">    /// @return The transformed matrix: 0 = A, 1 = B, 2 = C.</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="comment">    /// @ingroup PowerFlowCore</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="comment">    ///</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="comment">    /// v_123 = A^-1 v_abc and M_123 = A^-1 M_abc A.</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="comment"></span>    arma::Mat&lt;Complex&gt; <a class="code" href="group___power_flow_core.html#ga9b4ec6c45ac0fab516f0eb2643ab779e">fromSequence</a>(<span class="keyword">const</span> arma::Mat&lt;Complex&gt;&amp; M);</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="comment">    /// @brief To sequence components transform for vector.</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="comment">    /// @param v A 3 x 1 vector, 0 = A, 1 = B, 2 = C.</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="comment">    /// @return The transformed vector: 0 = 0, 1 = +, 2 = -.</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="comment">    /// @ingroup PowerFlowCore</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="comment">    ///</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="comment">    /// IMPORTANT: as per the theory notes, we use a scaled sequence transformation that is unitary and therefore</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="comment">    /// preserves scalars like total power. Let B = sqrt(3) A, where A is the usual sequence transformation</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="comment">    /// matrix. Then v_123 = B^-1 v_abc. A positive sequence vector V+ = [V_A, V_A exp(-2 pi / 3), V_A exp(2 pi / 3)]</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="comment">    /// then transforms to sqrt(3) [0, V_A, 0]; note the sqrt(3) factor.</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="comment"></span>    <a class="code" href="classarma_1_1_col.html">arma::Col&lt;Complex&gt;</a> <a class="code" href="group___power_flow_core.html#gaa8f8d94dfd0cf58317e2e04f52231a9d">toScaledSequence</a>(<span class="keyword">const</span> <a class="code" href="classarma_1_1_col.html">arma::Col&lt;Complex&gt;</a>&amp; v);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="comment">    /// @brief To sequence components transform for matrix.</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="comment">    /// @param M A 3 x 3 matrix, 0 = A, 1 = B, 2 = C.</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="comment">    /// @return The transformed matrix: 0 = 0, 1 = +, 2 = -.</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="comment">    /// @ingroup PowerFlowCore</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="comment">    ///</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="comment">    /// IMPORTANT: as per the theory notes, we use a scaled sequence transformation that is unitary and therefore</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="comment">    /// preserves scalars like total power. Let B = sqrt(3) A, where A is the usual sequence transformation</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="comment">    /// matrix. Then v_123 = B^-1 v_abc. A positive sequence vector V+ = [V_A, V_A exp(-2 pi / 3), V_A exp(2 pi / 3)]</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="comment">    /// then transforms to sqrt(3) [0, V_A, 0]; note the sqrt(3) factor.</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="comment"></span>    arma::Mat&lt;Complex&gt; <a class="code" href="group___power_flow_core.html#gaa8f8d94dfd0cf58317e2e04f52231a9d">toScaledSequence</a>(<span class="keyword">const</span> arma::Mat&lt;Complex&gt;&amp; M);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="comment">    /// @brief From sequence components transform for vector.</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="comment">    /// @param v A 3 x 1 vector, 0 = 0, 1 = +, 2 = -.</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="comment">    /// @return The transformed vector: 0 = A, 1 = B, 2 = C.</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="comment">    /// @ingroup PowerFlowCore</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="comment">    ///</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="comment">    /// IMPORTANT: as per the theory notes, we use a scaled sequence transformation that is unitary and therefore</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<span class="comment">    /// preserves scalars like total power. Let B = sqrt(3) A, where A is the usual sequence transformation</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<span class="comment">    /// matrix. Then v_123 = B^-1 v_abc. A positive sequence vector V+ = [V_A, V_A exp(-2 pi / 3), V_A exp(2 pi / 3)]</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="comment">    /// then transforms to sqrt(3) [0, V_A, 0]; note the sqrt(3) factor.</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="comment"></span>    <a class="code" href="classarma_1_1_col.html">arma::Col&lt;Complex&gt;</a> <a class="code" href="group___power_flow_core.html#gad576e56ff7877a6a6afbedb4cdbc9566">fromScaledSequence</a>(<span class="keyword">const</span> <a class="code" href="classarma_1_1_col.html">arma::Col&lt;Complex&gt;</a>&amp; v);</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="comment">    /// @brief From sequence components transform for matrix.</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="comment">    /// @param M A 3 x 3 matrix, 0 = 0, 1 = +, 2 = -.</span></div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="comment">    /// @return The transformed matrix: 0 = A, 1 = B, 2 = C.</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;<span class="comment">    /// @ingroup PowerFlowCore</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="comment">    ///</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;<span class="comment">    /// IMPORTANT: as per the theory notes, we use a scaled sequence transformation that is unitary and therefore</span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<span class="comment">    /// preserves scalars like total power. Let B = sqrt(3) A, where A is the usual sequence transformation</span></div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="comment">    /// matrix. Then v_123 = B^-1 v_abc. A positive sequence vector V+ = [V_A, V_A exp(-2 pi / 3), V_A exp(2 pi / 3)]</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="comment">    /// then transforms to sqrt(3) [0, V_A, 0]; note the sqrt(3) factor.</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="comment"></span>    arma::Mat&lt;Complex&gt; <a class="code" href="group___power_flow_core.html#gad576e56ff7877a6a6afbedb4cdbc9566">fromScaledSequence</a>(<span class="keyword">const</span> arma::Mat&lt;Complex&gt;&amp; M);</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;<span class="comment">    /// @brief approximate the phase impedance matrix from Z+ and Z0</span></div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="comment">    /// @param ZPlus Positive sequence impedance</span></div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;<span class="comment">    /// @param Z0 Zero sequence impedance</span></div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="comment">    /// @return The approximate phase impedance matrix.</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="comment">    ///</span></div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="comment">    /// Uses the usual sequence components.</span></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="comment">    /// Often, we only know the + and 0 sequence impedances, which can typically be derived by noting the phase to</span></div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="comment">    /// ground and three phase short circuit currents or powers at a node (e.g. at the HV side of a distribution</span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="comment">    /// substation. Assuming a symmetry between the phases (e.g. through transposition or  symmetric arrangement of</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="comment">    /// wires) leads to this approximate result for the phase impedance matrix. See Kersting, Distribution System</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;<span class="comment">    /// Modelling and Analysis, Section 6.3.</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="comment"></span>    arma::Mat&lt;Complex&gt; <a class="code" href="namespace_sgt.html#aea5347263e23e19c3e8eb24de8498c49">approxPhaseImpedanceMatrix</a>(Complex ZPlus, Complex Z0);</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;}</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="preprocessor">#endif // POWERFLOW_DOT_H</span></div>
 <div class="ttc" id="namespace_sgt_html"><div class="ttname"><a href="namespace_sgt.html">Sgt</a></div><div class="ttdoc">The primary namespace for SmartGridToolbox. </div></div>
-<div class="ttc" id="group___power_flow_core_html_gac77aa4c2855649f65d6642d4bbdfd8ae"><div class="ttname"><a href="group___power_flow_core.html#gac77aa4c2855649f65d6642d4bbdfd8ae">Sgt::ZLine2YNode</a></div><div class="ttdeci">arma::Mat&lt; Complex &gt; ZLine2YNode(const arma::Mat&lt; Complex &gt; &amp;ZLine)</div><div class="ttdoc">Calculate the nodal admittance matrix YNode from the line impedance ZLine. </div><div class="ttdef"><b>Definition:</b> PowerFlow.cc:237</div></div>
-<div class="ttc" id="group___power_flow_core_html_gaa8f8d94dfd0cf58317e2e04f52231a9d"><div class="ttname"><a href="group___power_flow_core.html#gaa8f8d94dfd0cf58317e2e04f52231a9d">Sgt::toScaledSequence</a></div><div class="ttdeci">arma::Col&lt; Complex &gt; toScaledSequence(const arma::Col&lt; Complex &gt; &amp;v)</div><div class="ttdoc">To sequence components transform for vector. </div><div class="ttdef"><b>Definition:</b> PowerFlow.cc:282</div></div>
-<div class="ttc" id="group___power_flow_core_html_ga8c6b0c8dc75db51fdcd07b0641735bfb"><div class="ttname"><a href="group___power_flow_core.html#ga8c6b0c8dc75db51fdcd07b0641735bfb">Sgt::fromScaledSequence</a></div><div class="ttdeci">arma::Col&lt; Complex &gt; fromScaledSequence(const arma::Col&lt; Complex &gt; &amp;v)</div><div class="ttdoc">From sequence components transform for vector. </div></div>
-<div class="ttc" id="group___power_flow_core_html_gae24d94dc2870f058428ec0ae14e7b6c1"><div class="ttname"><a href="group___power_flow_core.html#gae24d94dc2870f058428ec0ae14e7b6c1">Sgt::kron</a></div><div class="ttdeci">arma::Mat&lt; Complex &gt; kron(const arma::Mat&lt; Complex &gt; &amp;Z, arma::uword nPhase)</div><div class="ttdoc">Apply the kron reduction to line impedance matrix Z. </div><div class="ttdef"><b>Definition:</b> PowerFlow.cc:217</div></div>
+<div class="ttc" id="group___power_flow_core_html_gaa8f8d94dfd0cf58317e2e04f52231a9d"><div class="ttname"><a href="group___power_flow_core.html#gaa8f8d94dfd0cf58317e2e04f52231a9d">Sgt::toScaledSequence</a></div><div class="ttdeci">Col&lt; Complex &gt; toScaledSequence(const Col&lt; Complex &gt; &amp;v)</div><div class="ttdoc">To sequence components transform for vector. </div><div class="ttdef"><b>Definition:</b> PowerFlow.cc:312</div></div>
+<div class="ttc" id="group___power_flow_core_html_ga9b4ec6c45ac0fab516f0eb2643ab779e"><div class="ttname"><a href="group___power_flow_core.html#ga9b4ec6c45ac0fab516f0eb2643ab779e">Sgt::fromSequence</a></div><div class="ttdeci">Col&lt; Complex &gt; fromSequence(const Col&lt; Complex &gt; &amp;v)</div><div class="ttdoc">From sequence components transform for vector. </div><div class="ttdef"><b>Definition:</b> PowerFlow.cc:302</div></div>
+<div class="ttc" id="struct_a_html"><div class="ttname"><a href="struct_a.html">A</a></div><div class="ttdef"><b>Definition:</b> helloworld_works.cc:86</div></div>
+<div class="ttc" id="group___power_flow_core_html_gac82cd607d019a960ebee6b13a6a8d956"><div class="ttname"><a href="group___power_flow_core.html#gac82cd607d019a960ebee6b13a6a8d956">Sgt::toSequence</a></div><div class="ttdeci">Col&lt; Complex &gt; toSequence(const Col&lt; Complex &gt; &amp;v)</div><div class="ttdoc">To sequence components transform for vector. </div><div class="ttdef"><b>Definition:</b> PowerFlow.cc:292</div></div>
 <div class="ttc" id="classarma_1_1_col_html"><div class="ttname"><a href="classarma_1_1_col.html">arma::Col&lt; double &gt;</a></div></div>
 <div class="ttc" id="class_sgt_1_1_phases_html"><div class="ttname"><a href="class_sgt_1_1_phases.html">Sgt::Phases</a></div><div class="ttdoc">A set of network phases, each specified by a Phase value. </div><div class="ttdef"><b>Definition:</b> PowerFlow.h:63</div></div>
-<div class="ttc" id="group___power_flow_core_html_ga80adb9acb0acb72da9071e9f604fee8f"><div class="ttname"><a href="group___power_flow_core.html#ga80adb9acb0acb72da9071e9f604fee8f">Sgt::bundleGmr</a></div><div class="ttdeci">double bundleGmr(unsigned int n, double gmr1, double d)</div><div class="ttdoc">Calculate the GMR of a bundled conductor. </div><div class="ttdef"><b>Definition:</b> PowerFlow.cc:259</div></div>
+<div class="ttc" id="namespace_sgt_html_aea5347263e23e19c3e8eb24de8498c49"><div class="ttname"><a href="namespace_sgt.html#aea5347263e23e19c3e8eb24de8498c49">Sgt::approxPhaseImpedanceMatrix</a></div><div class="ttdeci">Mat&lt; Complex &gt; approxPhaseImpedanceMatrix(Complex ZPlus, Complex Z0)</div><div class="ttdoc">approximate the phase impedance matrix from Z+ and Z0 </div><div class="ttdef"><b>Definition:</b> PowerFlow.cc:332</div></div>
+<div class="ttc" id="group___power_flow_core_html_gad576e56ff7877a6a6afbedb4cdbc9566"><div class="ttname"><a href="group___power_flow_core.html#gad576e56ff7877a6a6afbedb4cdbc9566">Sgt::fromScaledSequence</a></div><div class="ttdeci">Col&lt; Complex &gt; fromScaledSequence(const Col&lt; Complex &gt; &amp;v)</div><div class="ttdoc">From sequence components transform for vector. </div><div class="ttdef"><b>Definition:</b> PowerFlow.cc:322</div></div>
+<div class="ttc" id="group___power_flow_core_html_ga80adb9acb0acb72da9071e9f604fee8f"><div class="ttname"><a href="group___power_flow_core.html#ga80adb9acb0acb72da9071e9f604fee8f">Sgt::bundleGmr</a></div><div class="ttdeci">double bundleGmr(unsigned int n, double gmr1, double d)</div><div class="ttdoc">Calculate the GMR of a bundled conductor. </div><div class="ttdef"><b>Definition:</b> PowerFlow.cc:261</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Nov 9 2015 14:49:02 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 21 2015 12:13:38 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

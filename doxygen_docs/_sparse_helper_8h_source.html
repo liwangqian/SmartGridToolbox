@@ -158,7 +158,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                {</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                    arma::span sp1(0, 1);</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                    arma::span sp2(0, nWaiting_ - 1);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                    m_ += <a class="code" href="classarma_1_1_sp_mat.html">arma::SpMat&lt;T&gt;</a>(checkZeros_, locs_(sp1, sp2), vals_(sp2), m_.n_rows, m_.n_cols, sort_, add_);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                    m_ += <a class="code" href="classarma_1_1_sp_mat.html">arma::SpMat&lt;T&gt;</a>(add_, locs_(sp1, sp2), vals_(sp2), m_.n_rows, m_.n_cols, sort_, checkZeros_);</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                    nWaiting_ = 0;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                }</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            }</div>
@@ -184,7 +184,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Nov 9 2015 14:49:02 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 21 2015 12:13:38 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

@@ -103,11 +103,11 @@ Collaboration diagram for Sgt::PfBus:</div>
 <div class="dyncontent">
 <div class="center"><img src="struct_sgt_1_1_pf_bus__coll__graph.png" border="0" usemap="#_sgt_1_1_pf_bus_coll__map" alt="Collaboration graph"/></div>
 <map name="_sgt_1_1_pf_bus_coll__map" id="_sgt_1_1_pf_bus_coll__map">
-<area shape="rect" id="node4" href="struct_sgt_1_1_pf_node.html" title="Sgt::PfNode" alt="" coords="699,78,792,103"/>
-<area shape="rect" id="node6" title="STL class. " alt="" coords="218,13,297,38"/>
-<area shape="rect" id="node7" title="STL class. " alt="" coords="5,6,131,45"/>
-<area shape="rect" id="node8" href="classarma_1_1_col.html" title="arma::Col\&lt; Complex \&gt;" alt="" coords="180,110,335,135"/>
-<area shape="rect" id="node9" href="class_sgt_1_1_phases.html" title="A set of network phases, each specified by a Phase value. " alt="" coords="211,159,304,185"/>
+<area shape="rect" id="node4" href="struct_sgt_1_1_pf_node.html" title="Sgt::PfNode" alt="" coords="602,67,696,92"/>
+<area shape="rect" id="node5" title="STL class. " alt="" coords="218,12,297,37"/>
+<area shape="rect" id="node6" title="STL class. " alt="" coords="5,5,131,44"/>
+<area shape="rect" id="node7" href="classarma_1_1_col.html" title="arma::Col\&lt; Complex \&gt;" alt="" coords="180,96,335,121"/>
+<area shape="rect" id="node8" href="class_sgt_1_1_phases.html" title="A set of network phases, each specified by a Phase value. " alt="" coords="211,145,304,171"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -119,9 +119,9 @@ typedef std::vector&lt; std::unique_ptr&lt; <a class="el" href="struct_sgt_1_1_p
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5190eb51dab171f30762467a94fd577b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5190eb51dab171f30762467a94fd577b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>PfBus</b> (const std::string &amp;id, BusType type, const <a class="el" href="class_sgt_1_1_phases.html">Phases</a> &amp;phases, const <a class="el" href="classarma_1_1_col.html">arma::Col</a>&lt; Complex &gt; &amp;YConst, const <a class="el" href="classarma_1_1_col.html">arma::Col</a>&lt; Complex &gt; &amp;IConst, const <a class="el" href="classarma_1_1_col.html">arma::Col</a>&lt; Complex &gt; &amp;SConst, double J, const <a class="el" href="classarma_1_1_col.html">arma::Col</a>&lt; Complex &gt; &amp;V, const <a class="el" href="classarma_1_1_col.html">arma::Col</a>&lt; Complex &gt; &amp;S)</td></tr>
-<tr class="separator:a5190eb51dab171f30762467a94fd577b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45366778468a541eab411697c9b1885e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a45366778468a541eab411697c9b1885e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>PfBus</b> (const std::string &amp;id, BusType type, const <a class="el" href="class_sgt_1_1_phases.html">Phases</a> &amp;phases, const <a class="el" href="classarma_1_1_col.html">arma::Col</a>&lt; Complex &gt; &amp;V, const <a class="el" href="classarma_1_1_col.html">arma::Col</a>&lt; Complex &gt; &amp;YConst, const <a class="el" href="classarma_1_1_col.html">arma::Col</a>&lt; Complex &gt; &amp;IConst, const <a class="el" href="classarma_1_1_col.html">arma::Col</a>&lt; Complex &gt; &amp;Scg, double J)</td></tr>
+<tr class="separator:a45366778468a541eab411697c9b1885e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -137,6 +137,10 @@ BusType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="s
 <a class="el" href="class_sgt_1_1_phases.html">Phases</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_sgt_1_1_pf_bus.html#a75e4c939db462f168fb6a61fa47c409b">phases_</a></td></tr>
 <tr class="memdesc:a75e4c939db462f168fb6a61fa47c409b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sgt_1_1_bus.html" title="A Bus is a grouped set of conductors / terminals, one per phase. ">Bus</a> phases. <br /></td></tr>
 <tr class="separator:a75e4c939db462f168fb6a61fa47c409b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25a3daa78d96f36cfed53e867843a5f3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a25a3daa78d96f36cfed53e867843a5f3"></a>
+<a class="el" href="classarma_1_1_col.html">arma::Col</a>&lt; Complex &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_sgt_1_1_pf_bus.html#a25a3daa78d96f36cfed53e867843a5f3">V_</a></td></tr>
+<tr class="memdesc:a25a3daa78d96f36cfed53e867843a5f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Voltage, one per phase. Setpoint/warm start on input. <br /></td></tr>
+<tr class="separator:a25a3daa78d96f36cfed53e867843a5f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab79aa18cacf4030111cf43ef14421fb6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab79aa18cacf4030111cf43ef14421fb6"></a>
 <a class="el" href="classarma_1_1_col.html">arma::Col</a>&lt; Complex &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_sgt_1_1_pf_bus.html#ab79aa18cacf4030111cf43ef14421fb6">YConst_</a></td></tr>
 <tr class="memdesc:ab79aa18cacf4030111cf43ef14421fb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant admittance shunt, one per phase. <br /></td></tr>
@@ -145,26 +149,18 @@ BusType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="s
 <a class="el" href="classarma_1_1_col.html">arma::Col</a>&lt; Complex &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_sgt_1_1_pf_bus.html#ab5d5111385a40ae995ab1c83f2ef3ea5">IConst_</a></td></tr>
 <tr class="memdesc:ab5d5111385a40ae995ab1c83f2ef3ea5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant current injection, one per phase. <br /></td></tr>
 <tr class="separator:ab5d5111385a40ae995ab1c83f2ef3ea5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ea102d3488cab61d5a5167437b69fa2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8ea102d3488cab61d5a5167437b69fa2"></a>
-<a class="el" href="classarma_1_1_col.html">arma::Col</a>&lt; Complex &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_sgt_1_1_pf_bus.html#a8ea102d3488cab61d5a5167437b69fa2">SConst_</a></td></tr>
-<tr class="memdesc:a8ea102d3488cab61d5a5167437b69fa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant power injection, one per phase. <br /></td></tr>
-<tr class="separator:a8ea102d3488cab61d5a5167437b69fa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a177f984bc03bbe5c3d42f4b73e29fb21"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a177f984bc03bbe5c3d42f4b73e29fb21"></a>
+<a class="el" href="classarma_1_1_col.html">arma::Col</a>&lt; Complex &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_sgt_1_1_pf_bus.html#a177f984bc03bbe5c3d42f4b73e29fb21">Scg_</a></td></tr>
+<tr class="memdesc:a177f984bc03bbe5c3d42f4b73e29fb21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant power injection plus gen, one per phase. <br /></td></tr>
+<tr class="separator:a177f984bc03bbe5c3d42f4b73e29fb21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a635a33634f697c5359dd9df870f330c9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a635a33634f697c5359dd9df870f330c9"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_sgt_1_1_pf_bus.html#a635a33634f697c5359dd9df870f330c9">J_</a> {0.0}</td></tr>
 <tr class="memdesc:a635a33634f697c5359dd9df870f330c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Effective moment of inertia for all machines attached to bus. <br /></td></tr>
 <tr class="separator:a635a33634f697c5359dd9df870f330c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25a3daa78d96f36cfed53e867843a5f3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a25a3daa78d96f36cfed53e867843a5f3"></a>
-<a class="el" href="classarma_1_1_col.html">arma::Col</a>&lt; Complex &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_sgt_1_1_pf_bus.html#a25a3daa78d96f36cfed53e867843a5f3">V_</a></td></tr>
-<tr class="memdesc:a25a3daa78d96f36cfed53e867843a5f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Voltage, one per phase. Setpoint/warm start on input. <br /></td></tr>
-<tr class="separator:a25a3daa78d96f36cfed53e867843a5f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5ec2a7a1627be42dd9afe9bc06f58fb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac5ec2a7a1627be42dd9afe9bc06f58fb"></a>
-<a class="el" href="classarma_1_1_col.html">arma::Col</a>&lt; Complex &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_sgt_1_1_pf_bus.html#ac5ec2a7a1627be42dd9afe9bc06f58fb">S_</a></td></tr>
-<tr class="memdesc:ac5ec2a7a1627be42dd9afe9bc06f58fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total power injection, one per phase. Setpt/wm start on input. <br /></td></tr>
-<tr class="separator:ac5ec2a7a1627be42dd9afe9bc06f58fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56baa2bc45df607d7a7e0728d0652089"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a56baa2bc45df607d7a7e0728d0652089"></a>
-PfNodeVec&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_sgt_1_1_pf_bus.html#a56baa2bc45df607d7a7e0728d0652089">nodes_</a></td></tr>
-<tr class="memdesc:a56baa2bc45df607d7a7e0728d0652089"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nodes, one per phase. <br /></td></tr>
-<tr class="separator:a56baa2bc45df607d7a7e0728d0652089"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9868a6ad18cee88a4d9e04becad05bcf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9868a6ad18cee88a4d9e04becad05bcf"></a>
+PfNodeVec&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_sgt_1_1_pf_bus.html#a9868a6ad18cee88a4d9e04becad05bcf">nodeVec_</a></td></tr>
+<tr class="memdesc:a9868a6ad18cee88a4d9e04becad05bcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nodes, one per phase. <br /></td></tr>
+<tr class="separator:a9868a6ad18cee88a4d9e04becad05bcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following files:<ul>
 <li>/Users/dgordon/Devel/SmartGridToolbox/SgtCore/<a class="el" href="_power_flow_model_8h_source.html">PowerFlowModel.h</a></li>
@@ -173,7 +169,7 @@ PfNodeVec&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Nov 9 2015 14:49:03 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 21 2015 12:13:39 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

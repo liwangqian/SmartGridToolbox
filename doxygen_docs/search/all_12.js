@@ -16,7 +16,8 @@ var searchData=
   ['timestepdidcomplete',['timestepDidComplete',['../class_sgt_1_1_simulation.html#ad190f8f9eb37d07c8a101f49e12d5951',1,'Sgt::Simulation']]],
   ['timestepwillstart',['timestepWillStart',['../class_sgt_1_1_simulation.html#a05ca47be0230ee065792737c56bb2520',1,'Sgt::Simulation']]],
   ['timezone',['timezone',['../class_sgt_1_1_simulation.html#a28f06270cbc10befeb04b6ed908afea2',1,'Sgt::Simulation']]],
-  ['toscaledsequence',['toScaledSequence',['../group___power_flow_core.html#gaa8f8d94dfd0cf58317e2e04f52231a9d',1,'Sgt::toScaledSequence(const arma::Col&lt; Complex &gt; &amp;v)'],['../group___power_flow_core.html#ga7f86beecf46d01451b400c840ebaf8b6',1,'Sgt::toScaledSequence(const arma::Mat&lt; Complex &gt; &amp;M)']]],
+  ['toscaledsequence',['toScaledSequence',['../group___power_flow_core.html#gaa8f8d94dfd0cf58317e2e04f52231a9d',1,'Sgt::toScaledSequence(const arma::Col&lt; Complex &gt; &amp;v)'],['../group___power_flow_core.html#ga024668541f1d117aef6c3e622d6be066',1,'Sgt::toScaledSequence(const arma::Mat&lt; Complex &gt; &amp;M)']]],
+  ['tosequence',['toSequence',['../group___power_flow_core.html#gac82cd607d019a960ebee6b13a6a8d956',1,'Sgt::toSequence(const arma::Col&lt; Complex &gt; &amp;v)'],['../group___power_flow_core.html#ga1d924bde63b032ec7cbb19f22a5351de',1,'Sgt::toSequence(const arma::Mat&lt; Complex &gt; &amp;M)']]],
   ['toyamlstring',['toYamlString',['../group___utilities.html#gae975ed475ef00424f8096561728acaa6',1,'Sgt']]],
   ['ts',['Ts',['../class_sgt_1_1_simple_building.html#a9c3f2cbc2e1f2a664fcf11bf7092b5e3',1,'Sgt::SimpleBuilding']]],
   ['type_5f',['type_',['../struct_sgt_1_1_pf_bus.html#a41d6d2e6f405de07697c51ce2fcec230',1,'Sgt::PfBus']]]

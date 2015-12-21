@@ -1,7 +1,7 @@
 <map id="Sgt::PfBus" name="Sgt::PfBus">
-<area shape="rect" id="node4" href="$struct_sgt_1_1_pf_node.html" title="Sgt::PfNode" alt="" coords="699,78,792,103"/>
-<area shape="rect" id="node6" title="STL class. " alt="" coords="218,13,297,38"/>
-<area shape="rect" id="node7" title="STL class. " alt="" coords="5,6,131,45"/>
-<area shape="rect" id="node8" href="$classarma_1_1_col.html" title="arma::Col\&lt; Complex \&gt;" alt="" coords="180,110,335,135"/>
-<area shape="rect" id="node9" href="$class_sgt_1_1_phases.html" title="A set of network phases, each specified by a Phase value. " alt="" coords="211,159,304,185"/>
+<area shape="rect" id="node4" href="$struct_sgt_1_1_pf_node.html" title="Sgt::PfNode" alt="" coords="602,67,696,92"/>
+<area shape="rect" id="node5" title="STL class. " alt="" coords="218,12,297,37"/>
+<area shape="rect" id="node6" title="STL class. " alt="" coords="5,5,131,44"/>
+<area shape="rect" id="node7" href="$classarma_1_1_col.html" title="arma::Col\&lt; Complex \&gt;" alt="" coords="180,96,335,121"/>
+<area shape="rect" id="node8" href="$class_sgt_1_1_phases.html" title="A set of network phases, each specified by a Phase value. " alt="" coords="211,145,304,171"/>
 </map>

@@ -141,7 +141,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">            /// @param ZL The leakage impedance, must be &gt; 0.</span></div>
 <div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_sgt_1_1_dgy_transformer.html#abe2f4c723fd9447a72f6a79be8be48b7">   50</a></span>&#160;<span class="comment"></span>            <a class="code" href="class_sgt_1_1_dgy_transformer.html#abe2f4c723fd9447a72f6a79be8be48b7">DgyTransformer</a>(<span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span>, Complex nomVRatioDY, Complex offNomRatioDY, Complex ZL) :</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                <a class="code" href="class_sgt_1_1_component.html">Component</a>(id),</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <a class="code" href="class_sgt_1_1_branch_abc.html">BranchAbc</a>(Phase::A | Phase::B | Phase::C, Phase::A | Phase::B | Phase::C),</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <a class="code" href="class_sgt_1_1_branch_abc.html">BranchAbc</a>(Phase::<a class="code" href="struct_a.html">A</a> | Phase::B | Phase::C, Phase::<a class="code" href="struct_a.html">A</a> | Phase::B | Phase::C),</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                nomVRatioDY_(nomVRatioDY), offNomRatioDY_(offNomRatioDY), YL_(1.0/ZL)</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            {</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                <span class="comment">// Empty.</span></div>
@@ -235,13 +235,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="class_sgt_1_1_component_html"><div class="ttname"><a href="class_sgt_1_1_component.html">Sgt::Component</a></div><div class="ttdoc">Base class for all Components. </div><div class="ttdef"><b>Definition:</b> Component.h:64</div></div>
 <div class="ttc" id="namespace_sgt_html"><div class="ttname"><a href="namespace_sgt.html">Sgt</a></div><div class="ttdoc">The primary namespace for SmartGridToolbox. </div></div>
 <div class="ttc" id="class_sgt_1_1_dgy_transformer_html_abe2f4c723fd9447a72f6a79be8be48b7"><div class="ttname"><a href="class_sgt_1_1_dgy_transformer.html#abe2f4c723fd9447a72f6a79be8be48b7">Sgt::DgyTransformer::DgyTransformer</a></div><div class="ttdeci">DgyTransformer(const std::string &amp;id, Complex nomVRatioDY, Complex offNomRatioDY, Complex ZL)</div><div class="ttdoc">Constructor. </div><div class="ttdef"><b>Definition:</b> DgyTransformer.h:50</div></div>
+<div class="ttc" id="struct_a_html"><div class="ttname"><a href="struct_a.html">A</a></div><div class="ttdef"><b>Definition:</b> helloworld_works.cc:86</div></div>
 <div class="ttc" id="class_sgt_1_1_branch_abc_html"><div class="ttname"><a href="class_sgt_1_1_branch_abc.html">Sgt::BranchAbc</a></div><div class="ttdoc">Common abstract base class for a branch. </div><div class="ttdef"><b>Definition:</b> Branch.h:32</div></div>
 <div class="ttc" id="class_sgt_1_1_dgy_transformer_html"><div class="ttname"><a href="class_sgt_1_1_dgy_transformer.html">Sgt::DgyTransformer</a></div><div class="ttdoc">Delta-grounded wye transformer. </div><div class="ttdef"><b>Definition:</b> DgyTransformer.h:24</div></div>
 <div class="ttc" id="class_sgt_1_1_dgy_transformer_html_aa29922db6720711b9b84ada91654e9cc"><div class="ttname"><a href="class_sgt_1_1_dgy_transformer.html#aa29922db6720711b9b84ada91654e9cc">Sgt::DgyTransformer::inServiceY</a></div><div class="ttdeci">virtual arma::Mat&lt; Complex &gt; inServiceY() const  override</div><div class="ttdoc">The admittance whenever isInService. </div><div class="ttdef"><b>Definition:</b> DgyTransformer.cc:19</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Nov 9 2015 14:49:02 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 21 2015 12:13:38 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

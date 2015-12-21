@@ -35,6 +35,7 @@ var searchData=
   ['spmat',['SpMat',['../classarma_1_1_sp_mat.html',1,'arma']]],
   ['spmat_3c_20complex_20_3e',['SpMat&lt; Complex &gt;',['../classarma_1_1_sp_mat.html',1,'arma']]],
   ['spmat_3c_20double_20_3e',['SpMat&lt; double &gt;',['../classarma_1_1_sp_mat.html',1,'arma']]],
+  ['statics',['Statics',['../structjson11_1_1_statics.html',1,'json11']]],
   ['stepwisetimeseries',['StepwiseTimeSeries',['../class_sgt_1_1_stepwise_time_series.html',1,'Sgt']]],
   ['stopwatch',['Stopwatch',['../class_stopwatch.html',1,'']]],
   ['streamindent',['StreamIndent',['../class_sgt_1_1_stream_indent.html',1,'Sgt']]]

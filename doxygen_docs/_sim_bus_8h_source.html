@@ -144,40 +144,39 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    {</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <a class="code" href="class_sgt_1_1_sim_bus.html">SimBus</a>(<a class="code" href="class_sgt_1_1_bus.html">Bus</a>&amp; <a class="code" href="class_sgt_1_1_sim_bus.html#ae220dd8574357077e5dff0e0fc6e0adf">bus</a>) :</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                <a class="code" href="class_sgt_1_1_component.html#a4c92ed17f833ebcf15268dc22ff78593">Component</a>(bus.id()),</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                <a class="code" href="class_sgt_1_1_sim_component.html">SimComponent</a>(),</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                bus_(&amp;bus)</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                <span class="comment">// Empty.</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            }</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_sgt_1_1_sim_bus.html#ae220dd8574357077e5dff0e0fc6e0adf">   63</a></span>&#160;            <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="class_sgt_1_1_bus.html">Bus</a>&amp; <a class="code" href="class_sgt_1_1_sim_bus.html#ae220dd8574357077e5dff0e0fc6e0adf">bus</a>()<span class="keyword"> const override</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">            </span>{</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                <span class="keywordflow">return</span> *bus_;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            }</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            </div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="class_sgt_1_1_sim_bus.html#a1408452ef4d331da0cbf3160702876c8">   68</a></span>&#160;            <span class="keyword">virtual</span> <a class="code" href="class_sgt_1_1_bus.html">Bus</a>&amp; <a class="code" href="class_sgt_1_1_sim_bus.html#a1408452ef4d331da0cbf3160702876c8">bus</a>()<span class="keyword"> override</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">            </span>{</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <span class="keywordflow">return</span> *bus_;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <a class="code" href="class_sgt_1_1_sim_bus.html">SimBus</a>(<span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span>, <a class="code" href="class_sgt_1_1_bus.html">Bus</a>&amp; <a class="code" href="class_sgt_1_1_sim_bus.html#ae220dd8574357077e5dff0e0fc6e0adf">bus</a>) :</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                <a class="code" href="class_sgt_1_1_component.html#a4c92ed17f833ebcf15268dc22ff78593">Component</a>(<span class="keywordtype">id</span>),</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                bus_(&amp;bus)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                <span class="comment">// Empty.</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_sgt_1_1_sim_bus.html#ae220dd8574357077e5dff0e0fc6e0adf">   62</a></span>&#160;            <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="class_sgt_1_1_bus.html">Bus</a>&amp; <a class="code" href="class_sgt_1_1_sim_bus.html#ae220dd8574357077e5dff0e0fc6e0adf">bus</a>()<span class="keyword"> const override</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">            </span>{</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                <span class="keywordflow">return</span> *bus_;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="class_sgt_1_1_sim_bus.html#a1408452ef4d331da0cbf3160702876c8">   67</a></span>&#160;            <span class="keyword">virtual</span> <a class="code" href="class_sgt_1_1_bus.html">Bus</a>&amp; <a class="code" href="class_sgt_1_1_sim_bus.html#a1408452ef4d331da0cbf3160702876c8">bus</a>()<span class="keyword"> override</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">            </span>{</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                <span class="keywordflow">return</span> *bus_;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <a class="code" href="class_sgt_1_1_bus.html">Bus</a>* bus_;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    };</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#endif // SIM_BUS_DOT_H</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <a class="code" href="class_sgt_1_1_bus.html">Bus</a>* bus_;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    };</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#endif // SIM_BUS_DOT_H</span></div>
 <div class="ttc" id="class_sgt_1_1_sim_bus_abc_html_ace8670a97a46727178522524c670a200"><div class="ttname"><a href="class_sgt_1_1_sim_bus_abc.html#ace8670a97a46727178522524c670a200">Sgt::SimBusAbc::initializeState</a></div><div class="ttdeci">virtual void initializeState() override</div><div class="ttdoc">Reset state of the object, time will be at negative infinity. </div><div class="ttdef"><b>Definition:</b> SimBus.cc:19</div></div>
 <div class="ttc" id="namespace_sgt_html"><div class="ttname"><a href="namespace_sgt.html">Sgt</a></div><div class="ttdoc">The primary namespace for SmartGridToolbox. </div></div>
 <div class="ttc" id="class_sgt_1_1_sim_bus_abc_html_a781da2981f98999ea5bc3dd3a10a4aec"><div class="ttname"><a href="class_sgt_1_1_sim_bus_abc.html#a781da2981f98999ea5bc3dd3a10a4aec">Sgt::SimBusAbc::linkToSimNetwork</a></div><div class="ttdeci">virtual void linkToSimNetwork(SimNetwork &amp;simNetwork)</div><div class="ttdoc">Do anything I need to do to add myself to the simNetwork. </div><div class="ttdef"><b>Definition:</b> SimBus.cc:5</div></div>
-<div class="ttc" id="class_sgt_1_1_sim_bus_html_a1408452ef4d331da0cbf3160702876c8"><div class="ttname"><a href="class_sgt_1_1_sim_bus.html#a1408452ef4d331da0cbf3160702876c8">Sgt::SimBus::bus</a></div><div class="ttdeci">virtual Bus &amp; bus() override</div><div class="ttdoc">Return the bus that I wrap (non-const). </div><div class="ttdef"><b>Definition:</b> SimBus.h:68</div></div>
+<div class="ttc" id="class_sgt_1_1_sim_bus_html_a1408452ef4d331da0cbf3160702876c8"><div class="ttname"><a href="class_sgt_1_1_sim_bus.html#a1408452ef4d331da0cbf3160702876c8">Sgt::SimBus::bus</a></div><div class="ttdeci">virtual Bus &amp; bus() override</div><div class="ttdoc">Return the bus that I wrap (non-const). </div><div class="ttdef"><b>Definition:</b> SimBus.h:67</div></div>
 <div class="ttc" id="class_sgt_1_1_bus_html"><div class="ttname"><a href="class_sgt_1_1_bus.html">Sgt::Bus</a></div><div class="ttdoc">A Bus is a grouped set of conductors / terminals, one per phase. </div><div class="ttdef"><b>Definition:</b> Bus.h:34</div></div>
 <div class="ttc" id="class_sgt_1_1_sim_component_html"><div class="ttname"><a href="class_sgt_1_1_sim_component.html">Sgt::SimComponent</a></div><div class="ttdoc">A base class for components of a Simulation. </div><div class="ttdef"><b>Definition:</b> SimComponent.h:26</div></div>
 <div class="ttc" id="class_sgt_1_1_sim_bus_abc_html_a313af1bffa22df28541b15f89e20e1ab"><div class="ttname"><a href="class_sgt_1_1_sim_bus_abc.html#a313af1bffa22df28541b15f89e20e1ab">Sgt::SimBusAbc::bus</a></div><div class="ttdeci">virtual const Bus &amp; bus() const  =0</div><div class="ttdoc">Return the bus that I wrap (const). </div></div>
-<div class="ttc" id="class_sgt_1_1_sim_bus_html_ae220dd8574357077e5dff0e0fc6e0adf"><div class="ttname"><a href="class_sgt_1_1_sim_bus.html#ae220dd8574357077e5dff0e0fc6e0adf">Sgt::SimBus::bus</a></div><div class="ttdeci">virtual const Bus &amp; bus() const  override</div><div class="ttdoc">Return the bus that I wrap (const). </div><div class="ttdef"><b>Definition:</b> SimBus.h:63</div></div>
+<div class="ttc" id="class_sgt_1_1_sim_bus_html_ae220dd8574357077e5dff0e0fc6e0adf"><div class="ttname"><a href="class_sgt_1_1_sim_bus.html#ae220dd8574357077e5dff0e0fc6e0adf">Sgt::SimBus::bus</a></div><div class="ttdeci">virtual const Bus &amp; bus() const  override</div><div class="ttdoc">Return the bus that I wrap (const). </div><div class="ttdef"><b>Definition:</b> SimBus.h:62</div></div>
 <div class="ttc" id="class_sgt_1_1_component_html_a4c92ed17f833ebcf15268dc22ff78593"><div class="ttname"><a href="class_sgt_1_1_component.html#a4c92ed17f833ebcf15268dc22ff78593">Sgt::Component::Component</a></div><div class="ttdeci">Component()</div><div class="ttdoc">Default constructor required by g++4.8 but not clang++. </div><div class="ttdef"><b>Definition:</b> Component.h:85</div></div>
 <div class="ttc" id="class_sgt_1_1_sim_network_html"><div class="ttname"><a href="class_sgt_1_1_sim_network.html">Sgt::SimNetwork</a></div><div class="ttdoc">SimNetwork : A SimComponent for an electrical network. </div><div class="ttdef"><b>Definition:</b> SimNetwork.h:25</div></div>
 <div class="ttc" id="class_sgt_1_1_sim_bus_html"><div class="ttname"><a href="class_sgt_1_1_sim_bus.html">Sgt::SimBus</a></div><div class="ttdoc">Simulation bus, corresponding to a Bus in a SimNetwork&#39;s network(). </div><div class="ttdef"><b>Definition:</b> SimBus.h:51</div></div>
@@ -185,7 +184,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Nov 9 2015 14:49:02 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 21 2015 12:13:39 for SmartGridToolbox by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>
