@@ -12,5 +12,6 @@ var searchData=
   ['toscaledsequence',['toScaledSequence',['../group___power_flow_core.html#gaa8f8d94dfd0cf58317e2e04f52231a9d',1,'Sgt::toScaledSequence(const arma::Col&lt; Complex &gt; &amp;v)'],['../group___power_flow_core.html#ga024668541f1d117aef6c3e622d6be066',1,'Sgt::toScaledSequence(const arma::Mat&lt; Complex &gt; &amp;M)']]],
   ['tosequence',['toSequence',['../group___power_flow_core.html#gac82cd607d019a960ebee6b13a6a8d956',1,'Sgt::toSequence(const arma::Col&lt; Complex &gt; &amp;v)'],['../group___power_flow_core.html#ga1d924bde63b032ec7cbb19f22a5351de',1,'Sgt::toSequence(const arma::Mat&lt; Complex &gt; &amp;M)']]],
   ['toyamlstring',['toYamlString',['../group___utilities.html#gae975ed475ef00424f8096561728acaa6',1,'Sgt']]],
-  ['ts',['Ts',['../class_sgt_1_1_simple_building.html#a9c3f2cbc2e1f2a664fcf11bf7092b5e3',1,'Sgt::SimpleBuilding']]]
+  ['ts',['Ts',['../class_sgt_1_1_simple_building.html#a9c3f2cbc2e1f2a664fcf11bf7092b5e3',1,'Sgt::SimpleBuilding']]],
+  ['type',['type',['../class_sgt_1_1basic__json.html#a6d55afaf7c3c63db77f29a84b9fbde7e',1,'Sgt::basic_json']]]
 ];

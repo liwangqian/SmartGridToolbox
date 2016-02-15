@@ -13,5 +13,6 @@ var searchData=
   ['dotimestep',['doTimestep',['../class_sgt_1_1_simulation.html#ac65b1144ced9974c5028dbc187081b93',1,'Sgt::Simulation']]],
   ['dqg',['dQg',['../class_sgt_1_1_simple_building.html#a6c6b55653fcf2d5fc4f0e6660ed13bff',1,'Sgt::SimpleBuilding']]],
   ['dqh',['dQh',['../class_sgt_1_1_simple_building.html#af4d5fe076703c004c6d35cc6243868b1',1,'Sgt::SimpleBuilding']]],
-  ['dt',['dt',['../class_sgt_1_1_simple_building.html#aa1c4876c630ed57554ff8ffc1bc37ca6',1,'Sgt::SimpleBuilding']]]
+  ['dt',['dt',['../class_sgt_1_1_simple_building.html#aa1c4876c630ed57554ff8ffc1bc37ca6',1,'Sgt::SimpleBuilding']]],
+  ['dump',['dump',['../class_sgt_1_1basic__json.html#aa3aca1d80b0eae2907aeed36c1280746',1,'Sgt::basic_json']]]
 ];

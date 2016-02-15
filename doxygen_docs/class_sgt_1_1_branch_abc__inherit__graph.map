@@ -9,7 +9,7 @@
 <area shape="rect" id="node2" href="$class_sgt_1_1_component.html" title="Base class for all Components. " alt="" coords="496,153,614,179"/>
 <area shape="rect" id="node3" href="$class_sgt_1_1_shared.html" title="Sgt::Shared\&lt; Component \&gt;" alt="" coords="264,125,448,151"/>
 <area shape="rect" id="node5" href="$class_sgt_1_1_has_properties.html" title="Sgt::HasProperties\l\&lt; Component \&gt;" alt="" coords="290,175,423,213"/>
-<area shape="rect" id="node6" href="$class_sgt_1_1_has_properties_abc.html" title="Sgt::HasPropertiesAbc" alt="" coords="33,181,189,207"/>
+<area shape="rect" id="node6" href="$class_sgt_1_1_has_properties_abc.html" title="Abstract base class for an object with properties. " alt="" coords="33,181,189,207"/>
 <area shape="rect" id="node13" href="$class_sgt_1_1_underground_line_stranded_shield.html" title="Underground line with stranded shielding. " alt="" coords="1067,215,1273,253"/>
 <area shape="rect" id="node14" href="$class_sgt_1_1_underground_line_tape_shield.html" title="Underground line with tape shielding. " alt="" coords="1080,277,1261,316"/>
 </map>

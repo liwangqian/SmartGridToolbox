@@ -1,3 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structjson11_1_1_statics.html" title="json11::Statics" alt="" coords="5,5,112,31"/>
+<area shape="rect" id="node2" href="$class_sgt_1_1basic__json_1_1const__iterator.html" title="a const random access iterator for the basic_json class " alt="" coords="116,5,348,84"/>
+<area shape="rect" id="node3" href="$class_sgt_1_1basic__json_1_1iterator.html" title="a mutable random access iterator for the basic_json class " alt="" coords="396,5,628,84"/>
 </map>

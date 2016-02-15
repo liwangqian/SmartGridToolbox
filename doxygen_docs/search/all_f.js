@@ -1,6 +1,9 @@
 var searchData=
 [
+  ['parse',['parse',['../class_sgt_1_1basic__json.html#adb243aeb1b430f4b7ce344e8b74e8200',1,'Sgt::basic_json::parse(const string_t &amp;s, parser_callback_t cb=nullptr)'],['../class_sgt_1_1basic__json.html#a1b4a2bc3100f6496d027f97de0e0dc59',1,'Sgt::basic_json::parse(std::istream &amp;i, parser_callback_t cb=nullptr)']]],
+  ['parse_5fevent_5ft',['parse_event_t',['../class_sgt_1_1basic__json.html#a4a4ad9a6971f02c628c6237cf27d412b',1,'Sgt::basic_json']]],
   ['parser',['Parser',['../class_sgt_1_1_parser.html',1,'Sgt']]],
+  ['parser_5fcallback_5ft',['parser_callback_t',['../class_sgt_1_1basic__json.html#a643583ca779f9da6369f11280f6ae174',1,'Sgt::basic_json']]],
   ['parserbase',['ParserBase',['../class_sgt_1_1_parser_base.html',1,'Sgt']]],
   ['parserloop',['ParserLoop',['../struct_sgt_1_1_parser_base_1_1_parser_loop.html',1,'Sgt::ParserBase']]],
   ['parserplugin',['ParserPlugin',['../class_sgt_1_1_parser_plugin.html',1,'Sgt']]],
@@ -14,6 +17,7 @@ var searchData=
   ['phases',['Phases',['../class_sgt_1_1_phases.html',1,'Sgt']]],
   ['phases_5f',['phases_',['../struct_sgt_1_1_pf_bus.html#a75e4c939db462f168fb6a61fa47c409b',1,'Sgt::PfBus::phases_()'],['../struct_sgt_1_1_pf_branch.html#a8c2aac6ca03028303c86ff4d23358fdb',1,'Sgt::PfBranch::phases_()']]],
   ['pmax',['PMax',['../class_sgt_1_1_simple_building.html#ad4609cf5a89c0fdcae1353f3d3c4e582',1,'Sgt::SimpleBuilding']]],
+  ['pointer',['pointer',['../class_sgt_1_1basic__json.html#a03a666c0bf739a2c89136c6f3d51aa7c',1,'Sgt::basic_json::pointer()'],['../class_sgt_1_1basic__json_1_1const__iterator.html#a9ab584dcaca5df312cc552a3e43535e0',1,'Sgt::basic_json::const_iterator::pointer()']]],
   ['power_20flow_20core',['Power Flow Core',['../group___power_flow_core.html',1,'']]],
   ['powerflowfdsolver',['PowerFlowFdSolver',['../class_sgt_1_1_power_flow_fd_solver.html',1,'Sgt']]],
   ['powerflowmodel',['PowerFlowModel',['../class_sgt_1_1_power_flow_model.html',1,'Sgt']]],
@@ -23,6 +27,8 @@ var searchData=
   ['powerflowsolverinterface',['PowerFlowSolverInterface',['../class_sgt_1_1_power_flow_solver_interface.html',1,'Sgt']]],
   ['powerflowsolverparserplugin',['PowerFlowSolverParserPlugin',['../class_sgt_1_1_power_flow_solver_parser_plugin.html',1,'Sgt']]],
   ['precedes',['precedes',['../class_sgt_1_1_wo_node.html#adf44321a7e5e969175e2784c1619cbc3',1,'Sgt::WoNode']]],
+  ['properties',['properties',['../class_sgt_1_1_has_properties_abc.html#ae8dc25983a9d64df53e73ba5aa60ffe2',1,'Sgt::HasPropertiesAbc::properties() const  =0'],['../class_sgt_1_1_has_properties_abc.html#a450c91a45f2f12ca20f29ea1a771459a',1,'Sgt::HasPropertiesAbc::properties()=0']]],
   ['property',['Property',['../class_sgt_1_1_property.html',1,'Sgt']]],
-  ['propertyabc',['PropertyAbc',['../class_sgt_1_1_property_abc.html',1,'Sgt']]]
+  ['propertyabc',['PropertyAbc',['../class_sgt_1_1_property_abc.html',1,'Sgt']]],
+  ['push_5fback',['push_back',['../class_sgt_1_1basic__json.html#a081d583f248919362fac826ef5e00b4d',1,'Sgt::basic_json::push_back(basic_json &amp;&amp;value)'],['../class_sgt_1_1basic__json.html#a1673ef9eebaf9cb091cf6231c9c36e54',1,'Sgt::basic_json::push_back(const basic_json &amp;value)'],['../class_sgt_1_1basic__json.html#a4a1ba98faad3128855647abf9ef1d36b',1,'Sgt::basic_json::push_back(const typename object_t::value_type &amp;value)']]]
 ];

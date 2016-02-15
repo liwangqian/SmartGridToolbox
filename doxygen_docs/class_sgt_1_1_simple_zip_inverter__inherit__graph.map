@@ -7,5 +7,5 @@
 <area shape="rect" id="node11" href="$class_sgt_1_1_zip_abc.html" title="A Zip is an injection into a bus with constant impedance / current / complex power components..." alt="" coords="292,325,383,351"/>
 <area shape="rect" id="node6" href="$class_sgt_1_1_shared.html" title="Sgt::Shared\&lt; Component \&gt;" alt="" coords="94,99,277,124"/>
 <area shape="rect" id="node8" href="$class_sgt_1_1_has_properties.html" title="Sgt::HasProperties\l\&lt; Component \&gt;" alt="" coords="314,92,447,131"/>
-<area shape="rect" id="node9" href="$class_sgt_1_1_has_properties_abc.html" title="Sgt::HasPropertiesAbc" alt="" coords="309,12,465,37"/>
+<area shape="rect" id="node9" href="$class_sgt_1_1_has_properties_abc.html" title="Abstract base class for an object with properties. " alt="" coords="309,12,465,37"/>
 </map>

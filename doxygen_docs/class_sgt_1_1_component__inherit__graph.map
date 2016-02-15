@@ -6,7 +6,7 @@
 <area shape="rect" id="node40" href="$class_sgt_1_1_zip_abc.html" title="A Zip is an injection into a bus with constant impedance / current / complex power components..." alt="" coords="903,548,993,573"/>
 <area shape="rect" id="node2" href="$class_sgt_1_1_shared.html" title="Sgt::Shared\&lt; Component \&gt;" alt="" coords="264,397,448,423"/>
 <area shape="rect" id="node4" href="$class_sgt_1_1_has_properties.html" title="Sgt::HasProperties\l\&lt; Component \&gt;" alt="" coords="290,447,423,485"/>
-<area shape="rect" id="node5" href="$class_sgt_1_1_has_properties_abc.html" title="Sgt::HasPropertiesAbc" alt="" coords="33,453,189,479"/>
+<area shape="rect" id="node5" href="$class_sgt_1_1_has_properties_abc.html" title="Abstract base class for an object with properties. " alt="" coords="33,453,189,479"/>
 <area shape="rect" id="node7" href="$class_sgt_1_1_common_branch.html" title="A single phase transmission line or transformer. " alt="" coords="876,153,1021,179"/>
 <area shape="rect" id="node8" href="$class_sgt_1_1_dgy_transformer.html" title="Delta&#45;grounded wye transformer. " alt="" coords="876,203,1021,228"/>
 <area shape="rect" id="node9" href="$class_sgt_1_1_generic_branch.html" title="A concrete, generic branch. " alt="" coords="879,252,1017,277"/>

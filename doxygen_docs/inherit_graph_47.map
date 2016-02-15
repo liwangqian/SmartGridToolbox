@@ -1,3 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node2" href="$class_sgt_1_1_stream_indent.html" title="Sgt::StreamIndent" alt="" coords="134,5,263,31"/>
+<area shape="rect" id="node1" href="$class_sgt_1_1_setter_abc.html" title="Sgt::SetterAbc\&lt; T \&gt;" alt="" coords="5,5,143,31"/>
+<area shape="rect" id="node2" href="$class_sgt_1_1_setter.html" title="Sgt::Setter\&lt; Targ, T \&gt;" alt="" coords="191,5,339,31"/>
 </map>

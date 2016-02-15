@@ -20,5 +20,6 @@ var searchData=
   ['tosequence',['toSequence',['../group___power_flow_core.html#gac82cd607d019a960ebee6b13a6a8d956',1,'Sgt::toSequence(const arma::Col&lt; Complex &gt; &amp;v)'],['../group___power_flow_core.html#ga1d924bde63b032ec7cbb19f22a5351de',1,'Sgt::toSequence(const arma::Mat&lt; Complex &gt; &amp;M)']]],
   ['toyamlstring',['toYamlString',['../group___utilities.html#gae975ed475ef00424f8096561728acaa6',1,'Sgt']]],
   ['ts',['Ts',['../class_sgt_1_1_simple_building.html#a9c3f2cbc2e1f2a664fcf11bf7092b5e3',1,'Sgt::SimpleBuilding']]],
+  ['type',['type',['../class_sgt_1_1basic__json.html#a6d55afaf7c3c63db77f29a84b9fbde7e',1,'Sgt::basic_json']]],
   ['type_5f',['type_',['../struct_sgt_1_1_pf_bus.html#a41d6d2e6f405de07697c51ce2fcec230',1,'Sgt::PfBus']]]
 ];

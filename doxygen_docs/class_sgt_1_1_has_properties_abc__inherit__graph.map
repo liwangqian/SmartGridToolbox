@@ -1,7 +1,7 @@
 <map id="Sgt::HasPropertiesAbc" name="Sgt::HasPropertiesAbc">
 <area shape="rect" id="node2" href="$class_sgt_1_1_has_properties.html" title="Sgt::HasProperties\l\&lt; Bus \&gt;" alt="" coords="391,224,524,263"/>
 <area shape="rect" id="node4" href="$class_sgt_1_1_has_properties.html" title="Sgt::HasProperties\l\&lt; Component \&gt;" alt="" coords="210,315,343,353"/>
-<area shape="rect" id="node41" href="$class_sgt_1_1_has_properties.html" title="Sgt::HasProperties\l\&lt; Targ \&gt;" alt="" coords="210,377,343,416"/>
+<area shape="rect" id="node41" href="$class_sgt_1_1_has_properties.html" title="Abstract base class for an object with properties. " alt="" coords="210,377,343,416"/>
 <area shape="rect" id="node3" href="$class_sgt_1_1_bus.html" title="A Bus is a grouped set of conductors / terminals, one per phase. " alt="" coords="606,216,678,241"/>
 <area shape="rect" id="node5" href="$class_sgt_1_1_component.html" title="Base class for all Components. " alt="" coords="399,365,516,391"/>
 <area shape="rect" id="node6" href="$class_sgt_1_1_branch_abc.html" title="Common abstract base class for a branch. " alt="" coords="585,265,699,291"/>
