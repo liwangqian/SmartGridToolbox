@@ -49,6 +49,12 @@ matrix:
             env:
                 - MY_CXX=g++-5
                 - LD_LIBRARY_PATH=/usr/local/lib
+        
+        -   os: osx
+            compiler: clang
+            
+            env:
+                - MY_CXX=clang++
 
 install:
     - export CXX=$MY_CXX
